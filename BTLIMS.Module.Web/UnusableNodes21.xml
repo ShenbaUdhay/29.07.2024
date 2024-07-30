@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Testparameter_LookupListView_Copy_SampleLogin">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Parameter" PropertyName="Parameter" Index="5" Width="70" LookupEditorMode="AllItemsWithSearch" />
+      </Columns>
+    </ListView>
+    <ListView Id="Testparameter_LookupListView_Copy_GroupTest">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Parameter" PropertyName="Parameter" Index="5" Width="70" LookupEditorMode="AllItemsWithSearch" />
+      </Columns>
+    </ListView>
+    <ListView Id="Testparameter_LookupListView_Copy_GroupSampleLogin">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Parameter" PropertyName="Parameter" Index="5" Width="70" LookupEditorMode="AllItemsWithSearch" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <ListView Id="GroupTest_TestParameters_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Parameter" Index="3" />
+        <ColumnInfo Id="Test" PropertyName="TestMethod.TestName.TestName" Caption="Test" Index="2" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+    <ListView Id="Samplecheckin_Testparameters_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Parameter" Index="2" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Reports">
+        <Items Id="Items">
+          <Item Id="BizRequest_DetailView_Report" ViewId="BizRequest_ListView_Report" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

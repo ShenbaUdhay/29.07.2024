@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="ChooseTestItemAction" Caption="选择检测项目" />
+      <Action Id="SearchTestItemAction" Caption="搜索" ToolTip="搜索检测项目" />
+    </Actions>
+  </ActionDesign>
+</Application>

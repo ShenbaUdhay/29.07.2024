@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="TestMethod_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod1" Caption="准备方法2" />
+        <ColumnInfo Id="PrepMethod" Caption="准备方法1" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_AnalysisQueue">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod1" Caption="准备方法2" />
+        <ColumnInfo Id="PrepMethod" Caption="准备方法1" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_AnalysisDepartmentChain">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod1" Caption="准备方法2" />
+        <ColumnInfo Id="PrepMethod" Caption="准备方法1" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

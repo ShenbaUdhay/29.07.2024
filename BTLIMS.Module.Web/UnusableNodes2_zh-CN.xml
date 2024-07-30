@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="TypePermissionMatrixItem_MemberPermissions_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="InheritedFrom" Caption="Inherited From" />
+      </Columns>
+    </ListView>
+    <ListView Id="TypePermissionMatrixItem_ObjectPermissions_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="InheritedFrom" Caption="Inherited From" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

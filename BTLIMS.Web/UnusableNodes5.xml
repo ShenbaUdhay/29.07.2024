@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="System">
+        <Items Id="Items">
+          <Item Id="TestGroup" ViewId="TestGroup_ListView" />
+          <Item Id="TestForm" ViewId="TestForm_LookupListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Views Id="Views">
+    <DetailView Id="Samplecheckin_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" RelativeSize="3.1298904538341157" />
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Samplecheckin">
+              <LayoutGroup Id="Samplecheckin_col1" RelativeSize="39.18495297805643">
+                <LayoutItem Id="JobID" RelativeSize="5.5267702936096716" />
+                <LayoutItem Id="RecievedDate" RelativeSize="4.1450777202072535" />
+                <LayoutItem Id="RecievedBy" RelativeSize="4.1450777202072535" />
+                <LayoutItem Id="ClientName" RelativeSize="4.1450777202072535" />
+                <LayoutItem Id="ClientAddress" RelativeSize="18.825561312607945" />
+                <LayoutItem Id="ClientPhone" Index="5" RelativeSize="4.1450777202072535" />
+                <LayoutItem Id="BroughtBy" Index="6" RelativeSize="4.1450777202072535" />
+                <LayoutItem Id="ProjectID" Index="7" RelativeSize="4.1450777202072535" />
+                <LayoutItem Id="ProjectName" Index="8" RelativeSize="4.1450777202072535" />
+                <LayoutItem Id="NumberOfSample" Index="9" RelativeSize="4.1450777202072535" />
+                <LayoutItem Id="DueDate" Index="10" RelativeSize="4.1450777202072535" />
+                <LayoutItem Id="UploadCOC" Index="11" RelativeSize="4.1450777202072535" />
+                <LayoutItem Id="TestDescription" Index="12" RelativeSize="12.435233160621761" ViewItem="TestDescription" />
+                <LayoutItem Id="Comment" Index="13" RelativeSize="15.544041450777202" ViewItem="Comment" />
+                <LayoutItem Id="SampleLoginFromCheckin" Index="14" RelativeSize="6.2176165803108807" />
+              </LayoutGroup>
+              <LayoutGroup Id="Samplecheckin_col2" RelativeSize="60.81504702194357">
+                <LayoutGroup Id="SampleCategoryName" RelativeSize="28.324697754749568" />
+                <LayoutItem Id="Item2" RelativeSize="2.245250431778929" />
+                <LayoutGroup Id="ImageUpload" RelativeSize="36.960276338514682" />
+                <LayoutGroup Id="Auto47048566-2917-43fa-bfb9-376adf953c2c" Caption="Auto47048566-2917-43fa-bfb9-376adf953c2c(28)" RelativeSize="32.469775474956819" Index="3" Direction="Vertical">
+                  <LayoutItem Id="Item3" RelativeSize="100" Index="0" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

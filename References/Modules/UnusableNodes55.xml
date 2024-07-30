@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Matrix_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Matrix" RelativeSize="100">
+              <LayoutItem Id="MatrixName" ViewItem="MatrixName" Index="0" RelativeSize="5.0955414012738851" Removed="True" />
+              <LayoutItem Id="ModifiedBy" RelativeSize="3.8216560509554141" />
+              <LayoutItem Id="ModifiedTime" RelativeSize="87.261146496815286" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestMethod_ListView" MasterDetailMode="ListViewAndDetailView" />
+    <DetailView Id="Employee_DetailView_Qualifications">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="MeasureQualifications">
+              <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Roles" View="PermissionPolicyUser_Roles_ListView" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Employee">
+                <LayoutGroup Id="Employee_col2">
+                  <LayoutItem Id="Photo3" ViewItem="Photo3" />
+                  <LayoutItem Id="Signature3" ViewItem="Signature3" />
+                  <LayoutItem Id="Signature2" ViewItem="Signature2" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

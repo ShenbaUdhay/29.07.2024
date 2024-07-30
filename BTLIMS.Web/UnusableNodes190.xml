@@ -1,0 +1,1298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="DefaultSettings_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MonitoringObject" Caption="MonitoringObject" Width="121" />
+        <ColumnInfo Id="MonitoringField" Caption="MonitoringField" Width="111" />
+        <ColumnInfo Id="Description" Width="87" />
+        <ColumnInfo Id="UnfollowedClients" Caption="UnfollowedClients" Width="125" />
+        <ColumnInfo Id="UnfollowedLeads" Caption="UnfollowedLeads" Width="120" />
+        <ColumnInfo Id="UnfollowedOpportunities" Caption="UnfollowedOpportunities" Width="163" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SequenceSetup_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item1">
+            <TabbedGroup Id="Tabs">
+              <LayoutGroup Id="ClosingQCTestRun">
+                <LayoutItem Id="ClosingTestRun" ViewItem="ClosingTestRun" />
+                <LayoutGroup Id="Auto1225705d-0b63-48bd-85cb-d891c0dee31d">
+                  <LayoutItem Id="ShowClosingQCTestRun" ViewItem="ShowClosingQCTestRun" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="SampleQCTestRun">
+                <LayoutItem Id="SampleTestRun" ViewItem="SampleTestRun" />
+              </LayoutGroup>
+              <LayoutGroup Id="InitialQCTestRun">
+                <LayoutItem Id="InitialTestRun" ViewItem="InitialTestRun" />
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SequenceSetup_col1">
+              <LayoutItem Id="SpikeSample" ViewItem="SpikeSample" />
+              <LayoutItem Id="DupSample" ViewItem="DupSample" />
+              <LayoutItem Id="Frequency" ViewItem="Frequency" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="SDMS">
+      <Layout Id="Layout">
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Item3">
+            <LayoutItem Id="SDMSDCAB" ViewItem="ABView" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="SDMSDCSpreadsheet" ViewItem="Spreadsheet" />
+          </LayoutGroup>
+        </TabbedGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SamplePrepBatchsequence">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Autocf0d576e-4672-46fd-83b9-5d54a7b37220">
+            <LayoutGroup Id="Auto04dcce49-4fcf-4903-87bc-06ea173390f5">
+              <LayoutGroup Id="Auto79cf6bba-a0c4-4196-aa16-782a4ecdbfdc">
+                <LayoutItem Id="sampleprepaction2" ViewItem="qcaction2" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Auto9df63651-b0e5-47e4-a744-3b2aba4e2177">
+              <LayoutGroup Id="Auto73751de5-0919-489d-bf05-d4d91c32cd0b">
+                <LayoutGroup Id="Auto119a6553-f7b5-4936-8039-f8b9ce2ee383">
+                  <LayoutGroup Id="Autob5a279a7-b443-4caf-ae67-65c0f9b5ef77">
+                    <LayoutItem Id="samplepreplist" ViewItem="qclist" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto87dec2e5-170a-4768-ae78-2b130933aa7a">
+            <LayoutItem Id="sampleprepdetail" ViewItem="qcdetail" />
+            <LayoutGroup Id="Autof31a4aa2-e7dd-42d5-a8f6-4f38b1059391">
+              <LayoutItem Id="sampleprepaction0" ViewItem="qcaction0" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="Samplecheckin_DetailView_Client">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultViewQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_Validation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_ResultView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_Delivery">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="PrintComment" ViewItem="PrintComment" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_Archived">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="PrintComment" ViewItem="PrintComment" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <ListView Id="Items_ListView_NN" DetailViewID="Items_DetailView_NN" />
+    <DetailView Id="Distribution_DetailView_Tracking">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Autoe4ca6050-d447-4399-af30-162c3643c91e">
+          <LayoutItem Id="ToDate" ViewItem="ToDate" />
+          <LayoutItem Id="FromDate" ViewItem="FromDate" />
+        </LayoutGroup>
+        <LayoutGroup Id="Auto3464b3b5-b9bd-4f75-83e3-eb268b75b10b">
+          <LayoutItem Id="Vendors" ViewItem="Vendors" />
+          <LayoutItem Id="Items" ViewItem="Items" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DefaultSetting_ListView_Copy" ClassName="ALPACpre.Module.BusinessObjects.DefaultSetting" Caption="Task Management Flow Control" MasterDetailView="DefaultSetting_DetailView" DetailViewID="DefaultSetting_DetailView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="SalesOrderTracking" PropertyName="SalesOrderTracking" Width="50" Index="2" />
+        <ColumnInfo Id="SalesOrderFiles" PropertyName="SalesOrderFiles" Width="50" Index="3" />
+        <ColumnInfo Id="CancelledsalesOrders" PropertyName="CancelledsalesOrders" Width="50" Index="4" />
+        <ColumnInfo Id="ClosedsalesOrders" PropertyName="ClosedsalesOrders" Width="50" Index="5" />
+        <ColumnInfo Id="ClosedQuotes" PropertyName="ClosedQuotes" Width="50" Index="7" />
+        <ColumnInfo Id="MyQuotes" PropertyName="MyQuotes" Width="50" Index="8" />
+        <ColumnInfo Id="OpenQuotes" PropertyName="OpenQuotes" Width="50" Index="9" />
+        <ColumnInfo Id="Invoices" PropertyName="Invoices" Width="50" Index="10" />
+      </Columns>
+    </ListView>
+    <ListView Id="DefaultSetting_ListView_2" ClassName="ALPACpre.Module.BusinessObjects.DefaultSetting" MasterDetailView="DefaultSetting_DetailView_aligment" DetailViewID="DefaultSetting_DetailView_aligment" Caption="Navigation Settings" AllowDelete="False" AllowNew="False" ShowSelectionColumn="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Accounts" PropertyName="Accounts" Width="50" Index="-1" />
+        <ColumnInfo Id="Alert" PropertyName="Alert" Width="50" Index="-1" />
+        <ColumnInfo Id="AnalysisDepartmentChain" PropertyName="AnalysisDepartmentChain" Width="50" Index="-1" />
+        <ColumnInfo Id="AnalysisQueue" PropertyName="AnalysisQueue" Width="50" Index="-1" />
+        <ColumnInfo Id="ASIProductStockInventory" PropertyName="ASIProductStockInventory" Width="50" Index="-1" />
+        <ColumnInfo Id="BasicSettings" PropertyName="BasicSettings" Width="50" Index="-1" />
+        <ColumnInfo Id="Boxes" PropertyName="Boxes" Width="50" Index="-1" />
+        <ColumnInfo Id="Boxing" PropertyName="Boxing" Width="50" Index="-1" />
+        <ColumnInfo Id="Calculation" PropertyName="Calculation" Width="50" Index="-1" />
+        <ColumnInfo Id="CalculationReview" PropertyName="CalculationReview" Width="50" Index="-1" />
+        <ColumnInfo Id="CancelledRequisition" PropertyName="CancelledRequisition" Width="50" Index="-1" />
+        <ColumnInfo Id="CancelledsalesOrders" PropertyName="CancelledsalesOrders" Width="50" Index="-1" />
+        <ColumnInfo Id="Carriers" PropertyName="Carriers" Width="50" Index="-1" />
+        <ColumnInfo Id="Category" PropertyName="Category" Width="50" Index="-1" />
+        <ColumnInfo Id="ChecklistSetup" PropertyName="ChecklistSetup" Width="50" Index="-1" />
+        <ColumnInfo Id="City" PropertyName="City" Width="50" Index="-1" />
+        <ColumnInfo Id="ClosedAccount" PropertyName="ClosedAccount" Width="50" Index="-1" />
+        <ColumnInfo Id="ClosedOpportunity" PropertyName="ClosedOpportunity" Width="50" Index="-1" />
+        <ColumnInfo Id="ClosedQuotes" PropertyName="ClosedQuotes" Width="50" Index="-1" />
+        <ColumnInfo Id="ClosedsalesOrders" PropertyName="ClosedsalesOrders" Width="50" Index="-1" />
+        <ColumnInfo Id="COA" PropertyName="COA" Width="50" Index="-1" />
+        <ColumnInfo Id="COCSettings" PropertyName="COCSettings" Width="50" Index="-1" />
+        <ColumnInfo Id="Companies" PropertyName="Companies" Width="50" Index="-1" />
+        <ColumnInfo Id="Consumption" PropertyName="Consumption" Width="50" Index="-1" />
+        <ColumnInfo Id="ContactLogs" PropertyName="ContactLogs" Width="50" Index="-1" />
+        <ColumnInfo Id="Containers" PropertyName="Containers" Width="50" Index="-1" />
+        <ColumnInfo Id="Country" PropertyName="Country" Width="50" Index="-1" />
+        <ColumnInfo Id="CRMAccount" PropertyName="CRMAccount" Width="50" Index="-1" />
+        <ColumnInfo Id="CRMContact" PropertyName="CRMContact" Width="50" Index="-1" />
+        <ColumnInfo Id="CurrentLanguage" PropertyName="CurrentLanguage" Width="50" Index="-1" />
+        <ColumnInfo Id="CustomizedProductCodes" PropertyName="CustomizedProductCodes" Width="50" Index="-1" />
+        <ColumnInfo Id="DangerousGoods" PropertyName="DangerousGoods" Width="50" Index="-1" />
+        <ColumnInfo Id="DeliveryPriority" PropertyName="DeliveryPriority" Width="50" Index="-1" />
+        <ColumnInfo Id="Department" PropertyName="Department" Width="50" Index="-1" />
+        <ColumnInfo Id="Disposal" PropertyName="Disposal" Width="50" Index="-1" />
+        <ColumnInfo Id="Distribution" PropertyName="Distribution" Width="50" Index="-1" />
+        <ColumnInfo Id="Employee" PropertyName="Employee" Width="50" Index="-1" />
+        <ColumnInfo Id="Expiration" PropertyName="Expiration" Width="50" Index="-1" />
+        <ColumnInfo Id="FinalInspection" PropertyName="FinalInspection" Width="50" Index="-1" />
+        <ColumnInfo Id="FormulationCheck" PropertyName="FormulationCheck" Width="50" Index="-1" />
+        <ColumnInfo Id="FormulationProcess" PropertyName="FormulationProcess" Width="50" Index="-1" />
+        <ColumnInfo Id="FormulationTemplateBuilder" PropertyName="FormulationTemplateBuilder" Width="50" Index="-1" />
+        <ColumnInfo Id="GHSLabeling" PropertyName="GHSLabeling" Width="50" Index="-1" />
+        <ColumnInfo Id="Glossary" PropertyName="Glossary" Width="50" Index="-1" />
+        <ColumnInfo Id="Grade" PropertyName="Grade" Width="50" Index="-1" />
+        <ColumnInfo Id="Inventory" PropertyName="Inventory" Width="50" Index="-1" />
+        <ColumnInfo Id="InventoryManagement" PropertyName="InventoryManagement" Width="50" Index="-1" />
+        <ColumnInfo Id="Invoices" PropertyName="Invoices" Width="50" Index="-1" />
+        <ColumnInfo Id="ItemImpurityEditor" PropertyName="ItemImpurityEditor" Width="50" Index="-1" />
+        <ColumnInfo Id="Items" PropertyName="Items" Width="50" Index="-1" />
+        <ColumnInfo Id="ItemStockInventory" PropertyName="ItemStockInventory" Width="50" Index="-1" />
+        <ColumnInfo Id="JobStatusTracking" PropertyName="JobStatusTracking" Width="50" Index="-1" />
+        <ColumnInfo Id="KPI" PropertyName="KPI" Width="50" Index="-1" />
+        <ColumnInfo Id="KpiDefinition_ListView" PropertyName="KpiDefinition_ListView" Width="50" Index="-1" />
+        <ColumnInfo Id="KpiScorecard_ListView" PropertyName="KpiScorecard_ListView" Width="50" Index="-1" />
+        <ColumnInfo Id="LoginImageEditor" PropertyName="LoginImageEditor" Width="50" Index="-1" />
+        <ColumnInfo Id="Maintenance" PropertyName="Maintenance" Width="50" Index="-1" />
+        <ColumnInfo Id="Manufacturers" PropertyName="Manufacturers" Width="50" Index="-1" />
+        <ColumnInfo Id="Matrix" PropertyName="Matrix" Width="50" Index="-1" />
+        <ColumnInfo Id="MaxBottleLimit" PropertyName="MaxBottleLimit" Width="50" Index="-1" />
+        <ColumnInfo Id="Method" PropertyName="Method" Width="50" Index="-1" />
+        <ColumnInfo Id="MethodCategory" PropertyName="MethodCategory" Width="50" Index="-1" />
+        <ColumnInfo Id="MyDetails" PropertyName="MyDetails" Width="50" Index="-1" />
+        <ColumnInfo Id="MyOpenOpportunities" PropertyName="MyOpenOpportunities" Width="50" Index="-1" />
+        <ColumnInfo Id="MyQuotes" PropertyName="MyQuotes" Width="50" Index="-1" />
+        <ColumnInfo Id="NotesinClients" PropertyName="NotesinClients" Width="50" Index="-1" />
+        <ColumnInfo Id="NotesinOpportunities" PropertyName="NotesinOpportunities" Width="50" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="OpenOpportunity" PropertyName="OpenOpportunity" Width="50" Index="-1" />
+        <ColumnInfo Id="OpenQuotes" PropertyName="OpenQuotes" Width="50" Index="-1" />
+        <ColumnInfo Id="Operations" PropertyName="Operations" Width="50" Index="-1" />
+        <ColumnInfo Id="Opportuinty" PropertyName="Opportuinty" Width="50" Index="-1" />
+        <ColumnInfo Id="OrderClosing" PropertyName="OrderClosing" Width="50" Index="-1" />
+        <ColumnInfo Id="OrderingItem" PropertyName="OrderingItem" Width="50" Index="-1" />
+        <ColumnInfo Id="Packageunits" PropertyName="Packageunits" Width="50" Index="-1" />
+        <ColumnInfo Id="Packing" PropertyName="Packing" Width="50" Index="-1" />
+        <ColumnInfo Id="Parameter" PropertyName="Parameter" Width="50" Index="-1" />
+        <ColumnInfo Id="Position" PropertyName="Position" Width="50" Index="-1" />
+        <ColumnInfo Id="PreKitting" PropertyName="PreKitting" Width="50" Index="-1" />
+        <ColumnInfo Id="Preservative" PropertyName="Preservative" Width="50" Index="-1" />
+        <ColumnInfo Id="PriceList" PropertyName="PriceList" Width="50" Index="-1" />
+        <ColumnInfo Id="ProcessDataEntry" PropertyName="ProcessDataEntry" Width="50" Index="-1" />
+        <ColumnInfo Id="ProcessDataEntryReview" PropertyName="ProcessDataEntryReview" Width="50" Index="-1" />
+        <ColumnInfo Id="ProductCatalog" PropertyName="ProductCatalog" Width="50" Index="-1" />
+        <ColumnInfo Id="ProductCategory" PropertyName="ProductCategory" Width="50" Index="-1" />
+        <ColumnInfo Id="ProductCodeandTemplateLink" PropertyName="ProductCodeandTemplateLink" Width="50" Index="-1" />
+        <ColumnInfo Id="ProductCodeandTestCodeLink" PropertyName="ProductCodeandTestCodeLink" Width="50" Index="-1" />
+        <ColumnInfo Id="ProductStorage" PropertyName="ProductStorage" Width="50" Index="-1" />
+        <ColumnInfo Id="QCBatches" PropertyName="QCBatches" Width="50" Index="-1" />
+        <ColumnInfo Id="QCCheck" PropertyName="QCCheck" Width="50" Index="-1" />
+        <ColumnInfo Id="QCLevel2" PropertyName="QCLevel2" Width="50" Index="-1" />
+        <ColumnInfo Id="QCLevel3" PropertyName="QCLevel3" Width="50" Index="-1" />
+        <ColumnInfo Id="QCTypes" PropertyName="QCTypes" Width="50" Index="-1" />
+        <ColumnInfo Id="QualityControl" PropertyName="QualityControl" Width="50" Index="-1" />
+        <ColumnInfo Id="Quote" PropertyName="Quote" Width="50" Index="-1" />
+        <ColumnInfo Id="ReceiveOrderDirect" PropertyName="ReceiveOrderDirect" Width="50" Index="-1" />
+        <ColumnInfo Id="Receiving" PropertyName="Receiving" Width="50" Index="-1" />
+        <ColumnInfo Id="ReportPackage" PropertyName="ReportPackage" Width="50" Index="-1" />
+        <ColumnInfo Id="Requisition" PropertyName="Requisition" Width="50" Index="-1" />
+        <ColumnInfo Id="RequisitionApproval" PropertyName="RequisitionApproval" Width="50" Index="-1" />
+        <ColumnInfo Id="ResaleProductStockInventory" PropertyName="ResaleProductStockInventory" Width="50" Index="-1" />
+        <ColumnInfo Id="Review" PropertyName="Review" Width="50" Index="-1" />
+        <ColumnInfo Id="Roles" PropertyName="Roles" Width="50" Index="-1" />
+        <ColumnInfo Id="RoundOffTest" PropertyName="RoundOffTest" Width="50" Index="-1" />
+        <ColumnInfo Id="Sales" PropertyName="Sales" Width="50" Index="-1" />
+        <ColumnInfo Id="SalesOrderFiles" PropertyName="SalesOrderFiles" Width="50" Index="-1" />
+        <ColumnInfo Id="SalesOrderReview2" PropertyName="SalesOrderReview2" Width="50" Index="-1" />
+        <ColumnInfo Id="SalesOrders" PropertyName="SalesOrders" Width="50" Index="-1" />
+        <ColumnInfo Id="SalesOrderTracking" PropertyName="SalesOrderTracking" Width="50" Index="-1" />
+        <ColumnInfo Id="SDMSResultEntry" PropertyName="SDMSResultEntry" Width="50" Index="-1" />
+        <ColumnInfo Id="SDS" PropertyName="SDS" Width="50" Index="-1" />
+        <ColumnInfo Id="Security" PropertyName="Security" Width="50" Index="-1" />
+        <ColumnInfo Id="Settings" PropertyName="Settings" Width="50" Index="-1" />
+        <ColumnInfo Id="Shipment" PropertyName="Shipment" Width="50" Index="-1" />
+        <ColumnInfo Id="Shipping" PropertyName="Shipping" Width="50" Index="-1" />
+        <ColumnInfo Id="ShippingOptions" PropertyName="ShippingOptions" Width="50" Index="-1" />
+        <ColumnInfo Id="ShipVia" PropertyName="ShipVia" Width="50" Index="-1" />
+        <ColumnInfo Id="State" PropertyName="State" Width="50" Index="-1" />
+        <ColumnInfo Id="StockAlert" PropertyName="StockAlert" Width="50" Index="-1" />
+        <ColumnInfo Id="StockWatch" PropertyName="StockWatch" Width="50" Index="-1" />
+        <ColumnInfo Id="Storage" PropertyName="Storage" Width="50" Index="-1" />
+        <ColumnInfo Id="SystemManagement" PropertyName="SystemManagement" Width="50" Index="-1" />
+        <ColumnInfo Id="Test" PropertyName="Test" Width="50" Index="-1" />
+        <ColumnInfo Id="TestGroup" PropertyName="TestGroup" Width="50" Index="-1" />
+        <ColumnInfo Id="Testing" PropertyName="Testing" Width="50" Index="-1" />
+        <ColumnInfo Id="TestParameterDefaultSetup" PropertyName="TestParameterDefaultSetup" Width="50" Index="-1" />
+        <ColumnInfo Id="Tests" PropertyName="Tests" Width="50" Index="-1" />
+        <ColumnInfo Id="UnfollowedAccounts" PropertyName="UnfollowedAccounts" Width="50" Index="-1" />
+        <ColumnInfo Id="UnfollowedClients" PropertyName="UnfollowedClients" Width="50" Index="-1" />
+        <ColumnInfo Id="UnfollowedOpportunities" PropertyName="UnfollowedOpportunities" Width="50" Index="-1" />
+        <ColumnInfo Id="Units" PropertyName="Units" Width="50" Index="-1" />
+        <ColumnInfo Id="Utility" PropertyName="Utility" Width="50" Index="-1" />
+        <ColumnInfo Id="VendorEvaluationItems" PropertyName="VendorEvaluationItems" Width="50" Index="-1" />
+        <ColumnInfo Id="VendorReagentCertificate" PropertyName="VendorReagentCertificate" Width="50" Index="-1" />
+        <ColumnInfo Id="Vendors" PropertyName="Vendors" Width="50" Index="-1" />
+        <ColumnInfo Id="ModuleName" PropertyName="ModuleName" View="" Width="400" SortIndex="0" SortOrder="Ascending" Index="0" Caption="Module " />
+      </Columns>
+    </ListView>
+    <DetailView Id="DefaultSetting_DetailView_Copy_Copy" ClassName="ALPACpre.Module.BusinessObjects.DefaultSetting" Caption="Task Management Flow Control" AllowDelete="False" AllowNew="False">
+      <Items Id="Items">
+        <PropertyEditor Id="CancelledsalesOrders" PropertyName="CancelledsalesOrders" />
+        <PropertyEditor Id="ClosedQuotes" PropertyName="ClosedQuotes" />
+        <PropertyEditor Id="ClosedsalesOrders" PropertyName="ClosedsalesOrders" />
+        <PropertyEditor Id="Invoices" PropertyName="Invoices" />
+        <PropertyEditor Id="MyQuotes" PropertyName="MyQuotes" />
+        <PropertyEditor Id="Oid" PropertyName="Oid" />
+        <PropertyEditor Id="OpenQuotes" PropertyName="OpenQuotes" />
+        <PropertyEditor Id="SalesOrderFiles" PropertyName="SalesOrderFiles" />
+        <PropertyEditor Id="SalesOrderTracking" PropertyName="SalesOrderTracking" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100">
+            <LayoutGroup Id="DefaultSetting" Index="0" Direction="Horizontal" ShowCaption="True" Caption="Sales" RelativeSize="100">
+              <LayoutGroup Id="DefaultSetting_col1" Index="0" ShowCaption="False" RelativeSize="50">
+                <LayoutItem Id="SalesOrder" ViewItem="SalesOrder" ShowCaption="" Index="0" RelativeSize="6.2378167641325533" />
+                <LayoutItem Id="SalesOrderReview" ViewItem="SalesOrderReview" ShowCaption="" Index="1" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="SalesOrderTracking" ViewItem="SalesOrderTracking" ShowCaption="" Index="2" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="SalesOrderFiles" ViewItem="SalesOrderFiles" ShowCaption="" Index="3" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="CancelledsalesOrders" ViewItem="CancelledsalesOrders" ShowCaption="" Index="4" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="ClosedsalesOrders" ViewItem="ClosedsalesOrders" ShowCaption="" Index="5" RelativeSize="75.048732943469787" />
+              </LayoutGroup>
+              <LayoutGroup Id="DefaultSetting_col2" Index="1" ShowCaption="False" RelativeSize="50">
+                <LayoutItem Id="Quotes" ViewItem="Quotes" ShowCaption="" Index="0" RelativeSize="6.2378167641325533" />
+                <LayoutItem Id="ClosedQuotes" ViewItem="ClosedQuotes" ShowCaption="" Index="1" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="MyQuotes" ViewItem="MyQuotes" ShowCaption="" Index="2" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="OpenQuotes" ViewItem="OpenQuotes" ShowCaption="" Index="3" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="Invoices" ViewItem="Invoices" ShowCaption="" Index="4" RelativeSize="79.727095516569207" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DefaultSetting_DetailView_Copy" ClassName="ALPACpre.Module.BusinessObjects.DefaultSetting" Caption="Task Management Flow Control" AllowDelete="False" AllowNew="False">
+      <Items Id="Items">
+        <PropertyEditor Id="CancelledsalesOrders" PropertyName="CancelledsalesOrders" />
+        <PropertyEditor Id="ClosedQuotes" PropertyName="ClosedQuotes" />
+        <PropertyEditor Id="ClosedsalesOrders" PropertyName="ClosedsalesOrders" />
+        <PropertyEditor Id="Invoices" PropertyName="Invoices" />
+        <PropertyEditor Id="MyQuotes" PropertyName="MyQuotes" />
+        <PropertyEditor Id="Oid" PropertyName="Oid" />
+        <PropertyEditor Id="OpenQuotes" PropertyName="OpenQuotes" />
+        <PropertyEditor Id="SalesOrderFiles" PropertyName="SalesOrderFiles" />
+        <PropertyEditor Id="SalesOrderTracking" PropertyName="SalesOrderTracking" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100">
+            <LayoutGroup Id="DefaultSetting" Index="0" Direction="Horizontal" ShowCaption="True" Caption="Sales" RelativeSize="100">
+              <LayoutGroup Id="DefaultSetting_col1" Index="0" ShowCaption="False" RelativeSize="50">
+                <LayoutItem Id="SalesOrder" ViewItem="SalesOrder" ShowCaption="" Index="0" RelativeSize="6.2378167641325533" />
+                <LayoutItem Id="SalesOrderReview" ViewItem="SalesOrderReview" ShowCaption="" Index="1" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="SalesOrderTracking" ViewItem="SalesOrderTracking" ShowCaption="" Index="2" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="SalesOrderFiles" ViewItem="SalesOrderFiles" ShowCaption="" Index="3" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="CancelledsalesOrders" ViewItem="CancelledsalesOrders" ShowCaption="" Index="4" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="ClosedsalesOrders" ViewItem="ClosedsalesOrders" ShowCaption="" Index="5" RelativeSize="75.048732943469787" />
+              </LayoutGroup>
+              <LayoutGroup Id="DefaultSetting_col2" Index="1" ShowCaption="False" RelativeSize="50">
+                <LayoutItem Id="Quotes" ViewItem="Quotes" ShowCaption="" Index="0" RelativeSize="6.2378167641325533" />
+                <LayoutItem Id="ClosedQuotes" ViewItem="ClosedQuotes" ShowCaption="" Index="1" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="MyQuotes" ViewItem="MyQuotes" ShowCaption="" Index="2" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="OpenQuotes" ViewItem="OpenQuotes" ShowCaption="" Index="3" RelativeSize="4.6783625730994149" />
+                <LayoutItem Id="Invoices" ViewItem="Invoices" ShowCaption="" Index="4" RelativeSize="79.727095516569207" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DefaultSetting_DetailView_aligment" ClassName="ALPACpre.Module.BusinessObjects.DefaultSetting" Caption="Navigation Settings " AllowDelete="False" AllowNew="False">
+      <Items Id="Items">
+        <PropertyEditor Id="Accounts" PropertyName="Accounts" />
+        <PropertyEditor Id="Alert" PropertyName="Alert" />
+        <PropertyEditor Id="AnalysisDepartmentChain" PropertyName="AnalysisDepartmentChain" />
+        <PropertyEditor Id="AnalysisQueue" PropertyName="AnalysisQueue" />
+        <PropertyEditor Id="ASIProductStockInventory" PropertyName="ASIProductStockInventory" />
+        <PropertyEditor Id="BasicSettings" PropertyName="BasicSettings" />
+        <PropertyEditor Id="Boxes" PropertyName="Boxes" />
+        <PropertyEditor Id="Boxing" PropertyName="Boxing" />
+        <PropertyEditor Id="Calculation" PropertyName="Calculation" />
+        <PropertyEditor Id="CalculationReview" PropertyName="CalculationReview" />
+        <PropertyEditor Id="CancelledRequisition" PropertyName="CancelledRequisition" />
+        <PropertyEditor Id="CancelledsalesOrders" PropertyName="CancelledsalesOrders" Caption="Cancelled Sales Orders" />
+        <PropertyEditor Id="Carriers" PropertyName="Carriers" />
+        <PropertyEditor Id="Category" PropertyName="Category" Caption="Item Categories" />
+        <PropertyEditor Id="ChecklistSetup" PropertyName="ChecklistSetup" />
+        <PropertyEditor Id="City" PropertyName="City" />
+        <PropertyEditor Id="ClosedAccount" PropertyName="ClosedAccount" />
+        <PropertyEditor Id="ClosedOpportunity" PropertyName="ClosedOpportunity" />
+        <PropertyEditor Id="ClosedQuotes" PropertyName="ClosedQuotes" />
+        <PropertyEditor Id="ClosedsalesOrders" PropertyName="ClosedsalesOrders" Caption="Closed Sales Orders" />
+        <PropertyEditor Id="COA" PropertyName="COA" Caption="Certificate of Analysis" />
+        <PropertyEditor Id="COCSettings" PropertyName="COCSettings" Caption="COC Settings" />
+        <PropertyEditor Id="Companies" PropertyName="Companies" />
+        <PropertyEditor Id="Consumption" PropertyName="Consumption" Caption="Item Consumption" />
+        <PropertyEditor Id="ContactLogs" PropertyName="ContactLogs" />
+        <PropertyEditor Id="Containers" PropertyName="Containers" />
+        <PropertyEditor Id="Country" PropertyName="Country" />
+        <PropertyEditor Id="CRMAccount" PropertyName="CRMAccount" Caption="Clients" />
+        <PropertyEditor Id="CRMContact" PropertyName="CRMContact" Caption="Contacts" />
+        <PropertyEditor Id="CustomizedProductCodes" PropertyName="CustomizedProductCodes" />
+        <PropertyEditor Id="DangerousGoods" PropertyName="DangerousGoods" />
+        <PropertyEditor Id="Dashboards" PropertyName="Dashboards" />
+        <PropertyEditor Id="DeliveryPriority" PropertyName="DeliveryPriority" />
+        <PropertyEditor Id="Department" PropertyName="Department" />
+        <PropertyEditor Id="Disposal" PropertyName="Disposal" Caption="Item Disposal" />
+        <PropertyEditor Id="Distribution" PropertyName="Distribution" Caption="Item Distribution" />
+        <PropertyEditor Id="Employee" PropertyName="Employee" />
+        <PropertyEditor Id="Expiration" PropertyName="Expiration" Caption="Expiration Alert" />
+        <PropertyEditor Id="FinalInspection" PropertyName="FinalInspection" />
+        <PropertyEditor Id="FlowControl" PropertyName="FlowControl" />
+        <PropertyEditor Id="FormulationCheck" PropertyName="FormulationCheck" View="" />
+        <PropertyEditor Id="FormulationProcess" PropertyName="FormulationProcess" View="" />
+        <PropertyEditor Id="FormulationTemplateBuilder" PropertyName="FormulationTemplateBuilder" />
+        <PropertyEditor Id="GHSLabeling" PropertyName="GHSLabeling" Caption="GHS Labeling" />
+        <PropertyEditor Id="Glossary" PropertyName="Glossary" />
+        <PropertyEditor Id="Grade" PropertyName="Grade" View="" />
+        <PropertyEditor Id="Inventory" PropertyName="Inventory" />
+        <PropertyEditor Id="InventoryManagement" PropertyName="InventoryManagement" Caption="Inventory Control Management" />
+        <PropertyEditor Id="Invoices" PropertyName="Invoices" />
+        <PropertyEditor Id="ItemImpurityEditor" PropertyName="ItemImpurityEditor" Caption="Item Property Editor" />
+        <PropertyEditor Id="Items" PropertyName="Items" />
+        <PropertyEditor Id="ItemStockInventory" PropertyName="ItemStockInventory" />
+        <PropertyEditor Id="JobStatusTracking" PropertyName="JobStatusTracking" Caption="Sample Status Tracking" />
+        <PropertyEditor Id="KPI" PropertyName="KPI" />
+        <PropertyEditor Id="KpiDefinition_ListView" PropertyName="KpiDefinition_ListView" View="" Caption="Definition" />
+        <PropertyEditor Id="KpiScorecard_ListView" PropertyName="KpiScorecard_ListView" View="" Caption="Scorecard" />
+        <PropertyEditor Id="LoginImageEditor" PropertyName="LoginImageEditor" />
+        <PropertyEditor Id="Maintenance" PropertyName="Maintenance" />
+        <PropertyEditor Id="Manufacturers" PropertyName="Manufacturers" />
+        <PropertyEditor Id="Matrix" PropertyName="Matrix" Caption="Matrices" />
+        <PropertyEditor Id="MaxBottleLimit" PropertyName="MaxBottleLimit" />
+        <PropertyEditor Id="Method" PropertyName="Method" Caption="Methods" />
+        <PropertyEditor Id="MethodCategory" PropertyName="MethodCategory" />
+        <PropertyEditor Id="MyDetails" PropertyName="MyDetails" />
+        <PropertyEditor Id="MyOpenOpportunities" PropertyName="MyOpenOpportunities" />
+        <PropertyEditor Id="MyQuotes" PropertyName="MyQuotes" />
+        <PropertyEditor Id="NoofLevels" PropertyName="NoofLevels" Caption="No of Levels" />
+        <PropertyEditor Id="NotesinClients" PropertyName="NotesinClients" />
+        <PropertyEditor Id="NotesinOpportunities" PropertyName="NotesinOpportunities" />
+        <PropertyEditor Id="Oid" PropertyName="Oid" />
+        <PropertyEditor Id="OpenOpportunity" PropertyName="OpenOpportunity" />
+        <PropertyEditor Id="OpenQuotes" PropertyName="OpenQuotes" />
+        <PropertyEditor Id="Operations" PropertyName="Operations" />
+        <PropertyEditor Id="Opportuinty" PropertyName="Opportuinty" Caption="Opportunities" />
+        <PropertyEditor Id="OrderClosing" PropertyName="OrderClosing" />
+        <PropertyEditor Id="OrderingItem" PropertyName="OrderingItem" />
+        <PropertyEditor Id="Packageunits" PropertyName="Packageunits" Caption="Package Units" />
+        <PropertyEditor Id="Packing" PropertyName="Packing" />
+        <PropertyEditor Id="Parameter" PropertyName="Parameter" Caption="Parameter Library" />
+        <PropertyEditor Id="Position" PropertyName="Position" />
+        <PropertyEditor Id="PreKitting" PropertyName="PreKitting" />
+        <PropertyEditor Id="Preservative" PropertyName="Preservative" />
+        <PropertyEditor Id="PriceList" PropertyName="PriceList" />
+        <PropertyEditor Id="ProcessDataEntry" PropertyName="ProcessDataEntry" />
+        <PropertyEditor Id="ProcessDataEntryReview" PropertyName="ProcessDataEntryReview" />
+        <PropertyEditor Id="ProductCatalog" PropertyName="ProductCatalog" />
+        <PropertyEditor Id="ProductCategory" PropertyName="ProductCategory" Caption="Product Categories" />
+        <PropertyEditor Id="ProductCodeandTemplateLink" PropertyName="ProductCodeandTemplateLink" Caption="Product Code and Template Link" />
+        <PropertyEditor Id="ProductCodeandTestCodeLink" PropertyName="ProductCodeandTestCodeLink" Caption="Product Code and Test Code Link" />
+        <PropertyEditor Id="ProductStorage" PropertyName="ProductStorage" />
+        <PropertyEditor Id="QCBatches" PropertyName="QCBatches" Caption="QC Batches" />
+        <PropertyEditor Id="QCCheck" PropertyName="QCCheck" Caption="Documenting QC Check" />
+        <PropertyEditor Id="QCLevel2" PropertyName="QCLevel2" Caption="QC Review  2" />
+        <PropertyEditor Id="QCLevel3" PropertyName="QCLevel3" Caption="QC Review 3" />
+        <PropertyEditor Id="QCTypes" PropertyName="QCTypes" Caption="QC Types" />
+        <PropertyEditor Id="QualityControl" PropertyName="QualityControl" />
+        <PropertyEditor Id="Quote" PropertyName="Quote" Caption="Quotes" />
+        <PropertyEditor Id="ReceiveOrderDirect" PropertyName="ReceiveOrderDirect" />
+        <PropertyEditor Id="Receiving" PropertyName="Receiving" Caption="Receiving Items" />
+        <PropertyEditor Id="ReportPackage" PropertyName="ReportPackage" />
+        <PropertyEditor Id="Reports" PropertyName="Reports" />
+        <PropertyEditor Id="Requisition" PropertyName="Requisition" Caption="Item Requisition" />
+        <PropertyEditor Id="RequisitionApproval" PropertyName="RequisitionApproval" />
+        <PropertyEditor Id="ResaleProductStockInventory" PropertyName="ResaleProductStockInventory" />
+        <PropertyEditor Id="Review" PropertyName="Review" Caption="Requisition Review" />
+        <PropertyEditor Id="Roles" PropertyName="Roles" />
+        <PropertyEditor Id="RoundOffTest" PropertyName="RoundOffTest" />
+        <PropertyEditor Id="Sales" PropertyName="Sales" ImmediatePostData="True" />
+        <PropertyEditor Id="SalesOrderFiles" PropertyName="SalesOrderFiles" />
+        <PropertyEditor Id="SalesOrderReview2" PropertyName="SalesOrderReview2" Caption="Sales Order Review " />
+        <PropertyEditor Id="SalesOrders" PropertyName="SalesOrders" Caption="Sales Order" />
+        <PropertyEditor Id="SalesOrderTracking" PropertyName="SalesOrderTracking" />
+        <PropertyEditor Id="SDMSResultEntry" PropertyName="SDMSResultEntry" Caption="SDMS Result Entry" />
+        <PropertyEditor Id="SDS" PropertyName="SDS" />
+        <PropertyEditor Id="Security" PropertyName="Security" />
+        <PropertyEditor Id="Settings" PropertyName="Settings" />
+        <PropertyEditor Id="Shipment" PropertyName="Shipment" />
+        <PropertyEditor Id="Shipping" PropertyName="Shipping" />
+        <PropertyEditor Id="ShippingOptions" PropertyName="ShippingOptions" />
+        <PropertyEditor Id="ShipVia" PropertyName="ShipVia" />
+        <PropertyEditor Id="State" PropertyName="State" />
+        <PropertyEditor Id="StockAlert" PropertyName="StockAlert" />
+        <PropertyEditor Id="StockWatch" PropertyName="StockWatch" />
+        <PropertyEditor Id="Storage" PropertyName="Storage" />
+        <PropertyEditor Id="SystemManagement" PropertyName="SystemManagement" />
+        <PropertyEditor Id="Test" PropertyName="Test" />
+        <PropertyEditor Id="TestGroup" PropertyName="TestGroup" />
+        <PropertyEditor Id="Testing" PropertyName="Testing" />
+        <PropertyEditor Id="TestParameterDefaultSetup" PropertyName="TestParameterDefaultSetup" Caption=" Parameter Defaults " />
+        <PropertyEditor Id="Tests" PropertyName="Tests" />
+        <PropertyEditor Id="UnfollowedAccounts" PropertyName="UnfollowedAccounts" />
+        <PropertyEditor Id="UnfollowedClients" PropertyName="UnfollowedClients" />
+        <PropertyEditor Id="UnfollowedOpportunities" PropertyName="UnfollowedOpportunities" />
+        <PropertyEditor Id="Units" PropertyName="Units" />
+        <PropertyEditor Id="Utility" PropertyName="Utility" />
+        <PropertyEditor Id="VendorEvaluationItems" PropertyName="VendorEvaluationItems" />
+        <PropertyEditor Id="VendorReagentCertificate" PropertyName="VendorReagentCertificate" />
+        <PropertyEditor Id="Vendors" PropertyName="Vendors" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Index="0" Direction="Vertical" ShowCaption="False" RelativeSize="100" Caption="SimpleEditors">
+            <LayoutItem Id="Item1" Index="0" RelativeSize="0.2635046113306983" />
+            <LayoutGroup Id="Autof08c3946-c0bd-47a8-aaf9-6c2318a4d505" ShowCaption="False" Caption="Autof08c3946-c0bd-47a8-aaf9-6c2318a4d505(4)" Direction="Horizontal" Index="1" RelativeSize="99.7364953886693">
+              <LayoutGroup Id="DefaultSetting_col1" ShowCaption="False" Index="0" RelativeSize="53.658536585365852">
+                <LayoutGroup Id="Grp_Sales" ShowCaption="True" Caption="Sales" CaptionLocation="Top" Index="0" RelativeSize="8.8507265521796565">
+                  <LayoutItem Id="Sales" ViewItem="Sales" Index="0" RelativeSize="10.526315789473685" />
+                  <LayoutItem Id="ClosedsalesOrders" ViewItem="ClosedsalesOrders" Index="1" RelativeSize="7.8947368421052628" />
+                  <LayoutItem Id="SalesOrders" ViewItem="SalesOrders" Index="2" RelativeSize="7.8947368421052628" />
+                  <LayoutItem Id="SalesOrderReview2" ViewItem="SalesOrderReview2" Index="3" RelativeSize="7.8947368421052628" />
+                  <LayoutItem Id="SalesOrderTracking" ViewItem="SalesOrderTracking" Index="4" RelativeSize="7.8947368421052628" />
+                  <LayoutItem Id="SalesOrderFiles" ViewItem="SalesOrderFiles" Index="5" RelativeSize="7.8947368421052628" />
+                  <LayoutItem Id="CancelledsalesOrders" ViewItem="CancelledsalesOrders" Index="6" RelativeSize="7.8947368421052628" />
+                  <LayoutItem Id="Quote" ViewItem="Quote" Index="7" RelativeSize="7.8947368421052628" />
+                  <LayoutItem Id="ClosedQuotes" ViewItem="ClosedQuotes" Index="8" RelativeSize="7.8947368421052628" />
+                  <LayoutItem Id="MyQuotes" ViewItem="MyQuotes" Index="9" RelativeSize="7.8947368421052628" />
+                  <LayoutItem Id="OpenQuotes" ViewItem="OpenQuotes" Index="10" RelativeSize="7.8947368421052628" />
+                  <LayoutItem Id="Invoices" ViewItem="Invoices" Index="11" RelativeSize="10.526315789473685" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp-FCheck" ShowCaption="True" Caption="Formulation Check" CaptionLocation="Top" Index="1" RelativeSize="2.9854689564068693">
+                  <LayoutItem Id="FormulationCheck" ViewItem="FormulationCheck" Index="0" RelativeSize="36.363636363636367" />
+                  <LayoutItem Id="Calculation" ViewItem="Calculation" Index="1" RelativeSize="27.272727272727273" />
+                  <LayoutItem Id="CalculationReview" ViewItem="CalculationReview" Index="2" RelativeSize="36.363636363636367" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_FProcess" ShowCaption="True" Caption="Formulation Process" CaptionLocation="Top" Index="2" RelativeSize="2.9854689564068693">
+                  <LayoutItem Id="FormulationProcess" ViewItem="FormulationProcess" Index="0" RelativeSize="36.363636363636367" />
+                  <LayoutItem Id="ProcessDataEntry" ViewItem="ProcessDataEntry" Index="1" RelativeSize="27.272727272727273" />
+                  <LayoutItem Id="ProcessDataEntryReview" ViewItem="ProcessDataEntryReview" Index="2" RelativeSize="36.363636363636367" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_QC" ShowCaption="True" Caption="Quality Control" CaptionLocation="Top" Index="3" RelativeSize="5.5217965653896961">
+                  <LayoutItem Id="QualityControl" ViewItem="QualityControl" Index="0" RelativeSize="17.391304347826086" />
+                  <LayoutItem Id="JobStatusTracking" ViewItem="JobStatusTracking" Index="1" RelativeSize="13.043478260869565" />
+                  <LayoutItem Id="AnalysisQueue" ViewItem="AnalysisQueue" Index="2" RelativeSize="13.043478260869565" />
+                  <LayoutItem Id="QCBatches" ViewItem="QCBatches" Index="3" RelativeSize="13.043478260869565" />
+                  <LayoutItem Id="SDMSResultEntry" ViewItem="SDMSResultEntry" Index="4" RelativeSize="13.043478260869565" />
+                  <LayoutItem Id="QCLevel2" ViewItem="QCLevel2" Index="5" RelativeSize="13.043478260869565" />
+                  <LayoutItem Id="QCLevel3" ViewItem="QCLevel3" Index="6" RelativeSize="17.391304347826086" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_Packing" ShowCaption="True" Caption="Packing" CaptionLocation="Top" Index="4" RelativeSize="3.619550858652576">
+                  <LayoutItem Id="Packing" ViewItem="Packing" Index="0" RelativeSize="28.571428571428573" />
+                  <LayoutItem Id="GHSLabeling" ViewItem="GHSLabeling" Index="1" RelativeSize="21.428571428571427" />
+                  <LayoutItem Id="SDS" ViewItem="SDS" Index="2" RelativeSize="21.428571428571427" />
+                  <LayoutItem Id="QCCheck" ViewItem="QCCheck" Index="3" RelativeSize="28.571428571428573" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_Shipment" ShowCaption="True" Caption="Shipment" CaptionLocation="Top" Index="5" RelativeSize="4.2536327608982827">
+                  <LayoutItem Id="Shipment" ViewItem="Shipment" Index="0" RelativeSize="23.529411764705884" />
+                  <LayoutItem Id="PreKitting" ViewItem="PreKitting" Index="1" RelativeSize="17.647058823529413" />
+                  <LayoutItem Id="FinalInspection" ViewItem="FinalInspection" Index="2" RelativeSize="17.647058823529413" />
+                  <LayoutItem Id="Shipping" ViewItem="Shipping" Index="3" RelativeSize="17.647058823529413" />
+                  <LayoutItem Id="OrderClosing" ViewItem="OrderClosing" Index="4" RelativeSize="23.529411764705884" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_Maintenance" ShowCaption="True" Caption="Maintenance" CaptionLocation="Top" Index="6" RelativeSize="15.033025099075298">
+                  <LayoutItem Id="Maintenance" ViewItem="Maintenance" Index="0" RelativeSize="5.882352941176471" />
+                  <LayoutItem Id="PriceList" ViewItem="PriceList" Index="1" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="ProductCatalog" ViewItem="ProductCatalog" Index="2" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="CustomizedProductCodes" ViewItem="CustomizedProductCodes" Index="3" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="Employee" ViewItem="Employee" Index="4" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="FormulationTemplateBuilder" ViewItem="FormulationTemplateBuilder" Index="5" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="ItemImpurityEditor" ViewItem="ItemImpurityEditor" Index="6" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="MaxBottleLimit" ViewItem="MaxBottleLimit" Index="7" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="Security" ViewItem="Security" Index="8" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="Roles" ViewItem="Roles" Index="9" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="MyDetails" ViewItem="MyDetails" Index="10" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="Test" ViewItem="Test" Index="11" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="AnalysisDepartmentChain" ViewItem="AnalysisDepartmentChain" Index="12" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="COCSettings" ViewItem="COCSettings" Index="13" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="Method" ViewItem="Method" Index="14" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="MethodCategory" ViewItem="MethodCategory" Index="15" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="TestParameterDefaultSetup" ViewItem="TestParameterDefaultSetup" Index="16" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="Parameter" ViewItem="Parameter" Index="17" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="ReportPackage" ViewItem="ReportPackage" Index="18" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="RoundOffTest" ViewItem="RoundOffTest" Index="19" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="Tests" ViewItem="Tests" Index="20" RelativeSize="4.4117647058823533" />
+                  <LayoutItem Id="TestGroup" ViewItem="TestGroup" Index="21" RelativeSize="5.882352941176471" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_KPI" ShowCaption="True" Caption="KPI" CaptionLocation="Top" Index="7" RelativeSize="2.9854689564068693">
+                  <LayoutItem Id="KPI" ViewItem="KPI" Index="0" RelativeSize="36.363636363636367" />
+                  <LayoutItem Id="KpiDefinition_ListView" ViewItem="KpiDefinition_ListView" Index="1" RelativeSize="27.272727272727273" />
+                  <LayoutItem Id="KpiScorecard_ListView" ViewItem="KpiScorecard_ListView" Index="2" RelativeSize="36.363636363636367" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_Accounts" ShowCaption="True" Caption="Accounts" CaptionLocation="Top" Index="8" RelativeSize="8.0581241743725229">
+                  <LayoutItem Id="Accounts" ViewItem="Accounts" Index="0" RelativeSize="11.428571428571429" />
+                  <LayoutItem Id="Opportuinty" ViewItem="Opportuinty" Index="1" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="ClosedOpportunity" ViewItem="ClosedOpportunity" Index="2" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="OpenOpportunity" ViewItem="OpenOpportunity" Index="3" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="MyOpenOpportunities" ViewItem="MyOpenOpportunities" Index="4" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="CRMAccount" ViewItem="CRMAccount" Index="5" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="ClosedAccount" ViewItem="ClosedAccount" Index="6" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="CRMContact" ViewItem="CRMContact" Index="7" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="UnfollowedAccounts" ViewItem="UnfollowedAccounts" Index="8" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="UnfollowedOpportunities" ViewItem="UnfollowedOpportunities" Index="9" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="UnfollowedClients" ViewItem="UnfollowedClients" Index="10" RelativeSize="11.428571428571429" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_ContactLogs" ShowCaption="True" Caption="Contact Logs" CaptionLocation="Top" Index="9" RelativeSize="2.9854689564068693">
+                  <LayoutItem Id="ContactLogs" ViewItem="ContactLogs" Index="0" RelativeSize="36.363636363636367" />
+                  <LayoutItem Id="NotesinOpportunities" ViewItem="NotesinOpportunities" Index="1" RelativeSize="27.272727272727273" />
+                  <LayoutItem Id="NotesinClients" ViewItem="NotesinClients" Index="2" RelativeSize="36.363636363636367" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_InventoryControlManagement" ShowCaption="True" Caption="Inventory Control Management" CaptionLocation="Top" Index="10" RelativeSize="23.223249669749009">
+                  <LayoutItem Id="InventoryManagement" ViewItem="InventoryManagement" Index="0" RelativeSize="3.7470725995316161" />
+                  <LayoutItem Id="Operations" ViewItem="Operations" Index="1" RelativeSize="2.810304449648712" />
+                  <LayoutGroup Id="Auto5af1f15b-fbca-4a84-9c97-9bedb202f043" ShowCaption="False" Caption="Auto5af1f15b-fbca-4a84-9c97-9bedb202f043(90)" Index="2" RelativeSize="4.2154566744730682">
+                    <LayoutItem Id="FlowControl" ViewItem="FlowControl" Index="0" RelativeSize="100" />
+                  </LayoutGroup>
+                  <LayoutItem Id="Requisition" ViewItem="Requisition" Index="3" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Review" ViewItem="Review" Index="4" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="RequisitionApproval" ViewItem="RequisitionApproval" Index="5" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="NoofLevels" ViewItem="NoofLevels" CaptionLocation="Left" Index="6" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="OrderingItem" ViewItem="OrderingItem" Index="7" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Receiving" ViewItem="Receiving" Index="8" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Distribution" ViewItem="Distribution" Index="9" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Consumption" ViewItem="Consumption" Index="10" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Disposal" ViewItem="Disposal" Index="11" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="VendorReagentCertificate" ViewItem="VendorReagentCertificate" Index="12" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="CancelledRequisition" ViewItem="CancelledRequisition" Index="13" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Alert" ViewItem="Alert" Index="14" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="StockWatch" ViewItem="StockWatch" Index="15" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Expiration" ViewItem="Expiration" Index="16" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="StockAlert" ViewItem="StockAlert" Index="17" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="StockInventory" Index="18" RelativeSize="1.17096018735363" />
+                  <LayoutItem Id="BasicSettings" ViewItem="BasicSettings" Index="19" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Items" ViewItem="Items" Index="20" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Vendors" ViewItem="Vendors" Index="21" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="VendorEvaluationItems" ViewItem="VendorEvaluationItems" Index="22" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="DeliveryPriority" ViewItem="DeliveryPriority" Index="23" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Grade" ViewItem="Grade" Index="24" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Category" ViewItem="Category" Index="25" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Manufacturers" ViewItem="Manufacturers" Index="26" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Packageunits" ViewItem="Packageunits" Index="27" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="ShippingOptions" ViewItem="ShippingOptions" Index="28" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="ShipVia" ViewItem="ShipVia" Index="29" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Storage" ViewItem="Storage" Index="30" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="Inventory" ViewItem="Inventory" Index="31" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="ASIProductStockInventory" ViewItem="ASIProductStockInventory" Index="32" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="ItemStockInventory" ViewItem="ItemStockInventory" Index="33" RelativeSize="2.810304449648712" />
+                  <LayoutItem Id="ResaleProductStockInventory" ViewItem="ResaleProductStockInventory" Index="34" RelativeSize="3.7470725995316161" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_Settings" ShowCaption="True" Caption="Settings" CaptionLocation="Top" Index="11" RelativeSize="16.935270805812419">
+                  <LayoutItem Id="Settings" ViewItem="Settings" Index="0" RelativeSize="5.1948051948051948" />
+                  <LayoutItem Id="ChecklistSetup" ViewItem="ChecklistSetup" Index="1" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="SystemManagement" ViewItem="SystemManagement" Index="2" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Companies" ViewItem="Companies" Index="3" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="City" ViewItem="City" Index="4" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Country" ViewItem="Country" Index="5" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Department" ViewItem="Department" Index="6" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Position" ViewItem="Position" Index="7" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="State" ViewItem="State" Index="8" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Glossary" ViewItem="Glossary" Index="9" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Utility" ViewItem="Utility" Index="10" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Boxes" ViewItem="Boxes" Index="11" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Boxing" ViewItem="Boxing" Index="12" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Carriers" ViewItem="Carriers" Index="13" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Containers" ViewItem="Containers" Index="14" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="DangerousGoods" ViewItem="DangerousGoods" Index="15" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="LoginImageEditor" ViewItem="LoginImageEditor" Index="16" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Matrix" ViewItem="Matrix" Index="17" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="ProductCodeandTemplateLink" ViewItem="ProductCodeandTemplateLink" Index="18" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="ProductCodeandTestCodeLink" ViewItem="ProductCodeandTestCodeLink" Index="19" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="ProductCategory" ViewItem="ProductCategory" Index="20" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="ProductStorage" ViewItem="ProductStorage" Index="21" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Units" ViewItem="Units" Index="22" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="QCTypes" ViewItem="QCTypes" Index="23" RelativeSize="3.8961038961038961" />
+                  <LayoutItem Id="Preservative" ViewItem="Preservative" Index="24" RelativeSize="5.1948051948051948" />
+                </LayoutGroup>
+                <LayoutGroup Id="Grp_Reports" ShowCaption="True" Caption="Reports" CaptionLocation="Top" Index="12" RelativeSize="2.5627476882430646">
+                  <LayoutItem Id="Reports" ViewItem="Reports" Index="0" RelativeSize="50" />
+                  <LayoutItem Id="Dashboards" ViewItem="Dashboards" Index="1" RelativeSize="50" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Auto04be203b-b2a3-4274-a215-58b46b239beb" ShowCaption="False" Caption="Auto04be203b-b2a3-4274-a215-58b46b239beb(45)" Index="1" RelativeSize="46.341463414634148">
+                <LayoutItem Id="Item4" Index="0" RelativeSize="0.26420079260237783" />
+                <LayoutItem Id="Item2" Index="1" RelativeSize="99.735799207397619" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BottleSetup_DetailView_Distribution">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BottleSetup">
+              <LayoutItem Id="Bottleid" ViewItem="Bottleid" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DefaultSetting_DetailView" Caption="Navigation Settings" AllowDelete="False" AllowNew="False" ClassName="">
+      <Items Id="Items">
+        <PropertyEditor Id="AnalysisQueue" PropertyName="AnalysisQueue" Removed="True" />
+        <PropertyEditor Id="Calculation" PropertyName="Calculation" Removed="True" />
+        <PropertyEditor Id="CalculationReview" PropertyName="CalculationReview" Removed="True" />
+        <PropertyEditor Id="CurrentLanguage" Removed="True" />
+        <PropertyEditor Id="JobStatusTracking" PropertyName="JobStatusTracking" Removed="True" />
+        <PropertyEditor Id="KpiDefinition_ListView" Caption="Definition" />
+        <PropertyEditor Id="KpiScorecard_ListView" Caption="Scorecard" />
+        <PropertyEditor Id="Oid" PropertyName="Oid" Removed="True" />
+        <PropertyEditor Id="ProcessDataEntry" PropertyName="ProcessDataEntry" Removed="True" />
+        <PropertyEditor Id="ProcessDataEntryReview" PropertyName="ProcessDataEntryReview" Removed="True" />
+        <PropertyEditor Id="QCBatches" PropertyName="QCBatches" Removed="True" />
+        <PropertyEditor Id="QCLevel2" PropertyName="QCLevel2" Removed="True" />
+        <PropertyEditor Id="QualityControl" PropertyName="QualityControl" Removed="True" />
+        <PropertyEditor Id="SDMSResultEntry" PropertyName="SDMSResultEntry" Removed="True" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100" Direction="Horizontal">
+            <LayoutGroup Id="DefaultSetting" ShowCaption="True" Caption="Track Management Flow Control" Direction="Horizontal" Index="0" RelativeSize="100" Removed="True">
+              <LayoutGroup Id="DefaultSetting_col1" ShowCaption="False" Index="0" RelativeSize="59.974747474747474">
+                <LayoutGroup Id="Item1" ShowCaption="True" Caption="Formula Check" CaptionLocation="Top" Index="0" RelativeSize="4.3091959129275876">
+                  <LayoutItem Id="Calculation" ViewItem="Calculation" Index="0" RelativeSize="50" />
+                  <LayoutItem Id="CalculationReview" ViewItem="CalculationReview" Index="1" RelativeSize="50" />
+                </LayoutGroup>
+                <LayoutGroup Id="Item2" ShowCaption="True" Caption="Formulation Process" CaptionLocation="Top" Index="1" RelativeSize="13.77165704131497">
+                  <LayoutItem Id="ProcessDataEntryReview" ViewItem="ProcessDataEntryReview" Index="0" RelativeSize="11.228070175438596" />
+                  <LayoutItem Id="ProcessDataEntry" ViewItem="ProcessDataEntry" Index="1" RelativeSize="8.4210526315789469" />
+                  <LayoutGroup Id="Item8" ShowCaption="True" Caption="Quality Control" CaptionLocation="Top" Index="2" RelativeSize="80.350877192982452">
+                    <LayoutItem Id="QualityControl" ViewItem="QualityControl" Index="0" RelativeSize="16.3265306122449" />
+                    <LayoutItem Id="QCBatches" ViewItem="QCBatches" Index="1" RelativeSize="12.244897959183673" />
+                    <LayoutItem Id="SDMSResultEntry" ViewItem="SDMSResultEntry" Index="2" RelativeSize="12.244897959183673" />
+                    <LayoutGroup Id="Auto3536f78b-0ee1-410c-bab8-fa6386a89058" ShowCaption="False" Caption="Auto3536f78b-0ee1-410c-bab8-fa6386a89058(22)" Index="3" RelativeSize="30.612244897959183" Direction="Vertical">
+                      <LayoutItem Id="JobStatusTracking" ViewItem="JobStatusTracking" Index="0" RelativeSize="50" />
+                      <LayoutItem Id="QCLevel3" ViewItem="QCLevel3" Index="1" RelativeSize="50" />
+                    </LayoutGroup>
+                    <LayoutItem Id="QCLevel2" ViewItem="QCLevel2" Index="4" RelativeSize="12.244897959183673" />
+                    <LayoutItem Id="AnalysisQueue" ViewItem="AnalysisQueue" Index="5" RelativeSize="16.3265306122449" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Item4" ShowCaption="True" Caption="Sales" CaptionLocation="Top" Index="2" RelativeSize="81.919147045757441">
+                  <LayoutItem Id="Sales" ViewItem="Sales" Index="0" RelativeSize="1.76697956929873" />
+                  <LayoutItem Id="SalesOrders" ViewItem="SalesOrders" Index="1" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="SalesOrderFiles" ViewItem="SalesOrderFiles" Index="2" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="ClosedQuotes" ViewItem="ClosedQuotes" Index="3" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="ClosedsalesOrders" ViewItem="ClosedsalesOrders" Index="4" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="SalesOrderReview2" ViewItem="SalesOrderReview2" Index="5" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="SalesOrderTracking" ViewItem="SalesOrderTracking" Index="6" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="CancelledsalesOrders" ViewItem="CancelledsalesOrders" Index="7" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="Quote" ViewItem="Quote" Index="8" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="Quotes" Index="9" RelativeSize="0.55218111540585313" />
+                  <LayoutItem Id="OpenQuotes" ViewItem="OpenQuotes" Index="10" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="MyQuotes" ViewItem="MyQuotes" Index="11" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="Invoices" ViewItem="Invoices" Index="12" RelativeSize="1.3252346769740475" />
+                  <LayoutItem Id="SalesOrder" Index="13" RelativeSize="0.55218111540585313" />
+                  <LayoutGroup Id="Item13" ShowCaption="True" CaptionLocation="Top" Index="14" RelativeSize="82.551076753175039" Caption="KPI">
+                    <LayoutItem Id="KPI" ViewItem="KPI" Index="0" RelativeSize="2.188782489740082" />
+                    <LayoutItem Id="KpiScorecard_ListView" ViewItem="KpiScorecard_ListView" Index="1" RelativeSize="1.6415868673050615" />
+                    <LayoutItem Id="KpiDefinition_ListView" ViewItem="KpiDefinition_ListView" Index="2" RelativeSize="1.6415868673050615" />
+                    <LayoutGroup Id="Item14" ShowCaption="True" CaptionLocation="Top" Index="3" RelativeSize="94.528043775649792" Caption="Maintenance" Direction="Vertical">
+                      <LayoutItem Id="Maintenance" ViewItem="Maintenance" Index="0" RelativeSize="2.3721275018532246" />
+                      <LayoutItem Id="Employee" ViewItem="Employee" Index="1" RelativeSize="1.7790956263899185" />
+                      <LayoutItem Id="PriceList" ViewItem="PriceList" Index="2" RelativeSize="1.7790956263899185" />
+                      <LayoutItem Id="ItemImpurityEditor" ViewItem="ItemImpurityEditor" Index="3" RelativeSize="1.7790956263899185" />
+                      <LayoutItem Id="ProductCatalog" ViewItem="ProductCatalog" Index="4" RelativeSize="1.7790956263899185" />
+                      <LayoutItem Id="CustomizedProductCodes" ViewItem="CustomizedProductCodes" Index="5" RelativeSize="1.7790956263899185" />
+                      <LayoutItem Id="FormulationTemplateBuilder" ViewItem="FormulationTemplateBuilder" Index="6" RelativeSize="1.7790956263899185" />
+                      <LayoutItem Id="MaxBottleLimit" ViewItem="MaxBottleLimit" Index="7" RelativeSize="1.7790956263899185" />
+                      <LayoutGroup Id="Item15" ShowCaption="True" CaptionLocation="Top" Index="8" RelativeSize="85.174203113417349" Caption="Security" Direction="Vertical">
+                        <LayoutItem Id="Security" ViewItem="Security" Index="0" RelativeSize="2.8673835125448028" />
+                        <LayoutItem Id="Roles" ViewItem="Roles" Index="1" RelativeSize="2.150537634408602" />
+                        <LayoutItem Id="MyDetails" ViewItem="MyDetails" Index="2" RelativeSize="2.150537634408602" />
+                        <LayoutGroup Id="Item16" ShowCaption="True" CaptionLocation="Top" Index="3" RelativeSize="92.831541218638" Caption="Test" Direction="Vertical">
+                          <LayoutItem Id="Test" ViewItem="Test" Index="0" RelativeSize="3.1904287138584246" />
+                          <LayoutItem Id="AnalysisDepartmentChain" ViewItem="AnalysisDepartmentChain" Index="1" RelativeSize="2.3928215353938187" />
+                          <LayoutItem Id="Method" ViewItem="Method" Index="2" RelativeSize="2.3928215353938187" />
+                          <LayoutItem Id="MethodCategory" ViewItem="MethodCategory" Index="3" RelativeSize="2.3928215353938187" />
+                          <LayoutItem Id="Parameter" ViewItem="Parameter" Index="4" RelativeSize="2.3928215353938187" />
+                          <LayoutItem Id="TestParameterDefaultSetup" ViewItem="TestParameterDefaultSetup" Index="5" RelativeSize="2.3928215353938187" />
+                          <LayoutItem Id="ReportPackage" ViewItem="ReportPackage" Index="6" RelativeSize="2.3928215353938187" />
+                          <LayoutItem Id="COCSettings" ViewItem="COCSettings" Index="7" RelativeSize="2.3928215353938187" />
+                          <LayoutItem Id="RoundOffTest" ViewItem="RoundOffTest" Index="8" RelativeSize="2.3928215353938187" />
+                          <LayoutItem Id="TestGroup" ViewItem="TestGroup" Index="9" RelativeSize="2.3928215353938187" />
+                          <LayoutItem Id="Tests" ViewItem="Tests" Index="10" RelativeSize="2.3928215353938187" />
+                          <LayoutGroup Id="Item17" ShowCaption="True" CaptionLocation="Top" Index="11" RelativeSize="72.881355932203391" Caption="Settings">
+                            <LayoutItem Id="Settings" ViewItem="Settings" Index="0" RelativeSize="4.5845272206303722" />
+                            <LayoutItem Id="ChecklistSetup" ViewItem="ChecklistSetup" Index="1" RelativeSize="3.4383954154727792" />
+                            <LayoutGroup Id="Item18" ShowCaption="True" CaptionLocation="Top" Index="2" RelativeSize="91.977077363896854" Caption="System Management" Direction="Vertical">
+                              <LayoutItem Id="SystemManagement" ViewItem="SystemManagement" Index="0" RelativeSize="5.2545155993431854" />
+                              <LayoutItem Id="Companies" ViewItem="Companies" Index="1" RelativeSize="3.9408866995073892" />
+                              <LayoutItem Id="City" ViewItem="City" Index="2" RelativeSize="3.9408866995073892" />
+                              <LayoutItem Id="Country" ViewItem="Country" Index="3" RelativeSize="3.9408866995073892" />
+                              <LayoutItem Id="Department" ViewItem="Department" Index="4" RelativeSize="3.9408866995073892" />
+                              <LayoutItem Id="State" ViewItem="State" Index="5" RelativeSize="3.9408866995073892" />
+                              <LayoutItem Id="Position" ViewItem="Position" Index="6" RelativeSize="3.9408866995073892" />
+                              <LayoutItem Id="Glossary" ViewItem="Glossary" Index="7" RelativeSize="3.9408866995073892" />
+                              <LayoutGroup Id="Item19" ShowCaption="True" CaptionLocation="Top" Index="8" RelativeSize="67.159277504105091" Caption="Utility">
+                                <LayoutItem Id="Utility" ViewItem="Utility" Index="0" RelativeSize="8.51063829787234" />
+                                <LayoutItem Id="Boxes" ViewItem="Boxes" Index="1" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="Boxing" ViewItem="Boxing" Index="2" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="Carriers" ViewItem="Carriers" Index="3" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="Containers" ViewItem="Containers" Index="4" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="DangerousGoods" ViewItem="DangerousGoods" Index="5" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="LoginImageEditor" ViewItem="LoginImageEditor" Index="6" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="Matrix" ViewItem="Matrix" Index="7" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="ProductCodeandTemplateLink" ViewItem="ProductCodeandTemplateLink" Index="8" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="ProductCodeandTestCodeLink" ViewItem="ProductCodeandTestCodeLink" Index="9" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="ProductCategory" ViewItem="ProductCategory" Index="10" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="ProductStorage" ViewItem="ProductStorage" Index="11" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="Units" ViewItem="Units" Index="12" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="QCTypes" ViewItem="QCTypes" Index="13" RelativeSize="6.3829787234042552" />
+                                <LayoutItem Id="Preservative" ViewItem="Preservative" Index="14" RelativeSize="8.51063829787234" />
+                              </LayoutGroup>
+                            </LayoutGroup>
+                          </LayoutGroup>
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="DefaultSetting_col2" ShowCaption="False" Index="1" RelativeSize="40.025252525252526">
+                <LayoutGroup Id="Item5" ShowCaption="True" Caption="Packing" CaptionLocation="Top" Index="0" RelativeSize="6.4415815193247443">
+                  <LayoutItem Id="Packing" ViewItem="Packing" Index="0" RelativeSize="28.571428571428573" />
+                  <LayoutItem Id="GHSLabeling" ViewItem="GHSLabeling" Index="1" RelativeSize="21.428571428571427" />
+                  <LayoutItem Id="SDS" ViewItem="SDS" Index="2" RelativeSize="21.428571428571427" />
+                  <LayoutItem Id="QCCheck" ViewItem="QCCheck" Index="3" RelativeSize="28.571428571428573" />
+                </LayoutGroup>
+                <LayoutGroup Id="Item6" ShowCaption="True" Caption="Shipment" CaptionLocation="Top" Index="1" RelativeSize="7.15237672145713">
+                  <LayoutItem Id="Shipment" ViewItem="Shipment" Index="0" RelativeSize="23.529411764705884" />
+                  <LayoutItem Id="OrderClosing" ViewItem="OrderClosing" Index="1" RelativeSize="17.647058823529413" />
+                  <LayoutItem Id="Shipping" ViewItem="Shipping" Index="2" RelativeSize="17.647058823529413" />
+                  <LayoutItem Id="FinalInspection" ViewItem="FinalInspection" Index="3" RelativeSize="17.647058823529413" />
+                  <LayoutItem Id="PreKitting" ViewItem="PreKitting" Index="4" RelativeSize="23.529411764705884" />
+                </LayoutGroup>
+                <LayoutGroup Id="Item7" ShowCaption="True" Caption="Accounts" CaptionLocation="Top" Index="2" RelativeSize="13.5495335406486">
+                  <LayoutItem Id="ClosedAccount" ViewItem="ClosedAccount" Index="0" RelativeSize="11.428571428571429" />
+                  <LayoutItem Id="CRMAccount" ViewItem="CRMAccount" Index="1" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="MyOpenOpportunities" ViewItem="MyOpenOpportunities" Index="2" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="CRMContact" ViewItem="CRMContact" Index="3" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="ClosedOpportunity" ViewItem="ClosedOpportunity" Index="4" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="UnfollowedOpportunities" ViewItem="UnfollowedOpportunities" Index="5" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="OpenOpportunity" ViewItem="OpenOpportunity" Index="6" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="Opportuinty" ViewItem="Opportuinty" Index="7" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="Accounts" ViewItem="Accounts" Index="8" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="UnfollowedClients" ViewItem="UnfollowedClients" Index="9" RelativeSize="8.5714285714285712" />
+                  <LayoutItem Id="UnfollowedAccounts" ViewItem="UnfollowedAccounts" Index="10" RelativeSize="11.428571428571429" />
+                </LayoutGroup>
+                <LayoutGroup Id="Item3" ShowCaption="True" Caption="Contact Logs" CaptionLocation="Top" Index="3" RelativeSize="72.85650821856953">
+                  <LayoutItem Id="NotesinOpportunities" ViewItem="NotesinOpportunities" Index="0" RelativeSize="1.9912881144990666" />
+                  <LayoutItem Id="NotesinClients" ViewItem="NotesinClients" Index="1" RelativeSize="1.4934660858742999" />
+                  <LayoutItem Id="ContactLogs" ViewItem="ContactLogs" Index="2" RelativeSize="1.4934660858742999" />
+                  <LayoutGroup Id="Item9" ShowCaption="True" CaptionLocation="Top" Index="3" RelativeSize="95.021779713752338" Caption="Inventory Management">
+                    <LayoutItem Id="InventoryManagement" ViewItem="InventoryManagement" Index="0" RelativeSize="2.14190093708166" />
+                    <LayoutItem Id="Operations" ViewItem="Operations" Index="1" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="Requisition" ViewItem="Requisition" Index="2" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="Review" ViewItem="Review" Index="3" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="RequisitionApproval" ViewItem="RequisitionApproval" Index="4" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="Receiving" ViewItem="Receiving" Index="5" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="OrderingItem" ViewItem="OrderingItem" Index="6" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="Distribution" ViewItem="Distribution" Index="7" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="ReceiveOrderDirect" ViewItem="ReceiveOrderDirect" Index="8" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="Testing" ViewItem="Testing" Index="9" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="Consumption" ViewItem="Consumption" Index="10" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="Disposal" ViewItem="Disposal" Index="11" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="COA" ViewItem="COA" Index="12" RelativeSize="1.606425702811245" />
+                    <LayoutItem Id="VendorReagentCertificate" ViewItem="VendorReagentCertificate" Index="13" RelativeSize="1.606425702811245" />
+                    <LayoutGroup Id="Item11" ShowCaption="True" CaptionLocation="Top" Index="14" RelativeSize="9.1700133868808571" Caption="Inventory" Direction="Vertical">
+                      <LayoutItem Id="Inventory" ViewItem="Inventory" Index="0" RelativeSize="28.571428571428573" />
+                      <LayoutItem Id="ASIProductStockInventory" ViewItem="ASIProductStockInventory" Index="1" RelativeSize="21.428571428571427" />
+                      <LayoutItem Id="ItemStockInventory" ViewItem="ItemStockInventory" Index="2" RelativeSize="21.428571428571427" />
+                      <LayoutItem Id="ResaleProductStockInventory" ViewItem="ResaleProductStockInventory" Index="3" RelativeSize="28.571428571428573" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Item10" ShowCaption="True" CaptionLocation="Top" Index="15" RelativeSize="67.8045515394913" Caption="Alert">
+                      <LayoutItem Id="Alert" ViewItem="Alert" Index="0" RelativeSize="3.2653061224489797" />
+                      <LayoutItem Id="Expiration" ViewItem="Expiration" Index="1" RelativeSize="2.4489795918367347" />
+                      <LayoutItem Id="StockAlert" ViewItem="StockAlert" Index="2" RelativeSize="2.4489795918367347" />
+                      <LayoutItem Id="StockInventory" ViewItem="StockInventory" Index="3" RelativeSize="2.4489795918367347" />
+                      <LayoutGroup Id="Item12" ShowCaption="True" CaptionLocation="Top" Index="4" RelativeSize="89.387755102040813" Caption="Basic Settings">
+                        <LayoutItem Id="BasicSettings" ViewItem="BasicSettings" Index="0" RelativeSize="3.7959667852906289" />
+                        <LayoutItem Id="Items" ViewItem="Items" Index="1" RelativeSize="2.8469750889679717" />
+                        <LayoutItem Id="Manufacturers" ViewItem="Manufacturers" Index="2" RelativeSize="2.8469750889679717" />
+                        <LayoutItem Id="DeliveryPriority" ViewItem="DeliveryPriority" Index="3" RelativeSize="2.8469750889679717" />
+                        <LayoutItem Id="Category" ViewItem="Category" Index="4" RelativeSize="2.8469750889679717" />
+                        <LayoutItem Id="ShippingOptions" ViewItem="ShippingOptions" Index="5" RelativeSize="2.8469750889679717" />
+                        <LayoutItem Id="Packageunits" ViewItem="Packageunits" Index="6" RelativeSize="2.8469750889679717" />
+                        <LayoutItem Id="Vendors" ViewItem="Vendors" Index="7" RelativeSize="2.8469750889679717" />
+                        <LayoutItem Id="Grade" ViewItem="Grade" Index="8" RelativeSize="2.8469750889679717" />
+                        <LayoutItem Id="Storage" ViewItem="Storage" Index="9" RelativeSize="2.8469750889679717" />
+                        <LayoutItem Id="ShipVia" ViewItem="ShipVia" Index="10" RelativeSize="2.8469750889679717" />
+                        <LayoutItem Id="VendorEvaluationItems" ViewItem="VendorEvaluationItems" Index="11" RelativeSize="67.734282325029653" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DefaultSetting_col1" ShowCaption="False" Index="0" RelativeSize="56.048387096774192">
+              <LayoutGroup Id="Item1" ShowCaption="True" Caption="Formula Check" CaptionLocation="Top" Index="0" RelativeSize="4.2321116928446774">
+                <LayoutItem Id="Calculation" ViewItem="Calculation" Index="0" RelativeSize="50" />
+                <LayoutItem Id="CalculationReview" ViewItem="CalculationReview" Index="1" RelativeSize="50" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item2" ShowCaption="True" Caption="Formulation Process" CaptionLocation="Top" Index="1" RelativeSize="13.525305410122163">
+                <LayoutItem Id="ProcessDataEntryReview" ViewItem="ProcessDataEntryReview" Index="0" RelativeSize="11.228070175438596" />
+                <LayoutItem Id="ProcessDataEntry" ViewItem="ProcessDataEntry" Index="1" RelativeSize="8.4210526315789469" />
+                <LayoutGroup Id="Item8" ShowCaption="True" Caption="Quality Control" CaptionLocation="Top" Index="2" RelativeSize="80.350877192982452">
+                  <LayoutItem Id="QualityControl" ViewItem="QualityControl" Index="0" RelativeSize="16.3265306122449" />
+                  <LayoutItem Id="QCBatches" ViewItem="QCBatches" Index="1" RelativeSize="12.244897959183673" />
+                  <LayoutItem Id="SDMSResultEntry" ViewItem="SDMSResultEntry" Index="2" RelativeSize="12.244897959183673" />
+                  <LayoutGroup Id="Auto3536f78b-0ee1-410c-bab8-fa6386a89058" ShowCaption="False" Caption="Auto3536f78b-0ee1-410c-bab8-fa6386a89058(22)" Index="3" RelativeSize="30.612244897959183">
+                    <LayoutItem Id="JobStatusTracking" ViewItem="JobStatusTracking" Index="0" RelativeSize="50" />
+                    <LayoutItem Id="QCLevel3" ViewItem="QCLevel3" Index="1" RelativeSize="50" />
+                  </LayoutGroup>
+                  <LayoutItem Id="QCLevel2" ViewItem="QCLevel2" Index="4" RelativeSize="12.244897959183673" />
+                  <LayoutItem Id="AnalysisQueue" ViewItem="AnalysisQueue" Index="5" RelativeSize="16.3265306122449" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" ShowCaption="True" Caption="Sales" CaptionLocation="Top" Index="2" RelativeSize="82.242582897033159">
+                <LayoutItem Id="Sales" ViewItem="Sales" Index="0" RelativeSize="1.7278617710583153" />
+                <LayoutItem Id="SalesOrders" ViewItem="SalesOrders" Index="1" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="SalesOrderFiles" ViewItem="SalesOrderFiles" Index="2" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="ClosedQuotes" ViewItem="ClosedQuotes" Index="3" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="ClosedsalesOrders" ViewItem="ClosedsalesOrders" Index="4" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="SalesOrderReview2" ViewItem="SalesOrderReview2" Index="5" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="SalesOrderTracking" ViewItem="SalesOrderTracking" Index="6" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="CancelledsalesOrders" ViewItem="CancelledsalesOrders" Index="7" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="Quote" ViewItem="Quote" Index="8" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="Quotes" Index="9" RelativeSize="0.5399568034557235" />
+                <LayoutItem Id="OpenQuotes" ViewItem="OpenQuotes" Index="10" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="MyQuotes" ViewItem="MyQuotes" Index="11" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="Invoices" ViewItem="Invoices" Index="12" RelativeSize="1.2958963282937366" />
+                <LayoutItem Id="SalesOrder" Index="13" RelativeSize="2.75377969762419" />
+                <LayoutGroup Id="Item13" ShowCaption="True" Caption="KPI" CaptionLocation="Top" Index="14" RelativeSize="80.723542116630668">
+                  <LayoutItem Id="KPI" ViewItem="KPI" Index="0" RelativeSize="2.188782489740082" />
+                  <LayoutItem Id="KpiScorecard_ListView" ViewItem="KpiScorecard_ListView" Index="1" RelativeSize="1.6415868673050615" />
+                  <LayoutItem Id="KpiDefinition_ListView" ViewItem="KpiDefinition_ListView" Index="2" RelativeSize="1.6415868673050615" />
+                  <LayoutGroup Id="Item14" ShowCaption="True" Caption="Maintenance" CaptionLocation="Top" Index="3" RelativeSize="94.528043775649792">
+                    <LayoutItem Id="Maintenance" ViewItem="Maintenance" Index="0" RelativeSize="2.3721275018532246" />
+                    <LayoutItem Id="Employee" ViewItem="Employee" Index="1" RelativeSize="1.7790956263899185" />
+                    <LayoutItem Id="PriceList" ViewItem="PriceList" Index="2" RelativeSize="1.7790956263899185" />
+                    <LayoutItem Id="ItemImpurityEditor" ViewItem="ItemImpurityEditor" Index="3" RelativeSize="1.7790956263899185" />
+                    <LayoutItem Id="ProductCatalog" ViewItem="ProductCatalog" Index="4" RelativeSize="1.7790956263899185" />
+                    <LayoutItem Id="CustomizedProductCodes" ViewItem="CustomizedProductCodes" Index="5" RelativeSize="1.7790956263899185" />
+                    <LayoutItem Id="FormulationTemplateBuilder" ViewItem="FormulationTemplateBuilder" Index="6" RelativeSize="1.7790956263899185" />
+                    <LayoutItem Id="MaxBottleLimit" ViewItem="MaxBottleLimit" Index="7" RelativeSize="1.7790956263899185" />
+                    <LayoutGroup Id="Item15" ShowCaption="True" Caption="Security" CaptionLocation="Top" Index="8" RelativeSize="85.174203113417349">
+                      <LayoutItem Id="Security" ViewItem="Security" Index="0" RelativeSize="2.8673835125448028" />
+                      <LayoutItem Id="Roles" ViewItem="Roles" Index="1" RelativeSize="2.150537634408602" />
+                      <LayoutItem Id="MyDetails" ViewItem="MyDetails" Index="2" RelativeSize="2.150537634408602" />
+                      <LayoutGroup Id="Item16" ShowCaption="True" Caption="Test" CaptionLocation="Top" Index="3" RelativeSize="92.831541218638">
+                        <LayoutItem Id="Test" ViewItem="Test" Index="0" RelativeSize="3.1904287138584246" />
+                        <LayoutItem Id="AnalysisDepartmentChain" ViewItem="AnalysisDepartmentChain" Index="1" RelativeSize="2.3928215353938187" />
+                        <LayoutItem Id="Method" ViewItem="Method" Index="2" RelativeSize="2.3928215353938187" />
+                        <LayoutItem Id="MethodCategory" ViewItem="MethodCategory" Index="3" RelativeSize="2.3928215353938187" />
+                        <LayoutItem Id="Parameter" ViewItem="Parameter" Index="4" RelativeSize="2.3928215353938187" />
+                        <LayoutItem Id="TestParameterDefaultSetup" ViewItem="TestParameterDefaultSetup" Index="5" RelativeSize="2.3928215353938187" />
+                        <LayoutItem Id="ReportPackage" ViewItem="ReportPackage" Index="6" RelativeSize="2.3928215353938187" />
+                        <LayoutItem Id="COCSettings" ViewItem="COCSettings" Index="7" RelativeSize="2.3928215353938187" />
+                        <LayoutItem Id="RoundOffTest" ViewItem="RoundOffTest" Index="8" RelativeSize="2.3928215353938187" />
+                        <LayoutItem Id="TestGroup" ViewItem="TestGroup" Index="9" RelativeSize="2.3928215353938187" />
+                        <LayoutItem Id="Tests" ViewItem="Tests" Index="10" RelativeSize="2.3928215353938187" />
+                        <LayoutGroup Id="Item17" ShowCaption="True" Caption="Settings" CaptionLocation="Top" Index="11" RelativeSize="72.881355932203391">
+                          <LayoutItem Id="Settings" ViewItem="Settings" Index="0" RelativeSize="4.5845272206303722" />
+                          <LayoutItem Id="ChecklistSetup" ViewItem="ChecklistSetup" Index="1" RelativeSize="3.4383954154727792" />
+                          <LayoutGroup Id="Item18" ShowCaption="True" Caption="System Management" CaptionLocation="Top" Index="2" RelativeSize="91.977077363896854">
+                            <LayoutItem Id="SystemManagement" ViewItem="SystemManagement" Index="0" RelativeSize="5.2545155993431854" />
+                            <LayoutItem Id="Companies" ViewItem="Companies" Index="1" RelativeSize="3.9408866995073892" />
+                            <LayoutItem Id="City" ViewItem="City" Index="2" RelativeSize="3.9408866995073892" />
+                            <LayoutItem Id="Country" ViewItem="Country" Index="3" RelativeSize="3.9408866995073892" />
+                            <LayoutItem Id="Department" ViewItem="Department" Index="4" RelativeSize="3.9408866995073892" />
+                            <LayoutItem Id="State" ViewItem="State" Index="5" RelativeSize="3.9408866995073892" />
+                            <LayoutItem Id="Position" ViewItem="Position" Index="6" RelativeSize="3.9408866995073892" />
+                            <LayoutItem Id="Glossary" ViewItem="Glossary" Index="7" RelativeSize="3.9408866995073892" />
+                            <LayoutGroup Id="Item19" ShowCaption="True" Caption="Utility" CaptionLocation="Top" Index="8" RelativeSize="67.159277504105091">
+                              <LayoutItem Id="Utility" ViewItem="Utility" Index="0" RelativeSize="8.51063829787234" />
+                              <LayoutItem Id="Boxes" ViewItem="Boxes" Index="1" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="Boxing" ViewItem="Boxing" Index="2" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="Carriers" ViewItem="Carriers" Index="3" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="Containers" ViewItem="Containers" Index="4" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="DangerousGoods" ViewItem="DangerousGoods" Index="5" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="LoginImageEditor" ViewItem="LoginImageEditor" Index="6" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="Matrix" ViewItem="Matrix" Index="7" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="ProductCodeandTemplateLink" ViewItem="ProductCodeandTemplateLink" Index="8" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="ProductCodeandTestCodeLink" ViewItem="ProductCodeandTestCodeLink" Index="9" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="ProductCategory" ViewItem="ProductCategory" Index="10" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="ProductStorage" ViewItem="ProductStorage" Index="11" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="Units" ViewItem="Units" Index="12" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="QCTypes" ViewItem="QCTypes" Index="13" RelativeSize="6.3829787234042552" />
+                              <LayoutItem Id="Preservative" ViewItem="Preservative" Index="14" RelativeSize="8.51063829787234" />
+                            </LayoutGroup>
+                          </LayoutGroup>
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DefaultSetting_col2" ShowCaption="False" Index="1" RelativeSize="43.951612903225808">
+              <LayoutGroup Id="Item5" ShowCaption="True" Caption="Packing" CaptionLocation="Top" Index="0" RelativeSize="6.326352530541012">
+                <LayoutItem Id="Packing" ViewItem="Packing" Index="0" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="GHSLabeling" ViewItem="GHSLabeling" Index="1" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="SDS" ViewItem="SDS" Index="2" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="QCCheck" ViewItem="QCCheck" Index="3" RelativeSize="28.571428571428573" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item6" ShowCaption="True" Caption="Shipment" CaptionLocation="Top" Index="1" RelativeSize="7.0244328097731241">
+                <LayoutItem Id="Shipment" ViewItem="Shipment" Index="0" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="OrderClosing" ViewItem="OrderClosing" Index="1" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Shipping" ViewItem="Shipping" Index="2" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="FinalInspection" ViewItem="FinalInspection" Index="3" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="PreKitting" ViewItem="PreKitting" Index="4" RelativeSize="23.529411764705884" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item7" ShowCaption="True" Caption="Accounts" CaptionLocation="Top" Index="2" RelativeSize="13.30715532286213">
+                <LayoutItem Id="ClosedAccount" ViewItem="ClosedAccount" Index="0" RelativeSize="11.428571428571429" />
+                <LayoutItem Id="CRMAccount" ViewItem="CRMAccount" Index="1" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="MyOpenOpportunities" ViewItem="MyOpenOpportunities" Index="2" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="CRMContact" ViewItem="CRMContact" Index="3" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="ClosedOpportunity" ViewItem="ClosedOpportunity" Index="4" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="UnfollowedOpportunities" ViewItem="UnfollowedOpportunities" Index="5" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="OpenOpportunity" ViewItem="OpenOpportunity" Index="6" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="Opportuinty" ViewItem="Opportuinty" Index="7" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="Accounts" ViewItem="Accounts" Index="8" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="UnfollowedClients" ViewItem="UnfollowedClients" Index="9" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="UnfollowedAccounts" ViewItem="UnfollowedAccounts" Index="10" RelativeSize="11.428571428571429" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item3" ShowCaption="True" Caption="Contact Logs" CaptionLocation="Top" Index="3" RelativeSize="73.342059336823738">
+                <LayoutItem Id="NotesinOpportunities" ViewItem="NotesinOpportunities" Index="0" RelativeSize="1.941747572815534" />
+                <LayoutItem Id="NotesinClients" ViewItem="NotesinClients" Index="1" RelativeSize="1.4563106796116505" />
+                <LayoutItem Id="ContactLogs" ViewItem="ContactLogs" Index="2" RelativeSize="1.4563106796116505" />
+                <LayoutGroup Id="Item9" ShowCaption="True" Caption="Inventory Management" CaptionLocation="Top" Index="3" RelativeSize="95.145631067961162">
+                  <LayoutItem Id="InventoryManagement" ViewItem="InventoryManagement" Index="0" RelativeSize="2.0846905537459284" />
+                  <LayoutItem Id="Operations" ViewItem="Operations" Index="1" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="Requisition" ViewItem="Requisition" Index="2" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="Review" ViewItem="Review" Index="3" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="RequisitionApproval" ViewItem="RequisitionApproval" Index="4" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="Receiving" ViewItem="Receiving" Index="5" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="OrderingItem" ViewItem="OrderingItem" Index="6" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="Distribution" ViewItem="Distribution" Index="7" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="ReceiveOrderDirect" ViewItem="ReceiveOrderDirect" Index="8" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="Testing" ViewItem="Testing" Index="9" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="Consumption" ViewItem="Consumption" Index="10" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="Disposal" ViewItem="Disposal" Index="11" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="COA" ViewItem="COA" Index="12" RelativeSize="1.5635179153094463" />
+                  <LayoutItem Id="VendorReagentCertificate" ViewItem="VendorReagentCertificate" Index="13" RelativeSize="1.5635179153094463" />
+                  <LayoutGroup Id="Item11" ShowCaption="True" Caption="Inventory" CaptionLocation="Top" Index="14" RelativeSize="8.9250814332247561">
+                    <LayoutItem Id="Inventory" ViewItem="Inventory" Index="0" RelativeSize="28.571428571428573" />
+                    <LayoutItem Id="ASIProductStockInventory" ViewItem="ASIProductStockInventory" Index="1" RelativeSize="21.428571428571427" />
+                    <LayoutItem Id="ItemStockInventory" ViewItem="ItemStockInventory" Index="2" RelativeSize="21.428571428571427" />
+                    <LayoutItem Id="ResaleProductStockInventory" ViewItem="ResaleProductStockInventory" Index="3" RelativeSize="28.571428571428573" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item10" ShowCaption="True" Caption="Alert" CaptionLocation="Top" Index="15" RelativeSize="68.664495114006513">
+                    <LayoutItem Id="Alert" ViewItem="Alert" Index="0" RelativeSize="3.1341821743388834" />
+                    <LayoutItem Id="Expiration" ViewItem="Expiration" Index="1" RelativeSize="2.3506366307541624" />
+                    <LayoutItem Id="StockAlert" ViewItem="StockAlert" Index="2" RelativeSize="2.3506366307541624" />
+                    <LayoutItem Id="StockInventory" ViewItem="StockInventory" Index="3" RelativeSize="2.3506366307541624" />
+                    <LayoutGroup Id="Item12" ShowCaption="True" Caption="Basic Settings" CaptionLocation="Top" Index="4" RelativeSize="89.813907933398625">
+                      <LayoutItem Id="BasicSettings" ViewItem="BasicSettings" Index="0" RelativeSize="3.6199095022624435" />
+                      <LayoutItem Id="Items" ViewItem="Items" Index="1" RelativeSize="2.7149321266968327" />
+                      <LayoutItem Id="Manufacturers" ViewItem="Manufacturers" Index="2" RelativeSize="2.7149321266968327" />
+                      <LayoutItem Id="DeliveryPriority" ViewItem="DeliveryPriority" Index="3" RelativeSize="2.7149321266968327" />
+                      <LayoutItem Id="Category" ViewItem="Category" Index="4" RelativeSize="2.7149321266968327" />
+                      <LayoutItem Id="ShippingOptions" ViewItem="ShippingOptions" Index="5" RelativeSize="2.7149321266968327" />
+                      <LayoutItem Id="Packageunits" ViewItem="Packageunits" Index="6" RelativeSize="2.7149321266968327" />
+                      <LayoutItem Id="Vendors" ViewItem="Vendors" Index="7" RelativeSize="2.7149321266968327" />
+                      <LayoutItem Id="Grade" ViewItem="Grade" Index="8" RelativeSize="2.7149321266968327" />
+                      <LayoutItem Id="Storage" ViewItem="Storage" Index="9" RelativeSize="2.7149321266968327" />
+                      <LayoutItem Id="ShipVia" ViewItem="ShipVia" Index="10" RelativeSize="2.7149321266968327" />
+                      <LayoutItem Id="VendorEvaluationItems" ViewItem="VendorEvaluationItems" Index="11" RelativeSize="69.230769230769226" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DefaultSetting_ListView" Caption="Navigation Settings" MasterDetailView="DefaultSetting_DetailView_aligment" DetailViewID="DefaultSetting_DetailView_aligment" ClassName="">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Accounts" Index="-1" />
+        <ColumnInfo Id="Alert" Index="-1" />
+        <ColumnInfo Id="AnalysisDepartmentChain" Index="-1" />
+        <ColumnInfo Id="AnalysisQueue" Index="-1" />
+        <ColumnInfo Id="ASIProductStockInventory" Index="-1" />
+        <ColumnInfo Id="BasicSettings" Index="-1" />
+        <ColumnInfo Id="Boxes" Index="-1" />
+        <ColumnInfo Id="Boxing" Index="-1" />
+        <ColumnInfo Id="Calculation" Index="-1" />
+        <ColumnInfo Id="CalculationReview" Index="-1" />
+        <ColumnInfo Id="CancelledsalesOrders" Index="-1" />
+        <ColumnInfo Id="Carriers" Index="-1" />
+        <ColumnInfo Id="Category" Index="-1" />
+        <ColumnInfo Id="ChecklistSetup" Index="-1" />
+        <ColumnInfo Id="City" Index="-1" />
+        <ColumnInfo Id="ClosedAccount" Index="-1" />
+        <ColumnInfo Id="ClosedOpportunity" Index="-1" />
+        <ColumnInfo Id="ClosedQuotes" Index="-1" />
+        <ColumnInfo Id="ClosedsalesOrders" Index="-1" />
+        <ColumnInfo Id="COA" Index="-1" />
+        <ColumnInfo Id="COCSettings" Index="-1" />
+        <ColumnInfo Id="Companies" Index="-1" />
+        <ColumnInfo Id="Consumption" Index="-1" />
+        <ColumnInfo Id="ContactLogs" Index="-1" />
+        <ColumnInfo Id="Containers" Index="-1" />
+        <ColumnInfo Id="Country" Index="-1" />
+        <ColumnInfo Id="CRMAccount" Index="-1" />
+        <ColumnInfo Id="CRMContact" Index="-1" />
+        <ColumnInfo Id="CurrentLanguage" Index="-1" />
+        <ColumnInfo Id="CustomizedProductCodes" Index="-1" />
+        <ColumnInfo Id="DangerousGoods" Index="-1" />
+        <ColumnInfo Id="DeliveryPriority" Index="-1" />
+        <ColumnInfo Id="Department" Index="-1" />
+        <ColumnInfo Id="Disposal" Index="-1" />
+        <ColumnInfo Id="Distribution" Index="-1" />
+        <ColumnInfo Id="Employee" Index="-1" />
+        <ColumnInfo Id="Expiration" Index="-1" />
+        <ColumnInfo Id="FinalInspection" Index="-1" />
+        <ColumnInfo Id="FormulationCheck" Index="-1" />
+        <ColumnInfo Id="FormulationProcess" Index="-1" />
+        <ColumnInfo Id="FormulationTemplateBuilder" Index="-1" />
+        <ColumnInfo Id="GHSLabeling" Index="-1" />
+        <ColumnInfo Id="Glossary" Index="-1" />
+        <ColumnInfo Id="Grade" Index="-1" />
+        <ColumnInfo Id="Inventory" Index="-1" />
+        <ColumnInfo Id="InventoryManagement" Index="-1" />
+        <ColumnInfo Id="Invoices" Index="-1" />
+        <ColumnInfo Id="ItemImpurityEditor" Index="-1" />
+        <ColumnInfo Id="Items" Index="-1" />
+        <ColumnInfo Id="ItemStockInventory" Index="-1" />
+        <ColumnInfo Id="JobStatusTracking" Index="-1" />
+        <ColumnInfo Id="KPI" Index="-1" />
+        <ColumnInfo Id="KpiDefinition_ListView" Index="-1" />
+        <ColumnInfo Id="KpiScorecard_ListView" Index="-1" />
+        <ColumnInfo Id="LoginImageEditor" Index="-1" />
+        <ColumnInfo Id="Maintenance" Index="-1" />
+        <ColumnInfo Id="Manufacturers" Index="-1" />
+        <ColumnInfo Id="Matrix" Index="-1" />
+        <ColumnInfo Id="MaxBottleLimit" Index="-1" />
+        <ColumnInfo Id="Method" Index="-1" />
+        <ColumnInfo Id="MethodCategory" Index="-1" />
+        <ColumnInfo Id="MyDetails" Index="-1" />
+        <ColumnInfo Id="MyOpenOpportunities" Index="-1" />
+        <ColumnInfo Id="MyQuotes" Index="-1" />
+        <ColumnInfo Id="NotesinClients" Index="-1" />
+        <ColumnInfo Id="NotesinOpportunities" Index="-1" />
+        <ColumnInfo Id="OpenOpportunity" Index="-1" />
+        <ColumnInfo Id="OpenQuotes" Index="-1" />
+        <ColumnInfo Id="Operations" Index="-1" />
+        <ColumnInfo Id="Opportuinty" Index="-1" />
+        <ColumnInfo Id="OrderClosing" Index="-1" />
+        <ColumnInfo Id="OrderingItem" Index="-1" />
+        <ColumnInfo Id="Packageunits" Index="-1" />
+        <ColumnInfo Id="Packing" Index="-1" />
+        <ColumnInfo Id="Parameter" Index="-1" />
+        <ColumnInfo Id="Position" Index="-1" />
+        <ColumnInfo Id="PreKitting" Index="-1" />
+        <ColumnInfo Id="Preservative" Index="-1" />
+        <ColumnInfo Id="PriceList" Index="-1" />
+        <ColumnInfo Id="ProcessDataEntry" Index="-1" />
+        <ColumnInfo Id="ProcessDataEntryReview" Index="-1" />
+        <ColumnInfo Id="ProductCatalog" Index="-1" />
+        <ColumnInfo Id="ProductCategory" Index="-1" />
+        <ColumnInfo Id="ProductCodeandTemplateLink" Index="-1" />
+        <ColumnInfo Id="ProductCodeandTestCodeLink" Index="-1" />
+        <ColumnInfo Id="ProductStorage" Index="-1" />
+        <ColumnInfo Id="QCBatches" Index="-1" />
+        <ColumnInfo Id="QCCheck" Index="-1" />
+        <ColumnInfo Id="QCLevel2" Index="-1" />
+        <ColumnInfo Id="QCLevel3" Index="-1" />
+        <ColumnInfo Id="QCTypes" Index="-1" />
+        <ColumnInfo Id="QualityControl" Index="-1" />
+        <ColumnInfo Id="Quote" Index="-1" />
+        <ColumnInfo Id="ReceiveOrderDirect" Index="-1" />
+        <ColumnInfo Id="Receiving" Index="-1" />
+        <ColumnInfo Id="ReportPackage" Index="-1" />
+        <ColumnInfo Id="Requisition" Index="-1" />
+        <ColumnInfo Id="RequisitionApproval" Index="-1" />
+        <ColumnInfo Id="ResaleProductStockInventory" Index="-1" />
+        <ColumnInfo Id="Review" Index="-1" />
+        <ColumnInfo Id="Roles" Index="-1" />
+        <ColumnInfo Id="RoundOffTest" Index="-1" />
+        <ColumnInfo Id="Sales" Index="-1" />
+        <ColumnInfo Id="SalesOrderFiles" Index="-1" />
+        <ColumnInfo Id="SalesOrderReview2" Index="-1" />
+        <ColumnInfo Id="SalesOrders" Index="-1" />
+        <ColumnInfo Id="SalesOrderTracking" Index="-1" />
+        <ColumnInfo Id="SDMSResultEntry" Index="-1" />
+        <ColumnInfo Id="SDS" Index="-1" />
+        <ColumnInfo Id="Security" Index="-1" />
+        <ColumnInfo Id="Settings" Index="-1" />
+        <ColumnInfo Id="Shipment" Index="-1" />
+        <ColumnInfo Id="Shipping" Index="-1" />
+        <ColumnInfo Id="ShippingOptions" Index="-1" />
+        <ColumnInfo Id="ShipVia" Index="-1" />
+        <ColumnInfo Id="State" Index="-1" />
+        <ColumnInfo Id="StockAlert" Index="-1" />
+        <ColumnInfo Id="Storage" Index="-1" />
+        <ColumnInfo Id="SystemManagement" Index="-1" />
+        <ColumnInfo Id="Test" Index="-1" />
+        <ColumnInfo Id="TestGroup" Index="-1" />
+        <ColumnInfo Id="Testing" Index="-1" />
+        <ColumnInfo Id="TestParameterDefaultSetup" Index="-1" />
+        <ColumnInfo Id="Tests" Index="-1" />
+        <ColumnInfo Id="UnfollowedAccounts" Index="-1" />
+        <ColumnInfo Id="UnfollowedClients" Index="-1" />
+        <ColumnInfo Id="UnfollowedOpportunities" Index="-1" />
+        <ColumnInfo Id="Units" Index="-1" />
+        <ColumnInfo Id="Utility" Index="-1" />
+        <ColumnInfo Id="VendorEvaluationItems" Index="-1" />
+        <ColumnInfo Id="VendorReagentCertificate" Index="-1" />
+        <ColumnInfo Id="Vendors" Index="-1" />
+        <ColumnInfo Id="ModuleName" Index="0" Caption="Module " />
+      </Columns>
+    </ListView>
+    <DetailView Id="QCBatch_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="qcreset" ActionContainer="qcreset" />
+        <ActionContainerViewItem Id="qcload" ActionContainer="qcload" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SamplePrepBatch_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SamplePrepBatch_col2">
+              <LayoutGroup Id="Autoda835163-9407-4180-b92a-85c047b6a952">
+                <LayoutGroup Id="Autobf3ccc2a-980e-43d0-825f-ae33b91363f3">
+                  <LayoutItem Id="Instrument" ViewItem="Instrument" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Maintenance">
+        <Items Id="Items">
+          <Item Id="System">
+            <Items Id="Items">
+              <Item Id="TestGroup" ViewId="TestGroup_ListView" />
+              <Item Id="TestForm" ViewId="TestForm_LookupListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="Utility">
+            <Items Id="Items">
+              <Item Id="Test">
+                <Items Id="Items">
+                  <Item Id="PrepMethodLabware" ViewId="PrepMethodLabware_ListView" />
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

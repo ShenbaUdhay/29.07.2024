@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ResultEntryQueryPanel_DetailView_Copy" Caption="查询数据">
+      <Items Id="Items">
+        <PropertyEditor Id="ClientName" Caption="委托单位" />
+        <PropertyEditor Id="FilterDataByMonth" Caption="按月过滤数据" />
+        <PropertyEditor Id="JobID" Caption="工作编号" />
+        <PropertyEditor Id="MatrixName" Caption="基质" />
+        <PropertyEditor Id="MethodName" Caption="分析方法" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目" />
+        <PropertyEditor Id="strJobID" Caption="工作编号" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

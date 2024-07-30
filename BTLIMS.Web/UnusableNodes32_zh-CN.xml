@@ -1,0 +1,2654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Messages">
+      <LocalizationGroup Name="LDMMessages">
+        <LocalizationItem Name="cannotdeletesdmstest" Value="无法删除品。它和测试关联了" />
+        <LocalizationItem Name="cannotdeletetestparameter" Value="无法删除品。它和测试关联了" />
+        <LocalizationItem Name="cannotdeletevalidatedreport" Value="校对后无法删除项目。" />
+        <LocalizationItem Name="cannotedit" Value="ABID已经完成，无法更新。" />
+        <LocalizationItem Name="COCSettingsImportSuccess" Value="COC设置已成功导入" />
+        <LocalizationItem Name="Completeexport" Value="完成并成功导出" />
+        <LocalizationItem Name="CompleteSuccess" Value="领用成功" />
+        <LocalizationItem Name="datafailed" Value="数据传输失败" />
+        <LocalizationItem Name="datanotgiven" Value="提供所有数据以继续" />
+        <LocalizationItem Name="DeleteReason" Value="输入删除原因" />
+        <LocalizationItem Name="DeleteSuccess" Value="成功删除。" />
+        <LocalizationItem Name="Duplicatefile" Value="文件已上传，请选择其他文件" />
+        <LocalizationItem Name="Editfail" Value="已经导出，无法编辑" />
+        <LocalizationItem Name="Exportcolumnissue" Value="找不到导出列" />
+        <LocalizationItem Name="InspectionCompleteSuccess" Value="提交成功。" />
+        <LocalizationItem Name="nodatatransfertemplate" Value="数据传输设置不存在" />
+        <LocalizationItem Name="NotDataLoaded" Value="数据未加载到工作表上" />
+        <LocalizationItem Name="qccannotadd" Value="无法添加质控" />
+        <LocalizationItem Name="qccannotremove" Value="无法删除质量控制" />
+        <LocalizationItem Name="QCnotdelete" Value="ABID批次号已经生成，不能删除" />
+        <LocalizationItem Name="ReportIDNotdeleted" Value="报告编号已完成下一个过程，无法删除" />
+        <LocalizationItem Name="ReportIDNotEditable" Value="报告已归档，不能编辑" />
+        <LocalizationItem Name="ReportNotFound" Value="找不到报告" />
+        <LocalizationItem Name="ResultNull" Value="结果不能为空" />
+        <LocalizationItem Name="Reviewexported" Value="已审核并成功导出" />
+        <LocalizationItem Name="Rollbackempty" Value="输入回滚原因" />
+        <LocalizationItem Name="Rollbackfailed" Value="回滚失败" />
+        <LocalizationItem Name="Rollbacksuccess" Value="一键退回成功" />
+        <LocalizationItem Name="samplecannotremove" Value="无法移除样品" />
+        <LocalizationItem Name="samplesorterror" Value="样品已排序，请单击“重置”并继续" />
+        <LocalizationItem Name="Savesuccess" Value="保存成功" />
+        <LocalizationItem Name="selectinstrument" Value="选择仪器以继续" />
+        <LocalizationItem Name="selectQCTypeinCombo" Value="选择仪器以继续" />
+        <LocalizationItem Name="SelectReportID" Value="选择一个报告编号进行预览" />
+        <LocalizationItem Name="SelectReportIDDelete" Value="选择一个报告编号进行删除" />
+        <LocalizationItem Name="Selectsample" Value="选择样品以继续" />
+        <LocalizationItem Name="testexists" Value="检测项目已经存在，可以自动生成新的检测项目" />
+        <LocalizationItem Name="Updatesuccess" Value="更新成功。" />
+        <LocalizationItem Name="Verifyexported" Value="验证并成功导出" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+  <Views Id="Views">
+    <DashboardView Id="AnalyticalBatchsequence" Caption="质量批次">
+      <Items Id="Items">
+        <DashboardViewItem Id="qclist" Caption="添加样品" />
+        <DashboardViewItem Id="qctype" Caption="添加质控" />
+      </Items>
+    </DashboardView>
+    <DashboardView Id="BatchTestAssignment" Caption="检测项目">
+      <Items Id="Items">
+        <DashboardViewItem Id="Samples" Caption="已选参数" />
+        <DashboardViewItem Id="TestViewMain" Caption="可选项目" />
+        <DashboardViewItem Id="TestViewSub" Caption="已选项目" />
+        <DashboardViewItem Id="TestViewSubChild" Caption="已选参数" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="BottleSetup_DetailView_Distribution">
+      <Items Id="Items">
+        <PropertyEditor Id="Comment" Caption="备注" />
+        <PropertyEditor Id="Duplicate" Caption="物品数量" />
+        <PropertyEditor Id="Matrix" Caption="基质" />
+        <PropertyEditor Id="Preservative" Caption="防腐剂" />
+        <PropertyEditor Id="Test" Caption="检测项目" />
+        <PropertyEditor Id="TestGroup" Caption="检测项目" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BottleSetup" Caption="分瓶设置" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="备注" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="BottleSetupDistribution" Caption="分发" />
+    <ListView Id="ClauseInspectionSettings_ListView_Import" Caption="检验条款设置">
+      <Columns Id="Columns">
+        <ColumnInfo Id="sort" Caption="序号" />
+      </Columns>
+    </ListView>
+    <ListView Id="ClauseOptions_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="sort" Caption="序号" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="COCSettings" Caption="委托单设置">
+      <Items Id="Items">
+        <DashboardViewItem Id="COCSettings" Caption="样品接收" />
+        <DashboardViewItem Id="Samples" Caption="样品" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item1" Caption="样品接收" />
+            <LayoutGroup Id="Item3" Caption="样品" />
+            <LayoutGroup Id="Item4" Caption="检测项目" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="COCSettings_DetailView_Copy" Caption="委托单设置">
+      <Items Id="Items">
+        <PropertyEditor Id="Address" Caption="委托单位地址" />
+        <PropertyEditor Id="Client" Caption="委托单位" />
+        <PropertyEditor Id="COC_ID" NullText="自动生成" Caption="委托单编号" />
+        <PropertyEditor Id="COCName" Caption="COC名称" />
+        <PropertyEditor Id="Comment" Caption="备注" />
+        <PropertyEditor Id="FileUpload" Caption="文件上传" />
+        <PropertyEditor Id="ProjectName" Caption="项目名称" />
+        <PropertyEditor Id="SiteMapID" Caption="位置地图编号" />
+        <PropertyEditor Id="strCOCID" NullText="自动生成" Caption="委托单编号" />
+      </Items>
+    </DetailView>
+    <ListView Id="COCSettings_ListView_SampleRegistration" Caption="委托单设置">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Address" Caption="委托单位地址" />
+        <ColumnInfo Id="COC_ID" Caption="委托单编号" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="FileUpload" Caption="文件上传" />
+        <ColumnInfo Id="PhoneNo" Caption="委托单位电话" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="SiteMapID" Caption="位置地图编号" />
+        <ColumnInfo Id="strCOCID" Caption="委托单编号" />
+        <ColumnInfo Id="COCName" Caption="COC名称" />
+        <ColumnInfo Id="Client" Caption="委托单位名称" />
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+        <ColumnInfo Id="ProjectLocation" Caption="项目地点" />
+      </Columns>
+    </ListView>
+    <ListView Id="COCSettingsSamples_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClientSampleID" Caption="样液编号" />
+        <ColumnInfo Id="Qty" Caption="物品数量" />
+        <ColumnInfo Id="SampleType" Caption="样品分类" />
+        <ColumnInfo Id="SiteName" Caption="地点名称" />
+        <ColumnInfo Id="TestCategory" Caption="检测分类" />
+        <ColumnInfo Id="VisualMatrix" Caption="样品基质" />
+        <ColumnInfo Id="SampleNo" Caption="样品号码" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="COCTest" Caption="检测项目">
+      <Items Id="Items">
+        <DashboardViewItem Id="TestViewMain" Caption="可选项目" />
+        <DashboardViewItem Id="TestViewSub" Caption="已选项目" />
+        <DashboardViewItem Id="TestViewSubChild" Caption="已选参数" />
+      </Items>
+    </DashboardView>
+    <DashboardView Id="COCTestGroup">
+      <Items Id="Items">
+        <DashboardViewItem Id="TestViewMain" Caption="可选项目" />
+        <DashboardViewItem Id="TestViewSub" Caption="已选项目" />
+        <DashboardViewItem Id="TestViewSubChild" Caption="已选参数" />
+      </Items>
+    </DashboardView>
+    <ListView Id="COCTestparameter_LookupListView_Copy_SampleLogin" Caption="参数名称">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Component" Caption="要素" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="TestMethod" Caption="基质" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+      </Columns>
+    </ListView>
+    <ListView Id="COCTestparameter_LookupListView_Copy_SampleLogin_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestMethod" Caption="样品类型" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <ListView Id="COCTestparameter_LookupListView_Copy_SampleLogin_Copy_Parameter">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="TestMethod" Caption="基质" />
+      </Columns>
+    </ListView>
+    <ListView Id="CustomSystemRole_ListView_Employee">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CanEditModel" Caption="可以编辑模式" />
+        <ColumnInfo Id="IsAdministrative" Caption="是管理员" />
+        <ColumnInfo Id="IsBatchExport" Caption="批量导出" />
+        <ColumnInfo Id="ISNavigationPermission" Caption="是否有导航权限" />
+        <ColumnInfo Id="PermissionPolicy" Caption="许可政策" />
+        <ColumnInfo Id="Name" Caption="名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="CustomSystemRole_LookupListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Caption="名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="Distribution_ListView_ReceiveViewDirect" Caption="收到物品">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ConsumptionBy" Caption="领用人" />
+        <ColumnInfo Id="ConsumptionDate" Caption="领用日期" />
+        <ColumnInfo Id="DistributionDate" Caption="发行日期" />
+        <ColumnInfo Id="ExpiryDate" Caption="有效日期" />
+        <ColumnInfo Id="GivenBy" Caption="给定" />
+        <ColumnInfo Id="itemreceivedsort" Caption="物品接收排序" />
+        <ColumnInfo Id="OrderQty" Caption="订购数量" />
+        <ColumnInfo Id="TotalItems" Caption="总物品数量" />
+        <ColumnInfo Id="VendorLT" Caption="供应商Lt" />
+        <ColumnInfo Id="Item" Caption="物品名称" />
+        <ColumnInfo Id="Catalog#" Caption="规格型号" />
+        <ColumnInfo Id="PackUnits" Caption="包装单位" />
+        <ColumnInfo Id="ItemUnit" Caption="物品数/单位" />
+        <ColumnInfo Id="StockQty" Caption="库存数量" />
+        <ColumnInfo Id="ReceivedDate" Caption="接收时间" />
+        <ColumnInfo Id="ReceivedBy" Caption="接收人" />
+        <ColumnInfo Id="Receiveviewgroup" Caption="母体" />
+      </Columns>
+    </ListView>
+    <ListView Id="Employee_LookupListView_AnalysisDepartmentChain">
+      <Columns Id="Columns">
+        <ColumnInfo Id="FullName" Caption="姓名" />
+      </Columns>
+    </ListView>
+    <ListView Id="Labware_ListView_Balance_Instrument" Caption="仪器设备">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AcceptanceDate" Caption="录取日期" />
+        <ColumnInfo Id="AssetsNumber" Caption="资产数量" />
+        <ColumnInfo Id="BizCategory" Caption="商务类别" />
+        <ColumnInfo Id="CertificateCategory" Caption="证书类别" />
+        <ColumnInfo Id="Custodian" Caption="保管人" />
+        <ColumnInfo Id="DateIssued" Caption="发证日期" />
+        <ColumnInfo Id="DepartmentUsed" Caption="使用部门" />
+        <ColumnInfo Id="ExpirationDate" Caption="失效期" />
+        <ColumnInfo Id="FileNumber" Caption="文件编号" />
+        <ColumnInfo Id="FilingDate" Caption="申请日期" />
+        <ColumnInfo Id="FullName" Caption="姓名" />
+        <ColumnInfo Id="InternalCategory" Caption="内部类别" />
+        <ColumnInfo Id="IsValid" Caption="已审核" />
+        <ColumnInfo Id="LabwareID" Caption="实验室代码" />
+        <ColumnInfo Id="LastTime" Caption="上次" />
+        <ColumnInfo Id="MeasuringRange" Caption="测量范围" />
+        <ColumnInfo Id="NextCheckDate" Caption="下一个检查日期" />
+        <ColumnInfo Id="NextMaintenanceDate" Caption="下次维护日期" />
+        <ColumnInfo Id="NextMeasureDate" Caption="下一个测量日期" />
+        <ColumnInfo Id="NextTime" Caption="下次" />
+        <ColumnInfo Id="PurchasingDate" Caption="采购日期" />
+        <ColumnInfo Id="StartDate" Caption="投产日期" />
+        <ColumnInfo Id="TrackingMode" Caption="跟踪模式" />
+        <ColumnInfo Id="UnitOfMeasure" Caption="物资计量单位" />
+        <ColumnInfo Id="AssignedName" Caption="仪器唯一编号" />
+        <ColumnInfo Id="LabwareName" Caption="仪器设备" />
+      </Columns>
+    </ListView>
+    <ListView Id="Labware_ListView_Copy" Caption="仪器设备">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AcceptanceDate" Caption="录取日期" />
+        <ColumnInfo Id="AssetsNumber" Caption="资产数量" />
+        <ColumnInfo Id="BizCategory" Caption="商务类别" />
+        <ColumnInfo Id="CertificateCategory" Caption="证书类别" />
+        <ColumnInfo Id="Custodian" Caption="保管人" />
+        <ColumnInfo Id="DateIssued" Caption="发证日期" />
+        <ColumnInfo Id="DepartmentUsed" Caption="使用部门" />
+        <ColumnInfo Id="ExpirationDate" Caption="失效期" />
+        <ColumnInfo Id="FileNumber" Caption="文件编号" />
+        <ColumnInfo Id="FilingDate" Caption="申请日期" />
+        <ColumnInfo Id="FullName" Caption="姓名" />
+        <ColumnInfo Id="InternalCategory" Caption="内部类别" />
+        <ColumnInfo Id="IsValid" Caption="已审核" />
+        <ColumnInfo Id="LabwareID" Caption="实验室代码" />
+        <ColumnInfo Id="LastTime" Caption="上次" />
+        <ColumnInfo Id="MeasuringRange" Caption="测量范围" />
+        <ColumnInfo Id="NextCheckDate" Caption="下一个检查日期" />
+        <ColumnInfo Id="NextMaintenanceDate" Caption="下次维护日期" />
+        <ColumnInfo Id="NextMeasureDate" Caption="下一个测量日期" />
+        <ColumnInfo Id="NextTime" Caption="下次" />
+        <ColumnInfo Id="PurchasingDate" Caption="采购日期" />
+        <ColumnInfo Id="StartDate" Caption="投产日期" />
+        <ColumnInfo Id="TrackingMode" Caption="跟踪模式" />
+        <ColumnInfo Id="UnitOfMeasure" Caption="物资计量单位" />
+        <ColumnInfo Id="AssignedName" Caption="仪器唯一编号" />
+        <ColumnInfo Id="LabwareName" Caption="仪器设备" />
+      </Columns>
+    </ListView>
+    <ListView Id="Labware_ListView_Instrument" Caption="仪器设备">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AcceptanceDate" Caption="录取日期" />
+        <ColumnInfo Id="BizCategory" Caption="商务类别" />
+        <ColumnInfo Id="CertificateCategory" Caption="证书类别" />
+        <ColumnInfo Id="Custodian" Caption="保管人" />
+        <ColumnInfo Id="DateIssued" Caption="发证日期" />
+        <ColumnInfo Id="DepartmentUsed" Caption="使用部门" />
+        <ColumnInfo Id="FilingDate" Caption="申请日期" />
+        <ColumnInfo Id="FullName" Caption="姓名" />
+        <ColumnInfo Id="InternalCategory" Caption="内部类别" />
+        <ColumnInfo Id="IsValid" Caption="已审核" />
+        <ColumnInfo Id="LabwareID" Caption="实验室代码" />
+        <ColumnInfo Id="LastTime" Caption="上次" />
+        <ColumnInfo Id="NextCheckDate" Caption="下一个检查日期" />
+        <ColumnInfo Id="NextMaintenanceDate" Caption="下次维护日期" />
+        <ColumnInfo Id="NextMeasureDate" Caption="下一个测量日期" />
+        <ColumnInfo Id="NextTime" Caption="下次" />
+        <ColumnInfo Id="PurchasingDate" Caption="采购日期" />
+        <ColumnInfo Id="StartDate" Caption="投产日期" />
+        <ColumnInfo Id="TrackingMode" Caption="跟踪模式" />
+        <ColumnInfo Id="UnitOfMeasure" Caption="物资计量单位" />
+        <ColumnInfo Id="LabwareName" Caption="仪器设备" />
+        <ColumnInfo Id="AssignedName" Caption="仪器唯一编号" />
+        <ColumnInfo Id="AssetsNumber" Caption="资产数量" />
+        <ColumnInfo Id="FileNumber" Caption="文件编号" />
+        <ColumnInfo Id="MeasuringRange" Caption="测量范围" />
+        <ColumnInfo Id="ExpirationDate" Caption="失效期" />
+      </Columns>
+    </ListView>
+    <ListView Id="Matrix_LookupListView_Bottlesetup">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+      </Columns>
+    </ListView>
+    <ListView Id="Method_ListView_Combo" Caption="分析方法 ">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodCode" Caption="方法代码" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="RetireDate" Caption="退役日期" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="Method_LookupListView_SamplecheckinClauses" Caption="分析方法 ">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="Parameter_ListView_Test">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BoilingPoint" Caption="沸点" />
+        <ColumnInfo Id="FlashPoint" Caption="闪点" />
+        <ColumnInfo Id="MeltingPoint" Caption="熔点" />
+        <ColumnInfo Id="MSDS" Caption="安全数据表" />
+        <ColumnInfo Id="ParameterCode" Caption="参数代码" />
+        <ColumnInfo Id="RetireDate" Caption="退役日期" />
+        <ColumnInfo Id="ParameterName" Caption="参数" />
+      </Columns>
+    </ListView>
+    <ListView Id="Parameter_LookupListView_AvailableTest">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ParameterName" Caption="参数" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="PortalDashboard" Caption="Portal" />
+    <ListView Id="Preservative_LookupListView_Bottlesetup">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PreservativeName" Caption="防腐剂" />
+      </Columns>
+    </ListView>
+    <ListView Id="Project_LookupListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Project ID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ProjectLocation" Caption="项目地点" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_Copy" Caption="质量批次">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="质量批次创建人" />
+        <ColumnInfo Id="Datecreated" Caption="质量批次创建日期" />
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="Matrix" Caption="样品类型" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Method" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultApproval" Caption="二级数据审核">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="Matrix" Caption="样品类型" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Method" Caption="分析方法" />
+        <ColumnInfo Id="CreatedBy" Caption="质量批次创建人" />
+        <ColumnInfo Id="Datecreated" Caption="质量批次创建日期" />
+        <ColumnInfo Id="PendingApprovalSamplesCount" Caption="样品数量" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultEntry" Caption="质量批次">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="Matrix" Caption="样品类型" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Method" Caption="分析方法" />
+        <ColumnInfo Id="CreatedBy" Caption="质量批次创建人" />
+        <ColumnInfo Id="Datecreated" Caption="质量批次创建日期" />
+        <ColumnInfo Id="PendingEntrySamplesCount" Caption="样品数量" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultValidation" Caption="一级数据审核">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="Matrix" Caption="样品类型" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Method" Caption="分析方法" />
+        <ColumnInfo Id="CreatedBy" Caption="质量批次创建人" />
+        <ColumnInfo Id="Datecreated" Caption="质量批次创建日期" />
+        <ColumnInfo Id="PendingValidationSamplesCount" Caption="样品数量" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultView" Caption="质量批次">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="Matrix" Caption="样品类型" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Method" Caption="分析方法" />
+        <ColumnInfo Id="CreatedBy" Caption="质量批次创建人" />
+        <ColumnInfo Id="Datecreated" Caption="质量批次创建日期" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="QCBatchsequence" Caption="质量批次">
+      <Items Id="Items">
+        <DashboardViewItem Id="qclist" Caption="添加样品" />
+        <DashboardViewItem Id="qctype" Caption="添加质控" />
+      </Items>
+    </DashboardView>
+    <ListView Id="QCBatchSequence_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="FinalVolume" Caption="定容体积(ml)" />
+        <ColumnInfo Id="HoldTime" Caption="到期时间" />
+        <ColumnInfo Id="SampleAmount" Caption="样品用量" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="Sort" Caption="排序" />
+        <ColumnInfo Id="StrSampleID" Caption="样品编号" />
+        <ColumnInfo Id="SYSSamplecode" Caption="系统样品代码" />
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+        <ColumnInfo Id="DateCollected" Caption="收集日期" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="QcParameter_ListView_DefaultSettings">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物控制上限" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物控制下限" />
+        <ColumnInfo Id="TestMethod" Caption="检测项目" />
+        <ColumnInfo Id="Sort" Caption="排序" />
+        <ColumnInfo Id="Surroagate" Caption="是否替代物" />
+        <ColumnInfo Id="InternalStandard" Caption="是否内标" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="DefaultUnits" Caption="默认单位" />
+        <ColumnInfo Id="FinalDefaultResult" Caption="最终默认结果" />
+        <ColumnInfo Id="FinalDefaultUnits" Caption="最终默认结果单位" />
+        <ColumnInfo Id="STDConcUnit" Caption="标样浓度单位" />
+        <ColumnInfo Id="STDVolAdd" Caption="标样使用体积" />
+        <ColumnInfo Id="STDVolUnit" Caption="标样体积单位" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeAmountUnit" Caption="加标量单位" />
+        <ColumnInfo Id="RecLCLimit" Caption="回收率控制下限" />
+        <ColumnInfo Id="RecHCLimit" Caption="回收率控制上限" />
+        <ColumnInfo Id="LowCLimit" Caption="控制下限" />
+        <ColumnInfo Id="HighCLimit" Caption="控制上限" />
+        <ColumnInfo Id="RELCLimit" Caption="相对误差下限" />
+        <ColumnInfo Id="SigFig" Caption="有效数字" />
+        <ColumnInfo Id="CutOff" Caption="切断值" />
+        <ColumnInfo Id="RetireDate" Caption="退役时间" />
+      </Columns>
+    </ListView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <PropertyEditor Id="FilterDataByMonth" Caption="按月过滤数据" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" Caption="工作编号" />
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" Caption="样品编号" />
+        <PropertyEditor Id="SampleID" Caption="样品编号" />
+        <PropertyEditor Id="strJobID" Caption="工作编号" />
+        <PropertyEditor Id="strSampleID" Caption="样品编号" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QCResultValidationQueryPanel" Caption="质控样结果审核面板" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultApproval" Caption="二级数据审核">
+      <Items Id="Items">
+        <PropertyEditor Id="FilterDataByMonth" Caption="按月过滤数据" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" Caption="工作编号" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" Caption="工作编号" />
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" Caption="样品编号" />
+        <PropertyEditor Id="SampleID" Caption="样品编号" />
+        <PropertyEditor Id="strJobID" Caption="工作编号" />
+        <PropertyEditor Id="strQCBatchID" Caption="质控批次编号" />
+        <PropertyEditor Id="strSampleID" Caption="样品编号" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+        <DashboardViewItem Id="viewItemJobID" Caption="工作编号" />
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultValidation" Caption="一级数据审核">
+      <Items Id="Items">
+        <PropertyEditor Id="FilterDataByMonth" Caption="按月过滤数据" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" Caption="工作编号" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" Caption="工作编号" />
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" Caption="样品编号" />
+        <PropertyEditor Id="SampleID" Caption="样品编号" />
+        <PropertyEditor Id="strJobID" Caption="工作编号" />
+        <PropertyEditor Id="strQCBatchID" Caption="质控批次编号" />
+        <PropertyEditor Id="strSampleID" Caption="样品编号" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+        <DashboardViewItem Id="viewItemJobID" Caption="工作编号" />
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <ListView Id="QCType_ListView_analyticalbatchsequence" Caption="质控类型">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+        <ColumnInfo Id="QCTypeName" Caption="质控类型" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCType_ListView_qcbatchsequence" Caption="质控类型">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+        <ColumnInfo Id="QCTypeName" Caption="质控类型" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCType_ListView_SamplePrepBatchSequence" Caption="质控类型">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+        <ColumnInfo Id="QCTypeName" Caption="质控类型" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCType_LookupListView_SequenceSetup" Caption="质控类型">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCTypeName" Caption="质控类型" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Reporting_DetailView_Archived" Caption="报告归档">
+      <Items Id="Items">
+        <PropertyEditor Id="Archive Comment" Caption="备注" />
+        <PropertyEditor Id="ArchiveCopies" Caption="#归档份数" />
+        <PropertyEditor Id="Box" Caption="盒号 " />
+        <PropertyEditor Id="CompanyID" Caption="委托单位" />
+        <PropertyEditor Id="Project Name" Caption="项目" />
+        <PropertyEditor Id="ProjectReportID" Caption="报告项目编号" />
+        <PropertyEditor Id="Received By" Caption="签收人 " />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Reporting" Caption="报告编制" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_DeleteReason" Caption="报告打印下载 ">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Reporting" Caption="报告编制" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_Delivery" Caption="报告发放">
+      <Items Id="Items">
+        <PropertyEditor Id="CompanyID" Caption="委托单位" />
+        <PropertyEditor Id="Delivery Comments" Caption="备注" />
+        <PropertyEditor Id="DeliveryCopies" Caption="#发放份数" />
+        <PropertyEditor Id="ISEmail" Caption="是否邮件发放 " />
+        <PropertyEditor Id="Project Name" Caption="项目" />
+        <PropertyEditor Id="ProjectReportID" Caption="报告项目编号" />
+        <PropertyEditor Id="Tracking" Caption="跟踪号#" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Reporting" Caption="报告编制" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_PrintDownload" Caption="报告打印下载 ">
+      <Items Id="Items">
+        <PropertyEditor Id="CompanyID" Caption="委托单位" />
+        <PropertyEditor Id="PrintComment" Caption="备注" />
+        <PropertyEditor Id="PrintCopies" Caption="#打印份数" />
+        <PropertyEditor Id="Project Name" Caption="项目" />
+        <PropertyEditor Id="ProjectCity" Caption="报告所属城市 " />
+        <PropertyEditor Id="ProjectReportID" Caption="报告项目编号" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Reporting" Caption="报告编制" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_Recalled" Caption="报告发放">
+      <Items Id="Items">
+        <PropertyEditor Id="#CopyRecalled" Caption="收回份数 " />
+        <PropertyEditor Id="CompanyID" Caption="委托单位" />
+        <PropertyEditor Id="DeliveryCopies" Caption="#发放份数" />
+        <PropertyEditor Id="ISEmail" Caption="是否邮件发放 " />
+        <PropertyEditor Id="Project Name" Caption="项目名称" />
+        <PropertyEditor Id="ProjectReportID" Caption="报告项目编号" />
+        <PropertyEditor Id="Recall Comment" Caption="备注" />
+        <PropertyEditor Id="Tracking" Caption="跟踪号#" />
+        <PropertyEditor Id="Tracking#" Caption="跟踪号#" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Reporting" Caption="报告编制" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_Rollback" Caption="报告编制">
+      <Items Id="Items">
+        <PropertyEditor Id="LastUpdatedBy" Caption="最后变更人" />
+      </Items>
+    </DetailView>
+    <ListView Id="Reporting_ListView_Account" Caption="报告台账">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ReportID" Caption="报告编号" />
+        <ColumnInfo Id="Box" Caption="盒号 " />
+        <ColumnInfo Id="Code Name" Caption="代号 " />
+        <ColumnInfo Id="Date Archived" Caption="归档日期" />
+        <ColumnInfo Id="Archived By" Caption="归档操作人" />
+        <ColumnInfo Id="Archive Location" Caption="归档路径 " />
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="CopyPrint" Caption="#打印份数" />
+        <ColumnInfo Id="Delivery Copies" Caption="#发放份数" />
+        <ColumnInfo Id="Archive Copies" Caption="#归档份数" />
+        <ColumnInfo Id="ProjectCity" Caption="报告所属城市 " />
+        <ColumnInfo Id="ProjectReportID" Caption="报告项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ReportName" Caption="报告名称" />
+        <ColumnInfo Id="Status" Caption="样品状态" />
+        <ColumnInfo Id="DeliveryDeleteReason" Caption="发放删除原因" />
+        <ColumnInfo Id="ArchiveDeleteReason" Caption="归档删除原因" />
+        <ColumnInfo Id="LastUpdatedDate" Caption="最后变更时间" />
+        <ColumnInfo Id="LastUpdatedBy" Caption="最后变更人" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_ApprovalQueryPanel" Caption="报告审核">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ReportedBy" Caption="报告人" />
+        <ColumnInfo Id="ReportedDate" Caption="制表时间" />
+        <ColumnInfo Id="ReportID" Caption="报告编号" />
+        <ColumnInfo Id="ReportName" Caption="报告名称" />
+        <ColumnInfo Id="ReportValidatedBy" Caption="报告审核人" />
+        <ColumnInfo Id="ReportValidatedDate" Caption="报告审核日期" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="Project Name" Caption="项目" />
+        <ColumnInfo Id="CompanyID" Caption="委托单位" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_Archieve" Caption="报告审核">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ReportID" Caption="报告编号" />
+        <ColumnInfo Id="ReportName" Caption="报告名称" />
+        <ColumnInfo Id="Archive Copies" Caption="#归档份数" />
+        <ColumnInfo Id="Box" Caption="盒号 " />
+        <ColumnInfo Id="Code Name" Caption="代号 " />
+        <ColumnInfo Id="ArchiveLocation" Caption="归档路径 " />
+        <ColumnInfo Id="Date Archived" Caption="归档日期" />
+        <ColumnInfo Id="ArchivedBy" Caption="归档操作人" />
+        <ColumnInfo Id="ReceivedBy" Caption="签收人 " />
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectReportID" Caption="报告项目编号" />
+        <ColumnInfo Id="LastUpdatedDate" Caption="最后变更时间" />
+        <ColumnInfo Id="LastUpdatedBy" Caption="最后变更人" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_Copy_RollbackLog" Caption="报告浏览">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CompanyID" Caption="委托单位" />
+        <ColumnInfo Id="ContactEmail" Caption="联系人邮件" />
+        <ColumnInfo Id="ContactName" Caption="联系人" />
+        <ColumnInfo Id="Project Name" Caption="项目" />
+        <ColumnInfo Id="ReportApprovedBy" Caption="报告批准人" />
+        <ColumnInfo Id="ReportApprovedDate" Caption="报告批准日期" />
+        <ColumnInfo Id="ReportedBy" Caption="报告人" />
+        <ColumnInfo Id="ReportedDate" Caption="制表时间" />
+        <ColumnInfo Id="ReportName" Caption="报告名称" />
+        <ColumnInfo Id="ReportStatus" Caption="状态" />
+        <ColumnInfo Id="ReportValidatedBy" Caption="报告审核人" />
+        <ColumnInfo Id="ReportValidatedDate" Caption="报告审核日期" />
+        <ColumnInfo Id="ReportID" Caption="报告编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_Delivery" Caption="报告发放">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DatePrinted" Caption="打印日期" />
+        <ColumnInfo Id="PrintedBy" Caption="打印操作人" />
+        <ColumnInfo Id="ReportName" Caption="报告名称" />
+        <ColumnInfo Id="StoreLocation" Caption="报告存放处 " />
+        <ColumnInfo Id="ReportID" Caption="报告编号" />
+        <ColumnInfo Id="DeliveryMethod" Caption="发放方式" />
+        <ColumnInfo Id="Tracking" Caption="跟踪号#" />
+        <ColumnInfo Id="Delivery Copies" Caption="#发放份数" />
+        <ColumnInfo Id="DeliveryAddress" Caption="送达地址" />
+        <ColumnInfo Id="ReceivedBy" Caption="签收人 " />
+        <ColumnInfo Id="Date Delivered" Caption="发放日期 " />
+        <ColumnInfo Id="DeliveredBy" Caption="发放人 " />
+        <ColumnInfo Id="EmailAddress" Caption="邮箱地址" />
+        <ColumnInfo Id="HandledBy" Caption="经办人" />
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectReportID" Caption="报告项目编号" />
+        <ColumnInfo Id="LastUpdatedBy" Caption="最后变更人" />
+        <ColumnInfo Id="LastUpdatedDate" Caption="最后变更时间" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_PrintDownload" Caption="报告打印下载 ">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ReportID" Caption="报告编号" />
+        <ColumnInfo Id="ReportName" Caption="报告名称" />
+        <ColumnInfo Id="PrintCopies" Caption="#打印份数" />
+        <ColumnInfo Id="StoreLocation" Caption="报告存放处 " />
+        <ColumnInfo Id="DatePrinted" Caption="打印日期" />
+        <ColumnInfo Id="PrintedBy" Caption="打印操作人" />
+        <ColumnInfo Id="ProjectCity" Caption="报告所属城市 " />
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectReportID" Caption="报告项目编号" />
+        <ColumnInfo Id="LastUpdatedBy" Caption="最后变更人" />
+        <ColumnInfo Id="LastUpdatedDate" Caption="最后变更时间" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_Recall" Caption="报告收回">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Archive Copies" Caption="#归档份数" />
+        <ColumnInfo Id="Archive Delete Reason" Caption="归档删除原因" />
+        <ColumnInfo Id="Archive Location" Caption="归档路径 " />
+        <ColumnInfo Id="Archived By" Caption="归档操作人" />
+        <ColumnInfo Id="Box" Caption="盒号 " />
+        <ColumnInfo Id="Code Name" Caption="代号 " />
+        <ColumnInfo Id="CopyPrint" Caption="#打印份数" />
+        <ColumnInfo Id="Date Archived" Caption="归档日期" />
+        <ColumnInfo Id="DeliveryDeleteReason" Caption="发放删除原因" />
+        <ColumnInfo Id="ProjectCity" Caption="报告所属城市 " />
+        <ColumnInfo Id="ReportName" Caption="报告名称" />
+        <ColumnInfo Id="ReportID" Caption="报告编号" />
+        <ColumnInfo Id="Delivery Copies" Caption="#发放份数" />
+        <ColumnInfo Id="#CopyRecalled " Caption="收回份数 " />
+        <ColumnInfo Id="DateRecalled" Caption="收回日期 " />
+        <ColumnInfo Id="RecalledBy" Caption="收回人" />
+        <ColumnInfo Id="RecalledFrom" Caption="收回联系人 " />
+        <ColumnInfo Id="Recalled Method" Caption="收回方式 " />
+        <ColumnInfo Id="Tracking" Caption="跟踪号#" />
+        <ColumnInfo Id="EmailAddress" Caption="邮箱地址" />
+        <ColumnInfo Id="Received By" Caption="签收人 " />
+        <ColumnInfo Id="Date Delivered" Caption="发放日期 " />
+        <ColumnInfo Id="DeliveredBy" Caption="发放人 " />
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectReportID" Caption="报告项目编号" />
+        <ColumnInfo Id="LastUpdatedDate" Caption="最后变更时间" />
+        <ColumnInfo Id="LastUpdatedBy" Caption="最后变更人" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_ReportViewQueryPanel" Caption="报告浏览">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ReportedBy" Caption="报告人" />
+        <ColumnInfo Id="ReportedDate" Caption="制表时间" />
+        <ColumnInfo Id="ReportID" Caption="报告编号" />
+        <ColumnInfo Id="ReportName" Caption="报告名称" />
+        <ColumnInfo Id="ReportValidatedBy" Caption="报告审核人" />
+        <ColumnInfo Id="ReportValidatedDate" Caption="报告审核日期" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="Project Name" Caption="项目" />
+        <ColumnInfo Id="CompanyID" Caption="委托单位" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_ValidationQueryPanel" Caption="报告审核">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ReportedBy" Caption="报告人" />
+        <ColumnInfo Id="ReportedDate" Caption="制表时间" />
+        <ColumnInfo Id="ReportID" Caption="报告编号" />
+        <ColumnInfo Id="ReportName" Caption="报告名称" />
+        <ColumnInfo Id="ReportValidatedBy" Caption="报告审核人" />
+        <ColumnInfo Id="ReportValidatedDate" Caption="报告审核日期" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="Project Name" Caption="项目" />
+        <ColumnInfo Id="CompanyID" Caption="委托单位" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ReportingQueryPanel_DetailView_ResultView" Caption="报告浏览">
+      <Items Id="Items">
+        <PropertyEditor Id="ClientName" Caption="委托单位" />
+        <PropertyEditor Id="FilterDataByMonth" Caption="按月过滤数据" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目" />
+        <ActionContainerViewItem Id="RepJobIDPopUp" Caption="工作编号" />
+        <PropertyEditor Id="ReportID" Caption="报告编号" />
+        <PropertyEditor Id="strJobID" Caption="工作编号" />
+        <DashboardViewItem Id="viewItemJobID" Caption="工作编号" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_Validation" Caption="查询数据">
+      <Items Id="Items">
+        <PropertyEditor Id="ClientName" Caption="委托单位" />
+        <PropertyEditor Id="FilterDataByMonth" Caption="按月过滤数据" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目" />
+        <ActionContainerViewItem Id="RepJobIDPopUp" Caption="工作编号" />
+        <PropertyEditor Id="ReportID" Caption="报告编号" />
+        <PropertyEditor Id="strJobID" Caption="工作编号" />
+        <DashboardViewItem Id="viewItemJobID" Caption="工作编号" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportPackage_DetailView_Edit">
+      <Items Id="Items">
+        <PropertyEditor Id="PageCount" Caption="显示页码总计" />
+        <PropertyEditor Id="PageDisplay" Caption="显示页码" />
+        <PropertyEditor Id="ReportName" Caption="报告名称" />
+        <PropertyEditor Id="sort" Caption="序号" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ReportPackage" Caption="报告包名称" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="ResultEntry_Approval" Caption="二级数据审核">
+      <Items Id="Items">
+        <DashboardViewItem Id="QC" Caption="质控样" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item6">
+            <LayoutGroup Id="Item1" Caption="样品" />
+            <LayoutGroup Id="Item2" Caption="质控样" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="ResultEntry_Enter" Caption="结果录入">
+      <Items Id="Items">
+        <DashboardViewItem Id="ResultEntry" Caption="结果录入" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item1" Caption="样品" />
+            <LayoutGroup Id="Item3" Caption="质控批次" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="ResultEntry_Validation" Caption="一级数据审核">
+      <Items Id="Items">
+        <DashboardViewItem Id="QC" Caption="质控样" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item1" Caption="样品" />
+            <LayoutGroup Id="Item3" Caption="质控样" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="ResultEntry_View" Caption="结果录入">
+      <Items Id="Items">
+        <DashboardViewItem Id="ResultEntry" Caption="结果录入" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView_Copy" Caption="结果录入">
+      <Items Id="Items">
+        <PropertyEditor Id="ClientName" Caption="委托单位" />
+        <PropertyEditor Id="FilterDataByMonth" Caption="日期过滤" />
+        <PropertyEditor Id="MatrixName" Caption="基质" />
+        <PropertyEditor Id="MethodName" Caption="分析方法" />
+        <PropertyEditor Id="strJobID" Caption="工作编号" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+        <DashboardViewItem Id="viewItemJobID" Caption="工作编号" />
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval" Caption="二级数据审核">
+      <Items Id="Items">
+        <PropertyEditor Id="FilterDataByMonth" Caption="按月过滤数据" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" Caption="工作编号" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" Caption="工作编号" />
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" Caption="样品编号" />
+        <PropertyEditor Id="SampleID" Caption="样品编号" />
+        <PropertyEditor Id="strJobID" Caption="工作编号" />
+        <PropertyEditor Id="strQCBatchID" Caption="质控批次编号" />
+        <PropertyEditor Id="strSampleID" Caption="样品编号" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+        <DashboardViewItem Id="viewItemJobID" Caption="工作编号" />
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation" Caption="一级数据审核">
+      <Items Id="Items">
+        <PropertyEditor Id="FilterDataByMonth" Caption="按月过滤数据" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" Caption="工作编号" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" Caption="工作编号" />
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" Caption="样品编号" />
+        <PropertyEditor Id="SampleID" Caption="样品编号" />
+        <PropertyEditor Id="strJobID" Caption="工作编号" />
+        <PropertyEditor Id="strQCBatchID" Caption="质控批次编号" />
+        <PropertyEditor Id="strSampleID" Caption="样品编号" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+        <DashboardViewItem Id="viewItemJobID" Caption="工作编号" />
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultViewQueryPanel_DetailView" Caption="查询数据">
+      <Items Id="Items">
+        <PropertyEditor Id="ClientName" Caption="委托单位" />
+        <PropertyEditor Id="FilterDataByMonth" Caption="按月过滤数据" />
+        <PropertyEditor Id="JobID" Caption="工作编号" />
+        <PropertyEditor Id="MatrixName" Caption="基质" />
+        <PropertyEditor Id="MethodName" Caption="分析方法" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目" />
+        <PropertyEditor Id="strJobID" Caption="工作编号" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+        <DashboardViewItem Id="viewItemJobID" Caption="工作编号" />
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质量批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Client" Caption="样品接收">
+      <Items Id="Items">
+        <PropertyEditor Id="PresevitiveCode" Caption="抑制剂代码" />
+        <PropertyEditor Id="BroughtBy" Caption="送样人" />
+        <PropertyEditor Id="Clauses" Caption="条款" />
+        <PropertyEditor Id="ClientAddress" Caption="地址" />
+        <PropertyEditor Id="ClientAddress2" Caption="地址" />
+        <PropertyEditor Id="ClientName" Caption="委托单位" />
+        <PropertyEditor Id="ClientPhone" Caption="办公室电话" />
+        <PropertyEditor Id="Comment" Caption="备注" />
+        <PropertyEditor Id="ContactName" Caption="联系人" />
+        <PropertyEditor Id="CoolerId" Caption="样品冷却箱编号" />
+        <PropertyEditor Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <PropertyEditor Id="DateManufactured" Caption="生产日期批号" />
+        <PropertyEditor Id="DueDate" Caption="交付日期" />
+        <PropertyEditor Id="ImageUpload" Caption="图片上传" />
+        <PropertyEditor Id="JobID" Caption="工作编号" />
+        <PropertyEditor Id="ManufacturerAddress" Caption="生产单位地址" />
+        <PropertyEditor Id="MethodNumber" Caption="依据关联" />
+        <PropertyEditor Id="ModelNumber" Caption="型号/规格" />
+        <PropertyEditor Id="NumberOfSample" Caption="样品数量" />
+        <PropertyEditor Id="OutdoorInspection" Caption="室外检验" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目" />
+        <PropertyEditor Id="RecievedBy" Caption="受理人" />
+        <PropertyEditor Id="RecievedDate" Caption="收到日期" />
+        <PropertyEditor Id="SampleCategoryName" Caption="任务分类" />
+        <PropertyEditor Id="SampleGrade" Caption="样品等级" />
+        <PropertyEditor Id="SampleLocation" Caption="采样图像" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" Caption="样品登录" />
+        <PropertyEditor Id="SampleName" Caption="样品名称" />
+        <PropertyEditor Id="SampleQuantity" Caption="样品数量" />
+        <PropertyEditor Id="TestDescription" Caption="监测项目" />
+        <PropertyEditor Id="TradeMark" Caption="商标" />
+        <PropertyEditor Id="UploadCOC" Caption="上传COC" />
+        <PropertyEditor Id="VisualMatrixName" Caption="样品基质" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_RegistrationSigningOff" Caption="样品接收">
+      <Items Id="Items">
+        <PropertyEditor Id="PresevitiveCode" Caption="抑制剂代码" />
+        <PropertyEditor Id="BroughtBy" Caption="送样人" />
+        <PropertyEditor Id="Clauses" Caption="条款" />
+        <PropertyEditor Id="ClientAddress" Caption="地址" />
+        <PropertyEditor Id="ClientAddress2" Caption="地址" />
+        <PropertyEditor Id="ClientName" Caption="委托单位" />
+        <PropertyEditor Id="ClientPhone" Caption="办公室电话" />
+        <PropertyEditor Id="Comment" Caption="备注" />
+        <PropertyEditor Id="ContactName" Caption="联系人" />
+        <PropertyEditor Id="CoolerId" Caption="样品冷却箱编号" />
+        <PropertyEditor Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <PropertyEditor Id="DateManufactured" Caption="生产日期批号" />
+        <PropertyEditor Id="DueDate" Caption="交付日期" />
+        <PropertyEditor Id="EvaluationStandard" Caption="评价依据" />
+        <PropertyEditor Id="ImageUpload" Caption="图片上传" />
+        <PropertyEditor Id="JobID" Caption="工作编号" />
+        <PropertyEditor Id="ManufacturerAddress" Caption="生产单位地址" />
+        <PropertyEditor Id="MethodNumber" Caption="依据关联" />
+        <PropertyEditor Id="ModelNumber" Caption="型号/规格" />
+        <PropertyEditor Id="NumberOfSample" Caption="样品数量" />
+        <PropertyEditor Id="OutdoorInspection" Caption="室外检验" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目" />
+        <PropertyEditor Id="RecievedBy" Caption="受理人" />
+        <PropertyEditor Id="RecievedDate" Caption="收到日期" />
+        <PropertyEditor Id="ReportID" Caption="报告编号" />
+        <ActionContainerViewItem Id="Sample" Caption="样品" />
+        <PropertyEditor Id="SampleCategoryName" Caption="任务分类" />
+        <PropertyEditor Id="SampleColor" Caption="样品颜色/性状" />
+        <PropertyEditor Id="SampleGrade" Caption="样品等级" />
+        <PropertyEditor Id="SampleLocation" Caption="采样图像" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" Caption="样品登录" />
+        <PropertyEditor Id="SampleName" Caption="样品名称" />
+        <PropertyEditor Id="SampleQuantity" Caption="样品数量" />
+        <PropertyEditor Id="TestDescription" Caption="监测项目" />
+        <PropertyEditor Id="TradeMark" Caption="商标" />
+        <PropertyEditor Id="UploadCOC" Caption="上传COC" />
+        <PropertyEditor Id="VisualMatrixName" Caption="样品基质" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_RegistrationSigningOff_History" Caption="样品接收">
+      <Items Id="Items">
+        <PropertyEditor Id="PresevitiveCode" Caption="抑制剂代码" />
+        <PropertyEditor Id="BroughtBy" Caption="送样人" />
+        <PropertyEditor Id="Clauses" Caption="条款" />
+        <PropertyEditor Id="ClientAddress" Caption="地址" />
+        <PropertyEditor Id="ClientAddress2" Caption="地址" />
+        <PropertyEditor Id="ClientName" Caption="委托单位" />
+        <PropertyEditor Id="ClientPhone" Caption="办公室电话" />
+        <PropertyEditor Id="Comment" Caption="备注" />
+        <PropertyEditor Id="ContactName" Caption="联系人" />
+        <PropertyEditor Id="CoolerId" Caption="样品冷却箱编号" />
+        <PropertyEditor Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <PropertyEditor Id="DateManufactured" Caption="生产日期批号" />
+        <PropertyEditor Id="DueDate" Caption="交付日期" />
+        <PropertyEditor Id="EvaluationStandard" Caption="评价依据" />
+        <PropertyEditor Id="ImageUpload" Caption="图片上传" />
+        <PropertyEditor Id="JobID" Caption="工作编号" />
+        <PropertyEditor Id="ManufacturerAddress" Caption="生产单位地址" />
+        <PropertyEditor Id="MethodNumber" Caption="依据关联" />
+        <PropertyEditor Id="ModelNumber" Caption="型号/规格" />
+        <PropertyEditor Id="NumberOfSample" Caption="样品数量" />
+        <PropertyEditor Id="OutdoorInspection" Caption="室外检验" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目" />
+        <PropertyEditor Id="RecievedBy" Caption="受理人" />
+        <PropertyEditor Id="RecievedDate" Caption="收到日期" />
+        <PropertyEditor Id="ReportID" Caption="报告编号" />
+        <ActionContainerViewItem Id="Sample" Caption="样品" />
+        <PropertyEditor Id="SampleCategoryName" Caption="任务分类" />
+        <PropertyEditor Id="SampleColor" Caption="样品颜色/性状" />
+        <PropertyEditor Id="SampleGrade" Caption="样品等级" />
+        <PropertyEditor Id="SampleLocation" Caption="采样图像" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" Caption="样品登录" />
+        <PropertyEditor Id="SampleName" Caption="样品名称" />
+        <PropertyEditor Id="SampleQuantity" Caption="样品数量" />
+        <PropertyEditor Id="TestDescription" Caption="监测项目" />
+        <PropertyEditor Id="TradeMark" Caption="商标" />
+        <PropertyEditor Id="UploadCOC" Caption="上传COC" />
+        <PropertyEditor Id="VisualMatrixName" Caption="样品基质" />
+      </Items>
+    </DetailView>
+    <ListView Id="Samplecheckin_ListView_Copy_ProductSampleMapping" Caption="编号匹配">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BroughtBy" Caption="送样人" />
+        <ColumnInfo Id="ClientAddress" Caption="地址" />
+        <ColumnInfo Id="ClientAddress2" Caption="地址" />
+        <ColumnInfo Id="ClientPhone" Caption="办公室电话" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContactName" Caption="联系人" />
+        <ColumnInfo Id="CoolerId" Caption="样品冷却箱编号" />
+        <ColumnInfo Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <ColumnInfo Id="DueDate" Caption="交付日期" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="NumberOfSample" Caption="样品数量" />
+        <ColumnInfo Id="PresevitiveCode" Caption="抑制剂代码" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="RecievedBy" Caption="受理人" />
+        <ColumnInfo Id="SampleCount" Caption="样品数量" />
+        <ColumnInfo Id="TestDescription" Caption="描述" />
+        <ColumnInfo Id="TestsCount" Caption="检测项目数量" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="InspectionCategory" Caption="检验类别" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_Copy_RegistrationSigningOff" Caption="样品登记">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BroughtBy" Caption="送样人" />
+        <ColumnInfo Id="ClientAddress" Caption="地址" />
+        <ColumnInfo Id="ClientAddress2" Caption="地址" />
+        <ColumnInfo Id="ClientPhone" Caption="办公室电话" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContactName" Caption="联系人" />
+        <ColumnInfo Id="CoolerId" Caption="样品冷却箱编号" />
+        <ColumnInfo Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <ColumnInfo Id="InspectionCategory" Caption="检验类别" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="NumberOfSample" Caption="样品数量" />
+        <ColumnInfo Id="PresevitiveCode" Caption="抑制剂代码" />
+        <ColumnInfo Id="RecievedBy" Caption="受理人" />
+        <ColumnInfo Id="TestDescription" Caption="描述" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="DueDate" Caption="交付日期" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="SampleCount" Caption="样品数量" />
+        <ColumnInfo Id="TestsCount" Caption="检测项目数量" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_Copy_RegistrationSigningOff_History" Caption="样品登记">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BroughtBy" Caption="送样人" />
+        <ColumnInfo Id="ClientAddress" Caption="地址" />
+        <ColumnInfo Id="ClientAddress2" Caption="地址" />
+        <ColumnInfo Id="ClientPhone" Caption="办公室电话" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContactName" Caption="联系人" />
+        <ColumnInfo Id="CoolerId" Caption="样品冷却箱编号" />
+        <ColumnInfo Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <ColumnInfo Id="InspectionCategory" Caption="检验类别" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="NumberOfSample" Caption="样品数量" />
+        <ColumnInfo Id="PresevitiveCode" Caption="抑制剂代码" />
+        <ColumnInfo Id="RecievedBy" Caption="受理人" />
+        <ColumnInfo Id="TestDescription" Caption="描述" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="DueDate" Caption="交付日期" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="SampleCount" Caption="样品数量" />
+        <ColumnInfo Id="TestsCount" Caption="检测项目数量" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_Incompletejobs" Caption="任务跟踪">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BroughtBy" Caption="送样人" />
+        <ColumnInfo Id="ClientAddress" Caption="地址" />
+        <ColumnInfo Id="ClientAddress2" Caption="地址" />
+        <ColumnInfo Id="ClientPhone" Caption="办公室电话" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContactName" Caption="联系人" />
+        <ColumnInfo Id="CoolerId" Caption="样品冷却箱编号" />
+        <ColumnInfo Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <ColumnInfo Id="DateManufactured" Caption="生产日期批号" />
+        <ColumnInfo Id="EvaluationStandard" Caption="评价依据" />
+        <ColumnInfo Id="InspectionCategory" Caption="分类" />
+        <ColumnInfo Id="ModelNumber" Caption="型号/规格" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="NumberOfSample" Caption="样品数量" />
+        <ColumnInfo Id="OutdoorInspection" Caption="室外检验" />
+        <ColumnInfo Id="PresevitiveCode" Caption="抑制剂代码" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="RecievedBy" Caption="受理人" />
+        <ColumnInfo Id="SampleGrade" Caption="样品等级" />
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+        <ColumnInfo Id="SampleQuantity" Caption="样品数量" />
+        <ColumnInfo Id="TestDescription" Caption="描述" />
+        <ColumnInfo Id="TradeMark" Caption="商标" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="DueDate" Caption="交付日期" />
+        <ColumnInfo Id="ProgressStatus" Caption="进度状态" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_ProjectTracking" Caption="项目进度跟踪">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BroughtBy" Caption="送样人" />
+        <ColumnInfo Id="ClientAddress" Caption="地址" />
+        <ColumnInfo Id="ClientAddress2" Caption="地址" />
+        <ColumnInfo Id="ClientPhone" Caption="办公室电话" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContactName" Caption="联系人" />
+        <ColumnInfo Id="CoolerId" Caption="样品冷却箱编号" />
+        <ColumnInfo Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <ColumnInfo Id="DateManufactured" Caption="生产日期批号" />
+        <ColumnInfo Id="DueDate" Caption="交付日期" />
+        <ColumnInfo Id="EvaluationStandard" Caption="评价依据" />
+        <ColumnInfo Id="ModelNumber" Caption="型号/规格" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="NumberOfSample" Caption="样品数量" />
+        <ColumnInfo Id="OutdoorInspection" Caption="室外检验" />
+        <ColumnInfo Id="PresevitiveCode" Caption="抑制剂代码" />
+        <ColumnInfo Id="ProgressStatus" Caption="进度状态" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="RecievedBy" Caption="受理人" />
+        <ColumnInfo Id="SampleGrade" Caption="样品等级" />
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+        <ColumnInfo Id="SampleQuantity" Caption="样品数量" />
+        <ColumnInfo Id="TestDescription" Caption="描述" />
+        <ColumnInfo Id="TradeMark" Caption="商标" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="InspectionCategory" Caption="分类" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="Reported" Caption="已报告" />
+        <ColumnInfo Id="ProjectTrackingStatus" Caption="检测项目进度" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_LookupListView_Copy_ReportingApprovalQueryPanel" Caption="工作编号">
+      <Columns Id="Columns">
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="Client Name" Caption="委托单位" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="Project Name" Caption="项目" />
+        <ColumnInfo Id="Recieved Date" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_LookupListView_Copy_ReportingViewQueryPanel" Caption="工作编号">
+      <Columns Id="Columns">
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="Client Name" Caption="委托单位" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="Project Name" Caption="项目" />
+        <ColumnInfo Id="Recieved Date" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleLogIn_DetailView_ProductSampleMapping" Caption="样机编号">
+      <Items Id="Items">
+        <PropertyEditor Id="Client" Caption="委托单位" />
+        <PropertyEditor Id="ClientSampleID" Caption="委托样品名称" />
+        <PropertyEditor Id="CollectDate" Caption="采样日" />
+        <PropertyEditor Id="Collector" Caption="采样者" />
+        <PropertyEditor Id="CollectTime" Caption="采样时间" />
+        <PropertyEditor Id="Comment" Caption="备注" />
+        <PropertyEditor Id="ContainerID" Caption="容器编号" />
+        <PropertyEditor Id="FlowRate" Caption="流速" />
+        <PropertyEditor Id="JobID" Caption="工作编号" />
+        <PropertyEditor Id="Latitude" Caption="维度" />
+        <PropertyEditor Id="Longitude" Caption="经度" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目" />
+        <PropertyEditor Id="QCSource" Caption="质控源" />
+        <PropertyEditor Id="QCType" Caption="质控种类" />
+        <PropertyEditor Id="Qty" Caption="物品数量" />
+        <PropertyEditor Id="SampleID" Caption="样品编号" />
+        <PropertyEditor Id="SampleType" Caption="样品类型" />
+        <PropertyEditor Id="SamplingLocation" Caption="样品地点" />
+        <PropertyEditor Id="SequenceTestSampleID" Caption="样品编号" />
+        <PropertyEditor Id="Storage" Caption="库房" />
+        <PropertyEditor Id="SubOut" Caption="分包" />
+        <PropertyEditor Id="TimeEnd" Caption="结束时间" />
+        <PropertyEditor Id="TimeStart" Caption="起始时间" />
+        <PropertyEditor Id="VisualMatrix" Caption="样品基质" />
+        <PropertyEditor Id="Volume" Caption="采样体积" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="备注" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SampleLogIn_ListView_BatchTestAssignment" Caption="样品登录">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="CollectDate" Caption="采样日" />
+        <ColumnInfo Id="Collector" Caption="采样者" />
+        <ColumnInfo Id="CollectTime" Caption="采样时间" />
+        <ColumnInfo Id="CollectTimeDisplay" Caption="采样时间" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContainerID" Caption="容器编号" />
+        <ColumnInfo Id="FlowRate" Caption="流速" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="Latitude" Caption="维度" />
+        <ColumnInfo Id="Longitude" Caption="经度" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+        <ColumnInfo Id="QCType" Caption="质控种类" />
+        <ColumnInfo Id="Qty" Caption="物品数量" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="SampleType" Caption="样品类型" />
+        <ColumnInfo Id="SamplingLocation" Caption="样品地点" />
+        <ColumnInfo Id="SequenceTestSampleID" Caption="样品编号" />
+        <ColumnInfo Id="Storage" Caption="库房" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Time" Caption="时间" />
+        <ColumnInfo Id="TimeEnd" Caption="结束时间" />
+        <ColumnInfo Id="TimeStart" Caption="起始时间" />
+        <ColumnInfo Id="VisualMatrix" Caption="样品基质" />
+        <ColumnInfo Id="Volume" Caption="采样体积" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_ListView_ProductSampleMapping" Caption="编号匹配">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="CollectDate" Caption="采样日" />
+        <ColumnInfo Id="Collector" Caption="采样者" />
+        <ColumnInfo Id="CollectTime" Caption="采样时间" />
+        <ColumnInfo Id="CollectTimeDisplay" Caption="采样时间" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContainerID" Caption="容器编号" />
+        <ColumnInfo Id="FlowRate" Caption="流速" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="Latitude" Caption="维度" />
+        <ColumnInfo Id="Longitude" Caption="经度" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+        <ColumnInfo Id="QCType" Caption="质控种类" />
+        <ColumnInfo Id="Qty" Caption="物品数量" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="SequenceTestSampleID" Caption="样品编号" />
+        <ColumnInfo Id="Storage" Caption="库房" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Time" Caption="时间" />
+        <ColumnInfo Id="TimeEnd" Caption="结束时间" />
+        <ColumnInfo Id="TimeStart" Caption="起始时间" />
+        <ColumnInfo Id="VisualMatrix" Caption="样品基质" />
+        <ColumnInfo Id="Volume" Caption="采样体积" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="SamplingLocation" Caption="样品地点" />
+        <ColumnInfo Id="SampleType" Caption="样品类型" />
+        <ColumnInfo Id="PurifierSampleID" Caption="样机编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_ListView_SampleDisposition" Caption="样品留样">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Collector" Caption="采样者" />
+        <ColumnInfo Id="CollectTime" Caption="采样时间" />
+        <ColumnInfo Id="CollectTimeDisplay" Caption="采样时间" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="DaysRemaining" Caption="剩余天数" />
+        <ColumnInfo Id="FlowRate" Caption="流速" />
+        <ColumnInfo Id="Latitude" Caption="维度" />
+        <ColumnInfo Id="Longitude" Caption="经度" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+        <ColumnInfo Id="QCType" Caption="质控种类" />
+        <ColumnInfo Id="Qty" Caption="物品数量" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="SampleType" Caption="样品类型" />
+        <ColumnInfo Id="SamplingLocation" Caption="样品地点" />
+        <ColumnInfo Id="SequenceTestSampleID" Caption="样品编号" />
+        <ColumnInfo Id="Storage" Caption="库房" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Time" Caption="时间" />
+        <ColumnInfo Id="TimeEnd" Caption="结束时间" />
+        <ColumnInfo Id="TimeStart" Caption="起始时间" />
+        <ColumnInfo Id="Volume" Caption="采样体积" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托单位样品编号" />
+        <ColumnInfo Id="VisualMatrix" Caption="样品类型" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="StorageID" Caption="库房编号" />
+        <ColumnInfo Id="PreserveCondition" Caption="保存条件" />
+        <ColumnInfo Id="DaysSampleKeeping" Caption="留样天数" />
+        <ColumnInfo Id="DisposedDate" Caption="处置日期" />
+        <ColumnInfo Id="DisposedBy" Caption="处置人" />
+        <ColumnInfo Id="CollectDate" Caption="采样日" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_ListView_SampleDisposition_DisposedSamples" Caption="样品留样">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Collector" Caption="采样者" />
+        <ColumnInfo Id="CollectTime" Caption="采样时间" />
+        <ColumnInfo Id="CollectTimeDisplay" Caption="采样时间" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="DaysRemaining" Caption="剩余天数" />
+        <ColumnInfo Id="FlowRate" Caption="流速" />
+        <ColumnInfo Id="Latitude" Caption="维度" />
+        <ColumnInfo Id="Longitude" Caption="经度" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="PreserveCondition" Caption="保存条件" />
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+        <ColumnInfo Id="QCType" Caption="质控种类" />
+        <ColumnInfo Id="Qty" Caption="物品数量" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="SampleType" Caption="样品类型" />
+        <ColumnInfo Id="SamplingLocation" Caption="样品地点" />
+        <ColumnInfo Id="SequenceTestSampleID" Caption="样品编号" />
+        <ColumnInfo Id="Storage" Caption="库房" />
+        <ColumnInfo Id="StorageID" Caption="库房编号" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Time" Caption="时间" />
+        <ColumnInfo Id="TimeEnd" Caption="结束时间" />
+        <ColumnInfo Id="TimeStart" Caption="起始时间" />
+        <ColumnInfo Id="Volume" Caption="采样体积" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托单位样品编号" />
+        <ColumnInfo Id="VisualMatrix" Caption="样品类型" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="DaysSampleKeeping" Caption="留样天数" />
+        <ColumnInfo Id="DisposedDate" Caption="处置日期" />
+        <ColumnInfo Id="DisposedBy" Caption="处置人" />
+        <ColumnInfo Id="CollectDate" Caption="采样日" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_ListView_SampleDisposition_PendingSamples" Caption="样品留样">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Collector" Caption="采样者" />
+        <ColumnInfo Id="CollectTime" Caption="采样时间" />
+        <ColumnInfo Id="CollectTimeDisplay" Caption="采样时间" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="FlowRate" Caption="流速" />
+        <ColumnInfo Id="Latitude" Caption="维度" />
+        <ColumnInfo Id="Longitude" Caption="经度" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="PreserveCondition" Caption="保存条件" />
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+        <ColumnInfo Id="QCType" Caption="质控种类" />
+        <ColumnInfo Id="Qty" Caption="物品数量" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="SampleType" Caption="样品类型" />
+        <ColumnInfo Id="SamplingLocation" Caption="样品地点" />
+        <ColumnInfo Id="SequenceTestSampleID" Caption="样品编号" />
+        <ColumnInfo Id="Storage" Caption="库房" />
+        <ColumnInfo Id="StorageID" Caption="库房编号" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Time" Caption="时间" />
+        <ColumnInfo Id="TimeEnd" Caption="结束时间" />
+        <ColumnInfo Id="TimeStart" Caption="起始时间" />
+        <ColumnInfo Id="Volume" Caption="采样体积" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托单位样品编号" />
+        <ColumnInfo Id="VisualMatrix" Caption="样品类型" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="DaysSampleKeeping" Caption="留样天数" />
+        <ColumnInfo Id="DisposedDate" Caption="处置日期" />
+        <ColumnInfo Id="DisposedBy" Caption="处置人" />
+        <ColumnInfo Id="DaysRemaining" Caption="剩余天数" />
+        <ColumnInfo Id="CollectDate" Caption="采样日" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_LookupListView_SequenceTest">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCType" Caption="质控类型" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_QCResultApproval">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="FinalResultUnits" Caption="最终结果单位" />
+        <ColumnInfo Id="HighCLimit" Caption="控制上限" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="LOQ" Caption="最低标定浓度" />
+        <ColumnInfo Id="LowCLimit" Caption="控制下限" />
+        <ColumnInfo Id="MCL" Caption="法规允许限" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="QCType" Caption="质控类型" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="RecHCLimit" Caption="回收率控制上限" />
+        <ColumnInfo Id="RecLCLimit" Caption="回收率控制下限" />
+        <ColumnInfo Id="RELCLimit" Caption="相对误差下限" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Station" Caption="点位" />
+        <ColumnInfo Id="STDConcUnit" Caption="标样浓度单位" />
+        <ColumnInfo Id="STDVolAdd" Caption="标样使用体积" />
+        <ColumnInfo Id="STDVolUnit" Caption="标样体积单位" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Surrogate" Caption="示踪物" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物上限" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物下限" />
+        <ColumnInfo Id="SurrogateSpikeAmount" Caption="替代物加标量" />
+        <ColumnInfo Id="SurrogateUnits" Caption="替代物单位" />
+        <ColumnInfo Id="UQL" Caption="最高标定浓度" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="SYSSamplecode" Caption="系统样品代码" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="ResultNumeric" Caption="数字结果" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeAmountUnit" Caption="加标量单位" />
+        <ColumnInfo Id="Rec" Caption="回收率" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="ValidatedBy" Caption="审核人" />
+        <ColumnInfo Id="ValidatedDate" Caption="审核日期" />
+        <ColumnInfo Id="ApprovedBy" Caption="批准人" />
+        <ColumnInfo Id="ApprovedDate" Caption="批准日期" />
+        <ColumnInfo Id="Status" Caption="状态" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_QCResultEntry" Caption="结果录入">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="FinalResultUnits" Caption="最终结果单位" />
+        <ColumnInfo Id="HighCLimit" Caption="控制上限" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="LOQ" Caption="最低标定浓度" />
+        <ColumnInfo Id="LowCLimit" Caption="控制下限" />
+        <ColumnInfo Id="MCL" Caption="法规允许限" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="QCType" Caption="质控类型" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="RecHCLimit" Caption="回收率控制上限" />
+        <ColumnInfo Id="RecLCLimit" Caption="回收率控制下限" />
+        <ColumnInfo Id="RELCLimit" Caption="相对误差下限" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Station" Caption="点位" />
+        <ColumnInfo Id="STDConcUnit" Caption="标样浓度单位" />
+        <ColumnInfo Id="STDVolAdd" Caption="标样使用体积" />
+        <ColumnInfo Id="STDVolUnit" Caption="标样体积单位" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Surrogate" Caption="示踪物" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物上限" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物下限" />
+        <ColumnInfo Id="SurrogateSpikeAmount" Caption="替代物加标量" />
+        <ColumnInfo Id="SurrogateUnits" Caption="替代物单位" />
+        <ColumnInfo Id="UQL" Caption="最高标定浓度" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="SYSSamplecode" Caption="系统样品代码" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeAmountUnit" Caption="加标量单位" />
+        <ColumnInfo Id="Rec" Caption="回收率" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="Status" Caption="状态" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_QCResultValidation">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="FinalResultUnits" Caption="最终结果单位" />
+        <ColumnInfo Id="HighCLimit" Caption="控制上限" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="LOQ" Caption="最低标定浓度" />
+        <ColumnInfo Id="LowCLimit" Caption="控制下限" />
+        <ColumnInfo Id="MCL" Caption="法规允许限" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="QCType" Caption="质控类型" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="RecHCLimit" Caption="回收率控制上限" />
+        <ColumnInfo Id="RecLCLimit" Caption="回收率控制下限" />
+        <ColumnInfo Id="RELCLimit" Caption="相对误差下限" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Station" Caption="点位" />
+        <ColumnInfo Id="STDConcUnit" Caption="标样浓度单位" />
+        <ColumnInfo Id="STDVolAdd" Caption="标样使用体积" />
+        <ColumnInfo Id="STDVolUnit" Caption="标样体积单位" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Surrogate" Caption="示踪物" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物上限" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物下限" />
+        <ColumnInfo Id="SurrogateSpikeAmount" Caption="替代物加标量" />
+        <ColumnInfo Id="SurrogateUnits" Caption="替代物单位" />
+        <ColumnInfo Id="UQL" Caption="最高标定浓度" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="SYSSamplecode" Caption="系统样品代码" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="ResultNumeric" Caption="数字结果" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeAmountUnit" Caption="加标量单位" />
+        <ColumnInfo Id="Rec" Caption="回收率" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="ValidatedBy" Caption="审核人" />
+        <ColumnInfo Id="ValidatedDate" Caption="审核日期" />
+        <ColumnInfo Id="Status" Caption="状态" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_QCResultView" Caption="结果录入">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="FinalResultUnits" Caption="最终结果单位" />
+        <ColumnInfo Id="HighCLimit" Caption="控制上限" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="LOQ" Caption="最低标定浓度" />
+        <ColumnInfo Id="LowCLimit" Caption="控制下限" />
+        <ColumnInfo Id="MCL" Caption="法规允许限" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="QCType" Caption="质控类型" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="RecHCLimit" Caption="回收率控制上限" />
+        <ColumnInfo Id="RecLCLimit" Caption="回收率控制下限" />
+        <ColumnInfo Id="RELCLimit" Caption="相对误差下限" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Station" Caption="点位" />
+        <ColumnInfo Id="STDConcUnit" Caption="标样浓度单位" />
+        <ColumnInfo Id="STDVolAdd" Caption="标样使用体积" />
+        <ColumnInfo Id="STDVolUnit" Caption="标样体积单位" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Surrogate" Caption="示踪物" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物上限" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物下限" />
+        <ColumnInfo Id="SurrogateSpikeAmount" Caption="替代物加标量" />
+        <ColumnInfo Id="SurrogateUnits" Caption="替代物单位" />
+        <ColumnInfo Id="UQL" Caption="最高标定浓度" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="SYSSamplecode" Caption="系统样品代码" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="ResultNumeric" Caption="数字结果" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeAmountUnit" Caption="加标量单位" />
+        <ColumnInfo Id="Rec" Caption="回收率" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="ValidatedBy" Caption="审核人" />
+        <ColumnInfo Id="ValidatedDate" Caption="审核日期" />
+        <ColumnInfo Id="ApprovedBy" Caption="批准人" />
+        <ColumnInfo Id="ApprovedDate" Caption="批准日期" />
+        <ColumnInfo Id="Status" Caption="状态" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_RegistrationSignOffSamples" Caption="结果录入">
+      <Columns Id="Columns">
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Matrix" Caption="基质" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_ResultEntry_Main_Copy" Caption="结果录入">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="FinalResultUnits" Caption="最终默认结果" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物控制上限" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物控制下限" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_ReportingApproval_QueryPanel" Caption="结果录入">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="Status" Caption="状态" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_ReportingValidation_QueryPanel" Caption="结果录入">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="Status" Caption="状态" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_ReportingView_QueryPanel" Caption="结果录入">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="Status" Caption="状态" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_ResultApproval_QueryPanel" Caption="结果录入">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="Status" Caption="状态" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_ResultValidation_QueryPanel" Caption="结果录入">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="Status" Caption="状态" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SamplePrepBatch_DetailView_Copy">
+      <Items Id="Items">
+        <PropertyEditor Id="CreatedBy" Caption="创建人" />
+        <PropertyEditor Id="Humidity" Caption="湿度" />
+        <PropertyEditor Id="Matrix" Caption="基质" />
+        <PropertyEditor Id="Method" Caption="分析方法&#xD;" />
+        <DashboardViewItem Id="qctype" Caption="添加质控" />
+        <DashboardViewItem Id="samplepreplist" Caption="添加样品" />
+        <PropertyEditor Id="Temperature" Caption="温度" />
+        <PropertyEditor Id="Test" Caption="检测项目" />
+      </Items>
+    </DetailView>
+    <ListView Id="SamplePrepBatch_ListView_CopyFrom" Caption="样品准备">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="Temperature" Caption="温度" />
+        <ColumnInfo Id="PrepBatchID" Caption="准备批次" />
+        <ColumnInfo Id="Matrix" Caption="基质" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Method" Caption="分析方法&#xD;" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="SamplePrepBatchsequence" Caption="质量批次">
+      <Items Id="Items">
+        <DashboardViewItem Id="qctype" Caption="添加质控" />
+        <DashboardViewItem Id="samplepreplist" Caption="添加样品" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="SampleUpload_DetailView_ImagePreview" Caption="上传图片" />
+    <DashboardView Id="SampleWeighing" Caption="质量批次">
+      <Items Id="Items">
+        <DashboardViewItem Id="SampleWeighingList" Caption="添加样品" />
+      </Items>
+    </DashboardView>
+    <ListView Id="SampleWeighingBatchSequence_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCType" Caption="质控类型" />
+        <ColumnInfo Id="SampleID" Caption="样品名称" />
+        <ColumnInfo Id="Sort" Caption="序号" />
+        <ColumnInfo Id="StrSampleID" Caption="样品编号" />
+        <ColumnInfo Id="SYSSamplecode" Caption="系统样品代码" />
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+        <ColumnInfo Id="SampleAmount" Caption="样品称重(g)" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="DateWeighed" Caption="称重时间" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="SDMS">
+      <Layout Id="Layout">
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Item2" Caption="原始记录表单" />
+          <LayoutGroup Id="Item3" Caption="分析批次结果" />
+        </TabbedGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="SequenceSetup_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="MatrixName" Caption="基质" />
+        <PropertyEditor Id="MethodName" Caption="分析方法" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+      </Items>
+    </DetailView>
+    <ListView Id="SequenceSetup_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RetireDate" Caption="退役时间" />
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="SpecificSymbolDashboard" Caption="特殊符号">
+      <Items Id="Items">
+        <CustomUserControlViewItemWeb Id="SpecificSymbol" Caption="特殊符号" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="SpreadSheetEntry_AnalyticalBatch_DetailView_Copy">
+      <Items Id="Items">
+        <DashboardViewItem Id="qclist" Caption="添加样品" />
+        <DashboardViewItem Id="qctype" Caption="添加质控" />
+      </Items>
+    </DetailView>
+    <ListView Id="SpreadSheetEntry_ListView_QCBatchQueryPanel">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="ApprovedDate" Caption="批准日期" />
+        <ColumnInfo Id="BottleID" Caption="样瓶编号" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="InternalStandard" Caption="内标化合物" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+        <ColumnInfo Id="NumericResult" Caption="数字结果" />
+        <ColumnInfo Id="P_Recovery" Caption="复测值" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="QCSampleResult" Caption="质控样品结果" />
+        <ColumnInfo Id="RE" Caption="相对误差" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeUnit" Caption="加标单位" />
+        <ColumnInfo Id="SpikeVol" Caption="加标体积" />
+        <ColumnInfo Id="Surrogate" Caption="示踪物" />
+        <ColumnInfo Id="Temperature" Caption="温度" />
+        <ColumnInfo Id="ValidatedBy" Caption="审核人" />
+        <ColumnInfo Id="ValidatedDate" Caption="审核日期" />
+        <ColumnInfo Id="VOLUME" Caption="体积" />
+        <ColumnInfo Id="uqSampleParameterID" Caption="质控批次编号" />
+        <ColumnInfo Id="Matrix" Caption="检测项目&#xD;&#xA;" />
+        <ColumnInfo Id="Test" Caption="检测项目&#xD;&#xA;" />
+        <ColumnInfo Id="Method" Caption="分析方法 " />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="SpreadSheetEntry_ListView_QCBatchQueryPanel_ResultApproval">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="ApprovedDate" Caption="批准日期" />
+        <ColumnInfo Id="BottleID" Caption="样瓶编号" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="InternalStandard" Caption="内标化合物" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+        <ColumnInfo Id="NumericResult" Caption="数字结果" />
+        <ColumnInfo Id="P_Recovery" Caption="复测值" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="QCSampleResult" Caption="质控样品结果" />
+        <ColumnInfo Id="RE" Caption="相对误差" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeUnit" Caption="加标单位" />
+        <ColumnInfo Id="SpikeVol" Caption="加标体积" />
+        <ColumnInfo Id="Surrogate" Caption="示踪物" />
+        <ColumnInfo Id="Temperature" Caption="温度" />
+        <ColumnInfo Id="ValidatedBy" Caption="审核人" />
+        <ColumnInfo Id="ValidatedDate" Caption="审核日期" />
+        <ColumnInfo Id="VOLUME" Caption="体积" />
+        <ColumnInfo Id="uqSampleParameterID" Caption="质控批次编号" />
+        <ColumnInfo Id="Matrix" Caption="检测项目&#xD;&#xA;" />
+        <ColumnInfo Id="Test" Caption="检测项目&#xD;&#xA;" />
+        <ColumnInfo Id="Method" Caption="分析方法 " />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="SpreadSheetEntry_ListView_QCBatchQueryPanel_ResultValidation">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="ApprovedDate" Caption="批准日期" />
+        <ColumnInfo Id="BottleID" Caption="样瓶编号" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="InternalStandard" Caption="内标化合物" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+        <ColumnInfo Id="NumericResult" Caption="数字结果" />
+        <ColumnInfo Id="P_Recovery" Caption="复测值" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="QCSampleResult" Caption="质控样品结果" />
+        <ColumnInfo Id="RE" Caption="相对误差" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeUnit" Caption="加标单位" />
+        <ColumnInfo Id="SpikeVol" Caption="加标体积" />
+        <ColumnInfo Id="Surrogate" Caption="示踪物" />
+        <ColumnInfo Id="Temperature" Caption="温度" />
+        <ColumnInfo Id="ValidatedBy" Caption="审核人" />
+        <ColumnInfo Id="ValidatedDate" Caption="审核日期" />
+        <ColumnInfo Id="VOLUME" Caption="体积" />
+        <ColumnInfo Id="uqSampleParameterID" Caption="质控批次编号" />
+        <ColumnInfo Id="Matrix" Caption="检测项目&#xD;&#xA;" />
+        <ColumnInfo Id="Test" Caption="检测项目&#xD;&#xA;" />
+        <ColumnInfo Id="Method" Caption="分析方法 " />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="SpreadSheetEntry_ListView_SDMS">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="P_Recovery" Caption="复测值" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+        <ColumnInfo Id="VOLUME" Caption="体积" />
+        <ColumnInfo Id="RE" Caption="相对误差" />
+        <ColumnInfo Id="SpikeUnit" Caption="加标单位" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="Temperature" Caption="温度" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestMethod_DetailView_SamplePreparationChain" Caption="检测项目">
+      <Items Id="Items">
+        <PropertyEditor Id="Instrument" Caption="分析仪器" />
+        <PropertyEditor Id="MatrixName" Caption="基质" />
+        <PropertyEditor Id="MethodName" Caption="分析方法 " />
+        <PropertyEditor Id="Parameters" Caption="参数" />
+        <PropertyEditor Id="SubOut" Caption="分包" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+      </Items>
+    </DetailView>
+    <ListView Id="TestMethod_ListView_AnalysisDepartmentChain" Caption="检测项目&#xD;&#xA;">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RetireDate" Caption="退役日期" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="TestCode" Caption="测试代码" />
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+        <ColumnInfo Id="ResultEntryUsers" Caption="结果录入" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_AnalysisQueue" Caption="检测项目&#xD;&#xA;">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RetireDate" Caption="退役日期" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="TestCode" Caption="测试代码" />
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+        <ColumnInfo Id="NoSamples" Caption="样品数量" />
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_Copy" Caption="检测项目&#xD;&#xA;">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+        <ColumnInfo Id="TestCode" Caption="测试代码" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+        <ColumnInfo Id="RetireDate" Caption="退役日期" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_PrepQueue" Caption="检测项目&#xD;&#xA;">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RetireDate" Caption="退役日期" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="TestCode" Caption="测试代码" />
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+        <ColumnInfo Id="NoSamples" Caption="样品数量" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_SamplePreparationChain" Caption="检测项目&#xD;&#xA;">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RetireDate" Caption="退役日期" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="TestCode" Caption="测试代码" />
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_TestInstrument" Caption="分析用仪器">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+        <ColumnInfo Id="MethodName" Caption="检测依据" />
+        <ColumnInfo Id="Instrument" Caption="分析仪器" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_LookupListView_Bottlesetup" Caption="检测项目">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MatrixName.MatrixName" Caption="基质" />
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_LookupListView_Copy" Caption="分析方法">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MatrixName.MatrixName" Caption="基质" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_LookupListView_SequenceSetup">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_QCTypes_ListView_CopyToQcType">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+        <ColumnInfo Id="QCTypeName" Caption="质控类型" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_QCTypes_ListView_RunType">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestParameter_ListView_DefaultSettings" Caption="参数名称">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestMethod" Caption="检测项目" />
+        <ColumnInfo Id="Sort" Caption="排序" />
+        <ColumnInfo Id="Surroagate" Caption="是否替代物" />
+        <ColumnInfo Id="InternalStandard" Caption="是否内标" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="DefaultUnits" Caption="默认单位" />
+        <ColumnInfo Id="FinalDefaultResult" Caption="最终默认结果" />
+        <ColumnInfo Id="FinalDefaultUnits" Caption="最终默认结果单位" />
+        <ColumnInfo Id="SurrogateAmount" Caption="替代物加标量" />
+        <ColumnInfo Id="SurrogateUnits" Caption="替代物单位" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物控制下限" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物控制上限" />
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="SigFig" Caption="有效数字" />
+        <ColumnInfo Id="CutOff" Caption="切断值" />
+        <ColumnInfo Id="RetireDate" Caption="退役时间" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestParameter_ListView_DefaultSettings_QC" Caption="参数名称">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="SurrogateAmount" Caption="替代物加标量" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物控制上限" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物控制下限" />
+        <ColumnInfo Id="SurrogateUnits" Caption="替代物单位" />
+        <ColumnInfo Id="TestMethod" Caption="检测项目" />
+        <ColumnInfo Id="Sort" Caption="排序" />
+        <ColumnInfo Id="Surroagate" Caption="是否替代物" />
+        <ColumnInfo Id="InternalStandard" Caption="是否内标" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="DefaultUnits" Caption="默认单位" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeAmountUnit" Caption="加标量单位" />
+        <ColumnInfo Id="FinalDefaultResult" Caption="最终默认结果" />
+        <ColumnInfo Id="FinalDefaultUnits" Caption="最终默认结果单位" />
+        <ColumnInfo Id="STDConcUnit" Caption="标样浓度单位" />
+        <ColumnInfo Id="STDVolAdd" Caption="标样使用体积" />
+        <ColumnInfo Id="STDVolUnit" Caption="标样体积单位" />
+        <ColumnInfo Id="RecLCLimit" Caption="回收率控制下限" />
+        <ColumnInfo Id="RecHCLimit" Caption="回收率控制下限" />
+        <ColumnInfo Id="LowCLimit" Caption="控制下限" />
+        <ColumnInfo Id="HighCLimit" Caption="控制上限" />
+        <ColumnInfo Id="RELCLimit" Caption="相对误差下限" />
+        <ColumnInfo Id="SigFig" Caption="有效数字" />
+        <ColumnInfo Id="CutOff" Caption="切断值" />
+        <ColumnInfo Id="RetireDate" Caption="退役时间" />
+      </Columns>
+    </ListView>
+    <ListView Id="Testparameter_LookupListView_Copy_SampleLogin_BatchAssignment" Caption="参数名称">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="TestMethod" Caption="基质" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+      </Columns>
+    </ListView>
+    <ListView Id="Testparameter_LookupListView_Copy_SampleLogin_Copy_BatchAssignment" Caption="参数名称">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="TestMethod" Caption="基质" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+      </Columns>
+    </ListView>
+    <ListView Id="Testparameter_LookupListView_Copy_SampleLogin_Copy_Parameter_BatchAssignment">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="TestMethod" Caption="样品类型" />
+      </Columns>
+    </ListView>
+    <ListView Id="Testparameter_LookupListView_SelectedTest_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="TestMethod" Caption="样品类型" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="TestParameterSettings" Caption="默认设置">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item1" Caption="检测参数" />
+            <LayoutGroup Id="Item3" Caption="质控参数" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="BottleSetup_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BottleSetup">
+              <LayoutGroup Id="Test_Group" Caption="检测项目" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="COCSettingsTest_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Matrix" Caption="基质" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="ParameterName" Caption="参数" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IndoorInspection_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Client" Caption="委托单位名称" />
+        <PropertyEditor Id="ClientAddress" Caption="委托单位地址" />
+        <PropertyEditor Id="DateManufactured" Caption="生产日期/批号" />
+        <PropertyEditor Id="Filterelementalarmdevice" Caption="滤芯报警装置" />
+        <PropertyEditor Id="InspectedClient" Caption="受检单位名称" />
+        <PropertyEditor Id="InspectedClientAddress" Caption="受检单位地址" />
+        <PropertyEditor Id="InspectionCategory" Caption="检验类别" />
+        <PropertyEditor Id="InspectionStandard" Caption="检验依据" />
+        <PropertyEditor Id="ManufacturerAddress" Caption="生产单位地址样品" />
+        <PropertyEditor Id="ModelNumber" Caption="型号/规格" />
+        <PropertyEditor Id="RatedCleanWaterFlow" Caption="额定净水流量(L/h)&#xD;" />
+        <PropertyEditor Id="RatedTotalCleanWaterFlow" Caption="额定总净水量(L)&#xD;" />
+        <PropertyEditor Id="SampleGrade" Caption="样品等级" />
+        <PropertyEditor Id="SampleName" Caption="名称" />
+        <PropertyEditor Id="SampleQuantity" Caption="样品数量" />
+        <PropertyEditor Id="SampleStatus" Caption="样品状态" />
+        <PropertyEditor Id="TradeMark" Caption="商标" />
+        <PropertyEditor Id="WithWaterStorageContainer" Caption="带储水容器" />
+      </Items>
+      <Layout Id="Layout">
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Tab1" Caption="基础信息">
+            <LayoutGroup Id="rowGeneralInformation" Caption="此表单中有多个选项卡" />
+            <LayoutGroup Id="rowSampleDescription" Caption="样品描述及说明" />
+          </LayoutGroup>
+          <LayoutGroup Id="Tab2" Caption="样机信息" />
+          <LayoutGroup Id="Tab3" Caption="照片编辑" />
+          <LayoutGroup Id="Tab4" Caption="元器件" />
+          <LayoutGroup Id="Tab5" Caption="条款检验" />
+          <LayoutGroup Id="Tab6" Caption="记事本" />
+        </TabbedGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="IndoorInspection_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+        <ColumnInfo Id="Category" Caption="检验类别" />
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+        <ColumnInfo Id="DateReceived" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <DetailView Id="OutdoorInspection_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Client" Caption="委托单位名称" />
+        <PropertyEditor Id="InspectedClient" Caption="受检单位名称" />
+        <PropertyEditor Id="InspectedClientAddress" Caption="受检单位地址" />
+        <PropertyEditor Id="InspectionCategory" Caption="检验类别" />
+        <PropertyEditor Id="SampleQuantity" Caption="样品数量" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Item1" Caption="基础信息" />
+              <LayoutGroup Id="Item3" Caption="样机信息" />
+              <LayoutGroup Id="Item4" Caption="条款检验" />
+              <LayoutGroup Id="Item5" Caption="记事本" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="OutdoorInspection_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DateReceived" Caption="收到日期" />
+        <ColumnInfo Id="Status" Caption="状态" />
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+        <ColumnInfo Id="Client" Caption="委托单位" />
+      </Columns>
+    </ListView>
+    <ListView Id="ProductSampleMapping_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="InspectionCategory" Caption="检验类别" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="Project_LookupListView_Copy_SampleCheckIn">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClientName" Caption="委托单位名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatchSequence_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Client" Caption="委托单位" />
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+        <ColumnInfo Id="DateCollected" Caption="收集日期" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+      </Columns>
+    </ListView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" Caption="工作编号" />
+      </Items>
+    </DetailView>
+    <ListView Id="Reporting_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CompanyID" Caption="委托单位" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_Copy_ReportApproval">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CompanyID" Caption="委托单位" />
+        <ColumnInfo Id="ReportStatus" Caption="状态" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_Copy_ReportView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ReportStatus" Caption="状态" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ReportingQueryPanel_DetailView">
+      <Items Id="Items">
+        <DashboardViewItem Id="viewItemJobID" Caption="工作编号" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView">
+      <Items Id="Items">
+        <DashboardViewItem Id="viewItemJobID" Caption="工作编号" />
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_SampleRegistration">
+      <Items Id="Items">
+        <PropertyEditor Id="Clauses" Caption="条款" />
+        <PropertyEditor Id="DateManufactured" Caption="生产日期批号" />
+        <PropertyEditor Id="EvaluationStandard" Caption="评价依据" />
+        <PropertyEditor Id="ManufacturerAddress" Caption="生产单位地址" />
+        <PropertyEditor Id="MethodNumber" Caption="依据关联" />
+        <PropertyEditor Id="ModelNumber" Caption="型号/规格" />
+        <PropertyEditor Id="OutdoorInspection" Caption="室外检验" />
+        <PropertyEditor Id="ReportID" Caption="报告编号" />
+        <PropertyEditor Id="SampleColor" Caption="样品颜色/性状" />
+        <PropertyEditor Id="SampleGrade" Caption="样品等级" />
+        <PropertyEditor Id="SampleName" Caption="样品名称" />
+        <PropertyEditor Id="SampleQuantity" Caption="样品数量" />
+        <PropertyEditor Id="TradeMark" Caption="商标" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto8fc6667c-ae60-46fe-b07c-8d6cf4096192">
+              <LayoutGroup Id="Item6" Caption="常规信息" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Samplecheckin_ListView_Copy_Registration">
+      <Columns Id="Columns">
+        <ColumnInfo Id="InspectionCategory" Caption="检验类别" />
+        <ColumnInfo Id="SampleCount" Caption="样品数量" />
+        <ColumnInfo Id="TestsCount" Caption="检测项目数量" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_ResultApproval">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="FinalResultUnits" Caption="最终结果单位" />
+        <ColumnInfo Id="HighCLimit" Caption="控制上限" />
+        <ColumnInfo Id="LOQ" Caption="最低标定浓度" />
+        <ColumnInfo Id="LowCLimit" Caption="控制下限" />
+        <ColumnInfo Id="MCL" Caption="法规允许限" />
+        <ColumnInfo Id="QCType" Caption="质控类型" />
+        <ColumnInfo Id="Rec" Caption="回收率" />
+        <ColumnInfo Id="RecHCLimit" Caption="回收率控制上限" />
+        <ColumnInfo Id="RecLCLimit" Caption="回收率控制下限" />
+        <ColumnInfo Id="RELCLimit" Caption="相对误差下限" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeAmountUnit" Caption="加标量单位" />
+        <ColumnInfo Id="Station" Caption="点位" />
+        <ColumnInfo Id="STDConcUnit" Caption="标样浓度单位" />
+        <ColumnInfo Id="STDVolAdd" Caption="标样使用体积" />
+        <ColumnInfo Id="STDVolUnit" Caption="标样体积单位" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Surrogate" Caption="示踪物" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物上限" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物下限" />
+        <ColumnInfo Id="SurrogateSpikeAmount" Caption="替代物加标量" />
+        <ColumnInfo Id="SurrogateUnits" Caption="替代物单位" />
+        <ColumnInfo Id="UQL" Caption="最高标定浓度" />
+        <ColumnInfo Id="SYSSamplecode" Caption="系统样品代码" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_ResultValidation">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="FinalResultUnits" Caption="最终结果单位" />
+        <ColumnInfo Id="HighCLimit" Caption="控制上限" />
+        <ColumnInfo Id="LowCLimit" Caption="控制下限" />
+        <ColumnInfo Id="MCL" Caption="法规允许限" />
+        <ColumnInfo Id="QCType" Caption="质控类型" />
+        <ColumnInfo Id="Rec" Caption="回收率" />
+        <ColumnInfo Id="RecHCLimit" Caption="回收率控制上限" />
+        <ColumnInfo Id="RecLCLimit" Caption="回收率控制下限" />
+        <ColumnInfo Id="RELCLimit" Caption="相对误差下限" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="SpikeAmount" Caption="加标量" />
+        <ColumnInfo Id="SpikeAmountUnit" Caption="加标量单位" />
+        <ColumnInfo Id="Station" Caption="点位" />
+        <ColumnInfo Id="STDConcUnit" Caption="标样浓度单位" />
+        <ColumnInfo Id="STDVolAdd" Caption="标样使用体积" />
+        <ColumnInfo Id="STDVolUnit" Caption="标样体积单位" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="Surrogate" Caption="示踪物" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物上限" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物下限" />
+        <ColumnInfo Id="SurrogateSpikeAmount" Caption="替代物加标量" />
+        <ColumnInfo Id="SurrogateUnits" Caption="替代物单位" />
+        <ColumnInfo Id="UQL" Caption="最高标定浓度" />
+        <ColumnInfo Id="SYSSamplecode" Caption="系统样品代码" />
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+        <ColumnInfo Id="LOQ" Caption="最低标定浓度" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleWeighingBalance_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="InstrumentName" Caption="姓名" />
+        <ColumnInfo Id="Labware" Caption="仪器设备" />
+      </Columns>
+    </ListView>
+    <ListView Id="SDMSRollback_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Matrix" Caption="基质" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Inspection" Caption="检验评判">
+        <Items Id="Items">
+          <Item Id="IndoorInspection" Caption="室内检验 " />
+          <Item Id="OutdoorInspection" Caption="室外检验 " />
+          <Item Id="ProductAndSampleMapping" Caption="编号匹配" />
+        </Items>
+      </Item>
+      <Item Id="SamplePreparationRootNode" Caption="样品准备">
+        <Items Id="Items">
+          <Item Id="Samplepretreatment" Caption="样品准备批次" />
+          <Item Id="SamplePreparation" Caption="样品准备" />
+          <Item Id="SampleWeighing" Caption="样品称重" />
+        </Items>
+      </Item>
+      <Item Id="InventoryManagement" Caption="物料管理">
+        <Items Id="Items">
+          <Item Id="ReagentPrepNotebook" Caption="制备记事本" />
+        </Items>
+      </Item>
+      <Item Id="Accounting" Caption="收费">
+        <Items Id="Items">
+          <Item Id="Quotes" Caption="报价" />
+          <Item Id="Invoices" Caption="发票" />
+        </Items>
+      </Item>
+      <Item Id="Maintenance" Caption="系统维护">
+        <Items Id="Items">
+          <Item Id="Customer" Caption="客户管理">
+            <Items Id="Items">
+              <Item Id="Customer_ListView" Caption="委托单位" />
+              <Item Id="Contact_ListView" Caption="联系人" />
+              <Item Id="Project" Caption="项目" />
+            </Items>
+          </Item>
+          <Item Id="HumanResources" Caption="人力资源">
+            <Items Id="Items">
+              <Item Id="Employee_ListView" Caption="员工管理" />
+            </Items>
+          </Item>
+          <Item Id="Assets" Caption="仪器设备">
+            <Items Id="Items">
+              <Item Id="Labware_ListView" Caption="仪器设备" />
+              <Item Id="LabwareCertificate_ListView" Caption="实验室器皿证书" />
+              <Item Id="LabwareMaintenance_ListView" Caption="仪器设备维护" />
+            </Items>
+          </Item>
+          <Item Id="System" Caption="系统管理">
+            <Items Id="Items">
+              <Item Id="CustomSystemRole_ListView" Caption="角色" />
+              <Item Id="MyDetails" Caption="我的信息" />
+              <Item Id="Role" Caption="角色" />
+              <Item Id="Navigation Permision" Caption="导航权限" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="MyDesktop">
+        <Items Id="Items">
+          <Item Id="TaskTracking" Caption="任务跟踪" />
+          <Item Id="Project Tracking" Caption="项目进度跟踪" />
+        </Items>
+      </Item>
+      <Item Id="SampleManagement">
+        <Items Id="Items">
+          <Item Id="RegistrationSigningOff" Caption="样品登记" />
+          <Item Id="SampleDisposition" Caption="样品留样" />
+          <Item Id="SubOutTracking">
+            <Items Id="Items">
+              <Item Id="SuboutSampleRegistration" Caption="分包样品登记" />
+              <Item Id="SuboutOrderDelivery" Caption="分包送样" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="DataEntry">
+        <Items Id="Items">
+          <Item Id="AnalysisQueue " Caption="分析排队" />
+          <Item Id="Analyticalbatch" Caption="质控批次" />
+          <Item Id="SuboutSampleResultEntry" Caption="分包样品结果录入" />
+        </Items>
+      </Item>
+      <Item Id="Reporting">
+        <Items Id="Items">
+          <Item Id="ReportPrintDownload" Caption="报告打印下载 " />
+          <Item Id="ReportDelivery" Caption="报告发放" />
+          <Item Id="ReportArchive" Caption="报告归档" />
+          <Item Id="ReportAccount" Caption="报告台账" />
+          <Item Id="ReportRecall" Caption="报告收回" />
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="AnalysisDepartmentChain" Caption="分析部门链" />
+          <Item Id="ClauseSettings" Caption="检验条款设置" />
+          <Item Id="COCSettings" Caption="委托单设置" />
+          <Item Id="E-mail" Caption="电子邮件">
+            <Items Id="Items">
+              <Item Id="Email" Caption="电子邮件" />
+            </Items>
+          </Item>
+          <Item Id="MethodCategory" Caption="方法分类" />
+          <Item Id="TestParameterDefaultSetup" Caption="参数值设置" />
+          <Item Id="SystemManagement">
+            <Items Id="Items">
+              <Item Id="Glossary" Caption="词汇表" />
+            </Items>
+          </Item>
+          <Item Id="Utility">
+            <Items Id="Items">
+              <Item Id="eDataTransfer" Caption="仪器数据导入">
+                <Items Id="Items">
+                  <Item Id="ParameterMatch" Caption="参数匹配" />
+                  <Item Id="QCTypeMatch" Caption="质控类型匹配" />
+                </Items>
+              </Item>
+              <Item Id="Test">
+                <Items Id="Items">
+                  <Item Id="InspectionCategory" Caption="检验类别" />
+                  <Item Id="PrepMethodLabware" Caption="分析方法 " />
+                  <Item Id="PreserveCondition" Caption="防腐剂" />
+                  <Item Id="SamplePrepTemplates" Caption="样品准备模板" />
+                  <Item Id="SampleWeighingBalance" Caption="样品称重天平" />
+                  <Item Id="TestInstrument" Caption="分析用仪器" />
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Audit Trail">
+        <Items Id="Items">
+          <Item Id="SDMSRollback" Caption="SDMS 回滚" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

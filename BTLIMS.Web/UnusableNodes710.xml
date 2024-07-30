@@ -1,0 +1,2404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="HelpCenter_Copy">
+      <Items Id="Items">
+        <StaticText Id="lblWelcomeText" font-style=" .welcometoourhelpcenter" />
+        <ActionContainerViewItem Id="Search" ActionContainer="catFullTextSearch" />
+        <ActionContainerViewItem Id="ArticalCategory" ActionContainer="ArticalCategoryView" />
+      </Items>
+    </DashboardView>
+    <ListView Id="SampleParameter_ListView_Copy_TrendAnalysis" ShowDetailView="False" />
+    <ListView Id="TrendAnalysis_ListView_DateVisualization" ShowDetailView="False" />
+    <DetailView Id="NPSamplingSample_Bottle_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="From" LookupProperty="SampleID" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="NPSamplingSample_Bottle" RelativeSize="100" Direction="Horizontal">
+              <LayoutGroup Id="Auto014e41de-2a1d-40b0-a86c-d102acbc8d5a" ShowCaption="False" Caption="" Index="0" RelativeSize="69.851951547779279">
+                <LayoutItem Id="From" ViewItem="From" Index="0" RelativeSize="4.6753246753246751" />
+                <LayoutItem Id="To" ViewItem="To" Index="1" RelativeSize="95.324675324675326" />
+              </LayoutGroup>
+              <LayoutItem Id="Item1" Index="1" RelativeSize="30.148048452220728" />
+              <LayoutItem Id="From" RelativeSize="4.4155844155844157" Removed="True" />
+              <LayoutItem Id="To" RelativeSize="3.3766233766233764" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Sampling_ListView" AllowLink="False" AllowNew="False" AllowUnlink="False" InlineEditMode="Batch" AllowEdit="True">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ProjectName" Width="109" Index="-1" />
+        <ColumnInfo Id="SamplingProposal" PropertyName="SequenceTestSampleID" Index="-1" />
+        <ColumnInfo Id="SequenceTestSampleID" Index="-1" />
+        <ColumnInfo Id="SampleID" Index="0" />
+        <ColumnInfo Id="ClientSampleID" Caption="SampleName" Index="1" />
+        <ColumnInfo Id="VisualMatrix" Index="2" />
+        <ColumnInfo Id="SampleType" Index="3" />
+        <ColumnInfo Id="Qty" Index="4" />
+        <ColumnInfo Id="Storage" Index="5" />
+        <ColumnInfo Id="Preservetives" Index="6" />
+        <ColumnInfo Id="SamplingLocation" Index="7" />
+        <ColumnInfo Id="QCType" Index="8" />
+        <ColumnInfo Id="QCSource" Index="9" />
+        <ColumnInfo Id="Collector" Index="10" />
+        <ColumnInfo Id="CollectDate" Index="11" />
+        <ColumnInfo Id="CollectTime" Index="12" />
+        <ColumnInfo Id="Length" Index="13" />
+        <ColumnInfo Id="Width" Index="14" />
+        <ColumnInfo Id="TimeStart" Index="15" />
+        <ColumnInfo Id="TimeEnd" Index="16" />
+        <ColumnInfo Id="StartFlow" Index="17" />
+        <ColumnInfo Id="EndFlow" Index="18" />
+        <ColumnInfo Id="Volume" Index="19" />
+        <ColumnInfo Id="ProjectID" Index="20" />
+        <ColumnInfo Id="Longitude" Index="21" />
+        <ColumnInfo Id="Latitude" Index="22" />
+        <ColumnInfo Id="SubOut" Index="23" />
+        <ColumnInfo Id="Containers" Index="24" />
+        <ColumnInfo Id="DaysKept" Index="25" />
+        <ColumnInfo Id="StorageID" Index="26" />
+        <ColumnInfo Id="PreserveCondition" Index="27" />
+        <ColumnInfo Id="ContainerID" Index="28" />
+        <ColumnInfo Id="CanChangeVisualMatrix" Index="29" />
+        <ColumnInfo Id="SampleAmount" Index="30" />
+        <ColumnInfo Id="AreaOrPerson" Index="31" />
+        <ColumnInfo Id="AuthorizedBy" Index="32" />
+        <ColumnInfo Id="AuthorizedDate" Index="33" />
+        <ColumnInfo Id="Barp" Index="34" />
+        <ColumnInfo Id="BottleQty" Index="35" />
+        <ColumnInfo Id="BuriedDepthOfGroundWater" Index="36" />
+        <ColumnInfo Id="ChlorineFree" Index="37" />
+        <ColumnInfo Id="ChlorineTotal" Index="38" />
+        <ColumnInfo Id="CompositeQty" Index="39" />
+        <ColumnInfo Id="DateStartExpected" Index="40" />
+        <ColumnInfo Id="DateEndExpected" Index="41" />
+        <ColumnInfo Id="Department" Index="42" />
+        <ColumnInfo Id="Depth" Index="43" />
+        <ColumnInfo Id="Description" Index="44" />
+        <ColumnInfo Id="DischargeFlow" Index="45" />
+        <ColumnInfo Id="DischargePipeHeight" Index="46" />
+        <ColumnInfo Id="DO" Index="47" />
+        <ColumnInfo Id="DueDate" Index="48" />
+        <ColumnInfo Id="Emission" Index="49" />
+        <ColumnInfo Id="EndOfRoad" Index="50" />
+        <ColumnInfo Id="EquipmentName" Index="51" />
+        <ColumnInfo Id="EquipmentModel" Index="52" />
+        <ColumnInfo Id="FlowRateLiterPerMin" Index="53" />
+        <ColumnInfo Id="FlowRateCubicMeterPerHour" Index="54" />
+        <ColumnInfo Id="FlowVelocity" Index="55" />
+        <ColumnInfo Id="ForeignMaterial" Index="56" />
+        <ColumnInfo Id="Frequency" Index="57" />
+        <ColumnInfo Id="GISStatus" Index="58" />
+        <ColumnInfo Id="GravelContent" Index="59" />
+        <ColumnInfo Id="GroupSample" Index="60" />
+        <ColumnInfo Id="Hold" Index="61" />
+        <ColumnInfo Id="Humidity" Index="62" />
+        <ColumnInfo Id="IceCycle" Index="63" />
+        <ColumnInfo Id="RegionNameOfSection" Index="64" />
+        <ColumnInfo Id="RiverWidth" Index="65" />
+        <ColumnInfo Id="SamplePointID" Index="66" />
+        <ColumnInfo Id="SampleSource" Index="67" />
+        <ColumnInfo Id="Status" Index="68" />
+        <ColumnInfo Id="Section" Index="69" />
+        <ColumnInfo Id="SiteDescription" Index="71" />
+        <ColumnInfo Id="SoilColor" Index="72" />
+        <ColumnInfo Id="SoilQuality" Index="73" />
+        <ColumnInfo Id="SoilMoisture" Index="74" />
+        <ColumnInfo Id="SortOrder" Index="75" />
+        <ColumnInfo Id="SplitQty" Index="76" />
+        <ColumnInfo Id="StandardVol" Index="77" />
+        <ColumnInfo Id="StartOfRoad" Index="78" />
+        <ColumnInfo Id="NoOfPoints" Index="80" />
+        <ColumnInfo Id="NoOfCollectionsEachTime" Index="81" />
+        <ColumnInfo Id="TotalTimes" Index="82" />
+        <ColumnInfo Id="TotalSamples" Index="83" />
+        <ColumnInfo Id="Interval" Index="84" />
+        <ColumnInfo Id="TtimeUnit" Index="85" />
+        <ColumnInfo Id="SamplingEquipment" Index="86" />
+        <ColumnInfo Id="SampleDescription" Index="87" />
+        <ColumnInfo Id="SampleCondition" Index="88" />
+        <ColumnInfo Id="SamplingProcedure" Index="89" />
+        <ColumnInfo Id="AssignTo" Index="90" />
+        <ColumnInfo Id="DateAssigned" Index="91" />
+        <ColumnInfo Id="AssignedBy" Index="92" />
+        <ColumnInfo Id="TestSummary" Index="93" />
+        <ColumnInfo Id="SiteID" Index="94" />
+        <ColumnInfo Id="Client" Index="95" />
+        <ColumnInfo Id="Blended" Index="96" />
+        <ColumnInfo Id="PWSSystemName" Index="97" />
+        <ColumnInfo Id="SystemType" Index="98" />
+        <ColumnInfo Id="SiteCode" Index="99" />
+        <ColumnInfo Id="PWSID" Index="100" />
+        <ColumnInfo Id="KeyMap" Index="101" />
+        <ColumnInfo Id="ServiceArea" Index="102" />
+        <ColumnInfo Id="SiteNameArchived" Index="103" />
+        <ColumnInfo Id="IsActive" Index="104" />
+        <ColumnInfo Id="City" Index="105" />
+        <ColumnInfo Id="State" Index="106" />
+        <ColumnInfo Id="ZipCode" Index="107" />
+        <ColumnInfo Id="FacilityID" Index="108" />
+        <ColumnInfo Id="FacilityName" Index="109" />
+        <ColumnInfo Id="FacilityType" Index="110" />
+        <ColumnInfo Id="SamplePointType" Index="111" />
+        <ColumnInfo Id="WaterType" Index="112" />
+        <ColumnInfo Id="MonitoryingRequirement" Index="113" />
+        <ColumnInfo Id="SiteUserDefinedColumn1" Index="114" />
+        <ColumnInfo Id="SiteUserDefinedColumn2" Index="115" />
+        <ColumnInfo Id="SiteUserDefinedColumn3" Index="116" />
+        <ColumnInfo Id="EnteredBy" Index="117" />
+        <ColumnInfo Id="EnteredDate" Index="118" />
+        <ColumnInfo Id="SamplingAddress" Index="119" />
+        <ColumnInfo Id="StationLocation" Index="120" />
+        <ColumnInfo Id="CollectorPhone" Index="121" />
+        <ColumnInfo Id="ParentSampleID" Index="122" />
+        <ColumnInfo Id="ParentSampleDate" Index="123" />
+        <ColumnInfo Id="RepeatLocation" Index="124" />
+        <ColumnInfo Id="RejectionCriteria" Index="125" />
+        <ColumnInfo Id="Matrix" Index="126" />
+        <ColumnInfo Id="WaterSource" Index="127" />
+        <ColumnInfo Id="Remark" Index="128" />
+        <ColumnInfo Id="SampleStatus" Index="129" />
+        <ColumnInfo Id="ProjectNumber" Index="130" />
+        <ColumnInfo Id="PreviousSample" Index="131" />
+        <ColumnInfo Id="PreviousCollection" Index="132" />
+        <ColumnInfo Id="SamplingEvent" Index="133" />
+        <ColumnInfo Id="LoginBy" Index="134" />
+        <ColumnInfo Id="LoginDateTime" Index="135" />
+      </Columns>
+    </ListView>
+    <ListView Id="Sampling_LookupListView" AllowNew="False" />
+    <ListView Id="SamplingBottleAllocation_ListView" InlineEditMode="Batch" AllowEdit="True" AllowDelete="False" AllowLink="False" AllowNew="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Test" PropertyName="TestMethod.TestName" Caption="Test" SortIndex="0" SortOrder="Ascending" Index="0" Width="94" />
+        <ColumnInfo Id="BottleID" Index="1" Caption="BottleID" />
+        <ColumnInfo Id="Method" Caption="Method" PropertyName="TestMethod.MethodName.MethodNumber" LookupProperty="MethodName.MethodNumber" Width="94" Index="2" AllowEdit="False" />
+        <ColumnInfo Id="Containers" Index="3" />
+        <ColumnInfo Id="Preservative" Index="3" />
+        <ColumnInfo Id="StorageID" Index="4" Caption="StorageID" />
+        <ColumnInfo Id="StorageCondition" Index="5" Caption="StorageCondition" />
+      </Columns>
+    </ListView>
+    <ListView Id="SamplingProposal_Attachments_ListView" AllowLink="False" AllowUnlink="False" />
+    <ListView Id="SamplingProposal_CopyTo_ListView" EditorTypeName="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridListEditor" />
+    <ListView Id="SamplingProposal_CustomDueDates_ListView" AllowEdit="True" AllowDelete="False" AllowLink="False" AllowNew="False" InlineEditMode="Batch">
+      <Columns Id="Columns">
+        <ColumnInfo Id="COCSettings" Index="-1" />
+        <ColumnInfo Id="SampleCheckin" Index="-1" />
+        <ColumnInfo Id="SampleMatrix" Index="-1" />
+        <ColumnInfo Id="TestHold" Index="-1" Caption="TestHold" />
+        <ColumnInfo Id="TestMethod" Index="-1" />
+        <ColumnInfo Id="Matrix" Caption="Matrix" PropertyName="TestMethod" LookupProperty="MatrixName.MatrixName" Index="0" AllowEdit="False" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="TestName" Caption="Test" PropertyName="TestMethod.TestName" LookupProperty="TestName" Index="1" AllowEdit="False" />
+        <ColumnInfo Id="MethodName" PropertyName="TestMethod.MethodName.MethodNumber" Index="2" Width="93" Caption="Method" AllowEdit="False" />
+        <ColumnInfo Id="IsGroup" Caption="IsGroup" PropertyName="TestMethod.IsGroup" Index="3" AllowEdit="False" />
+        <ColumnInfo Id="DefaultDueDate" Index="4" Caption="DefaultDueDate" AllowEdit="False" />
+        <ColumnInfo Id="DueDate" Index="5" Caption="DueDate" />
+        <ColumnInfo Id="Parameter" Index="6" />
+        <ColumnInfo Id="TAT" Index="7" LookupProperty="TAT" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SamplingProposal_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="btnImportQuote" Caption="btnImportQuote(54)" ActionContainer="ImportQuoteSamples" />
+        <PropertyEditor Id="ClientContact" View="Contact_LookupListView_Copy_SampleCheckin" />
+        <PropertyEditor Id="ClientName" Caption="Client" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridLookupPropertyEditor" View="Customer_LookupListView_SamplingProposal" />
+        <PropertyEditor Id="COC_ID" PropertyName="COCSource.strCOCID" AllowEdit="False" />
+        <ActionContainerViewItem Id="COCImport" ActionContainer="ImportCOCSamples" Caption="COCImport(55)" />
+        <PropertyEditor Id="ContactName" Caption="Client Contact" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridLookupPropertyEditor" View="Contact_LookupListView_Copy_SampleCheckin" />
+        <ActionContainerViewItem Id="Containers" ActionContainer="Sample" />
+        <PropertyEditor Id="CustomDueDates" AllowEdit="True" />
+        <PropertyEditor Id="DueDate" AllowEdit="False" />
+        <PropertyEditor Id="PaymentStatus" LookupProperty="Status" />
+        <PropertyEditor Id="ProjectID" LookupProperty="ProjectId" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridLookupPropertyEditor" View="Project_LookupListView_SamplingProposal" />
+        <PropertyEditor Id="QuoteID" LookupProperty="QuoteID" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridLookupPropertyEditor" View="CRMQuotes_ListView_SamplingProposal" />
+        <PropertyEditor Id="RecievedBy" AllowEdit="False" Caption="Registered By" />
+        <PropertyEditor Id="RecievedDate" AllowEdit="False" Caption="Date Registered" />
+        <PropertyEditor Id="RegistrationID" NullText="Autogenerate" AllowEdit="False" />
+        <PropertyEditor Id="RetiredBy" AllowEdit="False" />
+        <ActionContainerViewItem Id="Sample" ActionContainer="Sample" Caption="Sample(105)" />
+        <PropertyEditor Id="SPItemCharges" AllowEdit="False" />
+        <PropertyEditor Id="Status" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxEnumPropertyEditor" AllowEdit="False" />
+        <PropertyEditor Id="TAT" LookupProperty="TAT" />
+        <PropertyEditor Id="Test" PropertyEditorType="LDM.Module.Web.Editors.AspxGridLookupCustomEditor" Caption="Test" />
+        <PropertyEditor Id="TestName" Caption="Test" />
+        <ActionContainerViewItem Id="Tests" ActionContainer="Sample" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="col1" Index="0" Direction="Horizontal" ShowCaption="False" RelativeSize="79.678530424799078">
+            <LayoutGroup Id="col1" Index="0" RelativeSize="86.666666666666671" ShowCaption="False">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="52.017291066282418" Caption="General Information" Direction="Horizontal">
+                <LayoutGroup Id="Autoafd0e280-cca8-4c7a-a796-6b3848894d88" ShowCaption="False" Caption="Autoafd0e280-cca8-4c7a-a796-6b3848894d88(5)" Index="0" RelativeSize="50">
+                  <LayoutItem Id="RegistrationID" ViewItem="RegistrationID" Index="0" RelativeSize="10.526315789473685" />
+                  <LayoutItem Id="RecievedDate" ViewItem="RecievedDate" Index="1" RelativeSize="8.04953560371517" />
+                  <LayoutItem Id="RecievedBy" ViewItem="RecievedBy" Index="2" RelativeSize="8.04953560371517" />
+                  <LayoutItem Id="ClientName" ViewItem="ClientName" Index="3" RelativeSize="8.04953560371517" />
+                  <LayoutItem Id="ClientAddress" ViewItem="ClientAddress" Index="4" RelativeSize="8.04953560371517" />
+                  <LayoutItem Id="ClientPhone" ViewItem="ClientPhone" Index="5" RelativeSize="8.04953560371517" />
+                  <LayoutItem Id="ClientContact" ViewItem="ClientContact" Index="6" RelativeSize="8.04953560371517" />
+                  <LayoutGroup Id="Auto33c69ffc-5c81-461b-99d3-dc1922d1cbe8" ShowCaption="False" Caption="Auto33c69ffc-5c81-461b-99d3-dc1922d1cbe8(13)" Direction="Horizontal" Index="7" RelativeSize="14.551083591331269">
+                    <LayoutItem Id="QuoteID" ViewItem="QuoteID" SizeConstraintsType="Custom" MinSize="320, 24" Index="0" RelativeSize="22.772277227722771" />
+                    <LayoutItem Id="btnImportQuote" ViewItem="btnImportQuote" Index="1" MinSize="15, 24" RelativeSize="77.227722772277232" />
+                  </LayoutGroup>
+                  <LayoutItem Id="PO" ViewItem="PO" Index="8" RelativeSize="26.625386996904023" />
+                </LayoutGroup>
+                <LayoutGroup Id="Auto83d66be8-7306-457d-a7e9-4a6cf6238b47" ShowCaption="False" Caption="Auto83d66be8-7306-457d-a7e9-4a6cf6238b47(16)" Index="1" RelativeSize="50">
+                  <LayoutItem Id="DateExpect" ViewItem="DateExpect" Index="0" RelativeSize="10.526315789473685" />
+                  <LayoutItem Id="PaymentStatus" ViewItem="PaymentStatus" Index="1" RelativeSize="8.04953560371517" />
+                  <LayoutGroup Id="Autod69d98af-6b9f-4e6d-8b2a-ab980531684c" ShowCaption="False" Caption="Autod69d98af-6b9f-4e6d-8b2a-ab980531684c(17)" Direction="Horizontal" Index="2" RelativeSize="14.551083591331269">
+                    <LayoutItem Id="ProjectID" ViewItem="ProjectID" Index="0" RelativeSize="21.381578947368421" MinSize="320, 24" SizeConstraintsType="Custom" />
+                    <LayoutItem Id="COCImport" ViewItem="COCImport" Index="1" RelativeSize="78.618421052631575" />
+                  </LayoutGroup>
+                  <LayoutItem Id="ProjectName" ViewItem="ProjectName" Index="3" RelativeSize="8.04953560371517" />
+                  <LayoutItem Id="COC_ID" ViewItem="COC_ID" Index="4" RelativeSize="8.04953560371517" />
+                  <LayoutItem Id="Status" ViewItem="Status" Index="5" RelativeSize="8.04953560371517" />
+                  <LayoutItem Id="RetireDate" ViewItem="RetireDate" Index="6" RelativeSize="8.04953560371517" />
+                  <LayoutItem Id="RetiredBy" ViewItem="RetiredBy" Index="7" RelativeSize="8.04953560371517" />
+                  <LayoutItem Id="Comment" ViewItem="Comment" Index="8" RelativeSize="26.625386996904023" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="32.132564841498557" Caption="Sample Information" Direction="Horizontal">
+                <LayoutGroup Id="Auto15d91efa-35ae-4f0d-9c9a-ca4f60363f7e" ShowCaption="False" Caption="Auto15d91efa-35ae-4f0d-9c9a-ca4f60363f7e(27)" Index="0" RelativeSize="50">
+                  <LayoutItem Id="SampleMatries" ViewItem="SampleMatries" Index="0" RelativeSize="43.005181347150256" />
+                  <LayoutItem Id="Test" ViewItem="Test" Index="1" RelativeSize="39.37823834196891" />
+                  <LayoutItem Id="NoOfSamples" ViewItem="NoOfSamples" Index="2" RelativeSize="17.616580310880828" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autod6f29468-1738-4beb-a9b8-3ccef59f35aa" ShowCaption="False" Caption="Autod6f29468-1738-4beb-a9b8-3ccef59f35aa(31)" Index="1" RelativeSize="50">
+                  <LayoutItem Id="SampleCategory" ViewItem="SampleCategory" Index="0" RelativeSize="49.740932642487046" />
+                  <LayoutItem Id="Remark" ViewItem="Remark" Index="1" RelativeSize="50.259067357512954" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Index="2" RelativeSize="15.85014409221902" Caption="Report Requirments" Direction="Horizontal">
+                <LayoutGroup Id="Auto1c449c7b-efc4-4604-8269-677c4b871549" ShowCaption="False" Caption="Auto1c449c7b-efc4-4604-8269-677c4b871549(35)" Index="0" RelativeSize="50">
+                  <LayoutItem Id="TAT" ViewItem="TAT" Index="0" RelativeSize="45.945945945945944" />
+                  <LayoutItem Id="DueDate" ViewItem="DueDate" Index="1" RelativeSize="54.054054054054056" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autoc177ced6-0032-4ddc-a261-515d8e3a2e4b" ShowCaption="False" Caption="Autoc177ced6-0032-4ddc-a261-515d8e3a2e4b(39)" Index="1" RelativeSize="50">
+                  <LayoutItem Id="ReportTemplate" ViewItem="ReportTemplate" Index="0" RelativeSize="100" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="col2" Index="1" RelativeSize="13.333333333333334" ShowCaption="False">
+              <LayoutItem Id="@cb79adc0-a526-4dde-8ad3-a778d178e804" RelativeSize="100" Index="0" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="81.546391752577321" Index="0" Caption="SizeableEditors" Removed="True">
+            <LayoutItem Id="Comment" RelativeSize="17.383059418457648" Index="0" Removed="True" />
+            <LayoutItem Id="ReasonforWeighing" RelativeSize="100" Index="0" Removed="True" />
+            <LayoutItem Id="Remark" RelativeSize="40.581542351453855" Index="0" Removed="True" />
+            <LayoutItem Id="RollbackReason" RelativeSize="52.212389380530972" Index="0" Removed="True" />
+            <LayoutItem Id="SampleCategory" RelativeSize="75.474083438685213" Index="0" Removed="True" />
+            <LayoutItem Id="SampleMatries" RelativeSize="63.843236409608089" Index="0" Removed="True" />
+            <LayoutItem Id="TestDescription" RelativeSize="28.950695322376738" Index="0" Removed="True" />
+            <LayoutItem Id="TestName" RelativeSize="87.10493046776233" Index="0" Removed="True" />
+            <LayoutItem Id="ProjectLocation" RelativeSize="2.1491782553729455" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="col2" Index="1" ShowCaption="False" RelativeSize="20.321469575200918">
+            <TabbedGroup Id="Tabs" Index="0" RelativeSize="77.966101694915253">
+              <LayoutGroup Id="Attachments" Index="0" ShowCaption="True" RelativeSize="100">
+                <LayoutItem Id="Attachments" ViewItem="Attachments" ShowCaption="False" Index="0" RelativeSize="100" />
+              </LayoutGroup>
+              <LayoutGroup Id="Notes" Index="1" ShowCaption="True" RelativeSize="100">
+                <LayoutItem Id="Notes" ViewItem="Notes" ShowCaption="False" Index="0" RelativeSize="100" />
+              </LayoutGroup>
+              <LayoutGroup Id="CustomDueDates" Index="2" ShowCaption="True" RelativeSize="100" Caption="Custom Request">
+                <LayoutItem Id="CustomDueDates" ViewItem="CustomDueDates" ShowCaption="False" Index="0" RelativeSize="100" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutItem Id="Sample" ViewItem="Sample" Index="1" RelativeSize="22.033898305084747" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="17.530864197530864" Index="3" Removed="True">
+            <LayoutGroup Id="SampleConditionCheck" RelativeSize="100" Index="0">
+              <LayoutItem Id="SampleConditionCheck" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ImageUpload" RelativeSize="100" Index="1" Caption="Image Edit">
+              <LayoutItem Id="ImageUpload" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Attachments" RelativeSize="100" Index="2">
+              <LayoutItem Id="Attachments" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="CollectorDataSource" RelativeSize="100" Index="3" Removed="True">
+              <LayoutItem Id="CollectorDataSource" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Notes" RelativeSize="100" Index="3">
+              <LayoutItem Id="Notes" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Testparameters" RelativeSize="100" Index="3" Removed="True">
+              <LayoutItem Id="Testparameters" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="CustomDueDates" RelativeSize="100" Index="4" Caption="Custom Request">
+              <LayoutItem Id="CustomDueDates" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="SPItemCharges" RelativeSize="100" Index="5" Caption="Item Charge">
+              <LayoutItem Id="SPItemCharges" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors" RelativeSize="60.824742268041234" Removed="True">
+            <LayoutGroup Id="SamplingProposal" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SamplingProposal_ListView" Criteria="[Status] &lt;&gt; ##Enum#Modules.BusinessObjects.SamplingManagement.RegistrationStatus,Retired#">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BalanceCalibrationID" Width="212" />
+        <ColumnInfo Id="BalanceID" Index="-1" Width="212" />
+        <ColumnInfo Id="BatchID" Index="-1" Width="212" />
+        <ColumnInfo Id="BroughtBy" Index="-1" Width="212" />
+        <ColumnInfo Id="ClientAddress2" Index="-1" Width="212" />
+        <ColumnInfo Id="ClientContact" Index="-1" Width="212" />
+        <ColumnInfo Id="ClientPhone" Index="-1" Width="212" />
+        <ColumnInfo Id="ClientSampleID" Index="-1" Width="212" />
+        <ColumnInfo Id="COCAttached" Index="-1" Width="212" />
+        <ColumnInfo Id="COCSource" Width="212" />
+        <ColumnInfo Id="CollectionDate" Index="-1" Width="212" />
+        <ColumnInfo Id="CollectionTime" Index="-1" Width="212" />
+        <ColumnInfo Id="Collector" Index="-1" Width="212" />
+        <ColumnInfo Id="Comment" Width="212" />
+        <ColumnInfo Id="Comments" Index="-1" Width="150" />
+        <ColumnInfo Id="ContactName" Index="-1" Width="212" />
+        <ColumnInfo Id="Copyfrom" Index="-1" />
+        <ColumnInfo Id="CreatedBy" Index="-1" Width="212" />
+        <ColumnInfo Id="CreatedDate" Index="-1" Width="212" />
+        <ColumnInfo Id="CurrentWeight" Index="-1" Width="212" />
+        <ColumnInfo Id="DateCollected" Width="212" />
+        <ColumnInfo Id="DateTimeSent" Index="-1" Width="212" />
+        <ColumnInfo Id="DueDate" Index="-1" Caption="DueDate" Width="212" />
+        <ColumnInfo Id="Email" Index="-1" Width="212" />
+        <ColumnInfo Id="EmailList" Index="-1" Width="212" />
+        <ColumnInfo Id="GroupVisualMatrix" Index="-1" Width="212" />
+        <ColumnInfo Id="Index" Width="212" />
+        <ColumnInfo Id="InvoiceStatus" Width="212" />
+        <ColumnInfo Id="MailStatus" Index="-1" Width="212" />
+        <ColumnInfo Id="ManifestNumbers" Index="-1" Width="212" />
+        <ColumnInfo Id="ModifiedBy" Width="212" />
+        <ColumnInfo Id="ModifiedDate" Width="212" />
+        <ColumnInfo Id="NoOfDaysRemaining" Width="150" />
+        <ColumnInfo Id="NoOfSamples" Width="212" />
+        <ColumnInfo Id="NoStations" Index="-1" Width="150" />
+        <ColumnInfo Id="NPTest" Width="212" />
+        <ColumnInfo Id="Oid" Width="212" />
+        <ColumnInfo Id="PackageNo" Index="-1" Width="212" />
+        <ColumnInfo Id="PaymentStatus" Width="212" />
+        <ColumnInfo Id="PendingResult" Index="-1" Width="150" />
+        <ColumnInfo Id="PO" Index="-1" Width="212" />
+        <ColumnInfo Id="PreviousWeight" Index="-1" Width="212" />
+        <ColumnInfo Id="ProgressStatus" Index="-1" Width="150" />
+        <ColumnInfo Id="ProjectCategory" Index="-1" Width="212" />
+        <ColumnInfo Id="ProjectCity" Index="-1" Width="212" />
+        <ColumnInfo Id="ProjectLocation" Width="212" />
+        <ColumnInfo Id="ProjectManager" Index="-1" Width="212" />
+        <ColumnInfo Id="ProjectOverview" Index="-1" Width="212" />
+        <ColumnInfo Id="ProjectSource" Index="-1" Width="212" />
+        <ColumnInfo Id="ProjectTrackingStatus" Index="-1" Width="150" />
+        <ColumnInfo Id="QuoteID" Width="212" />
+        <ColumnInfo Id="ReasonforWeighing" Width="212" />
+        <ColumnInfo Id="RecievedBy" Index="-1" Width="212" />
+        <ColumnInfo Id="RecievedDate" SortIndex="-1" SortOrder="None" Index="-1" Caption="RecievedDate" Width="212" />
+        <ColumnInfo Id="RelinquishedBy" Index="-1" Width="212" />
+        <ColumnInfo Id="Remark" Width="212" />
+        <ColumnInfo Id="ReportDeliveryAddress" Index="-1" Width="212" />
+        <ColumnInfo Id="ReportDeliveryMethod" Index="-1" Width="212" />
+        <ColumnInfo Id="Reported" Index="-1" Width="212" />
+        <ColumnInfo Id="ReportSpecification" Index="-1" Width="212" />
+        <ColumnInfo Id="ReportStatus" Width="212" />
+        <ColumnInfo Id="ReportTemplate" Width="212" />
+        <ColumnInfo Id="RetireDate" Width="212" />
+        <ColumnInfo Id="RollbackedBy" Index="-1" Width="212" />
+        <ColumnInfo Id="RollbackedDate" Index="-1" Width="212" />
+        <ColumnInfo Id="RollbackReason" Width="212" />
+        <ColumnInfo Id="SalesOrder" Index="-1" Width="212" />
+        <ColumnInfo Id="SampleCategory" Width="212" />
+        <ColumnInfo Id="SampleCount" Index="-1" Width="150" />
+        <ColumnInfo Id="SampleImage" Index="-1" Width="212" />
+        <ColumnInfo Id="SampleLocation" Index="-1" Width="212" />
+        <ColumnInfo Id="SampleMatries" Width="212" />
+        <ColumnInfo Id="SampleTemperature" Index="-1" Width="212" />
+        <ColumnInfo Id="SamplingEquipment" Index="-1" Width="212" />
+        <ColumnInfo Id="SendBy" Index="-1" Width="212" />
+        <ColumnInfo Id="SendDate" Index="-1" Width="212" />
+        <ColumnInfo Id="SendingMethod" Index="-1" Width="212" />
+        <ColumnInfo Id="TAT" Index="-1" Width="212" />
+        <ColumnInfo Id="Test" Width="212" />
+        <ColumnInfo Id="TestDescription" Width="212" />
+        <ColumnInfo Id="TestName" Width="212" />
+        <ColumnInfo Id="TestSummary" Index="-1" Width="212" />
+        <ColumnInfo Id="UploadCOC" Index="-1" Width="212" />
+        <ColumnInfo Id="RegistrationID" Index="0" Caption="RegistrationID" Width="212" SortIndex="0" SortOrder="Descending" />
+        <ColumnInfo Id="ClientName" Index="1" SortIndex="-1" SortOrder="None" Width="116" Caption="Client" />
+        <ColumnInfo Id="ClientAddress" Index="2" Width="212" Caption="Address" />
+        <ColumnInfo Id="COCID" Caption="COCID" PropertyName="COCSource.strCOCID" Width="117" Index="3" />
+        <ColumnInfo Id="ProjectID" Index="4" Caption="ProjectID" Width="212" />
+        <ColumnInfo Id="ProjectName" Index="5" Caption="ProjectName" Width="212" />
+        <ColumnInfo Id="DateExpect" Width="212" Index="6" Caption="ExpectCollectionDate" />
+        <ColumnInfo Id="Status" Index="7" PropertyEditorType="LDM.Module.Web.Editors.EnumRadioButtonListPropertyEditor" Width="212" />
+      </Columns>
+    </ListView>
+    <ListView Id="SamplingProposal_LookupListView" AllowNew="False" />
+    <ListView Id="SamplingProposal_Notes_ListView" AllowLink="False" AllowUnlink="False" />
+    <ListView Id="SamplingProposal_SampleConditionCheck_ListView" AllowUnlink="False" AllowLink="False" DetailViewID="SampleConditionCheck_DetailView_Copy" />
+    <ListView Id="SamplingProposal_SPItemCharges_ListView" AllowLink="False" AllowUnlink="False" />
+    <DetailView Id="VisualMatrix_DetailView_FieldSetup_Copy_FromTO_Sampling">
+      <Items Id="Items">
+        <PropertyEditor Id="CopyToSetupFields" View="VisualMatrix_SetupFields_ListView_CopyTO" />
+      </Items>
+    </DetailView>
+    <DetailView Id="VisualMatrix_DetailView_FieldSetup_Copy_FromTO">
+      <Items Id="Items">
+        <PropertyEditor Id="CopyToSetupFields" View="VisualMatrix_SetupFields_ListView_CopyTO" />
+      </Items>
+    </DetailView>
+    <DetailView Id="VisualMatrix_DetailView_FieldConfiguration">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="VisualMatrix">
+              <TabbedGroup Id="Item3">
+                <LayoutGroup Id="FieldTesting_Group">
+                  <LayoutGroup Id="Auto77f20c16-42c1-4d53-9c5e-35601a650b8e">
+                    <LayoutItem Id="RemoveTestFieldConfiguration" ViewItem="RemoveTestFieldConfiguration" />
+                    <LayoutItem Id="AddTestConfiguration" ViewItem="AddTestConfiguration" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="SamplingInformation_Group">
+                  <LayoutGroup Id="Auto77f20c16-42c1-4d53-9c5e-35601a650b8e">
+                    <LayoutItem Id="RemoveFieldConfiguration" ViewItem="RemoveFieldConfiguration" />
+                    <LayoutItem Id="AddFieldConfiguration" ViewItem="AddFieldConfiguration" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Station_Group">
+                  <LayoutGroup Id="Auto77f20c16-42c1-4d53-9c5e-35601a650b8e">
+                    <LayoutItem Id="RemoveStationFieldConfiguration" ViewItem="RemoveStationFieldConfiguration" />
+                    <LayoutItem Id="AddStationFieldConfiguration" ViewItem="AddStationFieldConfiguration" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </TabbedGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TestMethod_DetailView_IsGroupTm">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoc7e445e2-6d47-40d7-bb4b-1dbf79231188">
+              <LayoutGroup Id="Col1">
+                <LayoutGroup Id="Grp_NewTest">
+                  <LayoutGroup Id="Autob7370328-915a-4c26-9a04-0334366eb7fd">
+                    <LayoutItem Id="Technologies" ViewItem="Technologies" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TestMethod_DetailView_CopyTest">
+      <Items Id="Items">
+        <PropertyEditor Id="QCTypes_CopyFrom" View="QCType_LookupListView_Copy_TestMethod_Copyfrom" />
+      </Items>
+    </DetailView>
+    <DetailView Id="TestMethod_DetailView_CopyParameter">
+      <Items Id="Items">
+        <PropertyEditor Id="QCTypes_CopyFrom" View="QCType_LookupListView_Copy_TestMethod_Copyfrom" />
+      </Items>
+    </DetailView>
+    <DetailView Id="TestMethod_DetailView_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoc7e445e2-6d47-40d7-bb4b-1dbf79231188">
+              <LayoutGroup Id="Col1">
+                <LayoutGroup Id="Auto03c00733-d9f0-4304-b63c-8bd2f2c653cd">
+                  <LayoutGroup Id="Item1">
+                    <LayoutGroup Id="Item2">
+                      <LayoutItem Id="Technologies" ViewItem="Technologies" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="TestEdit_DashboardView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="TestEditRemoveTest" ActionContainer="TestEditRemoveTest" />
+        <ActionContainerViewItem Id="TestEditCopyTest" ActionContainer="TestEditCopyTest" />
+        <ActionContainerViewItem Id="TestEditAddTest" ActionContainer="TestEditAddTest" />
+      </Items>
+    </DashboardView>
+    <ListView Id="TaskSchedulerEventList_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Status" PropertyName="Status" View="" Width="70" Index="7" AllowEdit="False" />
+        <ColumnInfo Id="SampleMatrix" PropertyName="SampleMatrix" View="" Width="70" Caption="SampleMatrix" Index="5" AllowEdit="False" />
+        <ColumnInfo Id="ProjectName" PropertyName="ProjectName" View="" Width="70" Caption="ProjectName" Index="4" AllowEdit="False" />
+        <ColumnInfo Id="ProjectID" PropertyName="ProjectID" View="" Width="70" Index="3" Caption="ProjectID" AllowEdit="False" />
+        <ColumnInfo Id="ClientName" PropertyName="ClientName" View="" Width="400" SortIndex="0" SortOrder="Ascending" Caption="Client" Index="2" AllowEdit="False" />
+        <ColumnInfo Id="TaskSchedulerID" PropertyName="TaskSchedulerID.RegistrationID.RegistrationID" View="" Width="70" Caption="RegistrationID" Index="0" AllowEdit="False" />
+        <ColumnInfo Id="TestSummary" PropertyName="TestSummary" View="" Width="70" Index="-1" Caption="TestSummary" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <ListView Id="SpreadSheetEntry_AnalyticalBatch_ListView_History" DetailViewID="SpreadSheetEntry_AnalyticalBatch_DetailView_History" />
+    <ListView Id="SpreadSheetEntry_AnalyticalBatch_ListView_Copy_SDMSBatchResults" DetailViewID="SpreadSheetEntry_AnalyticalBatch_DetailView_Copy" />
+    <ListView Id="SpreadSheetEntry_AnalyticalBatch_ListView_Copy_DC" DetailViewID="SpreadSheetEntry_AnalyticalBatch_DetailView_Copy" />
+    <DetailView Id="SpreadSheetEntry_AnalyticalBatch_DetailView_QCBatchID">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Row2">
+              <TabbedGroup Id="Item2">
+                <LayoutGroup Id="Item1">
+                  <LayoutItem Id="qclist" ViewItem="qclist" />
+                  <LayoutItem Id="qctype" ViewItem="qctype" />
+                </LayoutGroup>
+              </TabbedGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="SDMS">
+      <Layout Id="Layout">
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Item4">
+            <LayoutItem Id="SDMSCABCurve" ViewItem="SDMSCABCurve" />
+          </LayoutGroup>
+        </TabbedGroup>
+      </Layout>
+    </DashboardView>
+    <ListView Id="SamplingProposal_ListView_History" ClassName="Modules.BusinessObjects.SamplingManagement.SamplingProposal" Criteria="[RetireDate] Is Not Null And [RetiredBy] Is Not Null" AllowDelete="False" AllowLink="False" AllowNew="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BalanceCalibrationID" PropertyName="BalanceCalibrationID" Width="212" Index="-1" />
+        <ColumnInfo Id="BalanceID" PropertyName="BalanceID" Width="212" Index="-1" />
+        <ColumnInfo Id="BatchID" PropertyName="BatchID" Width="212" Index="-1" />
+        <ColumnInfo Id="BroughtBy" PropertyName="BroughtBy" Width="212" Index="-1" />
+        <ColumnInfo Id="ClientAddress2" PropertyName="ClientAddress2" Width="212" Index="-1" />
+        <ColumnInfo Id="ClientContact" PropertyName="ClientContact" Width="212" Index="-1" />
+        <ColumnInfo Id="ClientPhone" PropertyName="ClientPhone" Width="212" Index="-1" />
+        <ColumnInfo Id="ClientSampleID" PropertyName="ClientSampleID" Width="212" Index="-1" />
+        <ColumnInfo Id="COCAttached" PropertyName="COCAttached" Width="212" Index="-1" />
+        <ColumnInfo Id="COCSource" PropertyName="COCSource" Width="212" Index="-1" />
+        <ColumnInfo Id="CollectionDate" PropertyName="CollectionDate" Width="212" Index="-1" />
+        <ColumnInfo Id="CollectionTime" PropertyName="CollectionTime" Width="212" Index="-1" />
+        <ColumnInfo Id="Collector" PropertyName="Collector" Width="212" Index="-1" />
+        <ColumnInfo Id="Comment" PropertyName="Comment" Width="212" Index="-1" />
+        <ColumnInfo Id="Comments" PropertyName="Comments" Width="150" Index="-1" />
+        <ColumnInfo Id="ContactName" PropertyName="ContactName" Width="212" Index="-1" />
+        <ColumnInfo Id="CreatedBy" PropertyName="CreatedBy" Width="212" Index="-1" />
+        <ColumnInfo Id="CreatedDate" PropertyName="CreatedDate" Width="212" Index="-1" />
+        <ColumnInfo Id="CurrentWeight" PropertyName="CurrentWeight" Width="212" Index="-1" />
+        <ColumnInfo Id="DateCollected" PropertyName="DateCollected" Width="212" Index="-1" />
+        <ColumnInfo Id="DateTimeSent" PropertyName="DateTimeSent" Width="212" Index="-1" />
+        <ColumnInfo Id="DueDate" PropertyName="DueDate" Width="212" Index="-1" Caption="DueDate" />
+        <ColumnInfo Id="Email" PropertyName="Email" Width="212" Index="-1" />
+        <ColumnInfo Id="EmailList" PropertyName="EmailList" Width="212" Index="-1" />
+        <ColumnInfo Id="GroupVisualMatrix" PropertyName="GroupVisualMatrix" Width="212" Index="-1" />
+        <ColumnInfo Id="Index" PropertyName="Index" Width="212" Index="-1" />
+        <ColumnInfo Id="InvoiceStatus" PropertyName="InvoiceStatus" Width="212" Index="-1" />
+        <ColumnInfo Id="MailStatus" PropertyName="MailStatus" Width="212" Index="-1" />
+        <ColumnInfo Id="ManifestNumbers" PropertyName="ManifestNumbers" Width="212" Index="-1" />
+        <ColumnInfo Id="ModifiedBy" PropertyName="ModifiedBy" Width="212" Index="-1" />
+        <ColumnInfo Id="ModifiedDate" PropertyName="ModifiedDate" Width="212" Index="-1" />
+        <ColumnInfo Id="NoOfDaysRemaining" PropertyName="NoOfDaysRemaining" Width="150" Index="-1" />
+        <ColumnInfo Id="NoOfSamples" PropertyName="NoOfSamples" Width="212" Index="-1" />
+        <ColumnInfo Id="NoStations" PropertyName="NoStations" Width="150" Index="-1" />
+        <ColumnInfo Id="NPTest" PropertyName="NPTest" Width="212" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="212" Index="-1" />
+        <ColumnInfo Id="PackageNo" PropertyName="PackageNo" Width="212" Index="-1" />
+        <ColumnInfo Id="PaymentStatus" PropertyName="PaymentStatus" Width="212" Index="-1" />
+        <ColumnInfo Id="PendingResult" PropertyName="PendingResult" Width="150" Index="-1" />
+        <ColumnInfo Id="PO" PropertyName="PO" Width="212" Index="-1" />
+        <ColumnInfo Id="PreviousWeight" PropertyName="PreviousWeight" Width="212" Index="-1" />
+        <ColumnInfo Id="ProgressStatus" PropertyName="ProgressStatus" Width="150" Index="-1" />
+        <ColumnInfo Id="ProjectCategory" PropertyName="ProjectCategory" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectCity" PropertyName="ProjectCity" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectLocation" PropertyName="ProjectLocation" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectManager" PropertyName="ProjectManager" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectOverview" PropertyName="ProjectOverview" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectSource" PropertyName="ProjectSource" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectTrackingStatus" PropertyName="ProjectTrackingStatus" Width="150" Index="-1" />
+        <ColumnInfo Id="QuoteID" PropertyName="QuoteID" Width="212" Index="-1" />
+        <ColumnInfo Id="ReasonforWeighing" PropertyName="ReasonforWeighing" Width="212" Index="-1" />
+        <ColumnInfo Id="RecievedBy" PropertyName="RecievedBy" Width="212" Index="-1" />
+        <ColumnInfo Id="RecievedDate" PropertyName="RecievedDate" Width="212" Index="-1" Caption="RecievedDate" />
+        <ColumnInfo Id="RelinquishedBy" PropertyName="RelinquishedBy" Width="212" Index="-1" />
+        <ColumnInfo Id="Remark" PropertyName="Remark" Width="212" Index="-1" />
+        <ColumnInfo Id="ReportDeliveryAddress" PropertyName="ReportDeliveryAddress" Width="212" Index="-1" />
+        <ColumnInfo Id="ReportDeliveryMethod" PropertyName="ReportDeliveryMethod" Width="212" Index="-1" />
+        <ColumnInfo Id="Reported" PropertyName="Reported" Width="212" Index="-1" />
+        <ColumnInfo Id="ReportSpecification" PropertyName="ReportSpecification" Width="212" Index="-1" />
+        <ColumnInfo Id="ReportStatus" PropertyName="ReportStatus" Width="212" Index="-1" />
+        <ColumnInfo Id="ReportTemplate" PropertyName="ReportTemplate" Width="212" Index="-1" />
+        <ColumnInfo Id="RetireDate" PropertyName="RetireDate" Width="212" Index="-1" />
+        <ColumnInfo Id="RetiredBy" PropertyName="RetiredBy" Width="70" Index="-1" />
+        <ColumnInfo Id="RollbackedBy" PropertyName="RollbackedBy" Width="212" Index="-1" />
+        <ColumnInfo Id="RollbackedDate" PropertyName="RollbackedDate" Width="212" Index="-1" />
+        <ColumnInfo Id="RollbackReason" PropertyName="RollbackReason" Width="212" Index="-1" />
+        <ColumnInfo Id="SalesOrder" PropertyName="SalesOrder" Width="212" Index="-1" />
+        <ColumnInfo Id="SampleCategory" PropertyName="SampleCategory" Width="212" Index="-1" />
+        <ColumnInfo Id="SampleCount" PropertyName="SampleCount" Width="150" Index="-1" />
+        <ColumnInfo Id="SampleImage" PropertyName="SampleImage" Width="212" Index="-1" />
+        <ColumnInfo Id="SampleLocation" PropertyName="SampleLocation" Width="212" Index="-1" />
+        <ColumnInfo Id="SampleMatries" PropertyName="SampleMatries" Width="212" Index="-1" />
+        <ColumnInfo Id="SampleTemperature" PropertyName="SampleTemperature" Width="212" Index="-1" />
+        <ColumnInfo Id="SamplingEquipment" PropertyName="SamplingEquipment" Width="212" Index="-1" />
+        <ColumnInfo Id="SendBy" PropertyName="SendBy" Width="212" Index="-1" />
+        <ColumnInfo Id="SendDate" PropertyName="SendDate" Width="212" Index="-1" />
+        <ColumnInfo Id="SendingMethod" PropertyName="SendingMethod" Width="212" Index="-1" />
+        <ColumnInfo Id="TAT" PropertyName="TAT" Width="212" Index="-1" />
+        <ColumnInfo Id="Test" PropertyName="Test" Width="212" Index="-1" />
+        <ColumnInfo Id="TestDescription" PropertyName="TestDescription" Width="212" Index="-1" />
+        <ColumnInfo Id="TestName" PropertyName="TestName" Width="212" Index="-1" />
+        <ColumnInfo Id="TestSummary" PropertyName="TestSummary" Width="212" Index="-1" />
+        <ColumnInfo Id="UploadCOC" PropertyName="UploadCOC" Width="212" Index="-1" />
+        <ColumnInfo Id="RegistrationID" PropertyName="RegistrationID" Width="212" Index="0" Caption="RegistrationID" SortIndex="0" SortOrder="Descending" />
+        <ColumnInfo Id="ClientName" PropertyName="ClientName" Width="116" Index="1" Caption="Client" />
+        <ColumnInfo Id="ClientAddress" PropertyName="ClientAddress" Width="212" Index="2" Caption="Address" />
+        <ColumnInfo Id="COCID" Caption="COCID" PropertyName="COCSource.strCOCID" Width="117" Index="3" />
+        <ColumnInfo Id="ProjectID" PropertyName="ProjectID" Width="212" Index="4" Caption="ProjectID" />
+        <ColumnInfo Id="ProjectName" PropertyName="ProjectName" Width="212" Index="5" Caption="ProjectName" />
+        <ColumnInfo Id="DateExpect" PropertyName="DateExpect" Width="212" Index="6" Caption="ExpectCollectionDate" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="212" Index="7" PropertyEditorType="LDM.Module.Web.Editors.EnumRadioButtonListPropertyEditor" />
+      </Columns>
+    </ListView>
+    <ListView Id="SamplingProposal_ListView_CopyTo" ClassName="Modules.BusinessObjects.SamplingManagement.SamplingProposal" Criteria="">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BalanceCalibrationID" PropertyName="BalanceCalibrationID" Width="212" Index="-1" />
+        <ColumnInfo Id="BalanceID" PropertyName="BalanceID" Width="212" Index="-1" />
+        <ColumnInfo Id="BatchID" PropertyName="BatchID" Width="212" Index="-1" />
+        <ColumnInfo Id="BroughtBy" PropertyName="BroughtBy" Width="212" Index="-1" />
+        <ColumnInfo Id="ClientAddress2" PropertyName="ClientAddress2" Width="212" Index="-1" />
+        <ColumnInfo Id="ClientContact" PropertyName="ClientContact" Width="212" Index="-1" />
+        <ColumnInfo Id="ClientPhone" PropertyName="ClientPhone" Width="212" Index="-1" />
+        <ColumnInfo Id="ClientSampleID" PropertyName="ClientSampleID" Width="212" Index="-1" />
+        <ColumnInfo Id="COCAttached" PropertyName="COCAttached" Width="212" Index="-1" />
+        <ColumnInfo Id="COCSource" PropertyName="COCSource" Width="212" Index="-1" />
+        <ColumnInfo Id="CollectionDate" PropertyName="CollectionDate" Width="212" Index="-1" />
+        <ColumnInfo Id="CollectionTime" PropertyName="CollectionTime" Width="212" Index="-1" />
+        <ColumnInfo Id="Collector" PropertyName="Collector" Width="212" Index="-1" />
+        <ColumnInfo Id="Comment" PropertyName="Comment" Width="212" Index="-1" />
+        <ColumnInfo Id="Comments" PropertyName="Comments" Width="150" Index="-1" />
+        <ColumnInfo Id="ContactName" PropertyName="ContactName" Width="212" Index="-1" />
+        <ColumnInfo Id="CreatedBy" PropertyName="CreatedBy" Width="212" Index="-1" />
+        <ColumnInfo Id="CreatedDate" PropertyName="CreatedDate" Width="212" Index="-1" />
+        <ColumnInfo Id="CurrentWeight" PropertyName="CurrentWeight" Width="212" Index="-1" />
+        <ColumnInfo Id="DateCollected" PropertyName="DateCollected" Width="212" Index="-1" />
+        <ColumnInfo Id="DateExpect" PropertyName="DateExpect" Width="212" Index="-1" Caption="ExpectCollectionDate" />
+        <ColumnInfo Id="DateTimeSent" PropertyName="DateTimeSent" Width="212" Index="-1" />
+        <ColumnInfo Id="DueDate" PropertyName="DueDate" Width="212" Index="-1" Caption="DueDate" />
+        <ColumnInfo Id="Email" PropertyName="Email" Width="212" Index="-1" />
+        <ColumnInfo Id="EmailList" PropertyName="EmailList" Width="212" Index="-1" />
+        <ColumnInfo Id="GroupVisualMatrix" PropertyName="GroupVisualMatrix" Width="212" Index="-1" />
+        <ColumnInfo Id="Index" PropertyName="Index" Width="212" Index="-1" />
+        <ColumnInfo Id="InvoiceStatus" PropertyName="InvoiceStatus" Width="212" Index="-1" />
+        <ColumnInfo Id="MailStatus" PropertyName="MailStatus" Width="212" Index="-1" />
+        <ColumnInfo Id="ManifestNumbers" PropertyName="ManifestNumbers" Width="212" Index="-1" />
+        <ColumnInfo Id="ModifiedBy" PropertyName="ModifiedBy" Width="212" Index="-1" />
+        <ColumnInfo Id="ModifiedDate" PropertyName="ModifiedDate" Width="212" Index="-1" />
+        <ColumnInfo Id="NoOfDaysRemaining" PropertyName="NoOfDaysRemaining" Width="150" Index="-1" />
+        <ColumnInfo Id="NoOfSamples" PropertyName="NoOfSamples" Width="212" Index="-1" />
+        <ColumnInfo Id="NoStations" PropertyName="NoStations" Width="150" Index="-1" />
+        <ColumnInfo Id="NPTest" PropertyName="NPTest" Width="212" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="212" Index="-1" />
+        <ColumnInfo Id="PackageNo" PropertyName="PackageNo" Width="212" Index="-1" />
+        <ColumnInfo Id="PaymentStatus" PropertyName="PaymentStatus" Width="212" Index="-1" />
+        <ColumnInfo Id="PendingResult" PropertyName="PendingResult" Width="150" Index="-1" />
+        <ColumnInfo Id="PO" PropertyName="PO" Width="212" Index="-1" />
+        <ColumnInfo Id="PreviousWeight" PropertyName="PreviousWeight" Width="212" Index="-1" />
+        <ColumnInfo Id="ProgressStatus" PropertyName="ProgressStatus" Width="150" Index="-1" />
+        <ColumnInfo Id="ProjectCategory" PropertyName="ProjectCategory" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectCity" PropertyName="ProjectCity" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectLocation" PropertyName="ProjectLocation" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectManager" PropertyName="ProjectManager" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectOverview" PropertyName="ProjectOverview" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectSource" PropertyName="ProjectSource" Width="212" Index="-1" />
+        <ColumnInfo Id="ProjectTrackingStatus" PropertyName="ProjectTrackingStatus" Width="150" Index="-1" />
+        <ColumnInfo Id="QuoteID" PropertyName="QuoteID" Width="212" Index="-1" />
+        <ColumnInfo Id="ReasonforWeighing" PropertyName="ReasonforWeighing" Width="212" Index="-1" />
+        <ColumnInfo Id="RecievedBy" PropertyName="RecievedBy" Width="212" Index="-1" />
+        <ColumnInfo Id="RecievedDate" PropertyName="RecievedDate" Width="212" Index="-1" Caption="RecievedDate" />
+        <ColumnInfo Id="RelinquishedBy" PropertyName="RelinquishedBy" Width="212" Index="-1" />
+        <ColumnInfo Id="Remark" PropertyName="Remark" Width="212" Index="-1" />
+        <ColumnInfo Id="ReportDeliveryAddress" PropertyName="ReportDeliveryAddress" Width="212" Index="-1" />
+        <ColumnInfo Id="ReportDeliveryMethod" PropertyName="ReportDeliveryMethod" Width="212" Index="-1" />
+        <ColumnInfo Id="Reported" PropertyName="Reported" Width="212" Index="-1" />
+        <ColumnInfo Id="ReportSpecification" PropertyName="ReportSpecification" Width="212" Index="-1" />
+        <ColumnInfo Id="ReportStatus" PropertyName="ReportStatus" Width="212" Index="-1" />
+        <ColumnInfo Id="ReportTemplate" PropertyName="ReportTemplate" Width="212" Index="-1" />
+        <ColumnInfo Id="RetireDate" PropertyName="RetireDate" Width="212" Index="-1" />
+        <ColumnInfo Id="RollbackedBy" PropertyName="RollbackedBy" Width="212" Index="-1" />
+        <ColumnInfo Id="RollbackedDate" PropertyName="RollbackedDate" Width="212" Index="-1" />
+        <ColumnInfo Id="RollbackReason" PropertyName="RollbackReason" Width="212" Index="-1" />
+        <ColumnInfo Id="SalesOrder" PropertyName="SalesOrder" Width="212" Index="-1" />
+        <ColumnInfo Id="SampleCategory" PropertyName="SampleCategory" Width="212" Index="-1" />
+        <ColumnInfo Id="SampleCount" PropertyName="SampleCount" Width="150" Index="-1" />
+        <ColumnInfo Id="SampleImage" PropertyName="SampleImage" Width="212" Index="-1" />
+        <ColumnInfo Id="SampleLocation" PropertyName="SampleLocation" Width="212" Index="-1" />
+        <ColumnInfo Id="SampleMatries" PropertyName="SampleMatries" Width="212" Index="-1" />
+        <ColumnInfo Id="SampleTemperature" PropertyName="SampleTemperature" Width="212" Index="-1" />
+        <ColumnInfo Id="SamplingEquipment" PropertyName="SamplingEquipment" Width="212" Index="-1" />
+        <ColumnInfo Id="SendBy" PropertyName="SendBy" Width="212" Index="-1" />
+        <ColumnInfo Id="SendDate" PropertyName="SendDate" Width="212" Index="-1" />
+        <ColumnInfo Id="SendingMethod" PropertyName="SendingMethod" Width="212" Index="-1" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="212" Index="-1" PropertyEditorType="LDM.Module.Web.Editors.EnumRadioButtonListPropertyEditor" />
+        <ColumnInfo Id="TAT" PropertyName="TAT" Width="212" Index="-1" />
+        <ColumnInfo Id="Test" PropertyName="Test" Width="212" Index="-1" />
+        <ColumnInfo Id="TestDescription" PropertyName="TestDescription" Width="212" Index="-1" />
+        <ColumnInfo Id="TestName" PropertyName="TestName" Width="212" Index="-1" />
+        <ColumnInfo Id="TestSummary" PropertyName="TestSummary" Width="212" Index="-1" />
+        <ColumnInfo Id="UploadCOC" PropertyName="UploadCOC" Width="212" Index="-1" />
+        <ColumnInfo Id="RegistrationID" PropertyName="RegistrationID" Width="212" Index="0" Caption="RegistrationID" SortIndex="0" SortOrder="Descending" />
+        <ColumnInfo Id="ClientName" PropertyName="ClientName" Width="116" Index="1" Caption="Client" />
+        <ColumnInfo Id="Copyfrom" PropertyName="Copyfrom" Width="70" Index="1" />
+        <ColumnInfo Id="ClientAddress" PropertyName="ClientAddress" Width="212" Index="2" Caption="Address" />
+        <ColumnInfo Id="COCID" Caption="COCID" PropertyName="COCSource.strCOCID" Width="117" Index="3" />
+        <ColumnInfo Id="ProjectID" PropertyName="ProjectID" Width="212" Index="4" Caption="ProjectID" />
+        <ColumnInfo Id="ProjectName" PropertyName="ProjectName" Width="212" Index="5" Caption="ProjectName" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SamplingProposal_DetailView_CopyRecurrence" ClassName="Modules.BusinessObjects.SamplingManagement.SamplingProposal">
+      <Items Id="Items">
+        <PropertyEditor Id="Attachments" PropertyName="Attachments" View="SamplingProposal_Attachments_ListView" />
+        <PropertyEditor Id="BalanceCalibrationID" PropertyName="BalanceCalibrationID" />
+        <PropertyEditor Id="BalanceID" PropertyName="BalanceID" />
+        <PropertyEditor Id="BatchID" PropertyName="BatchID" />
+        <PropertyEditor Id="BroughtBy" PropertyName="BroughtBy" />
+        <ActionContainerViewItem Id="btnImportQuote" ActionContainer="ImportCOCSamples" Caption="btnImportQuote(54)" />
+        <PropertyEditor Id="ClientAddress" PropertyName="ClientAddress" />
+        <PropertyEditor Id="ClientAddress2" PropertyName="ClientAddress2" />
+        <PropertyEditor Id="ClientContact" PropertyName="ClientContact" View="Contact_LookupListView_Copy_SampleCheckin" />
+        <PropertyEditor Id="ClientName" PropertyName="ClientName" View="Customer_LookupListView_SamplingProposal" Caption="Client" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridLookupPropertyEditor" />
+        <PropertyEditor Id="ClientPhone" PropertyName="ClientPhone" />
+        <PropertyEditor Id="ClientSampleID" PropertyName="ClientSampleID" />
+        <PropertyEditor Id="COC_ID" PropertyName="COCSource.strCOCID" />
+        <PropertyEditor Id="COCAttached" PropertyName="COCAttached" />
+        <ActionContainerViewItem Id="COCImport" ActionContainer="ImportCOCSamples" Caption="COCImport(55)" />
+        <PropertyEditor Id="COCSource" PropertyName="COCSource" />
+        <PropertyEditor Id="CollectionDate" PropertyName="CollectionDate" />
+        <PropertyEditor Id="CollectionTime" PropertyName="CollectionTime" />
+        <PropertyEditor Id="Collector" PropertyName="Collector" />
+        <PropertyEditor Id="Comment" PropertyName="Comment" />
+        <PropertyEditor Id="Comments" PropertyName="Comments" />
+        <PropertyEditor Id="ContactName" PropertyName="ContactName" View="Contact_LookupListView_Copy_SampleCheckin" Caption="Client Contact" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridLookupPropertyEditor" />
+        <ActionContainerViewItem Id="Containers" ActionContainer="Sample" />
+        <PropertyEditor Id="Copyfrom" PropertyName="Copyfrom" View="TaskRecurranceSetup_LookupListView" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridLookupPropertyEditor" LookupProperty="RegistrationID.RegistrationID" ImmediatePostData="True" Caption="Copy from" />
+        <ActionContainerViewItem Id="CopySave" ActionContainer="CopySave" Caption="CopySave" />
+        <DashboardViewItem Id="CopyTo" Caption="CopyTo" ViewId="SamplingProposal_ListView_CopyTo" />
+        <PropertyEditor Id="CreatedBy" PropertyName="CreatedBy" />
+        <PropertyEditor Id="CreatedDate" PropertyName="CreatedDate" />
+        <PropertyEditor Id="CurrentWeight" PropertyName="CurrentWeight" />
+        <PropertyEditor Id="CustomDueDates" PropertyName="CustomDueDates" View="SamplingProposal_CustomDueDates_ListView" />
+        <PropertyEditor Id="DateCollected" PropertyName="DateCollected" />
+        <PropertyEditor Id="DateExpect" PropertyName="DateExpect" />
+        <PropertyEditor Id="DateTimeSent" PropertyName="DateTimeSent" />
+        <PropertyEditor Id="DueDate" PropertyName="DueDate" AllowEdit="False" />
+        <PropertyEditor Id="Email" PropertyName="Email" />
+        <PropertyEditor Id="EmailList" PropertyName="EmailList" />
+        <PropertyEditor Id="GroupVisualMatrix" PropertyName="GroupVisualMatrix" />
+        <PropertyEditor Id="ImageUpload" PropertyName="ImageUpload" View="SamplingProposal_ImageUpload_ListView" />
+        <PropertyEditor Id="Index" PropertyName="Index" />
+        <PropertyEditor Id="InvoiceStatus" PropertyName="InvoiceStatus" />
+        <PropertyEditor Id="MailStatus" PropertyName="MailStatus" />
+        <PropertyEditor Id="ManifestNumbers" PropertyName="ManifestNumbers" />
+        <PropertyEditor Id="ModifiedBy" PropertyName="ModifiedBy" />
+        <PropertyEditor Id="ModifiedDate" PropertyName="ModifiedDate" />
+        <PropertyEditor Id="NoOfDaysRemaining" PropertyName="NoOfDaysRemaining" />
+        <PropertyEditor Id="NoOfSamples" PropertyName="NoOfSamples" />
+        <PropertyEditor Id="NoStations" PropertyName="NoStations" />
+        <PropertyEditor Id="Notes" PropertyName="Notes" View="SamplingProposal_Notes_ListView" />
+        <PropertyEditor Id="NPTest" PropertyName="NPTest" />
+        <PropertyEditor Id="Oid" PropertyName="Oid" />
+        <PropertyEditor Id="PackageNo" PropertyName="PackageNo" />
+        <PropertyEditor Id="PaymentStatus" PropertyName="PaymentStatus" LookupProperty="Status" />
+        <PropertyEditor Id="PendingResult" PropertyName="PendingResult" />
+        <PropertyEditor Id="PO" PropertyName="PO" />
+        <PropertyEditor Id="PreviousWeight" PropertyName="PreviousWeight" />
+        <PropertyEditor Id="ProgressStatus" PropertyName="ProgressStatus" />
+        <PropertyEditor Id="ProjectCategory" PropertyName="ProjectCategory" />
+        <PropertyEditor Id="ProjectCity" PropertyName="ProjectCity" />
+        <PropertyEditor Id="ProjectID" PropertyName="ProjectID" View="Project_LookupListView_SamplingProposal" LookupProperty="ProjectId" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridLookupPropertyEditor" />
+        <PropertyEditor Id="ProjectLocation" PropertyName="ProjectLocation" />
+        <PropertyEditor Id="ProjectManager" PropertyName="ProjectManager" />
+        <PropertyEditor Id="ProjectName" PropertyName="ProjectName" />
+        <PropertyEditor Id="ProjectOverview" PropertyName="ProjectOverview" />
+        <PropertyEditor Id="ProjectSource" PropertyName="ProjectSource" />
+        <PropertyEditor Id="ProjectTrackingStatus" PropertyName="ProjectTrackingStatus" />
+        <PropertyEditor Id="QuoteID" PropertyName="QuoteID" LookupProperty="QuoteID" />
+        <PropertyEditor Id="ReasonforWeighing" PropertyName="ReasonforWeighing" />
+        <PropertyEditor Id="RecievedBy" PropertyName="RecievedBy" AllowEdit="False" Caption="Registered By" />
+        <PropertyEditor Id="RecievedDate" PropertyName="RecievedDate" AllowEdit="False" Caption="Date Registered" />
+        <PropertyEditor Id="RegistrationID" PropertyName="RegistrationID" NullText="Autogenerate" AllowEdit="False" />
+        <PropertyEditor Id="RelinquishedBy" PropertyName="RelinquishedBy" />
+        <PropertyEditor Id="Remark" PropertyName="Remark" />
+        <PropertyEditor Id="ReportDeliveryAddress" PropertyName="ReportDeliveryAddress" />
+        <PropertyEditor Id="ReportDeliveryMethod" PropertyName="ReportDeliveryMethod" />
+        <PropertyEditor Id="Reported" PropertyName="Reported" />
+        <PropertyEditor Id="ReportSpecification" PropertyName="ReportSpecification" />
+        <PropertyEditor Id="ReportStatus" PropertyName="ReportStatus" />
+        <PropertyEditor Id="ReportTemplate" PropertyName="ReportTemplate" />
+        <PropertyEditor Id="RetireDate" PropertyName="RetireDate" />
+        <PropertyEditor Id="RollbackedBy" PropertyName="RollbackedBy" />
+        <PropertyEditor Id="RollbackedDate" PropertyName="RollbackedDate" />
+        <PropertyEditor Id="RollbackReason" PropertyName="RollbackReason" />
+        <PropertyEditor Id="SalesOrder" PropertyName="SalesOrder" />
+        <ActionContainerViewItem Id="Sample" ActionContainer="Sample" Caption="Sample(105)" />
+        <PropertyEditor Id="SampleCategory" PropertyName="SampleCategory" />
+        <PropertyEditor Id="SampleConditionCheck" PropertyName="SampleConditionCheck" View="SamplingProposal_SampleConditionCheck_ListView" />
+        <PropertyEditor Id="SampleCount" PropertyName="SampleCount" />
+        <PropertyEditor Id="SampleImage" PropertyName="SampleImage" />
+        <PropertyEditor Id="SampleLocation" PropertyName="SampleLocation" />
+        <PropertyEditor Id="SampleMatries" PropertyName="SampleMatries" />
+        <PropertyEditor Id="SampleTemperature" PropertyName="SampleTemperature" />
+        <PropertyEditor Id="SamplingEquipment" PropertyName="SamplingEquipment" />
+        <PropertyEditor Id="SendBy" PropertyName="SendBy" />
+        <PropertyEditor Id="SendDate" PropertyName="SendDate" />
+        <PropertyEditor Id="SendingMethod" PropertyName="SendingMethod" />
+        <PropertyEditor Id="SPItemCharges" PropertyName="SPItemCharges" View="SamplingProposal_SPItemCharges_ListView" AllowEdit="False" />
+        <PropertyEditor Id="Status" PropertyName="Status" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxEnumPropertyEditor" AllowEdit="False" />
+        <PropertyEditor Id="TAT" PropertyName="TAT" LookupProperty="TAT" />
+        <PropertyEditor Id="Test" PropertyName="Test" PropertyEditorType="LDM.Module.Web.Editors.AspxGridLookupCustomEditor" Caption="Test" />
+        <PropertyEditor Id="TestDescription" PropertyName="TestDescription" />
+        <PropertyEditor Id="TestName" PropertyName="TestName" Caption="Test" />
+        <PropertyEditor Id="Testparameters" PropertyName="Testparameters" View="SamplingProposal_Testparameters_ListView" />
+        <ActionContainerViewItem Id="Tests" ActionContainer="Sample" />
+        <PropertyEditor Id="TestSummary" PropertyName="TestSummary" />
+        <PropertyEditor Id="UploadCOC" PropertyName="UploadCOC" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100">
+          <LayoutGroup Id="col1" Index="0" Direction="Vertical" ShowCaption="False" RelativeSize="5.9459459459459456">
+            <LayoutGroup Id="col1" Index="0" RelativeSize="100" ShowCaption="False" Caption="col1">
+              <LayoutItem Id="Copyfrom" ViewItem="Copyfrom" Index="0" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="col2" Index="1" ShowCaption="False" RelativeSize="94.054054054054049" Caption="col2" Direction="Vertical">
+            <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="92.959770114942529" Caption="Copy to">
+              <LayoutItem Id="CopyTo" ViewItem="CopyTo" Index="0" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Autof41fefa5-8e24-46f5-ab44-58897cbd782b" ShowCaption="False" Caption="Autof41fefa5-8e24-46f5-ab44-58897cbd782b(8)" Direction="Horizontal" Index="1" RelativeSize="7.0402298850574709">
+              <LayoutItem Id="Item1" Index="0" RelativeSize="85.310119695321" />
+              <LayoutItem Id="CopySave" ViewItem="CopySave" Index="1" RelativeSize="14.689880304678999" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SamplingParameter_ListView_SamplingProposal" ClassName="Modules.BusinessObjects.SamplingManagement.SamplingParameter" Caption="Tests" AllowLink="False" AllowNew="False" AllowUnlink="False" IsGroupPanelVisible="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ABID" PropertyName="ABID" Width="70" Index="-1" />
+        <ColumnInfo Id="AnalyzedBy" PropertyName="AnalyzedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="AnalyzedDate" PropertyName="AnalyzedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="ApprovedBy" PropertyName="ApprovedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="ApprovedDate" PropertyName="ApprovedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="AssignedValue" PropertyName="AssignedValue" Width="70" Index="-1" />
+        <ColumnInfo Id="ClientName" PropertyName="ClientName" Width="400" Index="-1" />
+        <ColumnInfo Id="Comment" PropertyName="Comment" Width="70" Index="-1" />
+        <ColumnInfo Id="Container" PropertyName="Container" Width="70" Index="-1" />
+        <ColumnInfo Id="ContainerType" PropertyName="ContainerType" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedBy" PropertyName="CreatedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedDate" PropertyName="CreatedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="DefaultResult" PropertyName="DefaultResult" Width="70" Index="-1" />
+        <ColumnInfo Id="DF" PropertyName="DF" Width="70" Index="-1" />
+        <ColumnInfo Id="Dilution" PropertyName="Dilution" Width="70" Index="-1" />
+        <ColumnInfo Id="DilutionCount" PropertyName="DilutionCount" Width="70" Index="-1" />
+        <ColumnInfo Id="DupBottle" PropertyName="DupBottle" Width="50" Index="-1" />
+        <ColumnInfo Id="DVResult" PropertyName="DVResult" Width="70" Index="-1" />
+        <ColumnInfo Id="EBFAnalyzedBy" PropertyName="EBFAnalyzedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="EBFAnalyzedDate" PropertyName="EBFAnalyzedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="EBFApprovedBy" PropertyName="EBFApprovedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="EBFApprovedDate" PropertyName="EBFApprovedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="EBFEnteredDate" PropertyName="EBFEnteredDate" Width="70" Index="-1" />
+        <ColumnInfo Id="EBFValidatedBy" PropertyName="EBFValidatedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="EBFValidatedDate" PropertyName="EBFValidatedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="EnteredBy" PropertyName="EnteredBy" Width="70" Index="-1" />
+        <ColumnInfo Id="EnteredDate" PropertyName="EnteredDate" Width="70" Index="-1" />
+        <ColumnInfo Id="FinalResult" PropertyName="FinalResult" Width="70" Index="-1" />
+        <ColumnInfo Id="FinalResultUnits" PropertyName="FinalResultUnits" Width="70" Index="-1" />
+        <ColumnInfo Id="FinalRptLimit" PropertyName="FinalRptLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="FinalRptLimitpercentage" PropertyName="FinalRptLimitpercentage" Width="70" Index="-1" />
+        <ColumnInfo Id="FinalVolume" PropertyName="FinalVolume" Width="70" Index="-1" />
+        <ColumnInfo Id="GroupTest" PropertyName="GroupTest" Width="70" Index="-1" />
+        <ColumnInfo Id="HighCLimit" PropertyName="HighCLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="HoldTime" PropertyName="HoldTime" Width="70" Index="-1" />
+        <ColumnInfo Id="InvoiceIsDone" PropertyName="InvoiceIsDone" Width="50" Index="-1" />
+        <ColumnInfo Id="IsComplete" PropertyName="IsComplete" Width="50" Index="-1" />
+        <ColumnInfo Id="IsDilution" PropertyName="IsDilution" Width="50" Index="-1" />
+        <ColumnInfo Id="IsExported" PropertyName="IsExported" Width="50" Index="-1" />
+        <ColumnInfo Id="IsGroup" PropertyName="IsGroup" Width="50" Index="-1" />
+        <ColumnInfo Id="IsPrepMethodComplete" PropertyName="IsPrepMethodComplete" Width="50" Index="-1" />
+        <ColumnInfo Id="IsResultDefaultValue" PropertyName="IsResultDefaultValue" Width="50" Index="-1" />
+        <ColumnInfo Id="JobID" PropertyName="JobID" Width="70" Index="-1" />
+        <ColumnInfo Id="LOQ" PropertyName="LOQ" Width="70" Index="-1" />
+        <ColumnInfo Id="LowCLimit" PropertyName="LowCLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="MCL" PropertyName="MCL" Width="70" Index="-1" />
+        <ColumnInfo Id="MDL" PropertyName="MDL" Width="70" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="PrepBatchID" PropertyName="PrepBatchID" Width="70" Index="-1" />
+        <ColumnInfo Id="PrepMethodCount" PropertyName="PrepMethodCount" Width="50" Index="-1" />
+        <ColumnInfo Id="Preservative" PropertyName="Preservative" Width="70" Index="-1" />
+        <ColumnInfo Id="QCBatchID" PropertyName="QCBatchID" Width="70" Index="-1" />
+        <ColumnInfo Id="QcSampleResult" PropertyName="QcSampleResult" Width="70" Index="-1" />
+        <ColumnInfo Id="QCSort" PropertyName="QCSort" Width="50" Index="-1" />
+        <ColumnInfo Id="Qualifier" PropertyName="Qualifier" Width="70" Index="-1" />
+        <ColumnInfo Id="RawData" PropertyName="RawData" Width="70" Index="-1" />
+        <ColumnInfo Id="Rec" PropertyName="Rec" Width="70" Index="-1" />
+        <ColumnInfo Id="RecHCLimit" PropertyName="RecHCLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="RecLCLimit" PropertyName="RecLCLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="REHCLimit" PropertyName="REHCLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="RELCLimit" PropertyName="RELCLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="Result" PropertyName="Result" Width="70" Index="-1" />
+        <ColumnInfo Id="ResultNumeric" PropertyName="ResultNumeric" Width="70" Index="-1" />
+        <ColumnInfo Id="Rollback" PropertyName="Rollback" Width="70" Index="-1" />
+        <ColumnInfo Id="RPD" PropertyName="RPD" Width="70" Index="-1" />
+        <ColumnInfo Id="RPDHCLimit" PropertyName="RPDHCLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="RPDLCLimit" PropertyName="RPDLCLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="RptLimit" PropertyName="RptLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="SampleArea" PropertyName="SampleArea" Width="70" Index="-1" />
+        <ColumnInfo Id="SampleparameterUnit" PropertyName="SampleparameterUnit" Width="70" Index="-1" />
+        <ColumnInfo Id="Sampling" PropertyName="Sampling" Width="70" Index="-1" />
+        <ColumnInfo Id="SCDateReceived" PropertyName="SCDateReceived" Width="70" Index="-1" />
+        <ColumnInfo Id="SignOff" PropertyName="SignOff" Width="50" Index="-1" />
+        <ColumnInfo Id="SortNo" PropertyName="SortNo" Width="50" Index="-1" />
+        <ColumnInfo Id="SpikeAmount" PropertyName="SpikeAmount" Width="70" Index="-1" />
+        <ColumnInfo Id="SpikeAmountUnit" PropertyName="SpikeAmountUnit" Width="70" Index="-1" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="70" Index="-1" />
+        <ColumnInfo Id="STDConc" PropertyName="STDConc" Width="70" Index="-1" />
+        <ColumnInfo Id="STDConcUnit" PropertyName="STDConcUnit" Width="70" Index="-1" />
+        <ColumnInfo Id="STDVolAdd" PropertyName="STDVolAdd" Width="70" Index="-1" />
+        <ColumnInfo Id="STDVolUnit" PropertyName="STDVolUnit" Width="70" Index="-1" />
+        <ColumnInfo Id="SubLabName" PropertyName="SubLabName" Width="70" Index="-1" />
+        <ColumnInfo Id="SubOut" PropertyName="SubOut" Width="50" Index="-1" />
+        <ColumnInfo Id="SuboutAnalyzedBy" PropertyName="SuboutAnalyzedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="SuboutAnalyzedDate" PropertyName="SuboutAnalyzedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="SubOutBy" PropertyName="SubOutBy" Width="70" Index="-1" />
+        <ColumnInfo Id="SubOutDate" PropertyName="SubOutDate" Width="70" Index="-1" />
+        <ColumnInfo Id="SuboutQCType" PropertyName="SuboutQCType" Width="70" Index="-1" />
+        <ColumnInfo Id="SurrogateHighLimit" PropertyName="SurrogateHighLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="SurrogateLowLimit" PropertyName="SurrogateLowLimit" Width="70" Index="-1" />
+        <ColumnInfo Id="SurrogateSpikeAmount" PropertyName="SurrogateSpikeAmount" Width="70" Index="-1" />
+        <ColumnInfo Id="SurrogateUnits" PropertyName="SurrogateUnits" Width="70" Index="-1" />
+        <ColumnInfo Id="SysSampleCode" PropertyName="SysSampleCode" Width="70" Index="-1" />
+        <ColumnInfo Id="TAT" PropertyName="TAT" Width="70" Index="-1" />
+        <ColumnInfo Id="TestHold" PropertyName="TestHold" Width="50" Index="-1" />
+        <ColumnInfo Id="Testparameter" PropertyName="Testparameter" Width="70" Index="-1" />
+        <ColumnInfo Id="TWA" PropertyName="TWA" Width="70" Index="-1" />
+        <ColumnInfo Id="ugft" PropertyName="ugft" Width="70" Index="-1" />
+        <ColumnInfo Id="ugmcube" PropertyName="ugmcube" Width="70" Index="-1" />
+        <ColumnInfo Id="ugsample" PropertyName="ugsample" Width="70" Index="-1" />
+        <ColumnInfo Id="Units" PropertyName="Units" Width="70" Index="-1" />
+        <ColumnInfo Id="UQABID" PropertyName="UQABID" Width="70" Index="-1" />
+        <ColumnInfo Id="UQL" PropertyName="UQL" Width="70" Index="-1" />
+        <ColumnInfo Id="uqQCBatchID" PropertyName="uqQCBatchID" Width="70" Index="-1" />
+        <ColumnInfo Id="ValidatedBy" PropertyName="ValidatedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="ValidatedDate" PropertyName="ValidatedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="Parameter" Caption="Parameter" PropertyName="Testparameter.Parameter.ParameterName" Index="0" />
+        <ColumnInfo Id="Parent" PropertyName="Parent" Width="70" Index="1" SortOrder="Ascending" GroupIndex="0" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SamplingBottleAllocation_DetailView_Sampling" ClassName="Modules.BusinessObjects.SamplingManagement.SamplingBottleAllocation">
+      <Items Id="Items">
+        <PropertyEditor Id="DefaultContainerQty" PropertyName="DefaultContainerQty" />
+        <PropertyEditor Id="Oid" PropertyName="Oid" />
+        <ActionContainerViewItem Id="Ok" ActionContainer="catqtyok" Caption="Ok(10)" />
+        <ActionContainerViewItem Id="Reset" ActionContainer="CatQtyReset" Caption="Reset(11)" />
+        <DashboardViewItem Id="SampleIDs" ViewId="Sampling_ListView_Bottle" Caption="Samples" />
+        <DashboardViewItem Id="SamplingBottle" ViewId="SamplingBottleAllocation_ListView" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" ShowCaption="False" Direction="Vertical" Index="0" RelativeSize="100">
+          <LayoutGroup Id="Autoe418de29-fff7-4ff3-9ed9-0d9f52e1f747" ShowCaption="False" Caption="Autoe418de29-fff7-4ff3-9ed9-0d9f52e1f747(1)" Index="0" RelativeSize="100">
+            <LayoutGroup Id="Autob0d01096-0326-40eb-a9ac-b662bb9589b2" ShowCaption="False" Caption="Autob0d01096-0326-40eb-a9ac-b662bb9589b2(2)" Index="0" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="Auto8de43db2-fe3d-43ce-9ed5-f3b1de9d5abb" ShowCaption="False" Caption="Auto8de43db2-fe3d-43ce-9ed5-f3b1de9d5abb(4)" Direction="Horizontal" Index="0" RelativeSize="5.8290155440414511">
+                <LayoutItem Id="DefaultContainerQty" ViewItem="DefaultContainerQty" Index="0" RelativeSize="20.972972972972972" SizeConstraintsType="Custom" MaxSize="583, 0" MinSize="58, 31" />
+                <LayoutItem Id="Ok" ViewItem="Ok" Index="1" RelativeSize="28.216216216216218" />
+                <LayoutItem Id="Reset" ViewItem="Reset" Index="2" RelativeSize="28.216216216216218" />
+                <LayoutItem Id="@1060a144-3fa6-439c-bb31-47f7fdc64e72" RelativeSize="22.594594594594593" Index="3" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto1bcd625f-b9a9-4cdf-9756-6f9715170f1d" ShowCaption="False" Caption="Auto1bcd625f-b9a9-4cdf-9756-6f9715170f1d(5)" Direction="Horizontal" Index="1" RelativeSize="94.170984455958546">
+                <LayoutGroup Id="Auto563ca8cb-de94-4cc2-a0dd-5ad0c9853c7c" ShowCaption="False" Caption="Auto563ca8cb-de94-4cc2-a0dd-5ad0c9853c7c(3)" Index="0" RelativeSize="30.162162162162161">
+                  <LayoutItem Id="SampleIDs" ViewItem="SampleIDs" CaptionLocation="Top" Index="0" RelativeSize="100" />
+                </LayoutGroup>
+                <LayoutItem Id="SamplingBottle" ViewItem="SamplingBottle" Index="1" RelativeSize="69.837837837837839" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Sampling_LookupListView_CopyTest_SampleID" ClassName="Modules.BusinessObjects.SamplingManagement.Sampling" AllowNew="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SampleID" PropertyName="SampleID" SortIndex="0" SortOrder="Ascending" Caption="SampleID" />
+      </Columns>
+    </ListView>
+    <ListView Id="Sampling_ListView_SourceSample" ClassName="Modules.BusinessObjects.SamplingManagement.Sampling" AllowLink="False" AllowNew="False" AllowUnlink="False" InlineEditMode="Inline" AllowEdit="False" Caption="Sample Source">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="SampleID" PropertyName="SampleID" Width="70" Index="0" SortIndex="0" SortOrder="Ascending" />
+      </Columns>
+    </ListView>
+    <ListView Id="Sampling_ListView_SamplingProposal" ClassName="Modules.BusinessObjects.SamplingManagement.Sampling" AllowLink="False" AllowNew="False" AllowUnlink="False" InlineEditMode="Batch" AllowEdit="True" Caption="Samples" PageSize="200">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Address" PropertyName="Address" Width="87" Index="-1" />
+        <ColumnInfo Id="AlternativeStation" PropertyName="AlternativeStation" Width="70" Index="-1" />
+        <ColumnInfo Id="AreaOrPerson" PropertyName="AreaOrPerson" Width="87" Index="-1" />
+        <ColumnInfo Id="AssignedBy" PropertyName="AssignedBy" Width="87" Index="-1" />
+        <ColumnInfo Id="AssignTo" PropertyName="AssignTo" Width="87" Index="-1" />
+        <ColumnInfo Id="AuthorizedBy" PropertyName="AuthorizedBy" Width="87" Index="-1" />
+        <ColumnInfo Id="AuthorizedDate" PropertyName="AuthorizedDate" Width="87" Index="-1" />
+        <ColumnInfo Id="BalanceID" PropertyName="BalanceID" Width="87" Index="-1" />
+        <ColumnInfo Id="Barp" PropertyName="Barp" Width="87" Index="-1" />
+        <ColumnInfo Id="BatchID" PropertyName="BatchID" Width="87" Index="-1" />
+        <ColumnInfo Id="BatchSize" PropertyName="BatchSize" Width="87" Index="-1" />
+        <ColumnInfo Id="BatchSize_pc" PropertyName="BatchSize_pc" Width="62" Index="-1" />
+        <ColumnInfo Id="BatchSize_Units" PropertyName="BatchSize_Units" Width="62" Index="-1" />
+        <ColumnInfo Id="Blended" PropertyName="Blended" Width="62" Index="-1" />
+        <ColumnInfo Id="BottleQty" PropertyName="BottleQty" Width="62" Index="-1" />
+        <ColumnInfo Id="BuriedDepthOfGroundWater" PropertyName="BuriedDepthOfGroundWater" Width="87" Index="-1" />
+        <ColumnInfo Id="CanChangeVisualMatrix" PropertyName="CanChangeVisualMatrix" Width="87" Index="-1" />
+        <ColumnInfo Id="ChlorineFree" PropertyName="ChlorineFree" Width="87" Index="-1" />
+        <ColumnInfo Id="ChlorineTotal" PropertyName="ChlorineTotal" Width="87" Index="-1" />
+        <ColumnInfo Id="City" PropertyName="City" Width="87" Index="-1" />
+        <ColumnInfo Id="Client" PropertyName="Client" Width="87" Index="-1" />
+        <ColumnInfo Id="CollectorPhone" PropertyName="CollectorPhone" Width="87" Index="-1" />
+        <ColumnInfo Id="CollectTime" PropertyName="CollectTime" Width="87" Index="-1" />
+        <ColumnInfo Id="Comment" PropertyName="Comment" Width="87" Index="-1" />
+        <ColumnInfo Id="CompositeQty" PropertyName="CompositeQty" Width="62" Index="-1" />
+        <ColumnInfo Id="ContainerID" PropertyName="ContainerID" Width="87" Index="-1" />
+        <ColumnInfo Id="Containers" PropertyName="Containers" Width="87" Index="-1" />
+        <ColumnInfo Id="CreatedBy" PropertyName="CreatedBy" Width="87" Index="-1" />
+        <ColumnInfo Id="CreatedDate" PropertyName="CreatedDate" Width="87" Index="-1" />
+        <ColumnInfo Id="DateAssigned" PropertyName="DateAssigned" Width="87" Index="-1" />
+        <ColumnInfo Id="DateEndExpected" PropertyName="DateEndExpected" Width="87" Index="-1" />
+        <ColumnInfo Id="DateStartExpected" PropertyName="DateStartExpected" Width="87" Index="-1" />
+        <ColumnInfo Id="DaysKept" PropertyName="DaysKept" Width="62" Index="-1" />
+        <ColumnInfo Id="Department" PropertyName="Department" Width="87" Index="-1" />
+        <ColumnInfo Id="Depth" PropertyName="Depth" Width="87" Index="-1" />
+        <ColumnInfo Id="Description" PropertyName="Description" Width="87" Index="-1" />
+        <ColumnInfo Id="DischargeFlow" PropertyName="DischargeFlow" Width="87" Index="-1" />
+        <ColumnInfo Id="DischargePipeHeight" PropertyName="DischargePipeHeight" Width="87" Index="-1" />
+        <ColumnInfo Id="DisposedBy" PropertyName="DisposedBy" Width="87" Index="-1" />
+        <ColumnInfo Id="DisposedDate" PropertyName="DisposedDate" Width="87" Index="-1" />
+        <ColumnInfo Id="DO" PropertyName="DO" Width="87" Index="-1" />
+        <ColumnInfo Id="DueDate" PropertyName="DueDate" Width="87" Index="-1" />
+        <ColumnInfo Id="Emission" PropertyName="Emission" Width="87" Index="-1" />
+        <ColumnInfo Id="EndFlow" PropertyName="EndFlow" Width="87" Index="-1" />
+        <ColumnInfo Id="EndOfRoad" PropertyName="EndOfRoad" Width="87" Index="-1" />
+        <ColumnInfo Id="EnteredBy" PropertyName="EnteredBy" Width="87" Index="-1" />
+        <ColumnInfo Id="EnteredDate" PropertyName="EnteredDate" Width="87" Index="-1" />
+        <ColumnInfo Id="EquipmentModel" PropertyName="EquipmentModel" Width="87" Index="-1" />
+        <ColumnInfo Id="EquipmentName" PropertyName="EquipmentName" Width="87" Index="-1" />
+        <ColumnInfo Id="ExcludeInvoice" PropertyName="ExcludeInvoice" Width="62" Index="-1" />
+        <ColumnInfo Id="FacilityID" PropertyName="FacilityID" Width="87" Index="-1" />
+        <ColumnInfo Id="FacilityName" PropertyName="FacilityName" Width="87" Index="-1" />
+        <ColumnInfo Id="FacilityType" PropertyName="FacilityType" Width="87" Index="-1" />
+        <ColumnInfo Id="FinalForm" PropertyName="FinalForm" Width="87" Index="-1" />
+        <ColumnInfo Id="FinalPackaging" PropertyName="FinalPackaging" Width="87" Index="-1" />
+        <ColumnInfo Id="FlowRate" PropertyName="FlowRate" Width="87" Index="-1" />
+        <ColumnInfo Id="FlowRateCubicMeterPerHour" PropertyName="FlowRateCubicMeterPerHour" Width="87" Index="-1" />
+        <ColumnInfo Id="FlowRateLiterPerMin" PropertyName="FlowRateLiterPerMin" Width="87" Index="-1" />
+        <ColumnInfo Id="FlowVelocity" PropertyName="FlowVelocity" Width="87" Index="-1" />
+        <ColumnInfo Id="ForeignMaterial" PropertyName="ForeignMaterial" Width="87" Index="-1" />
+        <ColumnInfo Id="Frequency" PropertyName="Frequency" Width="87" Index="-1" />
+        <ColumnInfo Id="GISStatus" PropertyName="GISStatus" Width="87" Index="-1" />
+        <ColumnInfo Id="GravelContent" PropertyName="GravelContent" Width="87" Index="-1" />
+        <ColumnInfo Id="GrossWeight" PropertyName="GrossWeight" Width="87" Index="-1" />
+        <ColumnInfo Id="GroupSample" PropertyName="GroupSample" Width="87" Index="-1" />
+        <ColumnInfo Id="Hold" PropertyName="Hold" Width="62" Index="-1" />
+        <ColumnInfo Id="Humidity" PropertyName="Humidity" Width="87" Index="-1" />
+        <ColumnInfo Id="IceCycle" PropertyName="IceCycle" Width="87" Index="-1" />
+        <ColumnInfo Id="Increments" PropertyName="Increments" Width="87" Index="-1" />
+        <ColumnInfo Id="Interval" PropertyName="Interval" Width="62" Index="-1" />
+        <ColumnInfo Id="IsActive" PropertyName="IsActive" Width="62" Index="-1" />
+        <ColumnInfo Id="ItemName" PropertyName="ItemName" Width="87" Index="-1" />
+        <ColumnInfo Id="KeyMap" PropertyName="KeyMap" Width="87" Index="-1" />
+        <ColumnInfo Id="LastUpdatedBy" PropertyName="LastUpdatedBy" Width="87" Index="-1" />
+        <ColumnInfo Id="LastUpdatedDate" PropertyName="LastUpdatedDate" Width="87" Index="-1" />
+        <ColumnInfo Id="Latitude" PropertyName="Latitude" Width="87" Index="-1" />
+        <ColumnInfo Id="Length" PropertyName="Length" Width="87" Index="-1" />
+        <ColumnInfo Id="LicenseNumber" PropertyName="LicenseNumber" Width="87" Index="-1" />
+        <ColumnInfo Id="LoginBy" PropertyName="LoginBy" Width="87" Index="-1" />
+        <ColumnInfo Id="LoginDateTime" PropertyName="LoginDateTime" Width="87" Index="-1" />
+        <ColumnInfo Id="Longitude" PropertyName="Longitude" Width="87" Index="-1" />
+        <ColumnInfo Id="ManifestNo" PropertyName="ManifestNo" Width="87" Index="-1" />
+        <ColumnInfo Id="Matrix" PropertyName="Matrix" Width="87" Index="-1" />
+        <ColumnInfo Id="ModifiedBy" PropertyName="ModifiedBy" Width="87" Index="-1" />
+        <ColumnInfo Id="ModifiedDate" PropertyName="ModifiedDate" Width="87" Index="-1" />
+        <ColumnInfo Id="MonitoryingRequirement" PropertyName="MonitoryingRequirement" Width="87" Index="-1" />
+        <ColumnInfo Id="NoOfCollectionsEachTime" PropertyName="NoOfCollectionsEachTime" Width="62" Index="-1" />
+        <ColumnInfo Id="NoOfPoints" PropertyName="NoOfPoints" Width="62" Index="-1" />
+        <ColumnInfo Id="Notes" PropertyName="Notes" Width="87" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="87" Index="-1" />
+        <ColumnInfo Id="OriginatingEntiry" PropertyName="OriginatingEntiry" Width="87" Index="-1" />
+        <ColumnInfo Id="OriginatingLicenseNumber" PropertyName="OriginatingLicenseNumber" Width="87" Index="-1" />
+        <ColumnInfo Id="PackageNumber" PropertyName="PackageNumber" Width="87" Index="-1" />
+        <ColumnInfo Id="ParentSampleDate" PropertyName="ParentSampleDate" Width="87" Index="-1" />
+        <ColumnInfo Id="ParentSampleID" PropertyName="ParentSampleID" Width="87" Index="-1" />
+        <ColumnInfo Id="PiecesPerUnit" PropertyName="PiecesPerUnit" Width="62" Index="-1" />
+        <ColumnInfo Id="PlannedLatitude" PropertyName="PlannedLatitude" Width="70" Index="-1" />
+        <ColumnInfo Id="PlannedLongitude" PropertyName="PlannedLongitude" Width="70" Index="-1" />
+        <ColumnInfo Id="PreserveCondition" PropertyName="PreserveCondition" Width="87" Index="-1" />
+        <ColumnInfo Id="Preservetives" PropertyName="Preservetives" Width="87" Index="-1" />
+        <ColumnInfo Id="PreviousCollection" PropertyName="PreviousCollection" Width="87" Index="-1" />
+        <ColumnInfo Id="PreviousSample" PropertyName="PreviousSample" Width="87" Index="-1" />
+        <ColumnInfo Id="ProjectID" PropertyName="ProjectID" Width="87" Index="-1" />
+        <ColumnInfo Id="ProjectName" PropertyName="ProjectName" Width="500" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="ProjectNumber" PropertyName="ProjectNumber" Width="87" Index="-1" />
+        <ColumnInfo Id="PurifierSampleID" PropertyName="PurifierSampleID" Width="87" Index="-1" />
+        <ColumnInfo Id="PWSID" PropertyName="PWSID" Width="87" Index="-1" />
+        <ColumnInfo Id="PWSSystemName" PropertyName="PWSSystemName" Width="87" Index="-1" />
+        <ColumnInfo Id="QCSource" PropertyName="QCSource" Width="87" Index="-1" />
+        <ColumnInfo Id="QCType" PropertyName="QCType" Width="87" Index="-1" />
+        <ColumnInfo Id="RegionNameOfSection" PropertyName="RegionNameOfSection" Width="87" Index="-1" />
+        <ColumnInfo Id="RejectionCriteria" PropertyName="RejectionCriteria" Width="87" Index="-1" />
+        <ColumnInfo Id="Remark" PropertyName="Remark" Width="87" Index="-1" />
+        <ColumnInfo Id="RepeatLocation" PropertyName="RepeatLocation" Width="87" Index="-1" />
+        <ColumnInfo Id="RetainedWeight" PropertyName="RetainedWeight" Width="87" Index="-1" />
+        <ColumnInfo Id="RiverWidth" PropertyName="RiverWidth" Width="87" Index="-1" />
+        <ColumnInfo Id="RushSample" PropertyName="RushSample" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleAmount" PropertyName="SampleAmount" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleCondition" PropertyName="SampleCondition" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleDescription" PropertyName="SampleDescription" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplePointID" PropertyName="SamplePointID" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplePointType" PropertyName="SamplePointType" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleSource" PropertyName="SampleSource" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleStatus" PropertyName="SampleStatus" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleTag" PropertyName="SampleTag" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleWeight" PropertyName="SampleWeight" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplingAddress" PropertyName="SamplingAddress" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplingEquipment" PropertyName="SamplingEquipment" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplingEvent" PropertyName="SamplingEvent" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplingProcedure" PropertyName="SamplingProcedure" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplingProposal" PropertyName="SamplingProposal" Width="97" Index="-1" Caption="SamplingProposal" />
+        <ColumnInfo Id="Section" PropertyName="Section" Width="87" Index="-1" />
+        <ColumnInfo Id="ServiceArea" PropertyName="ServiceArea" Width="87" Index="-1" />
+        <ColumnInfo Id="SettingsSource" PropertyName="SettingsSource" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteCode" PropertyName="SiteCode" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteDescription" PropertyName="SiteDescription" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteID" PropertyName="SiteID" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteNameArchived" PropertyName="SiteNameArchived" Width="62" Index="-1" />
+        <ColumnInfo Id="SiteUserDefinedColumn1" PropertyName="SiteUserDefinedColumn1" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteUserDefinedColumn2" PropertyName="SiteUserDefinedColumn2" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteUserDefinedColumn3" PropertyName="SiteUserDefinedColumn3" Width="87" Index="-1" />
+        <ColumnInfo Id="SoilColor" PropertyName="SoilColor" Width="87" Index="-1" />
+        <ColumnInfo Id="SoilMoisture" PropertyName="SoilMoisture" Width="87" Index="-1" />
+        <ColumnInfo Id="SoilQuality" PropertyName="SoilQuality" Width="87" Index="-1" />
+        <ColumnInfo Id="SplitQty" PropertyName="SplitQty" Width="62" Index="-1" />
+        <ColumnInfo Id="StandardVol" PropertyName="StandardVol" Width="87" Index="-1" />
+        <ColumnInfo Id="StartFlow" PropertyName="StartFlow" Width="87" Index="-1" />
+        <ColumnInfo Id="StartOfRoad" PropertyName="StartOfRoad" Width="87" Index="-1" />
+        <ColumnInfo Id="State" PropertyName="State" Width="87" Index="-1" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="87" Index="-1" />
+        <ColumnInfo Id="Storage" PropertyName="Storage" Width="87" Index="-1" />
+        <ColumnInfo Id="StorageID" PropertyName="StorageID" Width="87" Index="-1" />
+        <ColumnInfo Id="SubOut" PropertyName="SubOut" Width="62" Index="-1" />
+        <ColumnInfo Id="SysSampleCode" PropertyName="SysSampleCode" Width="87" Index="-1" />
+        <ColumnInfo Id="SystemType" PropertyName="SystemType" Width="87" Index="-1" />
+        <ColumnInfo Id="TargetMGTHC_CBD_mg_pc" PropertyName="TargetMGTHC_CBD_mg_pc" Width="62" Index="-1" />
+        <ColumnInfo Id="TargetMGTHC_CBD_mg_unit" PropertyName="TargetMGTHC_CBD_mg_unit" Width="62" Index="-1" />
+        <ColumnInfo Id="TargetPotency" PropertyName="TargetPotency" Width="87" Index="-1" />
+        <ColumnInfo Id="TargetUnitWeight_g_pc" PropertyName="TargetUnitWeight_g_pc" Width="87" Index="-1" />
+        <ColumnInfo Id="TargetUnitWeight_g_unit" PropertyName="TargetUnitWeight_g_unit" Width="87" Index="-1" />
+        <ColumnInfo Id="TargetWeight" PropertyName="TargetWeight" Width="87" Index="-1" />
+        <ColumnInfo Id="Test" PropertyName="Test" Width="62" Index="-1" />
+        <ColumnInfo Id="TestSummary" PropertyName="TestSummary" Width="87" Index="-1" />
+        <ColumnInfo Id="Time" PropertyName="Time" Width="87" Index="-1" />
+        <ColumnInfo Id="TimeEnd" PropertyName="TimeEnd" Width="87" Index="-1" />
+        <ColumnInfo Id="TimeStart" PropertyName="TimeStart" Width="87" Index="-1" />
+        <ColumnInfo Id="TotalSamples" PropertyName="TotalSamples" Width="62" Index="-1" />
+        <ColumnInfo Id="TotalTimes" PropertyName="TotalTimes" Width="62" Index="-1" />
+        <ColumnInfo Id="TtimeUnit" PropertyName="TtimeUnit" Width="87" Index="-1" />
+        <ColumnInfo Id="Volume" PropertyName="Volume" Width="87" Index="-1" />
+        <ColumnInfo Id="WaterSource" PropertyName="WaterSource" Width="87" Index="-1" />
+        <ColumnInfo Id="WaterType" PropertyName="WaterType" Width="87" Index="-1" />
+        <ColumnInfo Id="Width" PropertyName="Width" Width="87" Index="-1" />
+        <ColumnInfo Id="ZipCode" PropertyName="ZipCode" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleID" PropertyName="SampleID" Width="92" Index="1" AllowEdit="False" SortIndex="1" SortOrder="Ascending" Caption="SampleID" />
+        <ColumnInfo Id="ClientSampleID" PropertyName="ClientSampleID" Width="87" Index="2" Caption="SampleName" />
+        <ColumnInfo Id="VisualMatrix" PropertyName="VisualMatrix" Width="87" Index="3" Caption="SampleMatrix" />
+        <ColumnInfo Id="SampleNo" PropertyName="SampleNo" Width="62" Index="4" AllowEdit="False" SortIndex="2" SortOrder="Ascending" />
+        <ColumnInfo Id="SampleType" PropertyName="SampleType" Width="87" Index="5" />
+        <ColumnInfo Id="Qty" PropertyName="Qty" Width="87" Index="6" />
+        <ColumnInfo Id="SamplingLocation" PropertyName="SamplingLocation" Width="87" Index="7" />
+        <ColumnInfo Id="Collector" PropertyName="Collector" Width="87" Index="8" />
+        <ColumnInfo Id="CollectDate" PropertyName="CollectDate" Width="199" Index="9" DisplayFormat="{0:MM/dd/yyyy HH:mm}" EditMask="MM/dd/yyyy HH:mm" Caption="CollectDate" />
+        <ColumnInfo Id="SortOrder" PropertyName="SortOrder" Width="62" Index="11" />
+        <ColumnInfo Id="StationLocation" PropertyName="StationLocation" Width="87" Index="13" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxLookupPropertyEditor" View="" AllowEdit="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="Sampling_ListView_Bottle" ClassName="Modules.BusinessObjects.SamplingManagement.Sampling" AllowLink="False" AllowNew="False" AllowUnlink="False" InlineEditMode="Batch" AllowEdit="True" Caption="Samples" AllowDelete="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="SampleID" PropertyName="SampleID" Width="74" Index="0" AllowEdit="False" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="VisualMatrix" PropertyName="VisualMatrix" Width="70" Index="1" Caption="Matrix" AllowClear="False" />
+        <ColumnInfo Id="Qty" PropertyName="Qty" Width="70" Index="2" />
+      </Columns>
+    </ListView>
+    <ListView Id="Sampling_ListView_AssignTo" ClassName="Modules.BusinessObjects.SamplingManagement.Sampling" AllowLink="False" AllowNew="False" AllowUnlink="False" InlineEditMode="Batch" AllowEdit="True" Caption="Samples">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Address" PropertyName="Address" Width="87" Index="-1" />
+        <ColumnInfo Id="AlternativeStation" PropertyName="AlternativeStation" Width="70" Index="-1" />
+        <ColumnInfo Id="AreaOrPerson" PropertyName="AreaOrPerson" Width="87" Index="-1" />
+        <ColumnInfo Id="AssignTo" PropertyName="Client.Company.Employees" Width="87" Index="-1" EditMaskType="RegEx" />
+        <ColumnInfo Id="AuthorizedBy" PropertyName="AuthorizedBy" Width="87" Index="-1" />
+        <ColumnInfo Id="AuthorizedDate" PropertyName="AuthorizedDate" Width="87" Index="-1" />
+        <ColumnInfo Id="BalanceID" PropertyName="BalanceID" Width="87" Index="-1" />
+        <ColumnInfo Id="Barp" PropertyName="Barp" Width="87" Index="-1" />
+        <ColumnInfo Id="BatchID" PropertyName="BatchID" Width="87" Index="-1" />
+        <ColumnInfo Id="BatchSize" PropertyName="BatchSize" Width="87" Index="-1" />
+        <ColumnInfo Id="BatchSize_pc" PropertyName="BatchSize_pc" Width="62" Index="-1" />
+        <ColumnInfo Id="BatchSize_Units" PropertyName="BatchSize_Units" Width="62" Index="-1" />
+        <ColumnInfo Id="Blended" PropertyName="Blended" Width="62" Index="-1" />
+        <ColumnInfo Id="BottleQty" PropertyName="BottleQty" Width="62" Index="-1" />
+        <ColumnInfo Id="BuriedDepthOfGroundWater" PropertyName="BuriedDepthOfGroundWater" Width="87" Index="-1" />
+        <ColumnInfo Id="CanChangeVisualMatrix" PropertyName="CanChangeVisualMatrix" Width="87" Index="-1" />
+        <ColumnInfo Id="ChlorineFree" PropertyName="ChlorineFree" Width="87" Index="-1" />
+        <ColumnInfo Id="ChlorineTotal" PropertyName="ChlorineTotal" Width="87" Index="-1" />
+        <ColumnInfo Id="City" PropertyName="City" Width="87" Index="-1" />
+        <ColumnInfo Id="Client" PropertyName="Client" Width="87" Index="-1" />
+        <ColumnInfo Id="CollectDate" PropertyName="CollectDate" Width="199" Index="-1" DisplayFormat="{0:MM/dd/yyyy HH:mm}" EditMask="MM/dd/yyyy HH:mm" Caption="CollectDate" />
+        <ColumnInfo Id="Collector" PropertyName="Collector" Width="87" Index="-1" />
+        <ColumnInfo Id="CollectorPhone" PropertyName="CollectorPhone" Width="87" Index="-1" />
+        <ColumnInfo Id="CollectTime" PropertyName="CollectTime" Width="87" Index="-1" />
+        <ColumnInfo Id="Comment" PropertyName="Comment" Width="87" Index="-1" />
+        <ColumnInfo Id="CompositeQty" PropertyName="CompositeQty" Width="62" Index="-1" />
+        <ColumnInfo Id="ContainerID" PropertyName="ContainerID" Width="87" Index="-1" />
+        <ColumnInfo Id="Containers" PropertyName="Containers" Width="87" Index="-1" />
+        <ColumnInfo Id="CreatedBy" PropertyName="CreatedBy" Width="87" Index="-1" />
+        <ColumnInfo Id="CreatedDate" PropertyName="CreatedDate" Width="87" Index="-1" />
+        <ColumnInfo Id="DateEndExpected" PropertyName="DateEndExpected" Width="87" Index="-1" />
+        <ColumnInfo Id="DateStartExpected" PropertyName="DateStartExpected" Width="87" Index="-1" />
+        <ColumnInfo Id="DaysKept" PropertyName="DaysKept" Width="62" Index="-1" />
+        <ColumnInfo Id="Department" PropertyName="Department" Width="87" Index="-1" />
+        <ColumnInfo Id="Depth" PropertyName="Depth" Width="87" Index="-1" />
+        <ColumnInfo Id="Description" PropertyName="Description" Width="87" Index="-1" />
+        <ColumnInfo Id="DischargeFlow" PropertyName="DischargeFlow" Width="87" Index="-1" />
+        <ColumnInfo Id="DischargePipeHeight" PropertyName="DischargePipeHeight" Width="87" Index="-1" />
+        <ColumnInfo Id="DisposedBy" PropertyName="DisposedBy" Width="87" Index="-1" />
+        <ColumnInfo Id="DisposedDate" PropertyName="DisposedDate" Width="87" Index="-1" />
+        <ColumnInfo Id="DO" PropertyName="DO" Width="87" Index="-1" />
+        <ColumnInfo Id="DueDate" PropertyName="DueDate" Width="87" Index="-1" />
+        <ColumnInfo Id="Emission" PropertyName="Emission" Width="87" Index="-1" />
+        <ColumnInfo Id="EndFlow" PropertyName="EndFlow" Width="87" Index="-1" />
+        <ColumnInfo Id="EndOfRoad" PropertyName="EndOfRoad" Width="87" Index="-1" />
+        <ColumnInfo Id="EnteredBy" PropertyName="EnteredBy" Width="87" Index="-1" />
+        <ColumnInfo Id="EnteredDate" PropertyName="EnteredDate" Width="87" Index="-1" />
+        <ColumnInfo Id="EquipmentModel" PropertyName="EquipmentModel" Width="87" Index="-1" />
+        <ColumnInfo Id="EquipmentName" PropertyName="EquipmentName" Width="87" Index="-1" />
+        <ColumnInfo Id="ExcludeInvoice" PropertyName="ExcludeInvoice" Width="62" Index="-1" />
+        <ColumnInfo Id="FacilityID" PropertyName="FacilityID" Width="87" Index="-1" />
+        <ColumnInfo Id="FacilityName" PropertyName="FacilityName" Width="87" Index="-1" />
+        <ColumnInfo Id="FacilityType" PropertyName="FacilityType" Width="87" Index="-1" />
+        <ColumnInfo Id="FinalForm" PropertyName="FinalForm" Width="87" Index="-1" />
+        <ColumnInfo Id="FinalPackaging" PropertyName="FinalPackaging" Width="87" Index="-1" />
+        <ColumnInfo Id="FlowRate" PropertyName="FlowRate" Width="87" Index="-1" />
+        <ColumnInfo Id="FlowRateCubicMeterPerHour" PropertyName="FlowRateCubicMeterPerHour" Width="87" Index="-1" />
+        <ColumnInfo Id="FlowRateLiterPerMin" PropertyName="FlowRateLiterPerMin" Width="87" Index="-1" />
+        <ColumnInfo Id="FlowVelocity" PropertyName="FlowVelocity" Width="87" Index="-1" />
+        <ColumnInfo Id="ForeignMaterial" PropertyName="ForeignMaterial" Width="87" Index="-1" />
+        <ColumnInfo Id="Frequency" PropertyName="Frequency" Width="87" Index="-1" />
+        <ColumnInfo Id="GISStatus" PropertyName="GISStatus" Width="87" Index="-1" />
+        <ColumnInfo Id="GravelContent" PropertyName="GravelContent" Width="87" Index="-1" />
+        <ColumnInfo Id="GrossWeight" PropertyName="GrossWeight" Width="87" Index="-1" />
+        <ColumnInfo Id="GroupSample" PropertyName="GroupSample" Width="87" Index="-1" />
+        <ColumnInfo Id="Hold" PropertyName="Hold" Width="62" Index="-1" />
+        <ColumnInfo Id="Humidity" PropertyName="Humidity" Width="87" Index="-1" />
+        <ColumnInfo Id="IceCycle" PropertyName="IceCycle" Width="87" Index="-1" />
+        <ColumnInfo Id="Increments" PropertyName="Increments" Width="87" Index="-1" />
+        <ColumnInfo Id="Interval" PropertyName="Interval" Width="62" Index="-1" />
+        <ColumnInfo Id="IsActive" PropertyName="IsActive" Width="62" Index="-1" />
+        <ColumnInfo Id="ItemName" PropertyName="ItemName" Width="87" Index="-1" />
+        <ColumnInfo Id="KeyMap" PropertyName="KeyMap" Width="87" Index="-1" />
+        <ColumnInfo Id="Latitude" PropertyName="Latitude" Width="87" Index="-1" />
+        <ColumnInfo Id="Length" PropertyName="Length" Width="87" Index="-1" />
+        <ColumnInfo Id="LicenseNumber" PropertyName="LicenseNumber" Width="87" Index="-1" />
+        <ColumnInfo Id="LoginBy" PropertyName="LoginBy" Width="87" Index="-1" />
+        <ColumnInfo Id="LoginDateTime" PropertyName="LoginDateTime" Width="87" Index="-1" />
+        <ColumnInfo Id="Longitude" PropertyName="Longitude" Width="87" Index="-1" />
+        <ColumnInfo Id="ManifestNo" PropertyName="ManifestNo" Width="87" Index="-1" />
+        <ColumnInfo Id="Matrix" PropertyName="Matrix" Width="87" Index="-1" />
+        <ColumnInfo Id="ModifiedBy" PropertyName="ModifiedBy" Width="87" Index="-1" />
+        <ColumnInfo Id="ModifiedDate" PropertyName="ModifiedDate" Width="87" Index="-1" />
+        <ColumnInfo Id="MonitoryingRequirement" PropertyName="MonitoryingRequirement" Width="87" Index="-1" />
+        <ColumnInfo Id="NoOfCollectionsEachTime" PropertyName="NoOfCollectionsEachTime" Width="62" Index="-1" />
+        <ColumnInfo Id="NoOfPoints" PropertyName="NoOfPoints" Width="62" Index="-1" />
+        <ColumnInfo Id="Notes" PropertyName="Notes" Width="87" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="87" Index="-1" />
+        <ColumnInfo Id="OriginatingEntiry" PropertyName="OriginatingEntiry" Width="87" Index="-1" />
+        <ColumnInfo Id="OriginatingLicenseNumber" PropertyName="OriginatingLicenseNumber" Width="87" Index="-1" />
+        <ColumnInfo Id="PackageNumber" PropertyName="PackageNumber" Width="87" Index="-1" />
+        <ColumnInfo Id="ParentSampleDate" PropertyName="ParentSampleDate" Width="87" Index="-1" />
+        <ColumnInfo Id="ParentSampleID" PropertyName="ParentSampleID" Width="87" Index="-1" />
+        <ColumnInfo Id="PiecesPerUnit" PropertyName="PiecesPerUnit" Width="62" Index="-1" />
+        <ColumnInfo Id="PlannedLatitude" PropertyName="PlannedLatitude" Width="70" Index="-1" />
+        <ColumnInfo Id="PlannedLongitude" PropertyName="PlannedLongitude" Width="70" Index="-1" />
+        <ColumnInfo Id="PreserveCondition" PropertyName="PreserveCondition" Width="87" Index="-1" />
+        <ColumnInfo Id="Preservetives" PropertyName="Preservetives" Width="87" Index="-1" />
+        <ColumnInfo Id="PreviousCollection" PropertyName="PreviousCollection" Width="87" Index="-1" />
+        <ColumnInfo Id="PreviousSample" PropertyName="PreviousSample" Width="87" Index="-1" />
+        <ColumnInfo Id="ProjectID" PropertyName="ProjectID" Width="87" Index="-1" />
+        <ColumnInfo Id="ProjectName" PropertyName="ProjectName" Width="500" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="ProjectNumber" PropertyName="ProjectNumber" Width="87" Index="-1" />
+        <ColumnInfo Id="PurifierSampleID" PropertyName="PurifierSampleID" Width="87" Index="-1" />
+        <ColumnInfo Id="PWSID" PropertyName="PWSID" Width="87" Index="-1" />
+        <ColumnInfo Id="PWSSystemName" PropertyName="PWSSystemName" Width="87" Index="-1" />
+        <ColumnInfo Id="QCSource" PropertyName="QCSource" Width="87" Index="-1" />
+        <ColumnInfo Id="QCType" PropertyName="QCType" Width="87" Index="-1" />
+        <ColumnInfo Id="Qty" PropertyName="Qty" Width="87" Index="-1" />
+        <ColumnInfo Id="RegionNameOfSection" PropertyName="RegionNameOfSection" Width="87" Index="-1" />
+        <ColumnInfo Id="RejectionCriteria" PropertyName="RejectionCriteria" Width="87" Index="-1" />
+        <ColumnInfo Id="Remark" PropertyName="Remark" Width="87" Index="-1" />
+        <ColumnInfo Id="RepeatLocation" PropertyName="RepeatLocation" Width="87" Index="-1" />
+        <ColumnInfo Id="RetainedWeight" PropertyName="RetainedWeight" Width="87" Index="-1" />
+        <ColumnInfo Id="RiverWidth" PropertyName="RiverWidth" Width="87" Index="-1" />
+        <ColumnInfo Id="RushSample" PropertyName="RushSample" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleAmount" PropertyName="SampleAmount" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleCondition" PropertyName="SampleCondition" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleDescription" PropertyName="SampleDescription" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleNo" PropertyName="SampleNo" Width="62" Index="-1" AllowEdit="False" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="SamplePointID" PropertyName="SamplePointID" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplePointType" PropertyName="SamplePointType" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleSource" PropertyName="SampleSource" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleStatus" PropertyName="SampleStatus" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleTag" PropertyName="SampleTag" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleType" PropertyName="SampleType" Width="87" Index="-1" />
+        <ColumnInfo Id="SampleWeight" PropertyName="SampleWeight" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplingAddress" PropertyName="SamplingAddress" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplingEvent" PropertyName="SamplingEvent" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplingLocation" PropertyName="SamplingLocation" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplingProcedure" PropertyName="SamplingProcedure" Width="87" Index="-1" />
+        <ColumnInfo Id="SamplingProposal" PropertyName="SamplingProposal" Width="97" Index="-1" Caption="SamplingProposal" />
+        <ColumnInfo Id="Section" PropertyName="Section" Width="87" Index="-1" />
+        <ColumnInfo Id="ServiceArea" PropertyName="ServiceArea" Width="87" Index="-1" />
+        <ColumnInfo Id="SettingsSource" PropertyName="SettingsSource" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteCode" PropertyName="SiteCode" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteDescription" PropertyName="SiteDescription" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteID" PropertyName="SiteID" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteNameArchived" PropertyName="SiteNameArchived" Width="62" Index="-1" />
+        <ColumnInfo Id="SiteUserDefinedColumn1" PropertyName="SiteUserDefinedColumn1" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteUserDefinedColumn2" PropertyName="SiteUserDefinedColumn2" Width="87" Index="-1" />
+        <ColumnInfo Id="SiteUserDefinedColumn3" PropertyName="SiteUserDefinedColumn3" Width="87" Index="-1" />
+        <ColumnInfo Id="SoilColor" PropertyName="SoilColor" Width="87" Index="-1" />
+        <ColumnInfo Id="SoilMoisture" PropertyName="SoilMoisture" Width="87" Index="-1" />
+        <ColumnInfo Id="SoilQuality" PropertyName="SoilQuality" Width="87" Index="-1" />
+        <ColumnInfo Id="SortOrder" PropertyName="SortOrder" Width="62" Index="-1" />
+        <ColumnInfo Id="SplitQty" PropertyName="SplitQty" Width="62" Index="-1" />
+        <ColumnInfo Id="StandardVol" PropertyName="StandardVol" Width="87" Index="-1" />
+        <ColumnInfo Id="StartFlow" PropertyName="StartFlow" Width="87" Index="-1" />
+        <ColumnInfo Id="StartOfRoad" PropertyName="StartOfRoad" Width="87" Index="-1" />
+        <ColumnInfo Id="State" PropertyName="State" Width="87" Index="-1" />
+        <ColumnInfo Id="StationLocation" PropertyName="StationLocation" Width="87" Index="-1" View="" AllowEdit="False" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="87" Index="-1" />
+        <ColumnInfo Id="Storage" PropertyName="Storage" Width="87" Index="-1" />
+        <ColumnInfo Id="StorageID" PropertyName="StorageID" Width="87" Index="-1" />
+        <ColumnInfo Id="SubOut" PropertyName="SubOut" Width="62" Index="-1" />
+        <ColumnInfo Id="SysSampleCode" PropertyName="SysSampleCode" Width="87" Index="-1" />
+        <ColumnInfo Id="SystemType" PropertyName="SystemType" Width="87" Index="-1" />
+        <ColumnInfo Id="TargetMGTHC_CBD_mg_pc" PropertyName="TargetMGTHC_CBD_mg_pc" Width="62" Index="-1" />
+        <ColumnInfo Id="TargetMGTHC_CBD_mg_unit" PropertyName="TargetMGTHC_CBD_mg_unit" Width="62" Index="-1" />
+        <ColumnInfo Id="TargetPotency" PropertyName="TargetPotency" Width="87" Index="-1" />
+        <ColumnInfo Id="TargetUnitWeight_g_pc" PropertyName="TargetUnitWeight_g_pc" Width="87" Index="-1" />
+        <ColumnInfo Id="TargetUnitWeight_g_unit" PropertyName="TargetUnitWeight_g_unit" Width="87" Index="-1" />
+        <ColumnInfo Id="TargetWeight" PropertyName="TargetWeight" Width="87" Index="-1" />
+        <ColumnInfo Id="Test" PropertyName="Test" Width="62" Index="-1" />
+        <ColumnInfo Id="TestSummary" PropertyName="TestSummary" Width="87" Index="-1" />
+        <ColumnInfo Id="Time" PropertyName="Time" Width="87" Index="-1" />
+        <ColumnInfo Id="TimeEnd" PropertyName="TimeEnd" Width="87" Index="-1" />
+        <ColumnInfo Id="TimeStart" PropertyName="TimeStart" Width="87" Index="-1" />
+        <ColumnInfo Id="TotalSamples" PropertyName="TotalSamples" Width="62" Index="-1" />
+        <ColumnInfo Id="TotalTimes" PropertyName="TotalTimes" Width="62" Index="-1" />
+        <ColumnInfo Id="TtimeUnit" PropertyName="TtimeUnit" Width="87" Index="-1" />
+        <ColumnInfo Id="Volume" PropertyName="Volume" Width="87" Index="-1" />
+        <ColumnInfo Id="WaterSource" PropertyName="WaterSource" Width="87" Index="-1" />
+        <ColumnInfo Id="WaterType" PropertyName="WaterType" Width="87" Index="-1" />
+        <ColumnInfo Id="Width" PropertyName="Width" Width="87" Index="-1" />
+        <ColumnInfo Id="ZipCode" PropertyName="ZipCode" Width="87" Index="-1" />
+        <ColumnInfo Id="VisualMatrix" PropertyName="VisualMatrix" Width="87" Index="0" Caption="SampleMatrix" />
+        <ColumnInfo Id="SiteName" PropertyName="StationLocation.SiteName" Index="1" />
+        <ColumnInfo Id="SampleID" PropertyName="SampleID" Width="92" Index="2" AllowEdit="False" SortIndex="0" SortOrder="Descending" Caption="SampleID" />
+        <ColumnInfo Id="ClientSampleID" PropertyName="ClientSampleID" Width="87" Index="3" Caption="SampleName" />
+        <ColumnInfo Id="SamplingEquipment" PropertyName="SamplingEquipment" Width="87" Index="4" />
+        <ColumnInfo Id="Assigned" PropertyName="Assigned" Width="70" Index="6" Caption="Assign To" />
+        <ColumnInfo Id="DateAssigned" PropertyName="DateAssigned" Width="87" Index="7" />
+        <ColumnInfo Id="AssignedBy" PropertyName="AssignedBy" Width="87" Index="8" />
+        <ColumnInfo Id="LastUpdatedBy" PropertyName="LastUpdatedBy" Width="87" Index="9" />
+        <ColumnInfo Id="LastUpdatedDate" PropertyName="LastUpdatedDate" Width="87" Index="10" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Sampling_DetailView_Copy" ClassName="Modules.BusinessObjects.SamplingManagement.Sampling">
+      <Items Id="Items">
+        <PropertyEditor Id="Address" PropertyName="Address" />
+        <PropertyEditor Id="AlternativeStation" PropertyName="AlternativeStation" />
+        <PropertyEditor Id="AreaOrPerson" PropertyName="AreaOrPerson" />
+        <DashboardViewItem Id="Assign" ViewId="Sampling_ListView_AssignTo" />
+        <PropertyEditor Id="Assigned" PropertyName="Assigned" />
+        <PropertyEditor Id="AssignedBy" PropertyName="AssignedBy" />
+        <PropertyEditor Id="AssignTo" PropertyName="AssignTo" />
+        <PropertyEditor Id="AuthorizedBy" PropertyName="AuthorizedBy" />
+        <PropertyEditor Id="AuthorizedDate" PropertyName="AuthorizedDate" />
+        <PropertyEditor Id="BalanceID" PropertyName="BalanceID" />
+        <PropertyEditor Id="Barp" PropertyName="Barp" />
+        <PropertyEditor Id="BatchID" PropertyName="BatchID" />
+        <PropertyEditor Id="BatchSize" PropertyName="BatchSize" />
+        <PropertyEditor Id="BatchSize_pc" PropertyName="BatchSize_pc" />
+        <PropertyEditor Id="BatchSize_Units" PropertyName="BatchSize_Units" />
+        <PropertyEditor Id="Blended" PropertyName="Blended" />
+        <PropertyEditor Id="BottleQty" PropertyName="BottleQty" />
+        <PropertyEditor Id="BuriedDepthOfGroundWater" PropertyName="BuriedDepthOfGroundWater" />
+        <PropertyEditor Id="CanChangeVisualMatrix" PropertyName="CanChangeVisualMatrix" />
+        <PropertyEditor Id="ChlorineFree" PropertyName="ChlorineFree" />
+        <PropertyEditor Id="ChlorineTotal" PropertyName="ChlorineTotal" />
+        <PropertyEditor Id="City" PropertyName="City" />
+        <PropertyEditor Id="Client" PropertyName="Client" />
+        <PropertyEditor Id="ClientSampleID" PropertyName="ClientSampleID" />
+        <PropertyEditor Id="CollectDate" PropertyName="CollectDate" />
+        <PropertyEditor Id="Collector" PropertyName="Collector" />
+        <PropertyEditor Id="CollectorPhone" PropertyName="CollectorPhone" />
+        <PropertyEditor Id="CollectTime" PropertyName="CollectTime" />
+        <PropertyEditor Id="Comment" PropertyName="Comment" />
+        <PropertyEditor Id="CompositeQty" PropertyName="CompositeQty" />
+        <PropertyEditor Id="ContainerID" PropertyName="ContainerID" />
+        <PropertyEditor Id="Containers" PropertyName="Containers" />
+        <PropertyEditor Id="CreatedBy" PropertyName="CreatedBy" />
+        <PropertyEditor Id="CreatedDate" PropertyName="CreatedDate" />
+        <PropertyEditor Id="DateAssigned" PropertyName="DateAssigned" />
+        <PropertyEditor Id="DateEndExpected" PropertyName="DateEndExpected" />
+        <PropertyEditor Id="DateStartExpected" PropertyName="DateStartExpected" />
+        <PropertyEditor Id="DaysKept" PropertyName="DaysKept" />
+        <PropertyEditor Id="Department" PropertyName="Department" />
+        <PropertyEditor Id="Depth" PropertyName="Depth" />
+        <PropertyEditor Id="Description" PropertyName="Description" />
+        <PropertyEditor Id="DischargeFlow" PropertyName="DischargeFlow" />
+        <PropertyEditor Id="DischargePipeHeight" PropertyName="DischargePipeHeight" />
+        <PropertyEditor Id="DisposedBy" PropertyName="DisposedBy" />
+        <PropertyEditor Id="DisposedDate" PropertyName="DisposedDate" />
+        <PropertyEditor Id="DO" PropertyName="DO" />
+        <PropertyEditor Id="DueDate" PropertyName="DueDate" />
+        <PropertyEditor Id="Emission" PropertyName="Emission" />
+        <PropertyEditor Id="EndFlow" PropertyName="EndFlow" />
+        <PropertyEditor Id="EndOfRoad" PropertyName="EndOfRoad" />
+        <PropertyEditor Id="EnteredBy" PropertyName="EnteredBy" />
+        <PropertyEditor Id="EnteredDate" PropertyName="EnteredDate" />
+        <PropertyEditor Id="EquipmentModel" PropertyName="EquipmentModel" />
+        <PropertyEditor Id="EquipmentName" PropertyName="EquipmentName" />
+        <PropertyEditor Id="ExcludeInvoice" PropertyName="ExcludeInvoice" />
+        <PropertyEditor Id="FacilityID" PropertyName="FacilityID" />
+        <PropertyEditor Id="FacilityName" PropertyName="FacilityName" />
+        <PropertyEditor Id="FacilityType" PropertyName="FacilityType" />
+        <PropertyEditor Id="FinalForm" PropertyName="FinalForm" />
+        <PropertyEditor Id="FinalPackaging" PropertyName="FinalPackaging" />
+        <PropertyEditor Id="FlowRate" PropertyName="FlowRate" />
+        <PropertyEditor Id="FlowRateCubicMeterPerHour" PropertyName="FlowRateCubicMeterPerHour" />
+        <PropertyEditor Id="FlowRateLiterPerMin" PropertyName="FlowRateLiterPerMin" />
+        <PropertyEditor Id="FlowVelocity" PropertyName="FlowVelocity" />
+        <PropertyEditor Id="ForeignMaterial" PropertyName="ForeignMaterial" />
+        <PropertyEditor Id="Frequency" PropertyName="Frequency" />
+        <PropertyEditor Id="GISStatus" PropertyName="GISStatus" />
+        <PropertyEditor Id="GravelContent" PropertyName="GravelContent" />
+        <PropertyEditor Id="GrossWeight" PropertyName="GrossWeight" />
+        <PropertyEditor Id="GroupSample" PropertyName="GroupSample" />
+        <PropertyEditor Id="Hold" PropertyName="Hold" />
+        <PropertyEditor Id="Humidity" PropertyName="Humidity" />
+        <PropertyEditor Id="IceCycle" PropertyName="IceCycle" />
+        <PropertyEditor Id="Increments" PropertyName="Increments" />
+        <PropertyEditor Id="Interval" PropertyName="Interval" />
+        <PropertyEditor Id="IsActive" PropertyName="IsActive" />
+        <PropertyEditor Id="ItemName" PropertyName="ItemName" />
+        <PropertyEditor Id="KeyMap" PropertyName="KeyMap" />
+        <PropertyEditor Id="LastUpdatedBy" PropertyName="LastUpdatedBy" />
+        <PropertyEditor Id="LastUpdatedDate" PropertyName="LastUpdatedDate" />
+        <PropertyEditor Id="Latitude" PropertyName="Latitude" />
+        <PropertyEditor Id="Length" PropertyName="Length" />
+        <PropertyEditor Id="LicenseNumber" PropertyName="LicenseNumber" />
+        <PropertyEditor Id="LoginBy" PropertyName="LoginBy" />
+        <PropertyEditor Id="LoginDateTime" PropertyName="LoginDateTime" />
+        <PropertyEditor Id="Longitude" PropertyName="Longitude" />
+        <PropertyEditor Id="ManifestNo" PropertyName="ManifestNo" />
+        <PropertyEditor Id="Matrix" PropertyName="Matrix" />
+        <PropertyEditor Id="ModifiedBy" PropertyName="ModifiedBy" />
+        <PropertyEditor Id="ModifiedDate" PropertyName="ModifiedDate" />
+        <PropertyEditor Id="MonitoryingRequirement" PropertyName="MonitoryingRequirement" />
+        <PropertyEditor Id="NoOfCollectionsEachTime" PropertyName="NoOfCollectionsEachTime" />
+        <PropertyEditor Id="NoOfPoints" PropertyName="NoOfPoints" />
+        <DashboardViewItem Id="Note" ViewId="Notes_ListView_Assign" />
+        <PropertyEditor Id="Notes" PropertyName="Notes" />
+        <PropertyEditor Id="Oid" PropertyName="Oid" />
+        <PropertyEditor Id="OriginatingEntiry" PropertyName="OriginatingEntiry" />
+        <PropertyEditor Id="OriginatingLicenseNumber" PropertyName="OriginatingLicenseNumber" />
+        <PropertyEditor Id="PackageNumber" PropertyName="PackageNumber" />
+        <PropertyEditor Id="ParentSampleDate" PropertyName="ParentSampleDate" />
+        <PropertyEditor Id="ParentSampleID" PropertyName="ParentSampleID" />
+        <PropertyEditor Id="PiecesPerUnit" PropertyName="PiecesPerUnit" />
+        <PropertyEditor Id="PlannedLatitude" PropertyName="PlannedLatitude" />
+        <PropertyEditor Id="PlannedLongitude" PropertyName="PlannedLongitude" />
+        <PropertyEditor Id="PreserveCondition" PropertyName="PreserveCondition" />
+        <PropertyEditor Id="Preservetives" PropertyName="Preservetives" />
+        <PropertyEditor Id="PreviousCollection" PropertyName="PreviousCollection" />
+        <PropertyEditor Id="PreviousSample" PropertyName="PreviousSample" />
+        <PropertyEditor Id="ProjectID" PropertyName="ProjectID" />
+        <PropertyEditor Id="ProjectName" PropertyName="ProjectName" />
+        <PropertyEditor Id="ProjectNumber" PropertyName="ProjectNumber" />
+        <PropertyEditor Id="PurifierSampleID" PropertyName="PurifierSampleID" />
+        <PropertyEditor Id="PWSID" PropertyName="PWSID" />
+        <PropertyEditor Id="PWSSystemName" PropertyName="PWSSystemName" />
+        <PropertyEditor Id="QCSource" PropertyName="QCSource" />
+        <PropertyEditor Id="QCType" PropertyName="QCType" />
+        <PropertyEditor Id="Qty" PropertyName="Qty" />
+        <PropertyEditor Id="RegionNameOfSection" PropertyName="RegionNameOfSection" />
+        <PropertyEditor Id="RejectionCriteria" PropertyName="RejectionCriteria" />
+        <PropertyEditor Id="Remark" PropertyName="Remark" />
+        <PropertyEditor Id="RepeatLocation" PropertyName="RepeatLocation" />
+        <PropertyEditor Id="RetainedWeight" PropertyName="RetainedWeight" />
+        <PropertyEditor Id="RiverWidth" PropertyName="RiverWidth" />
+        <PropertyEditor Id="RushSample" PropertyName="RushSample" />
+        <PropertyEditor Id="SampleAmount" PropertyName="SampleAmount" />
+        <PropertyEditor Id="SampleCondition" PropertyName="SampleCondition" />
+        <PropertyEditor Id="SampleDescription" PropertyName="SampleDescription" />
+        <PropertyEditor Id="SampleID" PropertyName="SampleID" />
+        <PropertyEditor Id="SampleImage" PropertyName="SampleImage" />
+        <PropertyEditor Id="SampleNo" PropertyName="SampleNo" />
+        <PropertyEditor Id="SamplePointID" PropertyName="SamplePointID" />
+        <PropertyEditor Id="SamplePointType" PropertyName="SamplePointType" />
+        <PropertyEditor Id="SampleSource" PropertyName="SampleSource" />
+        <PropertyEditor Id="SampleStatus" PropertyName="SampleStatus" />
+        <PropertyEditor Id="SampleTag" PropertyName="SampleTag" />
+        <PropertyEditor Id="SampleType" PropertyName="SampleType" />
+        <PropertyEditor Id="SampleWeight" PropertyName="SampleWeight" />
+        <PropertyEditor Id="SamplingAddress" PropertyName="SamplingAddress" />
+        <PropertyEditor Id="SamplingEquipment" PropertyName="SamplingEquipment" />
+        <PropertyEditor Id="SamplingEvent" PropertyName="SamplingEvent" />
+        <PropertyEditor Id="SamplingLocation" PropertyName="SamplingLocation" />
+        <PropertyEditor Id="SamplingProcedure" PropertyName="SamplingProcedure" />
+        <PropertyEditor Id="SamplingProposal" PropertyName="SamplingProposal" />
+        <PropertyEditor Id="Section" PropertyName="Section" />
+        <PropertyEditor Id="SequenceTestSampleID" PropertyName="SequenceTestSampleID" />
+        <PropertyEditor Id="SequenceTestSortNo" PropertyName="SequenceTestSortNo" />
+        <PropertyEditor Id="ServiceArea" PropertyName="ServiceArea" />
+        <PropertyEditor Id="SettingsSource" PropertyName="SettingsSource" />
+        <PropertyEditor Id="SiteCode" PropertyName="SiteCode" />
+        <PropertyEditor Id="SiteDescription" PropertyName="SiteDescription" />
+        <PropertyEditor Id="SiteID" PropertyName="SiteID" />
+        <PropertyEditor Id="SiteNameArchived" PropertyName="SiteNameArchived" />
+        <PropertyEditor Id="SiteUserDefinedColumn1" PropertyName="SiteUserDefinedColumn1" />
+        <PropertyEditor Id="SiteUserDefinedColumn2" PropertyName="SiteUserDefinedColumn2" />
+        <PropertyEditor Id="SiteUserDefinedColumn3" PropertyName="SiteUserDefinedColumn3" />
+        <PropertyEditor Id="SoilColor" PropertyName="SoilColor" />
+        <PropertyEditor Id="SoilMoisture" PropertyName="SoilMoisture" />
+        <PropertyEditor Id="SoilQuality" PropertyName="SoilQuality" />
+        <PropertyEditor Id="SortOrder" PropertyName="SortOrder" />
+        <PropertyEditor Id="SplitQty" PropertyName="SplitQty" />
+        <PropertyEditor Id="StandardVol" PropertyName="StandardVol" />
+        <PropertyEditor Id="StartFlow" PropertyName="StartFlow" />
+        <PropertyEditor Id="StartOfRoad" PropertyName="StartOfRoad" />
+        <PropertyEditor Id="State" PropertyName="State" />
+        <PropertyEditor Id="StationLocation" PropertyName="StationLocation" />
+        <PropertyEditor Id="Status" PropertyName="Status" />
+        <PropertyEditor Id="Storage" PropertyName="Storage" />
+        <PropertyEditor Id="StorageID" PropertyName="StorageID" />
+        <PropertyEditor Id="SubOut" PropertyName="SubOut" />
+        <PropertyEditor Id="SysSampleCode" PropertyName="SysSampleCode" />
+        <PropertyEditor Id="SystemType" PropertyName="SystemType" />
+        <PropertyEditor Id="TargetMGTHC_CBD_mg_pc" PropertyName="TargetMGTHC_CBD_mg_pc" />
+        <PropertyEditor Id="TargetMGTHC_CBD_mg_unit" PropertyName="TargetMGTHC_CBD_mg_unit" />
+        <PropertyEditor Id="TargetPotency" PropertyName="TargetPotency" />
+        <PropertyEditor Id="TargetUnitWeight_g_pc" PropertyName="TargetUnitWeight_g_pc" />
+        <PropertyEditor Id="TargetUnitWeight_g_unit" PropertyName="TargetUnitWeight_g_unit" />
+        <PropertyEditor Id="TargetWeight" PropertyName="TargetWeight" />
+        <PropertyEditor Id="Test" PropertyName="Test" />
+        <PropertyEditor Id="Testparameters" PropertyName="Testparameters" View="Sampling_Testparameters_ListView" />
+        <PropertyEditor Id="TestSummary" PropertyName="TestSummary" />
+        <PropertyEditor Id="Time" PropertyName="Time" />
+        <PropertyEditor Id="TimeEnd" PropertyName="TimeEnd" />
+        <PropertyEditor Id="TimeStart" PropertyName="TimeStart" />
+        <PropertyEditor Id="TotalSamples" PropertyName="TotalSamples" />
+        <PropertyEditor Id="TotalTimes" PropertyName="TotalTimes" />
+        <PropertyEditor Id="TtimeUnit" PropertyName="TtimeUnit" />
+        <PropertyEditor Id="VisualMatrix" PropertyName="VisualMatrix" />
+        <PropertyEditor Id="Volume" PropertyName="Volume" />
+        <PropertyEditor Id="WaterSource" PropertyName="WaterSource" />
+        <PropertyEditor Id="WaterType" PropertyName="WaterType" />
+        <PropertyEditor Id="Width" PropertyName="Width" />
+        <PropertyEditor Id="ZipCode" PropertyName="ZipCode" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="12.5" Caption="SimpleEditors" />
+          <LayoutItem Id="Assign" ViewItem="Assign" Index="1" RelativeSize="66.930379746835442" />
+          <TabbedGroup Id="Item3" CaptionLocation="Top" Index="2" RelativeSize="20.569620253164558">
+            <LayoutGroup Id="SizeableEditors" ShowCaption="False" Direction="Vertical" Index="0" RelativeSize="100" Caption="Note">
+              <LayoutItem Id="Note" ViewItem="Note" Index="0" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SampleSites_DetailView_Client">
+      <Items Id="Items">
+        <PropertyEditor Id="Client" View="Customer_ListView_InvoiceAddress" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="SampleRegistration_SampleBottleAllocation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="SampleregisterBottleAddRemove" ActionContainer="SampleBottleAddRemove" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="SamplePrepBatch_DetailView_Copy_History">
+      <Items Id="Items">
+        <PropertyEditor Id="Instruments" LinkView="Labware_ListView_Copy" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SamplePrepBatch_DetailView_Copy">
+      <Items Id="Items">
+        <PropertyEditor Id="Instruments" LinkView="Labware_ListView_Copy" />
+      </Items>
+    </DetailView>
+    <ListView Id="SampleParameter_ListView_TestEdit">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Matrix" View="Testparameter_LookupListView_TestEdit" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_FieldDataReview2">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestSummary" PropertyName="RegistrationID.TestSummary" Caption="TestSummary" Index="5" />
+        <ColumnInfo Id="RegistrationID" PropertyName="RegistrationID.RegistrationID" Caption="RegistrationID" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_FieldDataReview1">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestSummary" PropertyName="RegistrationID.TestSummary" Caption="TestSummary" Index="5" />
+        <ColumnInfo Id="RegistrationID" PropertyName="RegistrationID.RegistrationID" Caption="RegistrationID" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_FieldDataEntry_History">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestSummary" PropertyName="RegistrationID.TestSummary" Caption="TestSummary" Index="5" />
+        <ColumnInfo Id="RegistrationID" PropertyName="RegistrationID.RegistrationID" Caption="RegistrationID" Index="1" />
+        <ColumnInfo Id="Status" PropertyName="RegistrationID.Status" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_FieldDataEntry">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestSummary" PropertyName="RegistrationID.TestSummary" Caption="TestSummary" Index="5" />
+        <ColumnInfo Id="RegistrationID" PropertyName="RegistrationID.RegistrationID" Caption="RegistrationID" Index="1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView_TestEdit_SampleLogin">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" ActionContainer="GoToSampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_TestEdit">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" ActionContainer="GoToSampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_FieldDataReview2">
+      <Items Id="Items">
+        <PropertyEditor Id="RegistrationID" PropertyName="RegistrationID.RegistrationID" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_FieldDataReview1">
+      <Items Id="Items">
+        <PropertyEditor Id="RegistrationID" PropertyName="RegistrationID.RegistrationID" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_FieldDataEntry_History">
+      <Items Id="Items">
+        <PropertyEditor Id="RegistrationID" PropertyName="RegistrationID.RegistrationID" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_FieldDataEntry">
+      <Items Id="Items">
+        <PropertyEditor Id="RegistrationID" PropertyName="RegistrationID.RegistrationID" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_SampleRegistration_History">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" ActionContainer="GoToSampleLogin" />
+        <PropertyEditor Id="MethodNumber" View="Method_LookupListView_SamplecheckinClauses" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_RegistrationSigningOff_History">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" ActionContainer="GoToSampleLogin" />
+        <PropertyEditor Id="MethodNumber" View="Method_LookupListView_SamplecheckinClauses" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_RegistrationSigningOff">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" ActionContainer="GoToSampleLogin" />
+        <PropertyEditor Id="MethodNumber" View="Method_LookupListView_SamplecheckinClauses" />
+      </Items>
+    </DetailView>
+    <ListView Id="SampleBottleAllocation_ListView_Sampleregistration">
+      <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation_View">
+        <Layout Id="Layout">
+          <LayoutGroup Id="Main">
+            <LayoutGroup Id="SimpleEditors">
+              <LayoutGroup Id="QCResultValidationQueryPanel_col1">
+                <LayoutGroup Id="Autod70ffa49-8030-4502-aaea-802100d27d73_Copy">
+                  <LayoutItem Id="viewItemJobID" ViewItem="viewItemJobID" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </Layout>
+        <Items Id="Items">
+          <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+          <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+          <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+        </Items>
+      </DetailView>
+      <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval_View">
+        <Layout Id="Layout">
+          <LayoutGroup Id="Main">
+            <LayoutGroup Id="SimpleEditors">
+              <LayoutGroup Id="QCResultValidationQueryPanel_col1">
+                <LayoutGroup Id="Autod70ffa49-8030-4502-aaea-802100d27d73_Copy">
+                  <LayoutItem Id="viewItemJobID" ViewItem="viewItemJobID" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </Layout>
+        <Items Id="Items">
+          <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+          <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+          <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+        </Items>
+      </DetailView>
+    </ListView>
+    <ListView Id="SampleAllocation_Notes_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SamplingProposal" PropertyName="SamplingProposal" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ResultViewQueryPanel_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ResultEntryQueryPanel_col1">
+              <LayoutItem Id="viewItemABID" ViewItem="viewItemABID" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation_View">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval_View">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <ListView Id="Notes_ListView_Assign">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SamplingProposal" PropertyName="SamplingProposal" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="HelpCenter">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Search" ActionContainer="catFullTextSearch" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="DWQRReportTemplateSetup_DetailView_DWQRForm">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DWQRReportTemplateSetup">
+              <LayoutGroup Id="DWQRReportTemplateSetup_col2">
+                <LayoutItem Id="Status" ViewItem="Status" />
+                <LayoutItem Id="DeliveredBy" ViewItem="DeliveredBy" />
+                <LayoutItem Id="DateDelivered" ViewItem="DateDelivered" />
+                <LayoutItem Id="ApprovedBy" ViewItem="ApprovedBy" />
+                <LayoutItem Id="DateApproved" ViewItem="DateApproved" />
+              </LayoutGroup>
+              <LayoutGroup Id="DWQRReportTemplateSetup_col1">
+                <LayoutItem Id="ReportID" ViewItem="ReportID" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DOC_DetailView_Copy_DV_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SampleParameter_Group">
+            <LayoutItem Id="SampleParameter" ViewItem="SampleParameter" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <ActionContainerViewItem Id="CommentDOC" ActionContainer="CommentDOC" />
+      </Items>
+    </DetailView>
+    <DetailView Id="DOC_DetailView_Copy_DV">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto5da66699-af71-4893-bf3e-09ee37fe97c4">
+              <LayoutGroup Id="Autob8bca24d-00c8-4ff8-99cc-c91d6b1a1986">
+                <LayoutGroup Id="Item1">
+                  <LayoutGroup Id="Auto888c5c23-0291-481a-a509-7ded90b63014">
+                    <LayoutItem Id="SampleParameter" ViewItem="SampleParameter" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <ActionContainerViewItem Id="CommentDOC" ActionContainer="CommentDOC" />
+      </Items>
+    </DetailView>
+    <ListView Id="DefaultSetting_ListView_2_DefaultSetting2" DetailRowView="DefaultSetting_DetailView_aligment" DetailViewID="DefaultSetting_DetailView_aligment" MasterDetailView="DefaultSetting_DetailView_aligment" />
+    <ListView Id="DefaultSetting_ListView_2_DashboardSetting" DetailRowView="DefaultSetting_DetailView_aligment" DetailViewID="DefaultSetting_DetailView_aligment" MasterDetailView="DefaultSetting_DetailView_aligment" />
+    <ListView Id="DefaultSetting_ListView_2" DetailRowView="DefaultSetting_DetailView_aligment" DetailViewID="DefaultSetting_DetailView_aligment" MasterDetailView="DefaultSetting_DetailView_aligment" />
+    <DetailView Id="DefaultSetting_DetailView_Copy_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DefaultSetting">
+              <LayoutGroup Id="DefaultSetting_col2">
+                <LayoutItem Id="Invoices" ViewItem="Invoices" />
+                <LayoutItem Id="OpenQuotes" ViewItem="OpenQuotes" />
+                <LayoutItem Id="MyQuotes" ViewItem="MyQuotes" />
+                <LayoutItem Id="ClosedQuotes" ViewItem="ClosedQuotes" />
+                <LayoutItem Id="Quotes" ViewItem="Quotes" />
+              </LayoutGroup>
+              <LayoutGroup Id="DefaultSetting_col1">
+                <LayoutItem Id="ClosedsalesOrders" ViewItem="ClosedsalesOrders" />
+                <LayoutItem Id="CancelledsalesOrders" ViewItem="CancelledsalesOrders" />
+                <LayoutItem Id="SalesOrderFiles" ViewItem="SalesOrderFiles" />
+                <LayoutItem Id="SalesOrderTracking" ViewItem="SalesOrderTracking" />
+                <LayoutItem Id="SalesOrderReview" ViewItem="SalesOrderReview" />
+                <LayoutItem Id="SalesOrder" ViewItem="SalesOrder" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DefaultSetting_DetailView_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DefaultSetting">
+              <LayoutGroup Id="Auto31659c96-2ff2-48f9-9395-b46ad4c6a743">
+                <LayoutGroup Id="Auto4707c47d-66ba-404e-a6e3-e6f1afc65a11">
+                  <LayoutGroup Id="Auto42a65685-2313-4d53-98d0-0d60c4236516">
+                    <LayoutItem Id="DateFilter" ViewItem="DateFilter" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Customer_DetailView_UnfollowedClients">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto1d8cb483-ee22-4acc-bd2b-6b6e40e0d04d">
+              <LayoutGroup Id="Item4">
+                <LayoutGroup Id="Auto1d5ec707-d874-4b9c-a791-54259c5f9d10">
+                  <LayoutItem Id="ReminderDate" ViewItem="ReminderDate" />
+                  <LayoutItem Id="ManintenanceEndDate" ViewItem="ManintenanceEndDate" />
+                  <LayoutItem Id="StartDate" ViewItem="StartDate" />
+                  <LayoutItem Id="SourceLead" ViewItem="SourceLead" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autod1cd205b-524d-472b-92f3-b7a063d5234b">
+                  <LayoutItem Id="AcceptanceDate" ViewItem="AcceptanceDate" />
+                  <LayoutItem Id="ManintenanceStartDate" ViewItem="ManintenanceStartDate" />
+                  <LayoutItem Id="ContractDate" ViewItem="ContractDate" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Customer_DetailView_SampleRegistration">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto1d8cb483-ee22-4acc-bd2b-6b6e40e0d04d">
+              <LayoutGroup Id="Item4">
+                <LayoutGroup Id="Auto1d5ec707-d874-4b9c-a791-54259c5f9d10">
+                  <LayoutItem Id="ReminderDate" ViewItem="ReminderDate" />
+                  <LayoutItem Id="ManintenanceEndDate" ViewItem="ManintenanceEndDate" />
+                  <LayoutItem Id="StartDate" ViewItem="StartDate" />
+                  <LayoutItem Id="SourceLead" ViewItem="SourceLead" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autod1cd205b-524d-472b-92f3-b7a063d5234b">
+                  <LayoutItem Id="AcceptanceDate" ViewItem="AcceptanceDate" />
+                  <LayoutItem Id="ManintenanceStartDate" ViewItem="ManintenanceStartDate" />
+                  <LayoutItem Id="ContractDate" ViewItem="ContractDate" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Customer_DetailView_CRM">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto1d8cb483-ee22-4acc-bd2b-6b6e40e0d04d">
+              <LayoutGroup Id="Item4">
+                <LayoutGroup Id="Auto1d5ec707-d874-4b9c-a791-54259c5f9d10">
+                  <LayoutItem Id="ReminderDate" ViewItem="ReminderDate" />
+                  <LayoutItem Id="ManintenanceEndDate" ViewItem="ManintenanceEndDate" />
+                  <LayoutItem Id="StartDate" ViewItem="StartDate" />
+                  <LayoutItem Id="SourceLead" ViewItem="SourceLead" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autod1cd205b-524d-472b-92f3-b7a063d5234b">
+                  <LayoutItem Id="AcceptanceDate" ViewItem="AcceptanceDate" />
+                  <LayoutItem Id="ManintenanceStartDate" ViewItem="ManintenanceStartDate" />
+                  <LayoutItem Id="ContractDate" ViewItem="ContractDate" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Customer_DetailView_ClosedCRM">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto1d8cb483-ee22-4acc-bd2b-6b6e40e0d04d">
+              <LayoutGroup Id="Item4">
+                <LayoutGroup Id="Auto1d5ec707-d874-4b9c-a791-54259c5f9d10">
+                  <LayoutItem Id="ReminderDate" ViewItem="ReminderDate" />
+                  <LayoutItem Id="ManintenanceEndDate" ViewItem="ManintenanceEndDate" />
+                  <LayoutItem Id="StartDate" ViewItem="StartDate" />
+                  <LayoutItem Id="SourceLead" ViewItem="SourceLead" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autod1cd205b-524d-472b-92f3-b7a063d5234b">
+                  <LayoutItem Id="AcceptanceDate" ViewItem="AcceptanceDate" />
+                  <LayoutItem Id="ManintenanceStartDate" ViewItem="ManintenanceStartDate" />
+                  <LayoutItem Id="ContractDate" ViewItem="ContractDate" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView_Submitted_History">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item11">
+                <LayoutGroup Id="Autof03932b1-451e-4e6d-82ab-b49c98b9734e">
+                  <LayoutItem Id="SourceProspectsortunity" ViewItem="SourceProspectsortunity" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="strDetailedAmount" ViewItem="strDetailedAmount" />
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView_Submitted">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Attachments" View="CRMQuotes_Attachments_ListView_ViewMode" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView_SamplingProposal">
+      <Items Id="Items">
+        <PropertyEditor Id="Attachments" View="CRMQuotes_Attachments_ListView_ViewMode" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView_Reviewed">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Attachments" View="CRMQuotes_Attachments_ListView_ViewMode" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView_Reviewd_History_SampleRegistration">
+      <Items Id="Items">
+        <PropertyEditor Id="Attachments" View="CRMQuotes_Attachments_ListView_ViewMode" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView_Reviewd_History">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Attachments" View="CRMQuotes_Attachments_ListView_ViewMode" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView_Cancel_Expired">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView_Cancel">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CRMProspects_DetailView_Closed">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="@2c9789c2-9fb3-4672-b538-9e988ec48dab">
+              <LayoutGroup Id="Autoa9879468-cd5d-4c6c-a92b-d2892658afbd">
+                <LayoutGroup Id="Item4">
+                  <LayoutGroup Id="Autob03ee641-0852-413a-8153-bd9074b39594">
+                    <LayoutGroup Id="Auto4c14ed6e-3858-4160-bcc0-788fabedd85b">
+                      <LayoutItem Id="IsClose" ViewItem="IsClose" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Collector_DetailView_Utillity">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Collector_col1">
+              <LayoutGroup Id="Auto671931c8-cb7b-4a57-a254-29d1411458af">
+                <LayoutItem Id="CollectorName" ViewItem="CollectorName" />
+                <LayoutItem Id="ClientName" ViewItem="ClientName" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CloseCRMProspects_popup_DetailView_Copy">
+      <Items Id="Items">
+        <PropertyEditor Id="PotentialCustomer" View="CRMCustomer_ListView_Prospects" />
+      </Items>
+    </DetailView>
+    <DetailView Id="BatchReporting_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BatchReporting">
+              <LayoutGroup Id="BatchReporting_col2">
+                <LayoutGroup Id="Auto11279fd7-3986-427b-895b-81d8cc0f93c4">
+                  <LayoutGroup Id="Autoecd77c32-ce71-4aa3-b10f-5552b6b2ca12">
+                    <LayoutItem Id="Refresh" ViewItem="Refresh" />
+                    <LayoutItem Id="Retrive" ViewItem="Retrive" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ConstituentPricing_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutGroup Id="Item4">
+              <LayoutItem Id="Parameterview" ViewItem="Parameterview" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CRMProspects_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="@a1574c90-3724-41bf-9128-60130c2eafc8">
+              <LayoutGroup Id="Autoa9879468-cd5d-4c6c-a92b-d2892658afbd">
+                <LayoutGroup Id="Item4">
+                  <LayoutGroup Id="Autob03ee641-0852-413a-8153-bd9074b39594">
+                    <LayoutGroup Id="Auto61906b06-602b-4d9c-98e4-f3a7df1aaecd">
+                      <LayoutItem Id="IsClose" ViewItem="IsClose" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item11">
+                <LayoutGroup Id="Autof03932b1-451e-4e6d-82ab-b49c98b9734e">
+                  <LayoutItem Id="SourceProspectsortunity" ViewItem="SourceProspectsortunity" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="strDetailedAmount" ViewItem="strDetailedAmount" />
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Requisition_ListView_Review">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Item" View="Items_LookupListView_Combo" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_CustomDueDates_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SamplingProposal" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_SampleRegistration">
+      <Items Id="Items">
+        <PropertyEditor Id="MethodNumber" View="Method_LookupListView_SamplecheckinClauses" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="SampleRegistration">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="SampleregisterBottleAddRemove" ActionContainer="SampleBottleAddRemove" />
+      </Items>
+    </DashboardView>
+    <ListView Id="SamplingAllocation_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RegistrationID" Index="-1" />
+        <ColumnInfo Id="Sampling" Index="-1" />
+        <ColumnInfo Id="SampleMatrix" Index="0" Caption="SampleMatrix" Width="134" />
+        <ColumnInfo Id="SiteName" Index="1" Caption="SiteName" Width="269" />
+        <ColumnInfo Id="SampleID" Index="2" Caption="SampleID" Width="155" />
+        <ColumnInfo Id="SampleName" Index="3" Caption="SampleName" Width="121" />
+        <ColumnInfo Id="SamplingEquipment" Caption="SamplingEquipment" Index="4" Width="168" />
+      </Columns>
+    </ListView>
+    <ListView Id="TaskJobIDAutomation_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SRID" Index="0" AllowEdit="False" LookupProperty="" PropertyName="SRID.RegistrationID" />
+        <ColumnInfo Id="COCID" Index="1" Caption="COC_ID" AllowEdit="False" />
+        <ColumnInfo Id="ProjectID" Index="2" Caption="ProjectID" AllowEdit="False" />
+        <ColumnInfo Id="ProjectName" Index="3" Caption="ProjectName" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TaskRecurranceSetup_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="ClientAddress" AllowEdit="False" />
+        <PropertyEditor Id="ClientName" AllowEdit="False" Caption="Client" />
+        <PropertyEditor Id="COCID" AllowEdit="False" />
+        <PropertyEditor Id="ProjectID" AllowEdit="False" />
+        <PropertyEditor Id="ProjectName" AllowEdit="False" />
+        <PropertyEditor Id="RegistrationID" LookupProperty="RegistrationID" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TaskRecurranceSetup" RelativeSize="100" Removed="True">
+              <LayoutGroup Id="TaskRecurranceSetup_col1" RelativeSize="56.851851851851855">
+                <LayoutItem Id="ClientAddress" ViewItem="ClientAddress" Index="3" RelativeSize="8.125" />
+                <LayoutItem Id="ProjectID" ViewItem="ProjectID" Index="4" RelativeSize="8.125" />
+                <LayoutItem Id="ProjectName" ViewItem="ProjectName" Index="5" RelativeSize="8.125" />
+                <LayoutItem Id="RecurrenceInfoXml" ViewItem="RecurrenceInfoXml" Index="6" RelativeSize="22.5" />
+                <LayoutItem Id="Remark" ViewItem="Remark" Index="7" RelativeSize="25.625" />
+                <LayoutItem Id="ClientName" RelativeSize="8.125" />
+                <LayoutItem Id="COCID" RelativeSize="8.125" />
+                <LayoutItem Id="RegistrationID" RelativeSize="11.25" />
+              </LayoutGroup>
+              <LayoutGroup Id="TaskRecurranceSetup_col2" RelativeSize="43.148148148148145" Caption="TaskRecurranceSetup_col2">
+                <LayoutItem Id="ProjectID" RelativeSize="29.032258064516128" Index="0" Removed="True" />
+                <LayoutItem Id="ProjectName" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="ClientAddress" RelativeSize="36.734693877551024" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="TaskRecurranceSetup_col1">
+              <LayoutItem Id="ProjectName" ViewItem="ProjectName" />
+              <LayoutItem Id="ProjectID" ViewItem="ProjectID" />
+              <LayoutItem Id="ClientAddress" ViewItem="ClientAddress" />
+              <LayoutItem Id="ClientName" ViewItem="ClientName" />
+              <LayoutItem Id="COCID" ViewItem="COCID" />
+              <LayoutItem Id="RegistrationID" ViewItem="RegistrationID" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TaskRecurranceSetup_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="projectId" PropertyName="ProjectID" />
+        <ColumnInfo Id="ClientAddress" PropertyName="ClientAddress" Index="3" />
+        <ColumnInfo Id="ClientName" PropertyName="ClientName" Index="2" />
+        <ColumnInfo Id="COCID" PropertyName="COCID" Index="1" />
+        <ColumnInfo Id="RegistrationID" PropertyName="RegistrationID.RegistrationID" Index="0" />
+        <ColumnInfo Id="ProjectName" PropertyName="ProjectName" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="TaskSchedulerEventList_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClientName" Caption="Client" Index="2" />
+        <ColumnInfo Id="ProjectID" Index="3" Caption="ProjectID" />
+        <ColumnInfo Id="ProjectName" Caption="ProjectName" Index="4" />
+        <ColumnInfo Id="SampleMatrix" Caption="SampleMatrix" Index="5" />
+        <ColumnInfo Id="Status" Index="7" />
+        <ColumnInfo Id="TaskSchedulerID" PropertyName="TaskSchedulerID.RegistrationID.RegistrationID" Caption="RegistrationID" Index="0" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="TaskManagement">
+        <Items Id="Items">
+          <Item Id="SamplingProposal" ViewId="SamplingProposal_ListView" />
+        </Items>
+      </Item>
+      <Item Id="System">
+        <Items Id="Items">
+          <Item Id="TestGroup" ViewId="TestGroup_ListView" />
+          <Item Id="TestForm" ViewId="TestForm_LookupListView" />
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="SampleRegistrationAutomation" ViewId="Sampleregistartionauto_ListView" />
+          <Item Id="DefaultSettings">
+            <Items Id="Items">
+              <Item Id="Security">
+                <Items Id="Items">
+                  <Item Id="ConcurrentUsers" ViewId="ConcurrentUsers_ListView" />
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="btnSamplingQuoteImportSamples" PaintStyle="Image" />
+      <Action Id="SPSaveAs" ImageName="SaveAs_16x16_1" />
+    </Actions>
+    <ActionToContainerMapping Id="ActionToContainerMapping">
+      <ActionContainer Id="Sample">
+        <ActionLink ActionId="SamplingSample" Index="3" />
+        <ActionLink ActionId="btnSamplingTest" Index="4" />
+        <ActionLink ActionId="btnSamplingBottleAllocation" Index="5" />
+      </ActionContainer>
+      <ActionContainer Id="View">
+        <ActionLink ActionId="SamplingCopySamples" Index="51" />
+        <ActionLink ActionId="SamplingSL_CopyTest" Index="52" />
+        <ActionLink ActionId="SamplingReanalysis" Index="53" />
+        <ActionLink ActionId="Btn_Add_SamplingCollector" Index="54" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+</Application>

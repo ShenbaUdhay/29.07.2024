@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="PopupRegistration_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item1" Removed="True">
+              <LayoutGroup Id="Auto9e918c06-2a0b-4567-b365-817c31db5eb7">
+                <LayoutGroup Id="Auto515b8a68-5da4-44ef-8f72-d74f3934d9ac" RelativeSize="89.845758354755787">
+                  <LayoutGroup Id="Auto3a3cd5cb-4028-4288-aebb-8ae4835f31ab" RelativeSize="10.729613733905579" />
+                  <LayoutGroup Id="Auto7518ffd0-a308-4c7b-821b-d20bfce0b2b9" RelativeSize="89.27038626609442">
+                    <LayoutGroup Id="Auto4d751d6d-bcc2-46eb-9a65-feb27b10c90a" RelativeSize="12.339743589743589" />
+                    <LayoutGroup Id="Auto7291ce30-2e5d-4182-a1f6-69300b531d0b" RelativeSize="87.660256410256409">
+                      <LayoutGroup Id="Auto355d9390-85bc-4782-b116-f185dd7ef1a1" RelativeSize="13.893967093235832" />
+                      <LayoutGroup Id="Auto3ae9b4d3-aae2-4edb-b5d2-f621bc1f1f21" RelativeSize="86.10603290676417">
+                        <LayoutGroup Id="Autoa906dbeb-6255-438c-a775-5c7bf8e4d4ac" RelativeSize="16.348195329087048" />
+                        <LayoutGroup Id="Autod1c85362-458e-42b4-9ad4-620ffa9f94bf" RelativeSize="83.651804670912952">
+                          <LayoutGroup Id="Autoc72a5fb0-af74-4671-8fb8-3842119dc57b" RelativeSize="19.035532994923859" />
+                          <LayoutGroup Id="Autof3ec8fa4-35de-42f2-8862-c73129d5f80b" RelativeSize="80.964467005076145">
+                            <LayoutGroup Id="Auto54e7dd88-9c3a-4e20-8624-a58c776225b5" RelativeSize="24.137931034482758" />
+                            <LayoutGroup Id="Autof8224660-44f2-41b3-aaa0-4e0cf8b8b73e" RelativeSize="75.862068965517238">
+                              <LayoutGroup Id="Auto3f7b8a7f-d215-4205-8dab-9ae25cb7b31e" RelativeSize="67.768595041322314">
+                                <LayoutGroup Id="Auto3ecb6a64-778e-4668-8fa3-e456602ddfea" RelativeSize="48.170731707317074" />
+                                <LayoutGroup Id="Autobf769766-ff45-420e-8dec-2c1fb8abee95" RelativeSize="51.829268292682926" />
+                              </LayoutGroup>
+                              <LayoutGroup Id="Auto6781b80f-084a-4cb3-985a-394896bc430c" RelativeSize="32.231404958677686" />
+                            </LayoutGroup>
+                          </LayoutGroup>
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Auto9f95b330-5bc1-4726-b20e-37ca35f8e4a7" RelativeSize="10.154241645244216" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ResultEntry_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="JobID" LookupProperty="JobID.JobID" />
+        <PropertyEditor Id="SampleID" LookupProperty="SampleID" />
+        <PropertyEditor Id="TEst" Caption="test" PropertyName="TestParameters" View="SampleLogIn_ListView" />
+        <PropertyEditor Id="TestParameters" LookupProperty="Object.TestParameters" LinkView="" View="" Removed="True" />
+      </Items>
+    </DetailView>
+    <ListView Id="SampleLogIn_TestParameters_ListView" AllowDelete="False" AllowUnlink="True" AllowNew="False" AllowLink="True" AllowEdit="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ModifiedBy" Index="-1" />
+        <ColumnInfo Id="MatrixName" Width="169" />
+        <ColumnInfo Id="MethodName" Width="118" />
+        <ColumnInfo Id="MethodNumber" PropertyName="MethodName.MethodNumber" Index="3" Width="120" />
+        <ColumnInfo Id="ParameterName" Index="4" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView_Qualifications">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="MeasureQualifications">
+              <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Roles" View="PermissionPolicyUser_Roles_ListView" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Employee">
+                <LayoutGroup Id="Employee_col2">
+                  <LayoutItem Id="Photo3" ViewItem="Photo3" />
+                  <LayoutItem Id="Signature3" ViewItem="Signature3" />
+                  <LayoutItem Id="Signature2" ViewItem="Signature2" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="SampleManagement">
+        <Items Id="Items">
+          <Item Id="ResultEntry" ViewId="ResultEntry_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="SequenceSetup_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item1">
+            <TabbedGroup Id="Tabs">
+              <LayoutGroup Id="ClosingQCTestRun">
+                <LayoutItem Id="ClosingTestRun" ViewItem="ClosingTestRun" />
+                <LayoutGroup Id="Auto1225705d-0b63-48bd-85cb-d891c0dee31d">
+                  <LayoutItem Id="ShowClosingQCTestRun" ViewItem="ShowClosingQCTestRun" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="SampleQCTestRun">
+                <LayoutItem Id="SampleTestRun" ViewItem="SampleTestRun" />
+              </LayoutGroup>
+              <LayoutGroup Id="InitialQCTestRun">
+                <LayoutItem Id="InitialTestRun" ViewItem="InitialTestRun" />
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SequenceSetup_col1">
+              <LayoutItem Id="SpikeSample" ViewItem="SpikeSample" />
+              <LayoutItem Id="DupSample" ViewItem="DupSample" />
+              <LayoutItem Id="Frequency" ViewItem="Frequency" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="SDMS">
+      <Layout Id="Layout">
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Item3">
+            <LayoutItem Id="SDMSDCAB" ViewItem="ABView" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="SDMSDCSpreadsheet" ViewItem="Spreadsheet" />
+          </LayoutGroup>
+        </TabbedGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SamplePrepBatchsequence">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Autocf0d576e-4672-46fd-83b9-5d54a7b37220">
+            <LayoutGroup Id="Auto04dcce49-4fcf-4903-87bc-06ea173390f5">
+              <LayoutGroup Id="Auto79cf6bba-a0c4-4196-aa16-782a4ecdbfdc">
+                <LayoutItem Id="sampleprepaction2" ViewItem="qcaction2" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Auto9df63651-b0e5-47e4-a744-3b2aba4e2177">
+              <LayoutGroup Id="Auto73751de5-0919-489d-bf05-d4d91c32cd0b">
+                <LayoutGroup Id="Auto119a6553-f7b5-4936-8039-f8b9ce2ee383">
+                  <LayoutGroup Id="Autob5a279a7-b443-4caf-ae67-65c0f9b5ef77">
+                    <LayoutItem Id="samplepreplist" ViewItem="qclist" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto87dec2e5-170a-4768-ae78-2b130933aa7a">
+            <LayoutItem Id="sampleprepdetail" ViewItem="qcdetail" />
+            <LayoutGroup Id="Autof31a4aa2-e7dd-42d5-a8f6-4f38b1059391">
+              <LayoutItem Id="sampleprepaction0" ViewItem="qcaction0" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="Samplecheckin_DetailView_Client">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultViewQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_Validation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_ResultView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_Delivery">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="PrintComment" ViewItem="PrintComment" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_Archived">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="PrintComment" ViewItem="PrintComment" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="BottleSetup_DetailView_Distribution">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BottleSetup">
+              <LayoutItem Id="Bottleid" ViewItem="Bottleid" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Items_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="ASIProductCode" LookupEditorMode="AllItems" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs" RelativeSize="9.5029239766081872" Index="3" Removed="True">
+            <LayoutGroup Id="Upload" RelativeSize="100" Index="0" Removed="True">
+              <LayoutItem Id="Upload" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="NFPAGHSKeys" Removed="True" />
+            <LayoutGroup Id="SubItemsName" Caption="Sub Item" RelativeSize="100" Direction="Vertical" Removed="True">
+              <LayoutItem Id="SubItemsName" RelativeSize="100" Index="0" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Items">
+              <LayoutGroup Id="Items_col1">
+                <LayoutItem Id="RetireDate" RelativeSize="8.02139037433155" Index="14" />
+              </LayoutGroup>
+              <LayoutGroup Id="Items_col2">
+                <LayoutItem Id="ASIProductCode" RelativeSize="6.4171122994652405" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QCBatch_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="qcreset" ActionContainer="qcreset" />
+        <ActionContainerViewItem Id="qcload" ActionContainer="qcload" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SamplePrepBatch_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SamplePrepBatch_col2">
+              <LayoutGroup Id="Autoda835163-9407-4180-b92a-85c047b6a952">
+                <LayoutGroup Id="Autobf3ccc2a-980e-43d0-825f-ae33b91363f3">
+                  <LayoutItem Id="Instrument" ViewItem="Instrument" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Maintenance">
+        <Items Id="Items">
+          <Item Id="System">
+            <Items Id="Items">
+              <Item Id="TestGroup" ViewId="TestGroup_ListView" />
+              <Item Id="TestForm" ViewId="TestForm_LookupListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="Utility">
+            <Items Id="Items">
+              <Item Id="Test">
+                <Items Id="Items">
+                  <Item Id="PrepMethodLabware" ViewId="PrepMethodLabware_ListView" />
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

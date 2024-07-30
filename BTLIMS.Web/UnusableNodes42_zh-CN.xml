@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Modules.BusinessObjects.SuboutTracking.DeliveryService" Value="送样公司" />
+    </LocalizationGroup>
+  </Localization>
+</Application>

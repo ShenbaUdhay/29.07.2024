@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Assets.Labware">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="UncertaintyImage" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupRegistration">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Result" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+        <Member Name="Unqualified" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupRegistrationBatch">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Result" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+        <Member Name="Unqualified" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureStandardCertificate">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="UncertaintyImage" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureTemplate">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="TemplateContent" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureTemplateResult">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="TemplateContent" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureTestItem">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="UncertaintyImage" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="BizRequest_ListView" DetailRowMode="DetailView" />
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <ListView Id="BizRequest_Measures_ListView_Chart_Employee" EditorTypeName="DevExpress.ExpressApp.Chart.Web.ASPxChartListEditor">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MainInspector" Index="-1" />
+        <ColumnInfo Id="MainInspector.FullNameCN" PropertyName="MainInspector.FullNameCN" Index="0" />
+        <ColumnInfo Id="SampleNumber" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="BizRequest_ListView_Report" DetailRowMode="DetailView" DetailRowView="BizRequest_DetailView_Report" />
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Reports">
+        <Items Id="Items">
+          <Item Id="BizRequest_DetailView_Report" ViewId="BizRequest_ListView_Report" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

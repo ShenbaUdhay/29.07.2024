@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Setting.TestMethod">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="ParameterName" Caption="参数" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="TestMethod_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ParameterName" Caption="参数" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestMethod_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SampleLogIns_Group" Caption="Sample Log Ins" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestMethod_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ParameterName" Caption="参数" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

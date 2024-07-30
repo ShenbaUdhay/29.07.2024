@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="SL_QueryPanel" Index="0" />
+    </Actions>
+    <ActionToContainerMapping Id="ActionToContainerMapping">
+      <ActionContainer Id="View">
+        <ActionLink ActionId="SC_QueryPanel" Index="0" />
+        <ActionLink ActionId="SL_QueryPanel" Index="0" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <Views Id="Views">
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="ReportName" ActionContainer="Report_ReportName" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="Samplecheckin_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" ActionContainer="GoToSampleLogin" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Samplecheckin">
+              <LayoutGroup Id="Samplecheckin_col2">
+                <LayoutGroup Id="SampleCategoryName">
+                  <LayoutItem Id="SampleCategoryName" ViewItem="SampleCategoryName" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="MeasurementBusiness">
+        <Items Id="Items">
+          <Item Id="InstrumentManagement">
+            <Items Id="Items">
+              <Item Id="BizRequest_Measures_ListView_Sample_Release" ViewId="BizRequest_Measures_ListView_Sample_Release" />
+              <Item Id="BizRequest_Measures_ListView_Sample_Confirmation" ViewId="BizRequest_Measures_ListView_Sample_Confirmation" />
+              <Item Id="BizRequest_Measures_ListView_Sample_Returned" ViewId="BizRequest_Measures_ListView_Sample_Returned" />
+              <Item Id="BizRequest_Measures_ListView_Sample_Unclaimed" ViewId="BizRequest_Measures_ListView_Sample_Unclaimed" />
+              <Item Id="BizRequest_Measures_ListView_Sample_InStorage" ViewId="BizRequest_Measures_ListView_Sample_InStorage" />
+            </Items>
+          </Item>
+          <Item Id="BizRequest_Measures_ListView_Sample_Verified" ViewId="BizRequest_Measures_ListView_Sample_Verified" />
+          <Item Id="BizRequest_Measures_ListView_Sample" ViewId="BizRequest_Measures_ListView_Sample" />
+          <Item Id="BizRequest_Measures_ListView_Archiving" ViewId="BizRequest_Measures_ListView_Archiving" />
+          <Item Id="BizRequest_Measures_ListView_Release" ViewId="BizRequest_Measures_ListView_Release" />
+          <Item Id="BizRequest_Measures_ListView_Reception" ViewId="BizRequest_Measures_ListView_Reception" />
+          <Item Id="BizRequest_Measures_ListView_Printing" ViewId="BizRequest_Measures_ListView_Printing" />
+          <Item Id="BizRequest_Measures_ListView_Approval" ViewId="BizRequest_Measures_ListView_Approval" />
+          <Item Id="BizRequest_Measures_ListView_Audit" ViewId="BizRequest_Measures_ListView_Audit" />
+          <Item Id="BizRequest_Measures_ListView_Registration" ViewId="BizRequest_Measures_ListView_Registration" />
+          <Item Id="BizRequest_Measures_ListView_Allocation" ViewId="BizRequest_Measures_ListView_Allocation" />
+          <Item Id="BizRequest_ListView" ViewId="BizRequest_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Audit Trail">
+        <Items Id="Items">
+          <Item Id="SampleLogIn" ViewId="SampleLogIn_AuditTrail_ListView" />
+          <Item Id="SampleCheckIn" ViewId="Samplecheckin_AuditTrail_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Assets">
+        <Items Id="Items">
+          <Item Id="LabwareInherit_ListView" ViewId="LabwareInherit_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Reports">
+        <Items Id="Items">
+          <Item Id="BizRequest_Measures_ListView_Chart_Employee" ViewId="BizRequest_Measures_ListView_Chart_Employee" />
+          <Item Id="BizRequest_Measures_ListView_Report_Order" ViewId="BizRequest_Measures_ListView_Report_Order" />
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="Configuration">
+            <Items Id="Items">
+              <Item Id="MeasureTestItem_ListView" ViewId="MeasureTestItem_ListView" />
+              <Item Id="MeasureStandardCertificate_ListView" ViewId="MeasureStandardCertificate_ListView" />
+              <Item Id="MeasureMethodLibrary_ListView" ViewId="MeasureMethodLibrary_ListView" />
+              <Item Id="Category" ViewId="MeasureMajorCategory_ListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Assets.InspectCategory" Caption="检定类型">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Frequency" Caption="检定频率" />
+        <Member Name="LastTime" Caption="上次检定日期" />
+        <Member Name="Name" Caption="名称" />
+        <Member Name="NextTime" Caption="下次检定日期" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Assets.Labware">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="InspectCategory" Caption="检定类型" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

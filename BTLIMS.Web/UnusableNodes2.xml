@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="PopupRegistration_DetailView">
+      <Items Id="Items">
+        <CustomUserControlViewItemWeb Id="SpecificSymbolUserControl" CustomControlPath="SpecificSymbol.ascx" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item3">
+              <LayoutGroup Id="Auto1a1107ca-740d-4f64-bd5e-1b06f9177d0b" RelativeSize="27.133757961783438">
+                <LayoutItem Id="TestLocation" RelativeSize="7.1748878923766819" />
+                <LayoutItem Id="Atmospheric" RelativeSize="5.3811659192825116" />
+                <LayoutItem Id="Temperature" RelativeSize="5.3811659192825116" />
+                <LayoutItem Id="Humidity" RelativeSize="5.3811659192825116" />
+                <LayoutItem Id="CertificateCategory" RelativeSize="5.3811659192825116" />
+                <LayoutItem Id="CertificateNumber" RelativeSize="71.300448430493276" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto164c07a8-7a4b-477b-aef9-a3077cdaf335" RelativeSize="72.866242038216555">
+                <LayoutItem Id="Conclusion" RelativeSize="7.1748878923766819" />
+                <LayoutItem Id="AnalysisDate" RelativeSize="5.3811659192825116" />
+                <LayoutItem Id="ExpirationDate" RelativeSize="5.3811659192825116" />
+                <LayoutItem Id="TestItem" RelativeSize="5.3811659192825116" />
+                <LayoutItem Id="StandardCertificate" RelativeSize="5.3811659192825116" />
+                <LayoutItem Id="Method" RelativeSize="71.300448430493276" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item4">
+              <LayoutItem Id="TemplateResult" RelativeSize="7.1748878923766819" />
+              <LayoutItem Id="Result" RelativeSize="92.825112107623312" />
+            </LayoutGroup>
+            <LayoutGroup Id="BizMeasureLabwares_Group">
+              <LayoutGroup Id="Autoabf73941-6893-4d2c-9931-895c76274c57" RelativeSize="9.4170403587443943">
+                <LayoutItem Id="Item5" RelativeSize="77.452229299363054" />
+                <LayoutItem Id="RegistrationLabwareAction" RelativeSize="22.547770700636942" />
+              </LayoutGroup>
+              <LayoutItem Id="BizMeasureLabwares" RelativeSize="90.5829596412556" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item7" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="3" RelativeSize="100">
+              <LayoutItem Id="SpecificSymbolUserControl" ViewItem="SpecificSymbolUserControl" Index="0" RelativeSize="100" ShowCaption="False" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="PopupRegistrationBatch_DetailView">
+      <Items Id="Items">
+        <CustomUserControlViewItemWeb Id="SpecificSymbolUserControl" CustomControlPath="SpecificSymbol.ascx" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item3">
+              <LayoutGroup Id="Auto1a1107ca-740d-4f64-bd5e-1b06f9177d0b" RelativeSize="29.6875">
+                <LayoutItem Id="TestLocation" RelativeSize="7.3394495412844041" />
+                <LayoutItem Id="Atmospheric" RelativeSize="5.5045871559633026" />
+                <LayoutItem Id="Temperature" RelativeSize="5.5045871559633026" />
+                <LayoutItem Id="Humidity" RelativeSize="5.5045871559633026" />
+                <LayoutItem Id="CertificateCategory" RelativeSize="5.5045871559633026" />
+                <LayoutItem Id="CertificateNumber" RelativeSize="70.642201834862391" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto164c07a8-7a4b-477b-aef9-a3077cdaf335" RelativeSize="70.3125">
+                <LayoutItem Id="Conclusion" RelativeSize="7.3394495412844041" />
+                <LayoutItem Id="AnalysisDate" RelativeSize="5.5045871559633026" />
+                <LayoutItem Id="ExpirationDate" RelativeSize="5.5045871559633026" />
+                <LayoutItem Id="TestItem" RelativeSize="5.5045871559633026" />
+                <LayoutItem Id="StandardCertificate" RelativeSize="5.5045871559633026" />
+                <LayoutItem Id="Method" RelativeSize="70.642201834862391" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item4">
+              <LayoutItem Id="TemplateResult" RelativeSize="7.3394495412844041" />
+              <LayoutItem Id="Result" RelativeSize="92.660550458715591" />
+            </LayoutGroup>
+            <LayoutGroup Id="BizMeasureLabwares_Group">
+              <LayoutGroup Id="Autoabf73941-6893-4d2c-9931-895c76274c57" RelativeSize="9.63302752293578">
+                <LayoutItem Id="Item5" RelativeSize="70.454545454545453" />
+                <LayoutItem Id="RegistrationBatchLabwareAction" RelativeSize="29.545454545454547" />
+              </LayoutGroup>
+              <LayoutItem Id="BizMeasureLabwares" RelativeSize="90.366972477064223" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="3" RelativeSize="100">
+              <LayoutItem Id="SpecificSymbolUserControl" ViewItem="SpecificSymbolUserControl" Index="0" RelativeSize="100" ShowCaption="False" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

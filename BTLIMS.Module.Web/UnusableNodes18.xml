@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="GroupTest_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="TestParameters" LinkView="Testparameter_LookupListView_Copy_GroupTest" />
+      </Items>
+    </DetailView>
+    <ListView Id="GroupTest_TestParameters_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestGroupName" Index="-1" />
+        <ColumnInfo Id="TestMethod" Caption="Matrix" PropertyName="TestMethod.MatrixName.MatrixName" Index="0" />
+        <ColumnInfo Id="Test" Caption="Test" PropertyName="TestMethod.TestName.TestName" Index="1" />
+        <ColumnInfo Id="Parameter" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Reports">
+        <Items Id="Items">
+          <Item Id="BizRequest_DetailView_Report" ViewId="BizRequest_ListView_Report" />
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="GroupTest" ViewId="GroupTest_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

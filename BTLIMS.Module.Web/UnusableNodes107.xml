@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Requisition_DetailView_Receive">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Requisition">
+              <LayoutGroup Id="Requisition_col1">
+                <LayoutItem Id="Brand" ViewItem="Brand" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="Consumption_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Consumption">
+              <LayoutGroup Id="Consumption_col1">
+                <LayoutItem Id="ConsumptionItemQty" ViewItem="ConsumptionItemQty" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Customer_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="WebSite" Index="0" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomSystemRole_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SecuritySystemRoleBase">
+              <LayoutItem Id="Name" RelativeSize="54.237288135593218" />
+              <LayoutItem Id="IsAdministrative" RelativeSize="45.762711864406782" />
+              <LayoutItem Id="CanEditModel" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+  </Views>
+</Application>

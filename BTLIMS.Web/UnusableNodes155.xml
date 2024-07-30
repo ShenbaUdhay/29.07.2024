@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="PrepMethod1_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="MethodCode" AllowEdit="False" NullText="Autogenerate" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Direction="Vertical" RelativeSize="15.52346570397112">
+            <LayoutGroup Id="PrepMethod1_col1" ShowCaption="False" Index="0" RelativeSize="100">
+              <LayoutItem Id="MethodCode" ViewItem="MethodCode" Index="0" RelativeSize="37.2093023255814" />
+              <LayoutItem Id="MethodName" ViewItem="MethodName" Index="1" RelativeSize="27.906976744186046" />
+              <LayoutItem Id="MethodNumber" ViewItem="MethodNumber" Index="2" RelativeSize="34.883720930232556" />
+            </LayoutGroup>
+            <LayoutGroup Id="PrepMethod1" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="84.476534296028888" Caption="Comment">
+            <LayoutItem Id="DateIssued" ViewItem="DateIssued" Index="0" RelativeSize="5.7692307692307692" />
+            <LayoutItem Id="Comment" RelativeSize="87.6068376068376" Index="1" />
+            <LayoutItem Id="Active" ViewItem="Active" Index="2" RelativeSize="6.6239316239316235" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PrepMethod1_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RetireDate" Index="-1" Caption="RetireDate" />
+        <ColumnInfo Id="MethodCode" Index="0" Caption="MethodCode" />
+        <ColumnInfo Id="MethodName" Caption="MethodName" Index="1" />
+        <ColumnInfo Id="MethodNumber" Caption="MethodNumber" />
+        <ColumnInfo Id="Comment" Index="3" />
+        <ColumnInfo Id="DateIssued" Index="4" Caption="DateIssued" />
+        <ColumnInfo Id="Active" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="PrepMethod1_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodName" Caption="MethodName" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PrepMethod2_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="MethodCode" AllowEdit="False" NullText="Autogenerate" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="19.855595667870038" Direction="Vertical">
+            <LayoutGroup Id="PrepMethod2_col1" ShowCaption="False" Index="0" RelativeSize="100">
+              <LayoutItem Id="MethodCode" ViewItem="MethodCode" Index="0" RelativeSize="29.09090909090909" />
+              <LayoutItem Id="MethodName" ViewItem="MethodName" Index="1" RelativeSize="21.818181818181817" />
+              <LayoutItem Id="MethodNumber" ViewItem="MethodNumber" Index="2" RelativeSize="21.818181818181817" />
+              <LayoutItem Id="DateIssued" ViewItem="DateIssued" Index="3" RelativeSize="27.272727272727273" />
+            </LayoutGroup>
+            <LayoutGroup Id="PrepMethod2" RelativeSize="100" Removed="True">
+              <LayoutGroup Id="PrepMethod2_col1" RelativeSize="49.8876404494382">
+                <LayoutItem Id="DateIssued" ViewItem="DateIssued" Index="3" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="MethodCode" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="MethodName" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="MethodNumber" RelativeSize="21.428571428571427" />
+              </LayoutGroup>
+              <LayoutGroup Id="PrepMethod2_col2" RelativeSize="50.1123595505618" Caption="PrepMethod2_col2">
+                <LayoutItem Id="DateIssued" Index="1" RelativeSize="64.772727272727266" Removed="True" />
+                <LayoutItem Id="Active" RelativeSize="100" />
+                <LayoutItem Id="RetireDate" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="80.144404332129966" Caption="Comment">
+            <LayoutItem Id="Comment" RelativeSize="93.018018018018012" />
+            <LayoutItem Id="Active" ViewItem="Active" Index="1" RelativeSize="6.9819819819819822" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PrepMethod2_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RetireDate" Index="-1" />
+        <ColumnInfo Id="MethodCode" Index="0" Caption="MethodCode" />
+        <ColumnInfo Id="MethodName" Caption="MethodName" Index="1" />
+        <ColumnInfo Id="MethodNumber" Caption="MethodNumber" />
+        <ColumnInfo Id="Comment" Index="3" />
+        <ColumnInfo Id="DateIssued" Index="4" Caption="DateIssued" />
+        <ColumnInfo Id="Active" Index="5" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PrepMethodLabware_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="15.52346570397112">
+            <LayoutGroup Id="PrepMethodLabware" RelativeSize="100">
+              <LayoutItem Id="MethodType" Index="0" RelativeSize="37.2093023255814" />
+              <LayoutItem Id="PrepMethod1" Index="1" RelativeSize="27.906976744186046" />
+              <LayoutItem Id="PrepMethod2" Index="2" RelativeSize="34.883720930232556" />
+              <LayoutItem Id="PrepMethodLabwareCode" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="42.238267148014444">
+            <LayoutItem Id="Comment" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="Instruments_Group" Direction="Vertical" RelativeSize="42.238267148014444">
+            <LayoutItem Id="Instruments" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PrepMethodLabware_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod1" Index="-1" />
+        <ColumnInfo Id="PrepMethod2" Index="-1" />
+        <ColumnInfo Id="PrepMethodLabwareCode" Index="-1" />
+        <ColumnInfo Id="MethodType" Caption="MethodType" Index="0" />
+        <ColumnInfo Id="MethodName" Index="1" Caption="MethodName" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_TestInstrument">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod1" PropertyName="PrepMethod1" Width="70" Caption="PrepMethod2" Index="-1" />
+        <ColumnInfo Id="PrepMethod" PropertyName="PrepMethod" Width="70" Caption="PrepMethod1" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod1" PropertyName="PrepMethod1" Index="7" Width="70" Caption="PrepMethod2" />
+        <ColumnInfo Id="PrepMethod" PropertyName="PrepMethod" Index="6" Width="70" Caption="PrepMethod1" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_AnalysisQueue">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod1" PropertyName="PrepMethod1" Index="-1" Width="70" Caption="PrepMethod2" />
+        <ColumnInfo Id="PrepMethod" PropertyName="PrepMethod" Index="-1" Width="70" Caption="PrepMethod1" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView_AnalysisDepartmentChain">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod1" PropertyName="PrepMethod1" Width="70" Caption="PrepMethod2" Index="-1" />
+        <ColumnInfo Id="PrepMethod" PropertyName="PrepMethod" Width="70" Caption="PrepMethod1" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="SequenceSetup_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod1" PropertyName="PrepMethod1" Index="-1" Width="70" Caption="PrepMethod2" />
+        <ColumnInfo Id="PrepMethod" PropertyName="PrepMethod" Index="-1" Width="70" Caption="PrepMethod1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SequenceSetup_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item1">
+            <TabbedGroup Id="Tabs">
+              <LayoutGroup Id="ClosingQCTestRun">
+                <LayoutItem Id="ClosingTestRun" ViewItem="ClosingTestRun" />
+                <LayoutGroup Id="Auto1225705d-0b63-48bd-85cb-d891c0dee31d">
+                  <LayoutItem Id="ShowClosingQCTestRun" ViewItem="ShowClosingQCTestRun" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="SampleQCTestRun">
+                <LayoutItem Id="SampleTestRun" ViewItem="SampleTestRun" />
+              </LayoutGroup>
+              <LayoutGroup Id="InitialQCTestRun">
+                <LayoutItem Id="InitialTestRun" ViewItem="InitialTestRun" />
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SequenceSetup_col1">
+              <LayoutItem Id="SpikeSample" ViewItem="SpikeSample" />
+              <LayoutItem Id="DupSample" ViewItem="DupSample" />
+              <LayoutItem Id="Frequency" ViewItem="Frequency" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="PrepMethod1" PropertyName="PrepMethod1" Caption="Prep Method2" LookupEditorMode="AllItemsWithSearch" />
+        <PropertyEditor Id="PrepMethod" PropertyName="PrepMethod" LookupEditorMode="AllItemsWithSearch" Caption="Prep Method1" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="SDMS">
+      <Layout Id="Layout">
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Item3">
+            <LayoutItem Id="SDMSDCAB" ViewItem="ABView" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="SDMSDCSpreadsheet" ViewItem="Spreadsheet" />
+          </LayoutGroup>
+        </TabbedGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="SamplePrepBatchsequence">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Autocf0d576e-4672-46fd-83b9-5d54a7b37220">
+            <LayoutGroup Id="Auto04dcce49-4fcf-4903-87bc-06ea173390f5">
+              <LayoutGroup Id="Auto79cf6bba-a0c4-4196-aa16-782a4ecdbfdc">
+                <LayoutItem Id="sampleprepaction2" ViewItem="qcaction2" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Auto9df63651-b0e5-47e4-a744-3b2aba4e2177">
+              <LayoutGroup Id="Auto73751de5-0919-489d-bf05-d4d91c32cd0b">
+                <LayoutGroup Id="Auto119a6553-f7b5-4936-8039-f8b9ce2ee383">
+                  <LayoutGroup Id="Autob5a279a7-b443-4caf-ae67-65c0f9b5ef77">
+                    <LayoutItem Id="samplepreplist" ViewItem="qclist" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto87dec2e5-170a-4768-ae78-2b130933aa7a">
+            <LayoutItem Id="sampleprepdetail" ViewItem="qcdetail" />
+            <LayoutGroup Id="Autof31a4aa2-e7dd-42d5-a8f6-4f38b1059391">
+              <LayoutItem Id="sampleprepaction0" ViewItem="qcaction0" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="Samplecheckin_DetailView_Client">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultViewQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_Validation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_ResultView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_Delivery">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="PrintComment" ViewItem="PrintComment" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_Archived">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="PrintComment" ViewItem="PrintComment" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="BottleSetup_DetailView_Distribution">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BottleSetup">
+              <LayoutItem Id="Bottleid" ViewItem="Bottleid" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestMethod_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod" Index="5" />
+        <ColumnInfo Id="PrepMethod1" Index="6" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestMethod_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autof41af155-9776-4c91-848f-f62f0a69ca8f">
+              <LayoutGroup Id="Autoe423ea68-cf7b-493f-9322-4b5229229eac">
+                <LayoutGroup Id="Auto58b13ec3-7ee9-4865-b86f-9fbcfb63921c">
+                  <LayoutGroup Id="Autoe3a35350-4a18-477c-a7ab-e1f71b88ba8c">
+                    <LayoutItem Id="Container" ViewItem="Container" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="BottleSetup_Test_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod" Index="-1" />
+        <ColumnInfo Id="PrepMethod1" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="QCBatch_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="qcreset" ActionContainer="qcreset" />
+        <ActionContainerViewItem Id="qcload" ActionContainer="qcload" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SamplePrepTemplates_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SamplePrepTemplates_col1">
+              <LayoutItem Id="PrepMethod" ViewItem="PrepMethod" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SamplePretreatmentBatch_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SamplePretreatmentBatch_col2">
+              <LayoutGroup Id="Auto3b8dd3a1-0ea9-4f30-8bd1-6c0feda9487b">
+                <LayoutGroup Id="Auto5dcdfc76-9601-41b7-8018-5e12cd903396">
+                  <LayoutItem Id="Equipment" ViewItem="Equipment" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Auto2460f951-c6b3-4045-b6f0-8e0311e046d0">
+                <LayoutItem Id="PrepMethod1" ViewItem="PrepMethod1" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SamplePretreatmentBatch_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Equipment" Index="-1" />
+        <ColumnInfo Id="PrepMethod1" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="SamplePretreatmentBatch_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod1" Index="-1" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Maintenance">
+        <Items Id="Items">
+          <Item Id="System">
+            <Items Id="Items">
+              <Item Id="TestGroup" ViewId="TestGroup_ListView" />
+              <Item Id="TestForm" ViewId="TestForm_LookupListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="PrepMethod2" ViewId="PrepMethod2_ListView" />
+          <Item Id="PrepMethod1" ViewId="PrepMethod1_ListView" />
+          <Item Id="Utility">
+            <Items Id="Items">
+              <Item Id="Test">
+                <Items Id="Items">
+                  <Item Id="PrepMethodLabware" ViewId="PrepMethodLabware_ListView" />
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

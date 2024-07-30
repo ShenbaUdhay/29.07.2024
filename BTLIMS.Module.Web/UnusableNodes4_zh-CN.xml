@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="BottleTest_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="BottleTestSave" Caption="保存" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="TestMethods_Group" Caption="检测项目&#xD;&#xA;" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="BottleTest_TestMethods_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+      </Columns>
+    </ListView>
+    <ListView Id="UserNavigationPermission_NavigationItems_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="NavigationCaption" Caption="导航列名" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleBottleTest_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="SampleLogIn" Caption="样品登录" />
+      </Items>
+    </DetailView>
+    <ListView Id="SampleBottleTest_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SampleLogIn" Caption="样品登录" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleBottleTest_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SampleLogIn" Caption="样品登录" />
+      </Columns>
+    </ListView>
+    <ListView Id="BottleID_ListView_Copy_BottleTest">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BottleId" Caption="样瓶编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="NavigationItem_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="NavigationCaption" Caption="导航标题" />
+      </Columns>
+    </ListView>
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.SampleManagement.SL_BottleID.BottleID" Caption="样瓶编号">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="BottleId" Caption="样瓶编号" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.SampleManagement.SL_BottleID.BottleTest" Caption="测试瓶">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="BottleID" Caption="样瓶编号" />
+        <Member Name="TestMethods" Caption="分析方法" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.SampleManagement.SL_BottleID.SampleBottleTest">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="BottleID" Caption="样瓶编号" />
+        <Member Name="SampleLogIn" Caption="样品登录" />
+        <Member Name="TestMethod" Caption="分析方法" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.TestMethod">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="BottleTest" Caption="测试瓶" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.NavigationItem">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Create" Caption="创建" />
+        <Member Name="Delete" Caption="删除" />
+        <Member Name="Navigate" Caption="导航" />
+        <Member Name="Read" Caption="读" />
+        <Member Name="UserNavigationPermissions" Caption="用户导航权限" />
+        <Member Name="Write" Caption="写" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.UserNavigationPermission">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="NavigationItems" Caption="导航项目" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.UserNavigationPermissionDetails">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="NavigationItem" Caption="导航项目" />
+        <Member Name="UserNavigationPermission" Caption="用户导航权限" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="popupWindowQueryPanel" Caption="查询数据" />
+      <Action Id="QCResultValidationQueryPanel" Caption="查询数据" />
+      <Action Id="ReportingQueryPanelPopupWindow" Caption="查询数据" />
+      <Action Id="ActionAssignBottle" Caption="分瓶" />
+      <Action Id="AssignBottle" ToolTip="分瓶" ShortCaption="分瓶" Caption="分瓶" />
+      <Action Id="BottleTestSave" ToolTip="保存" ShortCaption="保存" Caption="保存" />
+      <Action Id="RE_JobIDPopUp" Caption="选择多个" />
+      <Action Id="RE_QCJobIDPopUp" Caption="选择多个" />
+      <Action Id="RE_QCSampleIDPopUp" Caption="选择多个" />
+      <Action Id="RepJobIDPopUp" Caption="选择多个" />
+    </Actions>
+  </ActionDesign>
+</Application>

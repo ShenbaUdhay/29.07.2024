@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Assets.LabwareMaintenance" Caption="保养记录">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Labware" Caption="设备" />
+        <Member Name="MaintainedBy" Caption="保养人" />
+        <Member Name="MaintenanceDate" Caption="保养时间" />
+        <Member Name="Material" Caption="材料" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.BizMeasure" Caption="器具信息">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="SampleNumber" Caption="数字编号" />
+        <Member Name="AcceptDate" Caption="受理日期" />
+        <Member Name="Accuracy" Caption="准确度" />
+        <Member Name="AnalysisDate" Caption="检定日期" />
+        <Member Name="AnalysisDay" Caption="检定日" />
+        <Member Name="AnalysisMonth" Caption="检定月" />
+        <Member Name="AnalysisYear" Caption="检定年" />
+        <Member Name="AppearanceCheck" Caption="外观检查" />
+        <Member Name="ApprovedBy" Caption="批准人" />
+        <Member Name="ArchiveNumber" Caption="归档号" />
+        <Member Name="Atmospheric" Caption="大气压" />
+        <Member Name="BarCode" Caption="条码" />
+        <Member Name="BizMeasureLabwares" Caption="检测设备" />
+        <Member Name="BusinessRemark" Caption="业务备注" />
+        <Member Name="Certificate" Caption="证书单位" />
+        <Member Name="CertificateCategory" Caption="证书类别" />
+        <Member Name="CertificateNumber" Caption="证书编号" />
+        <Member Name="CertIssueCompany" Caption="出证单位" />
+        <Member Name="ChargeStatus" Caption="收费状态" />
+        <Member Name="CheckedBy" Caption="核验员" />
+        <Member Name="Conclusion" Caption="结论" />
+        <Member Name="Deadline" Caption="要求完成日期" />
+        <Member Name="Department" Caption="检测科室" />
+        <Member Name="ExpirationDate" Caption="有效期至" />
+        <Member Name="ExpirationDay" Caption="有效期日" />
+        <Member Name="ExpirationMonth" Caption="有效期月" />
+        <Member Name="ExpirationYear" Caption="有效期年" />
+        <Member Name="FactoryNumber" Caption="出厂编号" />
+        <Member Name="Fee" Caption="收费标准" />
+        <Member Name="FlowLogs" Caption="流程日志" />
+        <Member Name="Humidity" Caption="湿度" />
+        <Member Name="InOrOut" Caption="送检/出检" />
+        <Member Name="IsAgreement" Caption="是否协议" />
+        <Member Name="IsIssueData" Caption="是否出具数据" />
+        <Member Name="IsReduction" Caption="是否减免" />
+        <Member Name="IsRegistration" Caption="是否结果登记" />
+        <Member Name="IsRepair" Caption="是否维修" />
+        <Member Name="IsRush" Caption="加急" />
+        <Member Name="IsStop" Caption="器具终止" />
+        <Member Name="LaborFee" Caption="人工费" />
+        <Member Name="MainInspector" Caption="主检人" />
+        <Member Name="MajorCategory" Caption="专业大类" />
+        <Member Name="Manufacturer" Caption="制造厂家" />
+        <Member Name="MaterialFee" Caption="材料费" />
+        <Member Name="MeasuringRange" Caption="测量范围" />
+        <Member Name="Method" Caption="检测依据" />
+        <Member Name="Number" Caption="器具编号" />
+        <Member Name="OnsiteCharge" Caption="出检费" />
+        <Member Name="OtherFee" Caption="其他费用" />
+        <Member Name="PrintCount" Caption="打印次数" />
+        <Member Name="PrintTime" Caption="打印时间" />
+        <Member Name="QRCode" Caption="二维码" />
+        <Member Name="Quantity" Caption="数量" />
+        <Member Name="ReceiveTime" Caption="接收时间" />
+        <Member Name="RepairFee" Caption="维修费" />
+        <Member Name="RepairType" Caption="维修状态" />
+        <Member Name="Request" Caption="所属业务" />
+        <Member Name="Result" Caption="结果" />
+        <Member Name="ReturnReason" Caption="退回缘由" />
+        <Member Name="RushCharge" Caption="加急费" />
+        <Member Name="Sample" Caption="器具名称" />
+        <Member Name="SampleCategory" Caption="器具类别" />
+        <Member Name="SampleRemarks" Caption="器具备注" />
+        <Member Name="SampleStatus" Caption="器具状态" />
+        <Member Name="Specification" Caption="型号规格" />
+        <Member Name="StandardCertificate" Caption="计量标准" />
+        <Member Name="Status" Caption="流程状态" />
+        <Member Name="StopRemark" Caption="终止备注" />
+        <Member Name="Temperature" Caption="温度" />
+        <Member Name="TestCategory" Caption="业务类别" />
+        <Member Name="TestItem" Caption="检测项目" />
+        <Member Name="TestItemName" Caption="项目名称" />
+        <Member Name="TestLocation" Caption="检测地点" />
+        <Member Name="TestNature" Caption="检测性质" />
+        <Member Name="TotalFee" Caption="费用合计" />
+        <Member Name="Unqualified" Caption="不合格项目" />
+        <Member Name="VerifiedBy" Caption="检定员" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.BizMeasureLabware" Caption="仪器设备">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Labware" Caption="设备" />
+        <Member Name="Measure" Caption="器具" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.BizRequest" Caption="业务受理">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Address" Caption="地址" />
+        <Member Name="AnalysisDate" Caption="出检日期" />
+        <Member Name="Bank" Caption="开户银行" />
+        <Member Name="BankAccount" Caption="银行账号" />
+        <Member Name="CertificateCompany" Caption="证书单位" />
+        <Member Name="CertificateCompanyAddress" Caption="证书单位地址" />
+        <Member Name="CertificateCompanyContact" Caption="证书单位联系人" />
+        <Member Name="CertificateCompanyContactPhone" Caption="证书单位联系电话" />
+        <Member Name="CertificateCompanyOfficePhone" Caption="证书单位办公电话" />
+        <Member Name="CertificateCompanyZip" Caption="证书单位邮编" />
+        <Member Name="Customer" Caption="受检单位" />
+        <Member Name="Discount" Caption="执行折扣" />
+        <Member Name="InOrOut" Caption="出检/送检" />
+        <Member Name="InvoicePhone" Caption="开票人电话" />
+        <Member Name="InvoiceRecipient" Caption="发票收件人" />
+        <Member Name="InvoiceTitle" Caption="发票抬头" />
+        <Member Name="IsForce" Caption="是否强检" />
+        <Member Name="IsSubout" Caption="是否同意外包" />
+        <Member Name="MainInspector" Caption="出检人" />
+        <Member Name="Measures" Caption="计量业务" />
+        <Member Name="MessagingAfterTest" Caption="检测结束发送短信" />
+        <Member Name="MobilePhone" Caption="手机" />
+        <Member Name="Number" Caption="业务编号" />
+        <Member Name="OfficePhone" Caption="办公电话" />
+        <Member Name="OrderID" Caption="受理号" />
+        <Member Name="PrimaryContact" Caption="联系人" />
+        <Member Name="StartSendMessage" Caption="检测开始发送短信" />
+        <Member Name="Status" Caption="流程状态" />
+        <Member Name="Zip" Caption="邮编" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupAllocation" Caption="任务分配">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="DataSource" Caption="筛选条件" />
+        <Member Name="DataValue" Caption="条件值" />
+        <Member Name="Employee" Caption="检测人" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupApproval" Caption="批准">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Comment" Caption="意见" />
+        <Member Name="Result" Caption="结果" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupBatchUpdate" Caption="批量修改数据">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Accuracy" Caption="准确度" />
+        <Member Name="FactoryNumber" Caption="出厂编号" />
+        <Member Name="IsRepair" Caption="是否维修" />
+        <Member Name="Manufacturer" Caption="制造厂家" />
+        <Member Name="Specification" Caption="型号规格" />
+        <Member Name="TestCategory" Caption="业务类别" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupBizMeasureFlowLog" Caption="流程日志" />
+    <Class Name="Modules.BusinessObjects.Biz.PopupBizRequestFlowLog" Caption="流程日志" />
+    <Class Name="Modules.BusinessObjects.Biz.PopupCopyRow" Caption="复制行">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="RowCount" Caption="行数" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupFlowReturn" Caption="一键退回">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Comment" Caption="退回原因" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupRegistration" Caption="结果登记">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CertificateCategory" Caption="证书类别" />
+        <Member Name="TestItem" Caption="检测项目" ToolTip="检测项目就是指定量程" />
+        <Member Name="AnalysisDate" Caption="检定日期" />
+        <Member Name="Atmospheric" Caption="大气压" />
+        <Member Name="BizMeasureLabwares" Caption="测试设备" />
+        <Member Name="CertificateNumber" Caption="证书编号" />
+        <Member Name="Conclusion" Caption="结论" />
+        <Member Name="ExpirationDate" Caption="有效期至" />
+        <Member Name="Humidity" Caption="湿度" />
+        <Member Name="Method" Caption="检测依据" />
+        <Member Name="Result" Caption="结果" />
+        <Member Name="StandardCertificate" Caption="计量标准" />
+        <Member Name="Temperature" Caption="温度" />
+        <Member Name="TemplateResult" Caption="结果模板" />
+        <Member Name="TestLocation" Caption="检测地点" />
+        <Member Name="Unqualified" Caption="不合格项目" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupRegistrationBatch" Caption="批量结果登记">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CertificateCategory" Caption="证书类别" />
+        <Member Name="TestItem" Caption="检测项目" ToolTip="检测项目就是指定量程" />
+        <Member Name="AnalysisDate" Caption="检定日期" />
+        <Member Name="Atmospheric" Caption="大气压" />
+        <Member Name="BizMeasureLabwares" Caption="测试设备" />
+        <Member Name="CertificateNumber" Caption="证书编号" />
+        <Member Name="Conclusion" Caption="结论" />
+        <Member Name="ExpirationDate" Caption="有效期至" />
+        <Member Name="Humidity" Caption="湿度" />
+        <Member Name="Method" Caption="检测依据" />
+        <Member Name="Result" Caption="结果" />
+        <Member Name="StandardCertificate" Caption="计量标准" />
+        <Member Name="Temperature" Caption="温度" />
+        <Member Name="TemplateResult" Caption="结果模板" />
+        <Member Name="TestLocation" Caption="检测地点" />
+        <Member Name="Unqualified" Caption="不合格项目" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupSetLabware" Caption="测试设备" />
+    <Class Name="Modules.BusinessObjects.Biz.PopupSymbol" Caption="特殊符号" />
+    <Class Name="Modules.BusinessObjects.Biz.PopupTerminated" Caption="检测终止">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Fee" Caption="收费标准" />
+        <Member Name="StopRemark" Caption="终止原因" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupTestItem" Caption="测试项目">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Sample" Caption="器具" />
+        <Member Name="TestItems" Caption="检测项目" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.CodingRule.CodeGenerateRecord" Caption="编号使用记录">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="UsedNumberInt" Caption="已使用编号(字符串)" />
+        <Member Name="UsedNumberString" Caption="已使用编号(数字)" />
+        <Member Name="DateTimeString" Caption="日期字符串" />
+        <Member Name="CompleteCode" Caption="完整编号" />
+        <Member Name="CreatedDate" Caption="创建日期" />
+        <Member Name="Belongs" Caption="所属编号规则" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.CodingRule.CodingRuleConfig" Caption="编码规则">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="ConfigNumber" Caption="编号" />
+        <Member Name="Prefix" Caption="自定义前缀" />
+        <Member Name="DateTimeFormat" Caption="日期格式" />
+        <Member Name="StartNumber" Caption="起始号" />
+        <Member Name="EndNumber" Caption="终止号" />
+        <Member Name="GeneratedRecords" Caption="当前编号" />
+        <Member Name="IsManualCoding" Caption="是否手工编号" ToolTip="自动编号后可手动修改" />
+        <Member Name="Description" Caption="备注" />
+        <Member Name="Documents" Caption="使用此编号规则的单据" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="DisplayName" Caption="格式预览" />
+        <Member Name="IsEnabledPrefix" Caption="启用前缀条件" />
+        <Member Name="IsMajorCategoryPrefix" Caption="使用专业大类为前缀" ToolTip="使用专业大类的编码作为前缀,一般用于业务受理的子项“器具信息”编号" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.CodingRule.CodingRuleDocument" Caption="规则使用">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Belongs" Caption="使用编号规则" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="Description" Caption="备注" />
+        <Member Name="DocumentName" Caption="规则名称" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.CodingRule.DateTimeFormat" Caption="日期格式">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Format" Caption="日期格式" />
+        <Member Name="Description" Caption="备注" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Crm.Customer" Caption="客户信息">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Address" Caption="地址" />
+        <Member Name="AnnualRevenue" Caption="年收入" />
+        <Member Name="Area" Caption="区" />
+        <Member Name="Category" Caption="分类（诚信）" />
+        <Member Name="City" Caption="市" />
+        <Member Name="Contacts" Caption="联系人" />
+        <Member Name="Country" Caption="国家" />
+        <Member Name="CustomerName" Caption="客户名称" />
+        <Member Name="Email" Caption="邮箱" />
+        <Member Name="Fax" Caption="传真" />
+        <Member Name="Industry" Caption="行业" />
+        <Member Name="NumberOfEmployees" Caption="雇员人数" />
+        <Member Name="OfficePhone" Caption="办公电话" />
+        <Member Name="OtherPhone" Caption="其它电话" />
+        <Member Name="PrimaryContact" Caption="主要联系人" />
+        <Member Name="State" Caption="省" />
+        <Member Name="Type" Caption="单位类型" />
+        <Member Name="WebSite" Caption="网站" />
+        <Member Name="Zip" Caption="邮编" />
+        <Member Name="Zone" Caption="分区（洲）" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Report.CustomReportDataV2" Caption="报告" />
+    <Class Name="Modules.BusinessObjects.Seting.KeyType" Caption="键值类型">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="BizCategory" Caption="业务类别" />
+        <Member Name="TypeName" Caption="名称" />
+        <Member Name="TypeNumber" Caption="编码" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.KeyValue" Caption="键值配置">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Company" Caption="公司" />
+        <Member Name="IsDefault" Caption="是否默认显示" />
+        <Member Name="KeyType" Caption="类别" />
+        <Member Name="Name" Caption="名称" />
+        <Member Name="Number" Caption="编码" />
+        <Member Name="Remark" Caption="备注" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureMajorCategory" Caption="专业大类">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CategoryName" Caption="名称" />
+        <Member Name="CategoryNumber" Caption="编号" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="Remark" Caption="备注" />
+        <Member Name="Sort" Caption="排序" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureMethodLibrary" Caption="方法库">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Attachment" Caption="附件" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="IsValid" Caption="是否有效" />
+        <Member Name="MajorCategory" Caption="专业大类" />
+        <Member Name="MethodCategory" Caption="方法类别" />
+        <Member Name="MethodName" Caption="名称" />
+        <Member Name="MethodNumber" Caption="代号" />
+        <Member Name="Sort" Caption="排序" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureQualifications" Caption="资质管理">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Company" Caption="公司" />
+        <Member Name="MajorCategory" Caption="专业大类" />
+        <Member Name="Method" Caption="检测方法" />
+        <Member Name="SampleCategory" Caption="器具类别" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureQualificationsAuthorize" Caption="资质授权">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Employee" Caption="员工" />
+        <Member Name="IsAuthorized" Caption="是否授权" />
+        <Member Name="IsAuthorizedApprove" Caption="是否批准授权" />
+        <Member Name="IsQualified" Caption="是否取得资格" />
+        <Member Name="MajorCategory" Caption="专业大类" />
+        <Member Name="Method" Caption="方法" />
+        <Member Name="SampleCategory" Caption="器具类别" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureSampleCategory" Caption="器具类别">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CategoryName" Caption="类别名称" />
+        <Member Name="CategoryNumber" Caption="类别编码" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="MajorCategory" Caption="专业大类" />
+        <Member Name="Sort" Caption="排序" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureSampleLibrary" Caption="器具库">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Company" Caption="公司" />
+        <Member Name="MajorCategory" Caption="专业大类" />
+        <Member Name="SampleCategory" Caption="器具类别" />
+        <Member Name="SampleName" Caption="器具名称" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureStandardCertificate" Caption="标准证书">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="BuildedBy" Caption="建标单位" />
+        <Member Name="CertificateCode" Caption="计量标准代号" />
+        <Member Name="CertificateName" Caption="计量标准名称" />
+        <Member Name="CertificateNumber" Caption="证书编号" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="DateIssued" Caption="发证日期" />
+        <Member Name="ExpirationDate" Caption="有效期至" />
+        <Member Name="IsPublic" Caption="是否社会公用" />
+        <Member Name="IssuedBy" Caption="发证单位" />
+        <Member Name="MeasureRange" Caption="测量范围" />
+        <Member Name="Remark" Caption="备注" />
+        <Member Name="Sort" Caption="排序" />
+        <Member Name="Uncertainty" Caption="不确定度或准确度" />
+        <Member Name="UncertaintyImage" Caption="不确定度或准确度图片" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureTemplate" Caption="通用模板">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Attachment" Caption="附件" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="Explanation" Caption="模板说明" />
+        <Member Name="IsDefault" Caption="是否默认" />
+        <Member Name="TemplateCategory" Caption="模板类别" />
+        <Member Name="TemplateContent" Caption="模板内容" />
+        <Member Name="TemplateName" Caption="模板名称" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureTemplateResult" Caption="结果模板">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Attachment" Caption="附件" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="IsDefault" Caption="是否默认" />
+        <Member Name="TemplateCategory" Caption="模板类别" />
+        <Member Name="TemplateContent" Caption="模板内容" />
+        <Member Name="TemplateName" Caption="模板名称" />
+        <Member Name="TestItems" Caption="检测项目" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureTemplateTxt" Caption="Txt结果模板">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Company" Caption="公司" />
+        <Member Name="MajorCategory" Caption="专业大类" />
+        <Member Name="TemplateContent" Caption="模板内容" />
+        <Member Name="TemplateName" Caption="模板名称" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.MeasureTestItem" Caption="检测项目">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Company" Caption="公司" />
+        <Member Name="Fee" Caption="收费标准" />
+        <Member Name="Labwares" Caption="仪器设备" />
+        <Member Name="MajorCategory" Caption="专业大类" />
+        <Member Name="MeasuringRange" Caption="计量范围" />
+        <Member Name="Method" Caption="测试方法" />
+        <Member Name="SampleCategory" Caption="器具类别" />
+        <Member Name="Sort" Caption="排序" />
+        <Member Name="StandardCertificate" Caption="计量标准" />
+        <Member Name="TemplateResults" Caption="结果模板" />
+        <Member Name="TestItemName" Caption="项目名称" />
+        <Member Name="TestSite" Caption="测试地点" />
+        <Member Name="Uncertainty" Caption="不确定度或准确度" />
+        <Member Name="UncertaintyImage" Caption="不确定度或准确度图片" />
+        <Member Name="ValidPeriod" Caption="有效期（月）" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Seting.PopupQualifications" Caption="资质">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Employee" Caption="员工" />
+        <Member Name="IsAuthorized" Caption="是否授权" />
+        <Member Name="IsAuthorizedApprove" Caption="是否批准授权" />
+        <Member Name="IsQualified" Caption="是否取得资格" />
+        <Member Name="Qualifications" Caption="资质" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.ReportDataV2" Caption="报告Base">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="DataTypeCaption" Caption="数据类型" />
+        <Member Name="DisplayName" Caption="报告名称" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Assets.Labware" Caption="仪器设备">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="AcceptanceDate" Caption="验收日期" />
+        <Member Name="AssetsNumber" Caption="固定资产编号" />
+        <Member Name="AssignedName" Caption="设备授予名" />
+        <Member Name="Attachment" Caption="附件" />
+        <Member Name="BizCategory" Caption="业务类别(计量/质检)" />
+        <Member Name="CertificateCategory" Caption="检定类别" />
+        <Member Name="Certificates" Caption="设备证书" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="Custodian" Caption="设备负责人" />
+        <Member Name="DateIssued" Caption="签发日期" />
+        <Member Name="DepartmentUsed" Caption="使用部门" />
+        <Member Name="ExpirationDate" Caption="有效期至" />
+        <Member Name="FactoryNumber" Caption="出厂编号" />
+        <Member Name="Fee" Caption="计量费用" />
+        <Member Name="FileNumber" Caption="档案号" />
+        <Member Name="FilingDate" Caption="归档日期" />
+        <Member Name="Frequency" Caption="检定频率" />
+        <Member Name="FullName" Caption="仪器设备" />
+        <Member Name="InternalCategory" Caption="内部类别" />
+        <Member Name="IsValid" Caption="是否退役" />
+        <Member Name="LabwareID" Caption="设备编号" />
+        <Member Name="LabwareName" Caption="设备名称" />
+        <Member Name="LastTime" Caption="上次检定日期" />
+        <Member Name="Location" Caption="安装地点" />
+        <Member Name="Maintenances" Caption="保养记录" />
+        <Member Name="Manufacturer" Caption="制造厂家" />
+        <Member Name="MeasuringRange" Caption="计量范围" />
+        <Member Name="NextCheckDate" Caption="下次核查日期" />
+        <Member Name="NextMaintenanceDate" Caption="下次保养日期" />
+        <Member Name="NextMeasureDate" Caption="下次计量日期" />
+        <Member Name="NextTime" Caption="下次检定日期" />
+        <Member Name="Price" Caption="设备价格" />
+        <Member Name="PurchasingDate" Caption="购进日期" />
+        <Member Name="Remarks" Caption="备注" />
+        <Member Name="RetireReason" Caption="退役原因" />
+        <Member Name="SerialNumber" Caption="系列号" />
+        <Member Name="Specification" Caption="型号规格" />
+        <Member Name="StartDate" Caption="启用日期" />
+        <Member Name="Status" Caption="设备状态" />
+        <Member Name="TestItems" Caption="检测项目" />
+        <Member Name="TrackingMode" Caption="溯源方式" />
+        <Member Name="Uncertainty" Caption="不确定度或准确度" />
+        <Member Name="UncertaintyImage" Caption="不确定度或准确度图片" />
+        <Member Name="UnitOfMeasure" Caption="计量单位" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Assets.LabwareCertificate" Caption="设备证书">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CertificateCategory" Caption="证书类别" />
+        <Member Name="CertificateName" Caption="证书名称" />
+        <Member Name="CertificateNumber" Caption="证书编号" />
+        <Member Name="DateIssued" Caption="有效期起" />
+        <Member Name="ExpirationDate" Caption="有效期止" />
+        <Member Name="Labware" Caption="设备" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.FlowLog" Caption="流程日志">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CurrentStatus" Caption="当前状态" />
+        <Member Name="Employee" Caption="操作人" />
+        <Member Name="Measure" Caption="器具名称" />
+        <Member Name="NextStatus" Caption="下一状态" />
+        <Member Name="OperationDate" Caption="操作时间" />
+        <Member Name="Remark" Caption="备注" />
+        <Member Name="Request" Caption="所属业务" />
+        <Member Name="SampleCurrentStatus" Caption="器具当前状态" />
+        <Member Name="SampleNextStatus" Caption="器具下一状态" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Biz.PopupAudit" Caption="审核">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Comment" Caption="意见" />
+        <Member Name="Result" Caption="结果" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Crm.Contact" Caption="联系人">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Account" Caption="账户" />
+        <Member Name="Anniversary" Caption="结婚纪念日" />
+        <Member Name="Birthday" Caption="出生年月" />
+        <Member Name="City" Caption="市" />
+        <Member Name="Country" Caption="国家" />
+        <Member Name="Customer" Caption="客户名称" />
+        <Member Name="Email" Caption="邮箱" />
+        <Member Name="Fax" Caption="传真" />
+        <Member Name="FirstName" Caption="名" />
+        <Member Name="FullName" Caption="姓名" />
+        <Member Name="Gender" Caption="性别" />
+        <Member Name="HomePhone" Caption="家庭电话" />
+        <Member Name="LastName" Caption="姓" />
+        <Member Name="MaritalStatus" Caption="婚姻状况" />
+        <Member Name="MobilePhone" Caption="手机" />
+        <Member Name="OfficePhone" Caption="办公电话" />
+        <Member Name="OtherPhone" Caption="其它电话" />
+        <Member Name="Photo" Caption="照片" />
+        <Member Name="Position" Caption="职务" />
+        <Member Name="SpouseName" Caption="配偶姓名" />
+        <Member Name="State" Caption="省" />
+        <Member Name="Street1" Caption="地址1" />
+        <Member Name="Street2" Caption="地址2" />
+        <Member Name="Zip" Caption="邮编" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="BizMeasure_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="BizMeasure" Caption="器具信息" />
+              <LayoutGroup Id="Item3" Caption="检定结果" />
+              <LayoutGroup Id="Item4" Caption="不合格项目" />
+              <LayoutGroup Id="Item2" Caption="流程日志" />
+            </TabbedGroup>
+            <LayoutGroup Id="BizMeasure" Caption="器具信息" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BizRequest_DetailView" Caption="业务受理">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="Item4" Caption="业务信息">
+                <LayoutGroup Id="Autoc2293119-d10c-4b18-b1c1-6c3dba5390be" Caption="" />
+                <LayoutGroup Id="Auto5e596edb-e6a5-4aa1-881a-e083161b9ce7" Caption="" />
+              </LayoutGroup>
+              <LayoutGroup Id="BizRequest" Caption="受检单位" />
+              <LayoutGroup Id="Item3" Caption="证书单位" />
+              <LayoutGroup Id="Item2" Caption="器具信息" />
+            </TabbedGroup>
+            <LayoutGroup Id="BizRequest" Caption="基本信息" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="BizRequest_ListView" Caption="业务受理" />
+    <DetailView Id="CodingRuleConfig_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CodingRuleConfig_col1" Caption="CodingRuleConfig_col1">
+              <LayoutGroup Id="Auto3c918c34-341f-4b79-8ef5-56b8e1e969d1" Caption="Auto3c918c34-341f-4b79-8ef5-56b8e1e969d1(4)" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="GeneratedRecords" Caption="当前编号" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Contact_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="Contact" Caption="基本信息" />
+              <LayoutGroup Id="Item2" Caption="联系方式" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Customer_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="Customer" Caption="基本信息" />
+              <LayoutGroup Id="Item2" Caption="主要联系人" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="FlowLog_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OperationDate" DisplayFormat="{0:F}" />
+      </Columns>
+    </ListView>
+    <ListView Id="FlowLog_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OperationDate" EditMask="F" DisplayFormat="{0:F}" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Labware_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="Labware" Caption="基础信息" />
+              <LayoutGroup Id="Item3" Caption="详细信息">
+                <LayoutGroup Id="Auto9403e140-1639-439c-a5cb-69d5db2061f2" Caption="Auto9403e140-1639-439c-a5cb-69d5db2061f2(19)" />
+                <LayoutGroup Id="Auto3c6e70e6-20ab-46c2-a56c-50fab6eb5739" Caption="Auto3c6e70e6-20ab-46c2-a56c-50fab6eb5739(27)" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" Caption="不确定度或准确度" />
+              <LayoutGroup Id="Item2" Caption="其它信息">
+                <LayoutGroup Id="Auto208cb4b6-e5c3-40ba-b7c2-eca19f7017e3" Caption="Auto208cb4b6-e5c3-40ba-b7c2-eca19f7017e3(35)">
+                  <LayoutGroup Id="Auto053e2d7f-8494-4d3a-924f-2b70bba0867a" Caption="Auto053e2d7f-8494-4d3a-924f-2b70bba0867a(36)">
+                    <LayoutGroup Id="Auto0eef21a2-6edb-4254-8217-6441816d7636" Caption="Auto0eef21a2-6edb-4254-8217-6441816d7636(37)" />
+                    <LayoutGroup Id="Autoc9693a30-d399-4c28-adcc-ce7326114457" Caption="Autoc9693a30-d399-4c28-adcc-ce7326114457(43)" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="Labware" Caption="基础信息" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureMethodLibrary_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureMethodLibrary">
+              <LayoutGroup Id="MeasureMethodLibrary_col1">
+                <LayoutGroup Id="Auto598e5db2-498f-4fba-8a4a-a7d3cc6907fd" Caption="Auto598e5db2-498f-4fba-8a4a-a7d3cc6907fd">
+                  <LayoutGroup Id="Auto76c07a28-a138-4ff9-866c-149b436247b6" Caption="Auto76c07a28-a138-4ff9-866c-149b436247b6(6)">
+                    <LayoutGroup Id="Autobd7f1039-bcd0-40a3-b09f-6e1548c65c20" Caption="Autobd7f1039-bcd0-40a3-b09f-6e1548c65c20(7)">
+                      <LayoutGroup Id="Autoc840ba1b-dcf6-47bc-b6eb-65c7df505817" Caption="Autoc840ba1b-dcf6-47bc-b6eb-65c7df505817(8)">
+                        <LayoutGroup Id="Auto724219cd-893a-4f9b-8284-ad131a2cd411" Caption="Auto724219cd-893a-4f9b-8284-ad131a2cd411(9)">
+                          <LayoutGroup Id="Autoe59f3f80-7995-4886-8bcc-1b37fdc69661" Caption="Autoe59f3f80-7995-4886-8bcc-1b37fdc69661(10)" />
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureQualifications_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureQualifications" Caption="详情" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureQualificationsAuthorize_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureQualificationsAuthorize_col1">
+              <LayoutGroup Id="Auto23790a26-7d3d-4bec-b0f9-5e223de089b0" Caption="Auto23790a26-7d3d-4bec-b0f9-5e223de089b0(5)" />
+              <LayoutGroup Id="Auto22255a84-fc4d-4efd-bad8-82c0b2b67150" Caption="Auto22255a84-fc4d-4efd-bad8-82c0b2b67150(8)">
+                <LayoutGroup Id="Auto8a78e096-64f4-4a20-9d1b-d4e84c60fe62" Caption="Auto8a78e096-64f4-4a20-9d1b-d4e84c60fe62(10)" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="MeasureQualificationsAuthorize" Caption="资质授权">
+              <LayoutGroup Id="MeasureQualificationsAuthorize_col1" Caption="MeasureQualificationsAuthorize_col1">
+                <LayoutGroup Id="Auto23790a26-7d3d-4bec-b0f9-5e223de089b0" Caption="" />
+                <LayoutGroup Id="Auto22255a84-fc4d-4efd-bad8-82c0b2b67150" Caption="">
+                  <LayoutGroup Id="Auto8a78e096-64f4-4a20-9d1b-d4e84c60fe62" Caption="" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="MeasureQualificationsAuthorize_col2" Caption="MeasureQualificationsAuthorize_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="MeasureQualificationsAuthorize_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DepartmentName" Caption="部门" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MeasureStandardCertificate_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Auto3382ea03-6377-4e6f-87e3-9cbed3d60896" Caption="Auto3382ea03-6377-4e6f-87e3-9cbed3d60896(2)">
+            <LayoutGroup Id="Autocc731459-1735-4b90-9390-d2c6ef69fd95" Caption="Autocc731459-1735-4b90-9390-d2c6ef69fd95(3)">
+              <TabbedGroup Id="Item3">
+                <LayoutGroup Id="Item2" Caption="基本信息">
+                  <LayoutGroup Id="Autoaeb6a801-25a9-4a39-a220-282902f48d9a" Caption="">
+                    <LayoutGroup Id="Auto4eb7eab3-78d7-4bb2-b6a3-1789247f3ba4" Caption="" />
+                    <LayoutGroup Id="Auto42764f7a-4af5-41c0-a7f5-86a884bb45a1" Caption="" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Item4" Caption="不确定度或准确度" />
+              </TabbedGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureStandardCertificate" Caption="证书信息" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureTemplate_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureTemplate" Caption="MeasureTemplate">
+              <LayoutGroup Id="Autobf14f253-2c27-498e-bd32-3e1c71619a38" Caption="">
+                <LayoutGroup Id="Autod0e0ada5-b774-4ae9-9c2f-1be094bed283" Caption="" />
+                <LayoutGroup Id="Autodab5e47f-a9e8-4883-a4a9-5567fc3b1b95" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureTemplateResult_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureTemplateResult">
+              <LayoutGroup Id="Auto5279941e-4695-41b0-9651-02cb4705e13f" Caption="" />
+              <LayoutGroup Id="Auto3d4bbf19-4f2e-4036-a37c-31d0ffb7aa6f" Caption="" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="模板内容">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Item1" Caption="模板内容" />
+              <LayoutGroup Id="Item3" Caption="检测项目" />
+            </TabbedGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="TestItems_Group" Caption="检测项目" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="MeasureTemplateResult_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TemplateCategory.Name" Caption="类别名称" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MeasureTestItem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureTestItem_col1" Caption="MeasureTestItem_col1">
+              <TabbedGroup Id="Item2">
+                <LayoutGroup Id="Item1" Caption="基本信息">
+                  <LayoutGroup Id="Auto90e3a49c-a04e-451c-ac3d-e055252a2b29" Caption="">
+                    <LayoutGroup Id="Auto0a512a08-cd25-4da7-99ff-979f3f0eb05d" Caption="" />
+                    <LayoutGroup Id="Auto2d2884cd-7282-4294-8b6e-e5ec55c0aa14" Caption="" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Item3" Caption="不确定度或准确度" />
+                <LayoutGroup Id="Labwares" Caption="仪器设备" />
+                <LayoutGroup Id="TemplateResults" Caption="结果模板" />
+              </TabbedGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="MeasureTestItem" Caption="详情" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PopupBizMeasureFlowLog_DataSource_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OperationDate" DisplayFormat="{0:F}" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PopupBizMeasureFlowLog_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Caption="Main" />
+      </Layout>
+    </DetailView>
+    <ListView Id="PopupBizRequestFlowLog_DataSource_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OperationDate" DisplayFormat="{0:F}" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PopupBizRequestFlowLog_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Caption="Main" />
+      </Layout>
+    </DetailView>
+    <DetailView Id="PopupQualifications_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="PopupQualifications" Caption="PopupQualifications">
+              <LayoutGroup Id="Auto8a55e3d1-1cf4-4028-b921-1050ea351584" Caption="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PopupRegistration_BizMeasureLabwares_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="LabwareName" Caption="设备名称" />
+        <ColumnInfo Id="Specification" Caption="型号规格" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PopupRegistration_DetailView">
+      <Items Id="Items">
+        <StaticText Id="%" Text="%" />
+        <StaticText Id="℃" Text="℃" />
+        <StaticText Id="kPa" Text="kPa" />
+        <ActionContainerViewItem Id="RegistrationLabwareAction" Caption="测试设备" />
+        <ActionContainerViewItem Id="SymbolAction" Caption="SymbolAction(33)" />
+        <PropertyEditor Id="Atmospheric" Caption="大气压(kPa)" />
+        <PropertyEditor Id="Humidity" Caption="湿度(%)" />
+        <PropertyEditor Id="Temperature" Caption="温度(℃)" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item3" Caption="基本信息">
+              <LayoutGroup Id="Auto1a1107ca-740d-4f64-bd5e-1b06f9177d0b" Caption="Auto1a1107ca-740d-4f64-bd5e-1b06f9177d0b(20)" />
+              <LayoutGroup Id="Auto164c07a8-7a4b-477b-aef9-a3077cdaf335" Caption="Auto164c07a8-7a4b-477b-aef9-a3077cdaf335(27)" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item4" Caption="检测结果" />
+            <LayoutGroup Id="Item1" Caption="不合格项目" />
+            <LayoutGroup Id="BizMeasureLabwares_Group" Caption="测试设备">
+              <LayoutGroup Id="Autoabf73941-6893-4d2c-9931-895c76274c57" Caption="Autoabf73941-6893-4d2c-9931-895c76274c57(22)" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="BizMeasureLabwares_Group" Caption="测试设备" />
+          <LayoutGroup Id="SizeableEditors" Caption="结果" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="PopupRegistrationBatch_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RegistrationBatchLabwareAction" Caption="RegistrationBatchLabwareAction(133)" />
+        <PropertyEditor Id="Atmospheric" Caption="大气压(kPa)" />
+        <PropertyEditor Id="Humidity" Caption="湿度(%)" />
+        <PropertyEditor Id="Temperature" Caption="温度(℃)" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item3" Caption="基本信息" />
+            <LayoutGroup Id="Item4" Caption="检测结果" />
+            <LayoutGroup Id="Item6" Caption="不合格项目" />
+            <LayoutGroup Id="BizMeasureLabwares_Group" Caption="测试设备" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="PopupSetLabware_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Caption="Main" />
+      </Layout>
+    </DetailView>
+    <DetailView Id="PopupSymbol_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="PopupSymbol_col1" Caption="PopupSymbol_col1">
+              <LayoutGroup Id="Auto617d2687-35a3-4369-8c7d-4c4a425d15ab" Caption="Auto617d2687-35a3-4369-8c7d-4c4a425d15ab(4)">
+                <LayoutGroup Id="Autob9b58fa6-f62d-4047-b83c-867a5e3482b6" Caption="Autob9b58fa6-f62d-4047-b83c-867a5e3482b6(5)" />
+                <LayoutGroup Id="Auto8561b9ef-6db7-428d-a69d-66219a74c67b" Caption="Auto8561b9ef-6db7-428d-a69d-66219a74c67b(14)">
+                  <LayoutGroup Id="Autoc559894e-ebfa-4ff4-8799-a522d9cac2e3" Caption="Autoc559894e-ebfa-4ff4-8799-a522d9cac2e3(15)" />
+                  <LayoutGroup Id="Autoa9ec17b2-e518-4c05-bea2-d8df4cb71db1" Caption="Autoa9ec17b2-e518-4c05-bea2-d8df4cb71db1(24)">
+                    <LayoutGroup Id="Autoa163e7a9-4944-4367-b054-5aac12439b30" Caption="Autoa163e7a9-4944-4367-b054-5aac12439b30(25)" />
+                    <LayoutGroup Id="Auto111766fb-17f9-4748-8448-1b1e61f57e03" Caption="Auto111766fb-17f9-4748-8448-1b1e61f57e03(34)">
+                      <LayoutGroup Id="Autof51130d3-801d-495c-894c-a580256a7a77" Caption="Autof51130d3-801d-495c-894c-a580256a7a77(35)" />
+                      <LayoutGroup Id="Auto0a928ea1-1a65-4bb4-a831-7561a61cc6bc" Caption="Auto0a928ea1-1a65-4bb4-a831-7561a61cc6bc(44)">
+                        <LayoutGroup Id="Autod65aa969-3c58-46a8-9ced-5f0222a6ce0e" Caption="Autod65aa969-3c58-46a8-9ced-5f0222a6ce0e(45)" />
+                        <LayoutGroup Id="Auto91bacbc4-4c49-49b2-8cea-a40aee33be5d" Caption="Auto91bacbc4-4c49-49b2-8cea-a40aee33be5d(54)">
+                          <LayoutGroup Id="Auto3f8b8a19-f393-4e49-a406-259c02d2de99" Caption="Auto3f8b8a19-f393-4e49-a406-259c02d2de99(55)" />
+                          <LayoutGroup Id="Autofd6c0925-ac22-4369-9762-0cc774bdba81" Caption="Autofd6c0925-ac22-4369-9762-0cc774bdba81(64)">
+                            <LayoutGroup Id="Autoc6c017eb-7e86-4ab7-b653-cb89311a33a7" Caption="Autoc6c017eb-7e86-4ab7-b653-cb89311a33a7(65)" />
+                            <LayoutGroup Id="Autod200e790-e1ed-4a0b-8202-368cc792dec2" Caption="Autod200e790-e1ed-4a0b-8202-368cc792dec2(74)">
+                              <LayoutGroup Id="Autodbc24afa-7be7-425d-85a9-354ce3362c9f" Caption="Autodbc24afa-7be7-425d-85a9-354ce3362c9f(75)" />
+                              <LayoutGroup Id="Auto7d2a6b29-4398-4360-90a9-8d5e73e94447" Caption="Auto7d2a6b29-4398-4360-90a9-8d5e73e94447(84)">
+                                <LayoutGroup Id="Auto178170a1-5291-4060-a6cf-e2cbfab39872" Caption="Auto178170a1-5291-4060-a6cf-e2cbfab39872(85)" />
+                                <LayoutGroup Id="Autobae8d2f9-1ab8-49de-87e4-d07a44b86ee9" Caption="Autobae8d2f9-1ab8-49de-87e4-d07a44b86ee9(94)">
+                                  <LayoutGroup Id="Auto1902643b-1461-45fd-a1ef-b3d944c62a9f" Caption="Auto1902643b-1461-45fd-a1ef-b3d944c62a9f(95)" />
+                                </LayoutGroup>
+                              </LayoutGroup>
+                            </LayoutGroup>
+                          </LayoutGroup>
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="PopupSymbol_col2" Caption="PopupSymbol_col2" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="PopupTestItem_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="SearchTestItemAction" Caption="搜索" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="PopupTestItem" Caption="器具" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="BizRequest_Measures_ListView_Sample_Verified" Caption="器具领取" />
+    <ListView Id="BizRequest_Measures_ListView_Sample_Unclaimed" Caption="领取" />
+    <ListView Id="BizRequest_Measures_ListView_Sample_Returned" Caption="归还" />
+    <ListView Id="BizRequest_Measures_ListView_Sample_Release" Caption="发放" />
+    <ListView Id="BizRequest_Measures_ListView_Sample_InStorage" Caption="入库" />
+    <ListView Id="BizRequest_Measures_ListView_Sample_Confirmation" Caption="归还确认" />
+    <ListView Id="BizRequest_Measures_ListView_Sample" Caption="器具入库" />
+    <ListView Id="BizRequest_Measures_ListView_Report_Order" Caption="订单统计" />
+    <ListView Id="BizRequest_Measures_ListView_Release" Caption="发放" />
+    <ListView Id="BizRequest_Measures_ListView_Registration" Caption="结果登记" />
+    <ListView Id="BizRequest_Measures_ListView_Reception" Caption="证书接收" />
+    <ListView Id="BizRequest_Measures_ListView_Printing" Caption="打印" />
+    <ListView Id="BizRequest_Measures_ListView_Chart_Employee" Caption="业务量汇总" />
+    <ListView Id="BizRequest_Measures_ListView_Audit" Caption="审核" />
+    <ListView Id="BizRequest_Measures_ListView_Archiving" Caption="归档" />
+    <ListView Id="BizRequest_Measures_ListView_Approval" Caption="批准" />
+    <ListView Id="BizRequest_Measures_ListView_Allocation" Caption="任务分配" />
+    <ListView Id="BizRequest_ListView_Report" Caption="报表" />
+    <DetailView Id="BizRequest_DetailView_Report" Caption="报表">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="Item4" Caption="业务信息">
+                <LayoutGroup Id="Autoc2293119-d10c-4b18-b1c1-6c3dba5390be" Caption="" />
+                <LayoutGroup Id="Auto5e596edb-e6a5-4aa1-881a-e083161b9ce7" Caption="" />
+              </LayoutGroup>
+              <LayoutGroup Id="BizRequest" Caption="受检单位" />
+              <LayoutGroup Id="Item3" Caption="证书单位" />
+              <LayoutGroup Id="Item2" Caption="器具信息" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BizMeasure_DetailView_Report" Caption="订单统计">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="Item5" Caption="业务信息">
+                <LayoutGroup Id="Auto7129bbc3-ed18-4a65-a922-442b61c04aae" Caption="Auto7129bbc3-ed18-4a65-a922-442b61c04aae(64)">
+                  <LayoutGroup Id="Auto56bab630-eef7-40eb-8b08-22cc62cb947f" Caption="Auto56bab630-eef7-40eb-8b08-22cc62cb947f(6)" />
+                  <LayoutGroup Id="Auto1464280d-98cf-4c79-be86-56cccdf8e1a9" Caption="Auto1464280d-98cf-4c79-be86-56cccdf8e1a9(12)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item6" Caption="受检单位">
+                <LayoutGroup Id="Auto76109734-8474-44de-972a-d5189ec315e2" Caption="Auto76109734-8474-44de-972a-d5189ec315e2(18)">
+                  <LayoutGroup Id="Auto5c09c404-72a8-4cfe-9c27-efdba84c616d" Caption="Auto5c09c404-72a8-4cfe-9c27-efdba84c616d(19)" />
+                  <LayoutGroup Id="Auto80b97e98-e2c3-4666-a8a7-747ddeae6a4d" Caption="Auto80b97e98-e2c3-4666-a8a7-747ddeae6a4d(25)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item7" Caption="证书单位" />
+              <LayoutGroup Id="BizMeasure" Caption="器具信息">
+                <LayoutGroup Id="BizMeasure_col1">
+                  <TabbedGroup Id="Item9">
+                    <LayoutGroup Id="Item8" Caption="基本信息">
+                      <LayoutGroup Id="Autoaaf3f3a8-1b22-4e01-8144-2fbc601e54bf" Caption="Autoaaf3f3a8-1b22-4e01-8144-2fbc601e54bf(42)" />
+                      <LayoutGroup Id="Auto19c81a14-8a50-4521-9e6c-3fdeaa832a6f" Caption="Auto19c81a14-8a50-4521-9e6c-3fdeaa832a6f(52)" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Item10" Caption="结果登记">
+                      <LayoutGroup Id="Auto2650a02e-2314-448a-8cf5-ff723e20677a" Caption="Auto2650a02e-2314-448a-8cf5-ff723e20677a(63)" />
+                      <LayoutGroup Id="Auto09ccd186-ea16-425f-8da5-c82760feae8e" Caption="Auto09ccd186-ea16-425f-8da5-c82760feae8e(70)" />
+                    </LayoutGroup>
+                  </TabbedGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item2" Caption="流程日志" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="AllocationAction" Caption="任务分配" />
+      <Action Id="AllocationCancelAction" Caption="撤销分配" />
+      <Action Id="AllocationStatusAction" Caption="分配状态" />
+      <Action Id="AllocationTerminatedAction" Caption="终止" />
+      <Action Id="ApprovalAction" Caption="批准" />
+      <Action Id="ApprovalBackAction" Caption="退回批准" ShortCaption="退回批准" ToolTip="只有待打印状态的才能退回批准" />
+      <Action Id="ArchivingAction" Caption="归档" />
+      <Action Id="ArchivingCancelAction" Caption="撤销归档" />
+      <Action Id="ArchivingStatusAction" Caption="归档状态" ShortCaption="归档状态" />
+      <Action Id="AuditAction" Caption="审核" />
+      <Action Id="BizBatchUpdateAction" Caption="批量修改数据" />
+      <Action Id="BizChooseTestItemAction" Caption="选择检测项目" />
+      <Action Id="BizCopyRowAction" Caption="复制行" />
+      <Action Id="BizMeasureFlowLogAction" Caption="流程日志" />
+      <Action Id="BizRequestFlowLogAction" Caption="流程日志" />
+      <Action Id="BizSearchTestItemAction" Caption="搜索" />
+      <Action Id="ConfirmationAction" Caption="归还确认" />
+      <Action Id="FlowReturnAction" Caption="一键退回" />
+      <Action Id="InStorageAction" Caption="入库" />
+      <Action Id="PrintBatchSubmitAction" Caption="批量提交" />
+      <Action Id="PrintingAction" Caption="提交打印" />
+      <Action Id="PrintingBackAction" Caption="退回打印" ToolTip="只有{待证书接收}状态的才能{退回打印}" />
+      <Action Id="PrintingPreviewAction" Caption="预览打印" />
+      <Action Id="QualificationsAuthorizeAction" Caption="资质授权" />
+      <Action Id="ReceptionAction" Caption="证书接收" />
+      <Action Id="ReceptionBackAction" Caption="退回证书接收" ShortCaption="退回证书接收" />
+      <Action Id="RegistrationAction" Caption="结果登记" />
+      <Action Id="RegistrationBatchAction" Caption="批量结果登记" />
+      <Action Id="RegistrationBatchLabwareAction" Caption="测试设备" />
+      <Action Id="RegistrationLabwareAction" Caption="测试设备" />
+      <Action Id="RegistrationSubmitAction" Caption="提交" />
+      <Action Id="RegistrationTerminatedAction" Caption="终止" />
+      <Action Id="ReleaseAction" Caption="发放" />
+      <Action Id="ReleaseBackAction" Caption="退回发放" />
+      <Action Id="ReleaseCancelAction" Caption="撤销发放" />
+      <Action Id="ReleaseMeasureAction" Caption="发放" />
+      <Action Id="ReleaseStatusAction" Caption="发放状态" />
+      <Action Id="ReturnedAction" Caption="归还" />
+      <Action Id="ShowReportAction" Caption="查看报告" />
+      <Action Id="SymbolAction" Caption="特殊符号" />
+      <Action Id="UnclaimedAction" Caption="领取" />
+    </Actions>
+  </ActionDesign>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Modules.BusinessObjects.Assets.BizCategory">
+        <LocalizationItem Name="Measure" Value="计量" />
+        <LocalizationItem Name="QualityInspection" Value="质检" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Biz.ApprovalResult">
+        <LocalizationItem Name="Audit" Value="重审核" />
+        <LocalizationItem Name="Pass" Value="通过" />
+        <LocalizationItem Name="Registration" Value="重结果登记" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Biz.AuditResult">
+        <LocalizationItem Name="Pass" Value="通过" />
+        <LocalizationItem Name="Registration" Value="重结果登记" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Biz.BizInOrOut">
+        <LocalizationItem Name="In" Value="送检" />
+        <LocalizationItem Name="Out" Value="出检" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Biz.BizStatus">
+        <LocalizationItem Name="Allocation" Value="待任务分配" />
+        <LocalizationItem Name="Approval" Value="待批准" />
+        <LocalizationItem Name="Archiving" Value="待归档" />
+        <LocalizationItem Name="Audit" Value="待审核" />
+        <LocalizationItem Name="Draft" Value="业务受理" />
+        <LocalizationItem Name="End" Value="结束" />
+        <LocalizationItem Name="InStorage" Value="待器具入库" />
+        <LocalizationItem Name="Printing" Value="待打印" />
+        <LocalizationItem Name="Reception" Value="待证书接收" />
+        <LocalizationItem Name="Registration" Value="待结果登记" />
+        <LocalizationItem Name="Release" Value="待发放" />
+        <LocalizationItem Name="Unclaimed" Value="待器具领取" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Biz.Comment">
+        <LocalizationItem Name="DataError" Value="原始数据错误" />
+        <LocalizationItem Name="FormatError" Value="格式、数据录入错误" />
+        <LocalizationItem Name="Nothing" Value="无" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Biz.Conclusion">
+        <LocalizationItem Name="Disqualification" Value="不合格" />
+        <LocalizationItem Name="Qualified" Value="合格" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Biz.RequestStatus">
+        <LocalizationItem Name="Draft" Value="草稿" />
+        <LocalizationItem Name="End" Value="结束" />
+        <LocalizationItem Name="InTheProcess" Value="流程中" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Biz.SampleStatus">
+        <LocalizationItem Name="Confirmation" Value="待归还确认" />
+        <LocalizationItem Name="Draft" Value="草稿" />
+        <LocalizationItem Name="End" Value="结束" />
+        <LocalizationItem Name="InStorage" Value="待入库" />
+        <LocalizationItem Name="Release" Value="待发放" />
+        <LocalizationItem Name="Returned" Value="待归还" />
+        <LocalizationItem Name="Unclaimed" Value="待领取" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Biz.StopRemark">
+        <LocalizationItem Name="CanNotTest" Value="无法检测" />
+        <LocalizationItem Name="Normal" Value="正常" />
+        <LocalizationItem Name="Unqualified" Value="检测不合格" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Crm.MaritalStatus">
+        <LocalizationItem Name="Divorced" Value="离异" />
+        <LocalizationItem Name="Married" Value="已婚" />
+        <LocalizationItem Name="None" Value="无" />
+        <LocalizationItem Name="Single" Value="单身" />
+        <LocalizationItem Name="Widowed" Value="丧偶" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+  <Validation Id="Validation">
+    <Rules Id="Rules">
+      <RuleRequiredField Id="SecuritySystemUser_Roles_RuleRequiredField" CustomMessageTemplate="用户必须分配一个角色" />
+    </Rules>
+  </Validation>
+</Application>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Testparameter_ListView_Test_SampleParameter">
+      <Columns Id="Columns">
+        <ColumnInfo Id="InternalStandard" Caption="内标化合物" />
+        <ColumnInfo Id="SubOut" Caption="分包" />
+        <ColumnInfo Id="TestMethod" Caption="基质" />
+        <ColumnInfo Id="DefaultResult" Caption="默认结果" />
+        <ColumnInfo Id="DefaultUnits" Caption=" 默认单位" />
+        <ColumnInfo Id="FinalDefaultResult" Caption="最终默认结果单位" />
+        <ColumnInfo Id="FinalDefaultUnits" Caption="最终结果单位" />
+        <ColumnInfo Id="RptLimit" Caption=" 报告限" />
+        <ColumnInfo Id="RegulatoryLimit" Caption="化合物组合" />
+        <ColumnInfo Id="HighCLimit" Caption="控制上限" />
+        <ColumnInfo Id="REHCLimit" Caption="相对误差控制上限" />
+        <ColumnInfo Id="CutOff" Caption="切断值" />
+        <ColumnInfo Id="SigFig" Caption="有效数字" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

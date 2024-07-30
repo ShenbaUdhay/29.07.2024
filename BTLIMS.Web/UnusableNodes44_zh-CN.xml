@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ResultViewQueryPanel_DetailView">
+      <Items Id="Items">
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation_View">
+      <Items Id="Items">
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval_View">
+      <Items Id="Items">
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

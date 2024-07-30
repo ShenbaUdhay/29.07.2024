@@ -1,0 +1,1601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="HelpCenter_Copy">
+      <Items Id="Items">
+        <StaticText Id="lblWelcomeText" font-style=" .welcometoourhelpcenter" />
+        <ActionContainerViewItem Id="Search" ActionContainer="catFullTextSearch" />
+        <ActionContainerViewItem Id="ArticalCategory" ActionContainer="ArticalCategoryView" />
+      </Items>
+    </DashboardView>
+    <ListView Id="CalibrationSettings_ListView" AllowDelete="False" AllowLink="False" AllowNew="False" />
+    <ListView Id="CRMLead_CRMQuote_ListView" AllowEdit="True" AllowLink="False" AllowUnlink="False" Caption="Quote" DetailViewID="CRMQuote_DetailView_CRMLead">
+      <Columns Id="Columns">
+        <ColumnInfo Id="boolNotRuleRequired" Index="-1" />
+        <ColumnInfo Id="IsProspects" Index="-1" />
+        <ColumnInfo Id="ObjectSpace" Index="-1" />
+        <ColumnInfo Id="SameAddressForBothShippingAndBilling" Index="-1" />
+        <ColumnInfo Id="QuoteNumber" Index="1" Caption="QuoteNumber" />
+        <ColumnInfo Id="Attachment" Index="2" />
+        <ColumnInfo Id="Date" Index="3" />
+        <ColumnInfo Id="BillToStreet1" Index="4" Caption="BillToStreet1" />
+        <ColumnInfo Id="BillToStreet2" Index="5" Caption="BillToStreet2" />
+        <ColumnInfo Id="BillToCity" Index="6" Caption="BillToCity" />
+        <ColumnInfo Id="BillToState" Index="7" Caption="BillToState" />
+        <ColumnInfo Id="BillToCountry" Index="8" Caption="BillToCountry" />
+        <ColumnInfo Id="BillToZip" Index="9" Caption="BillToZip" />
+        <ColumnInfo Id="ShipToStreet1" Caption="ShipToStreet1" Index="10" />
+        <ColumnInfo Id="ShipToStreet2" Caption="ShipToStreet2" Index="11" />
+        <ColumnInfo Id="ShipToCity" Caption="ShipToCity" Index="12" />
+        <ColumnInfo Id="ShipToState" Caption="ShipToState" Index="13" />
+        <ColumnInfo Id="ShipToCountry" Index="14" Caption="ShipToCountry" />
+        <ColumnInfo Id="ShipToZip" Caption="ShipToZip" Index="15" />
+        <ColumnInfo Id="PotentialCustomers" Index="16" Caption="PotentialCustomers" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CRMLead_DetailView" AllowNew="False" Caption="Leads" DefaultFocusedItem="Topic">
+      <Items Id="Items">
+        <PropertyEditor Id="CRMQuote" Caption="Quotes" />
+        <PropertyEditor Id="Industry" Caption="Product Version" />
+        <PropertyEditor Id="LeadSource" LookupProperty="LeadSources" />
+        <PropertyEditor Id="Owner" PropertyName="Owner" Removed="True" />
+        <PropertyEditor Id="PreferredContactMethod" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxEnumPropertyEditor" />
+        <PropertyEditor Id="PrimaryContact" LookupEditorMode="AllItems" ImmediatePostData="True" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridLookupPropertyEditor" LookupProperty="FullName" View="CRMContact_ListView_Combo" />
+        <PropertyEditor Id="Status" ImmediatePostData="True" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxEnumPropertyEditor" />
+        <PropertyEditor Id="Street1" Caption="Street 1" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="99.8941798941799" Direction="Vertical" Caption="SimpleEditors">
+            <LayoutGroup Id="Auto4142b047-f8d2-431c-8714-6d56f53cde43" ShowCaption="False" Caption="Auto4142b047-f8d2-431c-8714-6d56f53cde43(3)" Index="0" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="Auto2aedf94b-40ae-4f60-9001-03a262172288" ShowCaption="False" Caption="Auto2aedf94b-40ae-4f60-9001-03a262172288(4)" Direction="Horizontal" Index="0" RelativeSize="87.394067796610173">
+                <LayoutGroup Id="Auto9efa8e97-6b14-4dfa-8aee-608c4e917bad" ShowCaption="False" Caption="Auto9efa8e97-6b14-4dfa-8aee-608c4e917bad(5)" Index="0" RelativeSize="66.518353726362619">
+                  <LayoutGroup Id="Item1" ShowCaption="True" Caption="SUMMARY" CaptionLocation="Top" Index="0" RelativeSize="26.060606060606062">
+                    <LayoutItem Id="Topic" ViewItem="Topic" CaptionLocation="Top" Index="0" RelativeSize="26.373626373626372" />
+                    <LayoutGroup Id="Autoecd4421b-3b62-4b82-8355-199ed68f7e27" ShowCaption="False" Caption="Autoecd4421b-3b62-4b82-8355-199ed68f7e27(6)" Direction="Horizontal" Index="1" RelativeSize="73.626373626373621">
+                      <LayoutGroup Id="Auto5512685c-d779-40c2-84e9-9ba019a0582d" ShowCaption="False" Caption="Auto5512685c-d779-40c2-84e9-9ba019a0582d(7)" Index="0" RelativeSize="49.913941480206539">
+                        <LayoutItem Id="FirstName" ViewItem="FirstName" CaptionLocation="Top" Index="0" RelativeSize="34.328358208955223" />
+                        <LayoutItem Id="LastName" ViewItem="LastName" CaptionLocation="Top" Index="1" RelativeSize="29.850746268656717" />
+                        <LayoutItem Id="PrimaryContact" ViewItem="PrimaryContact" CaptionLocation="Top" Index="2" RelativeSize="35.820895522388057" />
+                      </LayoutGroup>
+                      <LayoutGroup Id="Auto0f08557a-a0e9-408e-8189-882cfcdb4c34" ShowCaption="False" Caption="Auto0f08557a-a0e9-408e-8189-882cfcdb4c34(11)" Index="1" RelativeSize="50.086058519793461">
+                        <LayoutItem Id="CompanyName" ViewItem="CompanyName" CaptionLocation="Top" Index="0" RelativeSize="34.328358208955223" />
+                        <LayoutItem Id="JobTitle" ViewItem="JobTitle" CaptionLocation="Top" Index="1" RelativeSize="65.671641791044777" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item2" ShowCaption="True" Caption="CONTACT INFORMATION" CaptionLocation="Top" Direction="Horizontal" Index="1" RelativeSize="24.363636363636363">
+                    <LayoutGroup Id="Autoa697b987-e5df-42e6-89bc-6f16445d9761" ShowCaption="False" Caption="Autoa697b987-e5df-42e6-89bc-6f16445d9761(15)" Index="0" RelativeSize="49.913941480206539">
+                      <LayoutItem Id="OfficePhone" ViewItem="OfficePhone" CaptionLocation="Top" Index="0" RelativeSize="27.272727272727273" />
+                      <LayoutItem Id="Fax" ViewItem="Fax" CaptionLocation="Top" Index="1" RelativeSize="22.727272727272727" />
+                      <LayoutItem Id="MobilePhone" ViewItem="MobilePhone" CaptionLocation="Top" Index="2" RelativeSize="22.727272727272727" />
+                      <LayoutItem Id="HomePhone" ViewItem="HomePhone" CaptionLocation="Top" Index="3" RelativeSize="27.272727272727273" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto6f944c0d-f323-4e7e-acf8-444b6944551d" ShowCaption="False" Caption="Auto6f944c0d-f323-4e7e-acf8-444b6944551d(20)" Index="1" RelativeSize="50.086058519793461">
+                      <LayoutItem Id="OtherPhone" ViewItem="OtherPhone" CaptionLocation="Top" Index="0" RelativeSize="27.272727272727273" />
+                      <LayoutItem Id="WebSite" ViewItem="WebSite" CaptionLocation="Top" Index="1" RelativeSize="22.727272727272727" />
+                      <LayoutItem Id="Email" ViewItem="Email" CaptionLocation="Top" Index="2" RelativeSize="22.727272727272727" />
+                      <LayoutItem Id="FollowUpDate" ViewItem="FollowUpDate" CaptionLocation="Top" Index="3" RelativeSize="27.272727272727273" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item4" ShowCaption="True" Caption="DETAILS" CaptionLocation="Top" Direction="Horizontal" Index="2" RelativeSize="14.666666666666666">
+                    <LayoutGroup Id="Auto22665ad9-a309-4d2b-adbf-1ed61a9ada4b" ShowCaption="False" Caption="Auto22665ad9-a309-4d2b-adbf-1ed61a9ada4b(31)" Index="0" RelativeSize="49.913941480206539">
+                      <LayoutItem Id="NumberOfEmployees" ViewItem="NumberOfEmployees" CaptionLocation="Top" Index="0" RelativeSize="50" />
+                      <LayoutItem Id="Industry" ViewItem="Industry" CaptionLocation="Top" Index="1" RelativeSize="50" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto26243f6a-8bf6-4df1-bbd5-a732f3b38877" ShowCaption="False" Caption="Auto26243f6a-8bf6-4df1-bbd5-a732f3b38877(34)" Index="1" RelativeSize="50.086058519793461">
+                      <LayoutItem Id="LeadSource" ViewItem="LeadSource" CaptionLocation="Top" Index="0" RelativeSize="50" />
+                      <LayoutItem Id="Category" ViewItem="Category" CaptionLocation="Top" Index="1" RelativeSize="50" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item6" ShowCaption="True" Caption="ADDRESS" CaptionLocation="Top" Direction="Horizontal" Index="3" RelativeSize="19.515151515151516">
+                    <LayoutGroup Id="Auto2c8425b8-02bd-4b49-ac11-f2ee7dc1d370" ShowCaption="False" Caption="Auto2c8425b8-02bd-4b49-ac11-f2ee7dc1d370(38)" Index="0" RelativeSize="49.913941480206539">
+                      <LayoutItem Id="Street1" ViewItem="Street1" CaptionLocation="Top" Index="0" RelativeSize="35.294117647058826" />
+                      <LayoutItem Id="Street2" ViewItem="Street2" CaptionLocation="Top" Index="1" RelativeSize="29.411764705882351" />
+                      <LayoutItem Id="City" ViewItem="City" CaptionLocation="Top" Index="2" RelativeSize="35.294117647058826" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Autodb8c19ca-abd4-4f29-930d-04fb1709d02f" ShowCaption="False" Caption="Autodb8c19ca-abd4-4f29-930d-04fb1709d02f(42)" Index="1" RelativeSize="50.086058519793461">
+                      <LayoutItem Id="State" ViewItem="State" CaptionLocation="Top" Index="0" RelativeSize="35.294117647058826" />
+                      <LayoutItem Id="Zip" ViewItem="Zip" CaptionLocation="Top" Index="1" RelativeSize="29.411764705882351" />
+                      <LayoutItem Id="Country" ViewItem="Country" CaptionLocation="Top" Index="2" RelativeSize="35.294117647058826" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item5" ShowCaption="True" Caption="ACCOUNT MANAGEMENT" CaptionLocation="Top" Direction="Horizontal" Index="4" RelativeSize="15.393939393939395">
+                    <LayoutGroup Id="Autoe10e63f3-02b7-4a9c-87b8-4cfae9124837" ShowCaption="False" Caption="Autoe10e63f3-02b7-4a9c-87b8-4cfae9124837(47)" Index="0" RelativeSize="49.913941480206539">
+                      <LayoutItem Id="Owner" ViewItem="Owner" CaptionLocation="Top" Index="0" RelativeSize="50" />
+                      <LayoutItem Id="PreferredContactMethod" ViewItem="PreferredContactMethod" CaptionLocation="Top" Index="1" RelativeSize="50" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto4370e60b-c5ca-4624-92a2-079ac4f6a4f7" ShowCaption="False" Caption="Auto4370e60b-c5ca-4624-92a2-079ac4f6a4f7(50)" Index="1" RelativeSize="50.086058519793461">
+                      <LayoutItem Id="Status" ViewItem="Status" CaptionLocation="Top" Index="0" RelativeSize="50" />
+                      <LayoutItem Id="Region" ViewItem="Region" CaptionLocation="Top" Index="1" RelativeSize="50" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="Item3" Index="1" RelativeSize="33.481646273637374" />
+              </LayoutGroup>
+              <TabbedGroup Id="Tabs" Index="1" RelativeSize="12.60593220338983">
+                <LayoutGroup Id="Notes" ShowCaption="True" Index="0" RelativeSize="100">
+                  <LayoutItem Id="Notes" ViewItem="Notes" Index="0" RelativeSize="100" />
+                </LayoutGroup>
+                <LayoutGroup Id="CRMQuote" ShowCaption="True" Index="1" RelativeSize="100">
+                  <LayoutItem Id="CRMQuote" ViewItem="CRMQuote" Index="0" RelativeSize="100" />
+                </LayoutGroup>
+              </TabbedGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="CRMLead" Removed="True" />
+            <LayoutGroup Id="Lead" RelativeSize="53.346855983772819" Removed="True">
+              <LayoutGroup Id="Lead_col1" RelativeSize="49.944873208379271">
+                <LayoutItem Id="CompanyName" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="CreatedOn" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="DisplayName" RelativeSize="13.793103448275861" />
+                <LayoutItem Id="FirstName" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="LastName" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="LeadSource" RelativeSize="13.793103448275861" />
+                <LayoutItem Id="Name" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Status" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Topic" RelativeSize="10.344827586206897" />
+              </LayoutGroup>
+              <LayoutGroup Id="Lead_col2" RelativeSize="50.055126791620729">
+                <LayoutItem Id="AnnualRevenue" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="JobTitle" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="NumberOfEmployees" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Owner" RelativeSize="13.793103448275861" />
+                <LayoutItem Id="PreferredContactMethod" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="PrimaryContact" RelativeSize="24.137931034482758" />
+                <LayoutItem Id="SICCode" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="WebSite" RelativeSize="10.344827586206897" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto17feb260-4d07-4bea-af3a-9f27e78494ff" ShowCaption="False" Caption="Auto17feb260-4d07-4bea-af3a-9f27e78494ff(28)" Direction="Vertical" Index="1" RelativeSize="0.10582010582010581">
+            <LayoutGroup Id="Auto32737c32-85ca-494f-9979-1d2050cfae66" ShowCaption="False" Caption="Auto32737c32-85ca-494f-9979-1d2050cfae66(29)" Index="0" RelativeSize="100" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="12.777191129883844" Index="2" Removed="True">
+            <LayoutGroup Id="CRMQuote" RelativeSize="100" Index="1" Direction="Vertical">
+              <LayoutItem Id="CRMQuote" RelativeSize="100" Index="0" />
+            </LayoutGroup>
+            <LayoutGroup Id="CallLogs" RelativeSize="100" Caption="Call Logs" Removed="True">
+              <LayoutItem Id="HomePhone" ViewItem="HomePhone" Index="0" RelativeSize="4.4880785413744739" />
+              <LayoutItem Id="Owner" ViewItem="Owner" Index="1" RelativeSize="3.3660589060308554" />
+              <LayoutItem Id="CallLogs" RelativeSize="92.145862552594664" Index="2" />
+            </LayoutGroup>
+            <LayoutGroup Id="Notes" RelativeSize="100">
+              <LayoutItem Id="Notes" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CRMLead_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Category" Index="-1" />
+        <ColumnInfo Id="City" Index="-1" />
+        <ColumnInfo Id="ClientCode" Index="-1" />
+        <ColumnInfo Id="Country" Index="-1" />
+        <ColumnInfo Id="Fax" Index="-1" />
+        <ColumnInfo Id="HomePhone" Index="-1" />
+        <ColumnInfo Id="Industry" Index="-1" />
+        <ColumnInfo Id="LastContactDate" Index="-1" />
+        <ColumnInfo Id="MobilePhone" Index="-1" />
+        <ColumnInfo Id="OtherPhone" Index="-1" />
+        <ColumnInfo Id="Region" Index="-1" />
+        <ColumnInfo Id="State" Index="-1" />
+        <ColumnInfo Id="Street1" Index="-1" />
+        <ColumnInfo Id="Street2" Index="-1" />
+        <ColumnInfo Id="Zip" Index="-1" />
+        <ColumnInfo Id="Name" Caption="Contact" Width="183" />
+        <ColumnInfo Id="Topic" Index="1" />
+        <ColumnInfo Id="CompanyName" Caption="Company" Index="2" />
+        <ColumnInfo Id="OfficePhone" Index="3" Caption="OfficePhone" />
+        <ColumnInfo Id="Email" Index="4" />
+        <ColumnInfo Id="Status" Index="6" />
+        <ColumnInfo Id="FollowUpDate" Caption="FollowUpDate" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="CRMLead_Notes_ListView" AllowLink="False" AllowUnlink="False" MasterDetailView="" DetailViewID="">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Attachment" Index="-1" />
+        <ColumnInfo Id="Clients" Index="-1" />
+        <ColumnInfo Id="CRMActivity" Index="-1" />
+        <ColumnInfo Id="CRMContact" Index="-1" />
+        <ColumnInfo Id="CRMInvoice" Index="-1" />
+        <ColumnInfo Id="CRMProduct" Index="-1" />
+        <ColumnInfo Id="CRMProspects" Index="-1" />
+        <ColumnInfo Id="EnteredBy" Index="-1" />
+        <ColumnInfo Id="ProductVersion" Index="-1" />
+        <ColumnInfo Id="Title" SortIndex="-1" />
+        <ColumnInfo Id="Text" Index="1" Width="113" MaxLength="1000" />
+        <ColumnInfo Id="Author" Index="2" />
+        <ColumnInfo Id="Date" Index="3" />
+        <ColumnInfo Id="FollowUpDate" Index="11" />
+        <ColumnInfo Id="Status" Index="12" />
+      </Columns>
+    </ListView>
+    <DetailView Id="QualifyLeadParametersWithOpportunity_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Account" ImmediatePostData="True" />
+        <PropertyEditor Id="Prospects" ImmediatePostData="True" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="QualifyLeadParametersWithOpportunity" RelativeSize="4.1717791411042944">
+              <LayoutItem Id="Prospects" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="QualifyLeadParameters" Caption="QualifyLeadParameters" RelativeSize="95.8282208588957">
+              <LayoutItem Id="Account" RelativeSize="100" />
+              <LayoutItem Id="Contact" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="VisualMatrix_DetailView_FieldSetup_Copy_FromTO">
+      <Items Id="Items">
+        <PropertyEditor Id="CopyToSetupFields" View="VisualMatrix_SetupFields_ListView_CopyTO" />
+      </Items>
+    </DetailView>
+    <DetailView Id="VisualMatrix_DetailView_FieldConfiguration">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="VisualMatrix">
+              <TabbedGroup Id="Item3">
+                <LayoutGroup Id="FieldTesting_Group">
+                  <LayoutGroup Id="Auto77f20c16-42c1-4d53-9c5e-35601a650b8e">
+                    <LayoutItem Id="RemoveTestFieldConfiguration" ViewItem="RemoveTestFieldConfiguration" />
+                    <LayoutItem Id="AddTestConfiguration" ViewItem="AddTestConfiguration" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="SamplingInformation_Group">
+                  <LayoutGroup Id="Auto77f20c16-42c1-4d53-9c5e-35601a650b8e">
+                    <LayoutItem Id="RemoveFieldConfiguration" ViewItem="RemoveFieldConfiguration" />
+                    <LayoutItem Id="AddFieldConfiguration" ViewItem="AddFieldConfiguration" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Station_Group">
+                  <LayoutGroup Id="Auto77f20c16-42c1-4d53-9c5e-35601a650b8e">
+                    <LayoutItem Id="RemoveStationFieldConfiguration" ViewItem="RemoveStationFieldConfiguration" />
+                    <LayoutItem Id="AddStationFieldConfiguration" ViewItem="AddStationFieldConfiguration" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </TabbedGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestMethod_ListView_ItemLink" DetailViewID="TestMethod_DetailView_ItemLink" />
+    <DetailView Id="TestMethod_DetailView_CopyTest">
+      <Items Id="Items">
+        <PropertyEditor Id="QCTypes_CopyFrom" View="QCType_LookupListView_Copy_TestMethod_Copyfrom" />
+      </Items>
+    </DetailView>
+    <DetailView Id="TestMethod_DetailView_CopyParameter">
+      <Items Id="Items">
+        <PropertyEditor Id="QCTypes_CopyFrom" View="QCType_LookupListView_Copy_TestMethod_Copyfrom" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Tasks_DetailView_SmplingProposal">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Tasks">
+              <LayoutGroup Id="Autoad21c6d6-b931-4fc5-b0b8-e8e6e4d33ec3">
+                <LayoutGroup Id="Autod90efa23-418f-4093-8d44-9f82abfa6395">
+                  <LayoutGroup Id="Auto255f10dc-dd7f-4ff1-8bbd-ce1055222b52">
+                    <LayoutItem Id="ReasonForProposalChange" ViewItem="ReasonForProposalChange" />
+                    <LayoutGroup Id="Autoffe03372-1b26-4d87-aaac-9d8787697c66">
+                      <LayoutGroup Id="Item5">
+                        <LayoutGroup Id="Auto64341f49-d221-4642-bcc4-8a85710f00ee">
+                          <LayoutItem Id="RequestedDate" ViewItem="RequestedDate" />
+                          <LayoutGroup Id="Autoc5a2cdce-0357-47ce-abac-5083a0c3817b">
+                            <LayoutItem Id="RequestedBy" ViewItem="RequestedBy" />
+                          </LayoutGroup>
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Tasks_DetailView_SamplingAssignment_History">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="SamplingProposal" ViewItem="SamplingProposal" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Tasks_DetailView_SamplingAssignment">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="SamplingProposal" ViewItem="SamplingProposal" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Tasks_DetailView_FieldDataReviewView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Col2">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Item4">
+                <LayoutItem Id="SamplingTestInformation" ViewItem="SamplingTestInformation" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item3">
+                <LayoutItem Id="SampleInformation" ViewItem="SampleInformation" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item1">
+                <LayoutItem Id="StationInformation" ViewItem="StationInformation" />
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Tasks_DetailView_FieldDataEntry">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Tasks">
+              <TabbedGroup Id="Item5">
+                <LayoutGroup Id="Item4">
+                  <LayoutItem Id="uploadAttachement" ViewItem="uploadAttachement" />
+                </LayoutGroup>
+              </TabbedGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SpreadSheetEntry_AnalyticalBatch_DetailView_Asbestos_PLM">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Row1">
+              <LayoutGroup Id="SpreadSheetEntry_AnalyticalBatch_col1">
+                <LayoutGroup Id="Item3">
+                  <LayoutGroup Id="Auto28d3538a-25ee-4800-a66c-b504e4d4735a">
+                    <LayoutItem Id="Noruns" ViewItem="Noruns" />
+                    <LayoutItem Id="Humidity" ViewItem="Humidity" />
+                    <LayoutItem Id="Roomtemp" ViewItem="Roomtemp" />
+                    <LayoutItem Id="Jobid" ViewItem="Jobid" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SpreadSheetBuilder_TemplateInfo_DetailView_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="SpreadSheetBuilder_TemplateInfo">
+                <LayoutGroup Id="SpreadSheetBuilder_TemplateInfo_col1">
+                  <LayoutGroup Id="Autob6141a69-4f4e-4d8e-85eb-e49ba42cccda">
+                    <LayoutGroup Id="Autoffbfd49e-b7a4-42ad-84ec-2f3e97aed2e3">
+                      <LayoutItem Id="Category" ViewItem="Category" />
+                      <LayoutItem Id="NonTemplateType" ViewItem="NonTemplateType" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto6fe86ee7-a935-4f03-81cc-f73b65edf4b8">
+                      <LayoutItem Id="TestParameter" ViewItem="TestParameter" />
+                      <LayoutItem Id="NonPersistantMethod" ViewItem="NonPersistantMethod" />
+                      <LayoutItem Id="NonPersistantTest" ViewItem="NonPersistantTest" />
+                      <LayoutItem Id="NonPersistantMatrix" ViewItem="NonPersistantMatrix" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SequenceSetup_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item1">
+            <TabbedGroup Id="Tabs">
+              <LayoutGroup Id="ClosingQCTestRun">
+                <LayoutItem Id="closingqctypebool" ViewItem="closingqctypebool" />
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="SamplingProposal">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item3">
+              <LayoutItem Id="Sampling" ViewItem="Sampling" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <ActionContainerViewItem Id="BottleAddREmove" ActionContainer="TasksBottleAddRemove" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="SamplingBottleSetup_DetailView_Distribution">
+      <Items Id="Items">
+        <PropertyEditor Id="Matrix" View="Matrix_LookupListView_SamplingBottleSetup" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Sampling_DetailView_Station">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="SamplingStations" ViewItem="SamplingStations" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="SamplePrepBatchsequence">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Autocf0d576e-4672-46fd-83b9-5d54a7b37220">
+            <LayoutGroup Id="Auto04dcce49-4fcf-4903-87bc-06ea173390f5">
+              <LayoutGroup Id="Auto79cf6bba-a0c4-4196-aa16-782a4ecdbfdc">
+                <LayoutItem Id="sampleprepaction2" ViewItem="qcaction2" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Auto9df63651-b0e5-47e4-a744-3b2aba4e2177">
+              <LayoutGroup Id="Auto73751de5-0919-489d-bf05-d4d91c32cd0b">
+                <LayoutGroup Id="Auto119a6553-f7b5-4936-8039-f8b9ce2ee383">
+                  <LayoutGroup Id="Autob5a279a7-b443-4caf-ae67-65c0f9b5ef77">
+                    <LayoutItem Id="samplepreplist" ViewItem="qclist" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto87dec2e5-170a-4768-ae78-2b130933aa7a">
+            <LayoutItem Id="sampleprepdetail" ViewItem="qcdetail" />
+            <LayoutGroup Id="Autof31a4aa2-e7dd-42d5-a8f6-4f38b1059391">
+              <LayoutItem Id="sampleprepaction0" ViewItem="qcaction0" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="SampleLogIn_DetailView_ProductSampleMapping">
+      <Items Id="Items">
+        <PropertyEditor Id="Collector" View="Employee_LookupListView_Copy_SampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SampleLogIn_DetailView_CopyTO_SampleBottleAllocation">
+      <Items Id="Items">
+        <PropertyEditor Id="Collector" View="Employee_LookupListView_Copy_SampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SampleConditionCheck_DetailView_Tasks">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Col1">
+            <LayoutGroup Id="SampleConditionCheck">
+              <LayoutGroup Id="Autofc791d72-312a-4335-b985-c5f296bcf233">
+                <LayoutItem Id="Client" ViewItem="Client" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SampleConditionCheck_DetailView_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Col1">
+            <LayoutGroup Id="SampleConditionCheck">
+              <LayoutGroup Id="Autofc791d72-312a-4335-b985-c5f296bcf233">
+                <LayoutItem Id="Client" ViewItem="Client" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_RegistrationSigningOff_History">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_RegistrationSigningOff">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Client">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultViewQueryPanel_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ResultEntryQueryPanel_col1">
+              <LayoutItem Id="viewItemQCBatchID" ViewItem="viewItemQCBatchID" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation_View">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval_View">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ResultEntryQueryPanel_col1">
+              <LayoutItem Id="viewItemQCBatchID" ViewItem="viewItemQCBatchID" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_Validation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_ResultView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView_Archived">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="PrintComment" ViewItem="PrintComment" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="Qualifier">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item5">
+              <LayoutItem Id="SurrogateAutomationTab" ViewItem="SurrogateAutomationTab" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item4">
+              <LayoutItem Id="QCAutomationTab" ViewItem="QCAutomationTab" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item3">
+              <LayoutItem Id="SampleAutomationTab" ViewItem="SampleAutomationTab" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Manual_DetailView_IsRetired_DataCenter">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Manual_col1">
+              <LayoutItem Id="Download" ViewItem="Download" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Attachments" View="Manual_Attachments_ListView_IsRetired" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Manual_DetailView_IsRetired">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Manual_col1">
+              <LayoutItem Id="Download" ViewItem="Download" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Attachments" View="Manual_Attachments_ListView_IsRetired" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Labware_DetailView_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Labware_col1">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto712be4a0-4e27-4cd5-8d9f-ba8fb00f0b3c">
+                  <LayoutItem Id="DepartmentUsed" ViewItem="DepartmentUsed" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HelpCenter_DetailView_Article">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="ArticalView" ActionContainer="ArticalCategoryView" />
+        <ActionContainerViewItem Id="ArticalSearch" ActionContainer="catFullTextSearch" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="HelpCenter">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Search" ActionContainer="catFullTextSearch" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="DummyClass_DetailView_Copy_Mail">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DummyClass">
+              <LayoutGroup Id="Autoe3c01335-bcc8-4bf4-a0dc-2710f2ebe912">
+                <LayoutGroup Id="Auto2d4e4035-1495-49a1-9d2f-44e82ca2fdb4">
+                  <LayoutItem Id="MailBody" ViewItem="MailBody" />
+                  <LayoutItem Id="MailSubject" ViewItem="MailSubject" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Distribution_DetailView_Tracking">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Autoe4ca6050-d447-4399-af30-162c3643c91e">
+          <LayoutItem Id="ToDate" ViewItem="ToDate" />
+          <LayoutItem Id="FromDate" ViewItem="FromDate" />
+        </LayoutGroup>
+        <LayoutGroup Id="Auto3464b3b5-b9bd-4f75-83e3-eb268b75b10b">
+          <LayoutItem Id="Vendors" ViewItem="Vendors" />
+          <LayoutItem Id="Items" ViewItem="Items" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DefaultSetting_DetailView_Copy_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DefaultSetting">
+              <LayoutGroup Id="DefaultSetting_col2">
+                <LayoutItem Id="Invoices" ViewItem="Invoices" />
+                <LayoutItem Id="OpenQuotes" ViewItem="OpenQuotes" />
+                <LayoutItem Id="MyQuotes" ViewItem="MyQuotes" />
+                <LayoutItem Id="ClosedQuotes" ViewItem="ClosedQuotes" />
+                <LayoutItem Id="Quotes" ViewItem="Quotes" />
+              </LayoutGroup>
+              <LayoutGroup Id="DefaultSetting_col1">
+                <LayoutItem Id="ClosedsalesOrders" ViewItem="ClosedsalesOrders" />
+                <LayoutItem Id="CancelledsalesOrders" ViewItem="CancelledsalesOrders" />
+                <LayoutItem Id="SalesOrderFiles" ViewItem="SalesOrderFiles" />
+                <LayoutItem Id="SalesOrderTracking" ViewItem="SalesOrderTracking" />
+                <LayoutItem Id="SalesOrderReview" ViewItem="SalesOrderReview" />
+                <LayoutItem Id="SalesOrder" ViewItem="SalesOrder" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DefaultSetting_DetailView_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DefaultSetting">
+              <LayoutGroup Id="Auto31659c96-2ff2-48f9-9395-b46ad4c6a743">
+                <LayoutGroup Id="Auto4707c47d-66ba-404e-a6e3-e6f1afc65a11">
+                  <LayoutGroup Id="Auto42a65685-2313-4d53-98d0-0d60c4236516">
+                    <LayoutItem Id="DateFilter" ViewItem="DateFilter" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DefaultSetting_DetailView_aligment">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autof08c3946-c0bd-47a8-aaf9-6c2318a4d505">
+              <LayoutGroup Id="DefaultSetting_col1">
+                <LayoutGroup Id="Grp_InventoryControlManagement">
+                  <LayoutItem Id="ASIProductStockInventory" ViewItem="ASIProductStockInventory" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DataEntry_ListView_Copy_Edit">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BOSourceCodeCaption" View="UnconventionalAnalysisDataEntryConfigBOSourceCodeCaption_ListView" />
+      </Columns>
+    </ListView>
+    <ListView Id="DataEntry_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BOSourceCodeCaption" View="UnconventionalAnalysisDataEntryConfigBOSourceCodeCaption_ListView" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CRMQuotes_DetailView_Submitted">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Attachments" View="CRMQuotes_Attachments_ListView_ViewMode" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView_Reviewed">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Attachments" View="CRMQuotes_Attachments_ListView_ViewMode" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView_Cancel_Expired">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CRMQuote_ListView_Prospects">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SourceLead" PropertyName="SourceLead" Width="70" Index="-1" />
+        <ColumnInfo Id="CRMLead" PropertyName="CRMLead" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CRMQuote_DetailView_CRMLead">
+      <Items Id="Items">
+        <PropertyEditor Id="SourceLead" PropertyName="SourceLead" />
+        <PropertyEditor Id="CRMLead" PropertyName="CRMLead" LookupEditorMode="AllItems" />
+      </Items>
+    </DetailView>
+    <ListView Id="CRMProspects_ListView_UnfollowedOpportunities">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SourceLead" PropertyName="SourceLead" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="CRMProspects_ListView_MyOpenLeads_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SourceLead" PropertyName="SourceLead" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="CRMProspects_ListView_Copy_Open">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SourceLead" PropertyName="SourceLead" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="CRMProspects_ListView_Copy_Closed">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SourceLead" PropertyName="SourceLead" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="CRMLead_ListView_UnfollowedLeads" ClassName="Modules.BusinessObjects.Accounts.CRMLead" AllowLink="False" AllowNew="False" Caption="Unfollowed Leads" AllowDelete="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnnualRevenue" PropertyName="AnnualRevenue" Width="50" Index="-1" />
+        <ColumnInfo Id="Category" PropertyName="Category" Width="70" Index="-1" />
+        <ColumnInfo Id="City" PropertyName="City" Width="70" Index="-1" />
+        <ColumnInfo Id="ClientCode" PropertyName="ClientCode" Width="70" Index="-1" />
+        <ColumnInfo Id="Country" PropertyName="Country" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedBy" PropertyName="CreatedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedDate" PropertyName="CreatedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedOn" PropertyName="CreatedOn" Width="70" Index="-1" />
+        <ColumnInfo Id="DisplayName" PropertyName="DisplayName" Width="70" Index="-1" />
+        <ColumnInfo Id="Fax" PropertyName="Fax" Width="70" Index="-1" />
+        <ColumnInfo Id="FirstName" PropertyName="FirstName" Width="70" Index="-1" />
+        <ColumnInfo Id="HomePhone" PropertyName="HomePhone" Width="70" Index="-1" />
+        <ColumnInfo Id="Industry" PropertyName="Industry" Width="70" Index="-1" />
+        <ColumnInfo Id="IsUnFollowed" PropertyName="IsUnFollowed" Width="50" Index="-1" />
+        <ColumnInfo Id="JobTitle" PropertyName="JobTitle" Width="70" Index="-1" />
+        <ColumnInfo Id="LastContactDate" PropertyName="LastContactDate" Width="70" Index="-1" />
+        <ColumnInfo Id="LastName" PropertyName="LastName" Width="70" Index="-1" />
+        <ColumnInfo Id="LeadId" PropertyName="LeadId" Width="50" Index="-1" />
+        <ColumnInfo Id="LeadSource" PropertyName="LeadSource" Width="70" Index="-1" />
+        <ColumnInfo Id="MobilePhone" PropertyName="MobilePhone" Width="70" Index="-1" />
+        <ColumnInfo Id="ModifiedBy" PropertyName="ModifiedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="ModifiedDate" PropertyName="ModifiedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="NumberOfEmployees" PropertyName="NumberOfEmployees" Width="70" Index="-1" />
+        <ColumnInfo Id="NumberofUncontactedDays" PropertyName="NumberofUncontactedDays" Width="50" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="OtherPhone" PropertyName="OtherPhone" Width="70" Index="-1" />
+        <ColumnInfo Id="Owner" PropertyName="Owner" Width="70" Index="-1" />
+        <ColumnInfo Id="PreferredContactMethod" PropertyName="PreferredContactMethod" Width="70" Index="-1" />
+        <ColumnInfo Id="PrimaryContact" PropertyName="PrimaryContact" Width="70" Index="-1" />
+        <ColumnInfo Id="Region" PropertyName="Region" Width="70" Index="-1" />
+        <ColumnInfo Id="SICCode" PropertyName="SICCode" Width="70" Index="-1" />
+        <ColumnInfo Id="State" PropertyName="State" Width="70" Index="-1" />
+        <ColumnInfo Id="Street1" PropertyName="Street1" Width="70" Index="-1" />
+        <ColumnInfo Id="Street2" PropertyName="Street2" Width="70" Index="-1" />
+        <ColumnInfo Id="WebSite" PropertyName="WebSite" Width="70" Index="-1" />
+        <ColumnInfo Id="Zip" PropertyName="Zip" Width="70" Index="-1" />
+        <ColumnInfo Id="Name" PropertyName="Name" Width="183" SortIndex="0" SortOrder="Ascending" Index="0" />
+        <ColumnInfo Id="Topic" PropertyName="Topic" Width="70" Index="1" />
+        <ColumnInfo Id="CompanyName" PropertyName="CompanyName" Width="70" Caption="Company" Index="2" />
+        <ColumnInfo Id="OfficePhone" PropertyName="OfficePhone" Width="70" Index="3" Caption="OfficePhone" />
+        <ColumnInfo Id="Email" PropertyName="Email" Width="70" Index="4" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="70" Index="6" />
+        <ColumnInfo Id="FollowUpDate" PropertyName="FollowUpDate" Width="70" Caption="FollowUpDate" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="CRMLead_ListView_Copy_OpenLeads" ClassName="Modules.BusinessObjects.Accounts.CRMLead" AllowDelete="True" AllowLink="False" AllowNew="False" DetailViewID="CRMLead_DetailView" Caption="Open Leads">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnnualRevenue" PropertyName="AnnualRevenue" Width="50" Index="-1" />
+        <ColumnInfo Id="Category" PropertyName="Category" Width="70" Index="-1" />
+        <ColumnInfo Id="City" PropertyName="City" Width="70" Index="-1" />
+        <ColumnInfo Id="ClientCode" PropertyName="ClientCode" Width="70" Index="-1" />
+        <ColumnInfo Id="Country" PropertyName="Country" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedBy" PropertyName="CreatedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedDate" PropertyName="CreatedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedOn" PropertyName="CreatedOn" Width="70" Index="-1" />
+        <ColumnInfo Id="DisplayName" PropertyName="DisplayName" Width="70" Index="-1" />
+        <ColumnInfo Id="Fax" PropertyName="Fax" Width="70" Index="-1" />
+        <ColumnInfo Id="FirstName" PropertyName="FirstName" Width="70" Index="-1" />
+        <ColumnInfo Id="HomePhone" PropertyName="HomePhone" Width="70" Index="-1" />
+        <ColumnInfo Id="Industry" PropertyName="Industry" Width="70" Index="-1" />
+        <ColumnInfo Id="IsUnFollowed" PropertyName="IsUnFollowed" Width="50" Index="-1" />
+        <ColumnInfo Id="JobTitle" PropertyName="JobTitle" Width="70" Index="-1" />
+        <ColumnInfo Id="LastContactDate" PropertyName="LastContactDate" Width="70" Index="-1" />
+        <ColumnInfo Id="LastName" PropertyName="LastName" Width="70" Index="-1" />
+        <ColumnInfo Id="LeadId" PropertyName="LeadId" Width="50" Index="-1" />
+        <ColumnInfo Id="LeadSource" PropertyName="LeadSource" Width="70" Index="-1" />
+        <ColumnInfo Id="MobilePhone" PropertyName="MobilePhone" Width="70" Index="-1" />
+        <ColumnInfo Id="ModifiedBy" PropertyName="ModifiedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="ModifiedDate" PropertyName="ModifiedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="NumberOfEmployees" PropertyName="NumberOfEmployees" Width="70" Index="-1" />
+        <ColumnInfo Id="NumberofUncontactedDays" PropertyName="NumberofUncontactedDays" Width="50" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="OtherPhone" PropertyName="OtherPhone" Width="70" Index="-1" />
+        <ColumnInfo Id="Owner" PropertyName="Owner" Width="70" Index="-1" />
+        <ColumnInfo Id="PreferredContactMethod" PropertyName="PreferredContactMethod" Width="70" Index="-1" />
+        <ColumnInfo Id="PrimaryContact" PropertyName="PrimaryContact" Width="70" Index="-1" />
+        <ColumnInfo Id="Region" PropertyName="Region" Width="70" Index="-1" />
+        <ColumnInfo Id="SICCode" PropertyName="SICCode" Width="70" Index="-1" />
+        <ColumnInfo Id="State" PropertyName="State" Width="70" Index="-1" />
+        <ColumnInfo Id="Street1" PropertyName="Street1" Width="70" Index="-1" />
+        <ColumnInfo Id="Street2" PropertyName="Street2" Width="70" Index="-1" />
+        <ColumnInfo Id="WebSite" PropertyName="WebSite" Width="70" Index="-1" />
+        <ColumnInfo Id="Zip" PropertyName="Zip" Width="70" Index="-1" />
+        <ColumnInfo Id="Name" PropertyName="Name" Width="183" SortIndex="0" SortOrder="Ascending" Index="0" />
+        <ColumnInfo Id="Topic" PropertyName="Topic" Width="70" Index="1" />
+        <ColumnInfo Id="CompanyName" PropertyName="CompanyName" Width="70" Caption="Company" Index="2" />
+        <ColumnInfo Id="OfficePhone" PropertyName="OfficePhone" Width="70" Index="3" Caption="OfficePhone" />
+        <ColumnInfo Id="Email" PropertyName="Email" Width="70" Index="4" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="70" Index="6" />
+        <ColumnInfo Id="FollowUpDate" PropertyName="FollowUpDate" Width="70" Caption="FollowUpDate" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="CRMLead_ListView_Copy_MyOpenLeads" ClassName="Modules.BusinessObjects.Accounts.CRMLead" AllowLink="False" AllowNew="False" Caption="My Open Leads">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnnualRevenue" PropertyName="AnnualRevenue" Width="50" Index="-1" />
+        <ColumnInfo Id="Category" PropertyName="Category" Width="70" Index="-1" />
+        <ColumnInfo Id="City" PropertyName="City" Width="70" Index="-1" />
+        <ColumnInfo Id="ClientCode" PropertyName="ClientCode" Width="70" Index="-1" />
+        <ColumnInfo Id="Country" PropertyName="Country" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedBy" PropertyName="CreatedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedDate" PropertyName="CreatedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedOn" PropertyName="CreatedOn" Width="70" Index="-1" />
+        <ColumnInfo Id="DisplayName" PropertyName="DisplayName" Width="70" Index="-1" />
+        <ColumnInfo Id="Fax" PropertyName="Fax" Width="70" Index="-1" />
+        <ColumnInfo Id="FirstName" PropertyName="FirstName" Width="70" Index="-1" />
+        <ColumnInfo Id="HomePhone" PropertyName="HomePhone" Width="70" Index="-1" />
+        <ColumnInfo Id="Industry" PropertyName="Industry" Width="70" Index="-1" />
+        <ColumnInfo Id="IsUnFollowed" PropertyName="IsUnFollowed" Width="50" Index="-1" />
+        <ColumnInfo Id="JobTitle" PropertyName="JobTitle" Width="70" Index="-1" />
+        <ColumnInfo Id="LastContactDate" PropertyName="LastContactDate" Width="70" Index="-1" />
+        <ColumnInfo Id="LastName" PropertyName="LastName" Width="70" Index="-1" />
+        <ColumnInfo Id="LeadId" PropertyName="LeadId" Width="50" Index="-1" />
+        <ColumnInfo Id="LeadSource" PropertyName="LeadSource" Width="70" Index="-1" />
+        <ColumnInfo Id="MobilePhone" PropertyName="MobilePhone" Width="70" Index="-1" />
+        <ColumnInfo Id="ModifiedBy" PropertyName="ModifiedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="ModifiedDate" PropertyName="ModifiedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="NumberOfEmployees" PropertyName="NumberOfEmployees" Width="70" Index="-1" />
+        <ColumnInfo Id="NumberofUncontactedDays" PropertyName="NumberofUncontactedDays" Width="50" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="OtherPhone" PropertyName="OtherPhone" Width="70" Index="-1" />
+        <ColumnInfo Id="Owner" PropertyName="Owner" Width="70" Index="-1" />
+        <ColumnInfo Id="PreferredContactMethod" PropertyName="PreferredContactMethod" Width="70" Index="-1" />
+        <ColumnInfo Id="PrimaryContact" PropertyName="PrimaryContact" Width="70" Index="-1" />
+        <ColumnInfo Id="Region" PropertyName="Region" Width="70" Index="-1" />
+        <ColumnInfo Id="SICCode" PropertyName="SICCode" Width="70" Index="-1" />
+        <ColumnInfo Id="State" PropertyName="State" Width="70" Index="-1" />
+        <ColumnInfo Id="Street1" PropertyName="Street1" Width="70" Index="-1" />
+        <ColumnInfo Id="Street2" PropertyName="Street2" Width="70" Index="-1" />
+        <ColumnInfo Id="WebSite" PropertyName="WebSite" Width="70" Index="-1" />
+        <ColumnInfo Id="Zip" PropertyName="Zip" Width="70" Index="-1" />
+        <ColumnInfo Id="Name" PropertyName="Name" Width="183" SortIndex="0" SortOrder="Ascending" Index="0" Caption="Name" />
+        <ColumnInfo Id="Topic" PropertyName="Topic" Width="70" Index="1" />
+        <ColumnInfo Id="CompanyName" PropertyName="CompanyName" Width="70" Caption="Company" Index="2" />
+        <ColumnInfo Id="OfficePhone" PropertyName="OfficePhone" Width="70" Index="3" Caption="OfficePhone" />
+        <ColumnInfo Id="Email" PropertyName="Email" Width="70" Index="4" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="70" Index="6" />
+        <ColumnInfo Id="FollowUpDate" PropertyName="FollowUpDate" Width="70" Caption="FollowUpDate" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="CRMLead_ListView_Copy_ClosedLeads" ClassName="Modules.BusinessObjects.Accounts.CRMLead" AllowDelete="False" AllowLink="False" AllowNew="False" DetailViewID="CRMLead_DetailView_Copy" Caption="Closed Leads">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AnnualRevenue" PropertyName="AnnualRevenue" Width="50" Index="-1" />
+        <ColumnInfo Id="Category" PropertyName="Category" Width="70" Index="-1" />
+        <ColumnInfo Id="City" PropertyName="City" Width="70" Index="-1" />
+        <ColumnInfo Id="ClientCode" PropertyName="ClientCode" Width="70" Index="-1" />
+        <ColumnInfo Id="Country" PropertyName="Country" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedBy" PropertyName="CreatedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedDate" PropertyName="CreatedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="CreatedOn" PropertyName="CreatedOn" Width="70" Index="-1" />
+        <ColumnInfo Id="DisplayName" PropertyName="DisplayName" Width="70" Index="-1" />
+        <ColumnInfo Id="Fax" PropertyName="Fax" Width="70" Index="-1" />
+        <ColumnInfo Id="FirstName" PropertyName="FirstName" Width="70" Index="-1" />
+        <ColumnInfo Id="HomePhone" PropertyName="HomePhone" Width="70" Index="-1" />
+        <ColumnInfo Id="Industry" PropertyName="Industry" Width="70" Index="-1" />
+        <ColumnInfo Id="IsUnFollowed" PropertyName="IsUnFollowed" Width="50" Index="-1" />
+        <ColumnInfo Id="JobTitle" PropertyName="JobTitle" Width="70" Index="-1" />
+        <ColumnInfo Id="LastContactDate" PropertyName="LastContactDate" Width="70" Index="-1" />
+        <ColumnInfo Id="LastName" PropertyName="LastName" Width="70" Index="-1" />
+        <ColumnInfo Id="LeadId" PropertyName="LeadId" Width="50" Index="-1" />
+        <ColumnInfo Id="LeadSource" PropertyName="LeadSource" Width="70" Index="-1" />
+        <ColumnInfo Id="MobilePhone" PropertyName="MobilePhone" Width="70" Index="-1" />
+        <ColumnInfo Id="ModifiedBy" PropertyName="ModifiedBy" Width="70" Index="-1" />
+        <ColumnInfo Id="ModifiedDate" PropertyName="ModifiedDate" Width="70" Index="-1" />
+        <ColumnInfo Id="NumberOfEmployees" PropertyName="NumberOfEmployees" Width="70" Index="-1" />
+        <ColumnInfo Id="NumberofUncontactedDays" PropertyName="NumberofUncontactedDays" Width="50" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="OtherPhone" PropertyName="OtherPhone" Width="70" Index="-1" />
+        <ColumnInfo Id="Owner" PropertyName="Owner" Width="70" Index="-1" />
+        <ColumnInfo Id="PreferredContactMethod" PropertyName="PreferredContactMethod" Width="70" Index="-1" />
+        <ColumnInfo Id="PrimaryContact" PropertyName="PrimaryContact" Width="70" Index="-1" />
+        <ColumnInfo Id="Region" PropertyName="Region" Width="70" Index="-1" />
+        <ColumnInfo Id="SICCode" PropertyName="SICCode" Width="70" Index="-1" />
+        <ColumnInfo Id="State" PropertyName="State" Width="70" Index="-1" />
+        <ColumnInfo Id="Street1" PropertyName="Street1" Width="70" Index="-1" />
+        <ColumnInfo Id="Street2" PropertyName="Street2" Width="70" Index="-1" />
+        <ColumnInfo Id="WebSite" PropertyName="WebSite" Width="70" Index="-1" />
+        <ColumnInfo Id="Zip" PropertyName="Zip" Width="70" Index="-1" />
+        <ColumnInfo Id="Name" PropertyName="Name" Width="183" SortIndex="0" SortOrder="Ascending" Index="0" Caption="Name" />
+        <ColumnInfo Id="Topic" PropertyName="Topic" Width="70" Index="1" />
+        <ColumnInfo Id="CompanyName" PropertyName="CompanyName" Width="70" Caption="Company" Index="2" />
+        <ColumnInfo Id="OfficePhone" PropertyName="OfficePhone" Width="70" Index="3" Caption="OfficePhone" />
+        <ColumnInfo Id="Email" PropertyName="Email" Width="70" Index="4" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="70" Index="6" />
+        <ColumnInfo Id="FollowUpDate" PropertyName="FollowUpDate" Width="70" Caption="FollowUpDate" Index="7" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CRMLead_DetailView_Copy" ClassName="Modules.BusinessObjects.Accounts.CRMLead" DefaultFocusedItem="Topic" AllowNew="False" Caption="Leads">
+      <Items Id="Items">
+        <PropertyEditor Id="AnnualRevenue" PropertyName="AnnualRevenue" />
+        <PropertyEditor Id="CallLogs" PropertyName="CallLogs" View="CRMLead_CallLogs_ListView" />
+        <PropertyEditor Id="Category" PropertyName="Category" />
+        <PropertyEditor Id="City" PropertyName="City" />
+        <PropertyEditor Id="ClientCode" PropertyName="ClientCode" />
+        <PropertyEditor Id="CompanyName" PropertyName="CompanyName" />
+        <PropertyEditor Id="Country" PropertyName="Country" />
+        <PropertyEditor Id="CreatedBy" PropertyName="CreatedBy" />
+        <PropertyEditor Id="CreatedDate" PropertyName="CreatedDate" />
+        <PropertyEditor Id="CreatedOn" PropertyName="CreatedOn" />
+        <PropertyEditor Id="CRMQuote" PropertyName="CRMQuote" View="CRMLead_CRMQuote_ListView" Caption="Quotes" />
+        <PropertyEditor Id="DisplayName" PropertyName="DisplayName" />
+        <PropertyEditor Id="Email" PropertyName="Email" />
+        <PropertyEditor Id="Fax" PropertyName="Fax" />
+        <PropertyEditor Id="FirstName" PropertyName="FirstName" />
+        <PropertyEditor Id="FollowUpDate" PropertyName="FollowUpDate" />
+        <PropertyEditor Id="HomePhone" PropertyName="HomePhone" />
+        <PropertyEditor Id="Industry" PropertyName="Industry" Caption="Product Version" />
+        <PropertyEditor Id="IsUnFollowed" PropertyName="IsUnFollowed" />
+        <PropertyEditor Id="JobTitle" PropertyName="JobTitle" />
+        <PropertyEditor Id="LastContactDate" PropertyName="LastContactDate" />
+        <PropertyEditor Id="LastName" PropertyName="LastName" />
+        <PropertyEditor Id="LeadHistoryRecords" PropertyName="LeadHistoryRecords" View="CRMLead_LeadHistoryRecords_ListView" />
+        <PropertyEditor Id="LeadId" PropertyName="LeadId" />
+        <PropertyEditor Id="LeadSource" PropertyName="LeadSource" />
+        <PropertyEditor Id="MobilePhone" PropertyName="MobilePhone" />
+        <PropertyEditor Id="ModifiedBy" PropertyName="ModifiedBy" />
+        <PropertyEditor Id="ModifiedDate" PropertyName="ModifiedDate" />
+        <PropertyEditor Id="Name" PropertyName="Name" />
+        <PropertyEditor Id="Notes" PropertyName="Notes" View="CRMLead_Notes_ListView" />
+        <PropertyEditor Id="NumberOfEmployees" PropertyName="NumberOfEmployees" />
+        <PropertyEditor Id="NumberofUncontactedDays" PropertyName="NumberofUncontactedDays" />
+        <PropertyEditor Id="OfficePhone" PropertyName="OfficePhone" />
+        <PropertyEditor Id="Oid" PropertyName="Oid" />
+        <PropertyEditor Id="OtherPhone" PropertyName="OtherPhone" />
+        <PropertyEditor Id="Owner" PropertyName="Owner" />
+        <PropertyEditor Id="PreferredContactMethod" PropertyName="PreferredContactMethod" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxEnumPropertyEditor" />
+        <PropertyEditor Id="PrimaryContact" PropertyName="PrimaryContact" View="" LookupEditorMode="AllItems" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridLookupPropertyEditor" />
+        <PropertyEditor Id="PrimaryContacts" PropertyName="PrimaryContacts" View="Lead_PrimaryContacts_ListView" />
+        <PropertyEditor Id="Region" PropertyName="Region" />
+        <PropertyEditor Id="SICCode" PropertyName="SICCode" />
+        <PropertyEditor Id="State" PropertyName="State" />
+        <PropertyEditor Id="Status" PropertyName="Status" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxEnumPropertyEditor" />
+        <PropertyEditor Id="Street1" PropertyName="Street1" />
+        <PropertyEditor Id="Street2" PropertyName="Street2" />
+        <PropertyEditor Id="Topic" PropertyName="Topic" />
+        <PropertyEditor Id="WebSite" PropertyName="WebSite" />
+        <PropertyEditor Id="Zip" PropertyName="Zip" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="99.893503727369549">
+            <LayoutGroup Id="Auto4142b047-f8d2-431c-8714-6d56f53cde43" ShowCaption="False" Caption="Auto4142b047-f8d2-431c-8714-6d56f53cde43(3)" Index="0" RelativeSize="100">
+              <LayoutGroup Id="Auto2aedf94b-40ae-4f60-9001-03a262172288" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="87.31343283582089">
+                <LayoutGroup Id="Auto9efa8e97-6b14-4dfa-8aee-608c4e917bad" ShowCaption="False" Caption="" Index="0" RelativeSize="66.629588431590662">
+                  <LayoutGroup Id="Item1" ShowCaption="True" Caption="SUMMARY" CaptionLocation="Top" Index="0" RelativeSize="26.251526251526251">
+                    <LayoutItem Id="Topic" ViewItem="Topic" CaptionLocation="Top" Index="0" RelativeSize="26.373626373626372" />
+                    <LayoutGroup Id="Autoecd4421b-3b62-4b82-8355-199ed68f7e27" ShowCaption="False" Caption="Autoecd4421b-3b62-4b82-8355-199ed68f7e27(6)" Direction="Horizontal" Index="1" RelativeSize="73.626373626373621">
+                      <LayoutGroup Id="Auto5512685c-d779-40c2-84e9-9ba019a0582d" ShowCaption="False" Caption="Auto5512685c-d779-40c2-84e9-9ba019a0582d(7)" Index="0" RelativeSize="50">
+                        <LayoutItem Id="FirstName" ViewItem="FirstName" CaptionLocation="Top" Index="0" RelativeSize="34.328358208955223" />
+                        <LayoutItem Id="LastName" ViewItem="LastName" CaptionLocation="Top" Index="1" RelativeSize="29.850746268656717" />
+                        <LayoutItem Id="PrimaryContact" ViewItem="PrimaryContact" CaptionLocation="Top" Index="2" RelativeSize="35.820895522388057" />
+                      </LayoutGroup>
+                      <LayoutGroup Id="Auto0f08557a-a0e9-408e-8189-882cfcdb4c34" ShowCaption="False" Caption="Auto0f08557a-a0e9-408e-8189-882cfcdb4c34(11)" Index="1" RelativeSize="50">
+                        <LayoutItem Id="CompanyName" ViewItem="CompanyName" CaptionLocation="Top" Index="0" RelativeSize="34.328358208955223" />
+                        <LayoutItem Id="JobTitle" ViewItem="JobTitle" CaptionLocation="Top" Index="1" RelativeSize="65.671641791044777" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item2" ShowCaption="True" Caption="CONTACT INFORMATION" CaptionLocation="Top" Direction="Horizontal" Index="1" RelativeSize="24.542124542124544">
+                    <LayoutGroup Id="Autoa697b987-e5df-42e6-89bc-6f16445d9761" ShowCaption="False" Caption="Autoa697b987-e5df-42e6-89bc-6f16445d9761(15)" Index="0" RelativeSize="50">
+                      <LayoutItem Id="OfficePhone" ViewItem="OfficePhone" CaptionLocation="Top" Index="0" RelativeSize="27.272727272727273" />
+                      <LayoutItem Id="Fax" ViewItem="Fax" CaptionLocation="Top" Index="1" RelativeSize="22.727272727272727" />
+                      <LayoutItem Id="MobilePhone" ViewItem="MobilePhone" CaptionLocation="Top" Index="2" RelativeSize="22.727272727272727" />
+                      <LayoutItem Id="HomePhone" ViewItem="HomePhone" CaptionLocation="Top" Index="3" RelativeSize="27.272727272727273" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto6f944c0d-f323-4e7e-acf8-444b6944551d" ShowCaption="False" Caption="Auto6f944c0d-f323-4e7e-acf8-444b6944551d(20)" Index="1" RelativeSize="50">
+                      <LayoutItem Id="OtherPhone" ViewItem="OtherPhone" CaptionLocation="Top" Index="0" RelativeSize="27.272727272727273" />
+                      <LayoutItem Id="WebSite" ViewItem="WebSite" CaptionLocation="Top" Index="1" RelativeSize="22.727272727272727" />
+                      <LayoutItem Id="Email" ViewItem="Email" CaptionLocation="Top" Index="2" RelativeSize="22.727272727272727" />
+                      <LayoutItem Id="FollowUpDate" ViewItem="FollowUpDate" CaptionLocation="Top" Index="3" RelativeSize="27.272727272727273" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item4" ShowCaption="True" Caption="DETAILS" CaptionLocation="Top" Direction="Horizontal" Index="2" RelativeSize="14.774114774114775">
+                    <LayoutGroup Id="Auto22665ad9-a309-4d2b-adbf-1ed61a9ada4b" ShowCaption="False" Caption="Auto22665ad9-a309-4d2b-adbf-1ed61a9ada4b(31)" Index="0" RelativeSize="50">
+                      <LayoutItem Id="NumberOfEmployees" ViewItem="NumberOfEmployees" CaptionLocation="Top" Index="0" RelativeSize="50" />
+                      <LayoutItem Id="Industry" ViewItem="Industry" CaptionLocation="Top" Index="1" RelativeSize="50" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto26243f6a-8bf6-4df1-bbd5-a732f3b38877" ShowCaption="False" Caption="Auto26243f6a-8bf6-4df1-bbd5-a732f3b38877(34)" Index="1" RelativeSize="50">
+                      <LayoutItem Id="LeadSource" ViewItem="LeadSource" CaptionLocation="Top" Index="0" RelativeSize="50" />
+                      <LayoutItem Id="Category" ViewItem="Category" CaptionLocation="Top" Index="1" RelativeSize="50" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item6" ShowCaption="True" Caption="ADDRESS" CaptionLocation="Top" Direction="Horizontal" Index="3" RelativeSize="19.658119658119659">
+                    <LayoutGroup Id="Auto2c8425b8-02bd-4b49-ac11-f2ee7dc1d370" ShowCaption="False" Caption="Auto2c8425b8-02bd-4b49-ac11-f2ee7dc1d370(38)" Index="0" RelativeSize="50">
+                      <LayoutItem Id="Street1" ViewItem="Street1" CaptionLocation="Top" Index="0" RelativeSize="35.294117647058826" />
+                      <LayoutItem Id="Street2" ViewItem="Street2" CaptionLocation="Top" Index="1" RelativeSize="29.411764705882351" />
+                      <LayoutItem Id="City" ViewItem="City" CaptionLocation="Top" Index="2" RelativeSize="35.294117647058826" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Autodb8c19ca-abd4-4f29-930d-04fb1709d02f" ShowCaption="False" Caption="Autodb8c19ca-abd4-4f29-930d-04fb1709d02f(42)" Index="1" RelativeSize="50">
+                      <LayoutItem Id="State" ViewItem="State" CaptionLocation="Top" Index="0" RelativeSize="35.294117647058826" />
+                      <LayoutItem Id="Zip" ViewItem="Zip" CaptionLocation="Top" Index="1" RelativeSize="29.411764705882351" />
+                      <LayoutItem Id="Country" ViewItem="Country" CaptionLocation="Top" Index="2" RelativeSize="35.294117647058826" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item5" ShowCaption="True" Caption="ACCOUNT MANAGEMENT" CaptionLocation="Top" Direction="Horizontal" Index="4" RelativeSize="14.774114774114775">
+                    <LayoutGroup Id="Autoe10e63f3-02b7-4a9c-87b8-4cfae9124837" ShowCaption="False" Caption="Autoe10e63f3-02b7-4a9c-87b8-4cfae9124837(47)" Index="0" RelativeSize="50">
+                      <LayoutItem Id="Owner" ViewItem="Owner" CaptionLocation="Top" Index="0" RelativeSize="50" />
+                      <LayoutItem Id="PreferredContactMethod" ViewItem="PreferredContactMethod" CaptionLocation="Top" Index="1" RelativeSize="50" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto4370e60b-c5ca-4624-92a2-079ac4f6a4f7" ShowCaption="False" Caption="Auto4370e60b-c5ca-4624-92a2-079ac4f6a4f7(50)" Index="1" RelativeSize="50">
+                      <LayoutItem Id="Status" ViewItem="Status" CaptionLocation="Top" Index="0" RelativeSize="50" />
+                      <LayoutItem Id="Region" ViewItem="Region" CaptionLocation="Top" Index="1" RelativeSize="50" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="Item3" Index="1" RelativeSize="33.370411568409345" />
+              </LayoutGroup>
+              <TabbedGroup Id="Tabs" Index="1" RelativeSize="12.686567164179104">
+                <LayoutGroup Id="Notes" ShowCaption="True" Index="0" RelativeSize="100">
+                  <LayoutItem Id="Notes" ViewItem="Notes" Index="0" RelativeSize="100" />
+                </LayoutGroup>
+                <LayoutGroup Id="CRMQuote" ShowCaption="True" Index="1" RelativeSize="100">
+                  <LayoutItem Id="CRMQuote" ViewItem="CRMQuote" Index="0" RelativeSize="100" />
+                </LayoutGroup>
+              </TabbedGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto17feb260-4d07-4bea-af3a-9f27e78494ff" ShowCaption="False" Caption="Auto17feb260-4d07-4bea-af3a-9f27e78494ff(28)" Index="1" RelativeSize="0.10649627263045794">
+            <LayoutGroup Id="Auto32737c32-85ca-494f-9979-1d2050cfae66" ShowCaption="False" Caption="Auto32737c32-85ca-494f-9979-1d2050cfae66(29)" Index="0" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CRMContact_ListView_Combo_Opporunity">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SourceLead" PropertyName="SourceLead" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="CRMContact_ListView_Combo">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SourceLead" PropertyName="SourceLead" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CRMContact_DetailView_Copy_Opportunity">
+      <Items Id="Items">
+        <PropertyEditor Id="SourceLead" PropertyName="SourceLead" />
+        <PropertyEditor Id="Customer" View="CRMCustomer_ListView" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CRMContact_DetailView_Copy_Lead">
+      <Items Id="Items">
+        <PropertyEditor Id="SourceLead" PropertyName="SourceLead" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Contract_DetailView_Rollback">
+      <Items Id="Items">
+        <PropertyEditor Id="ReviewComments" View="Contract_ReviewComments_ListView" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Contract_DetailView_ContractValidation_Copy">
+      <Items Id="Items">
+        <PropertyEditor Id="ReviewComments" View="Contract_ReviewComments_ListView" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CloseCRMProspects_popup_DetailView_Copy">
+      <Items Id="Items">
+        <PropertyEditor Id="SourceLead" PropertyName="SourceLead" />
+        <PropertyEditor Id="PotentialCustomer" View="CRMCustomer_ListView_Prospects" />
+      </Items>
+    </DetailView>
+    <DetailView Id="BottleSetup_DetailView_Distribution">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BottleSetup">
+              <LayoutItem Id="Bottleid" ViewItem="Bottleid" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="AssignDashboardToUserDepartment_DetailView_Copy_DashboardSetting">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Autode62e854-ae6b-40db-b7a4-35f55528cc02">
+            <LayoutItem Id="Navigations" ViewItem="Navigations" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CRMQuotes_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoe7bb2d2b-9d0a-422b-b586-b367219b390c">
+              <LayoutGroup Id="Item11">
+                <LayoutGroup Id="Autof03932b1-451e-4e6d-82ab-b49c98b9734e">
+                  <LayoutItem Id="SourceProspectsortunity" ViewItem="SourceProspectsortunity" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="strDetailedAmount" ViewItem="strDetailedAmount" />
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto659fcaba-2a79-4747-8cf8-053839757f9a">
+                  <LayoutGroup Id="Autob5b42604-6fd5-4edd-8f79-c92e495e5a2f">
+                    <LayoutItem Id="CanceledBy" ViewItem="CanceledBy" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Activity_Notes_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CRMLead" Index="-1" />
+        <ColumnInfo Id="Status" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="AssignDashboardToUserDepartment_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="AssignDashboardToUserDepartment">
+              <LayoutGroup Id="Auto5c051238-ca31-475e-a248-05a781163c36">
+                <LayoutItem Id="User" ViewItem="User" />
+                <LayoutItem Id="Navigations" ViewItem="Navigations" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CalibrationCurve_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CalibrationCurve">
+              <LayoutGroup Id="Autof4fdfa70-be25-496d-a292-074a901ae0f7">
+                <LayoutItem Id="CalibrationCurve" ViewItem="CalibrationCurve" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CRMContact_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autof7d85471-00bd-4866-a378-095f2f53b0b2">
+              <LayoutGroup Id="Item2">
+                <LayoutGroup Id="Auto2c5687d0-374a-4db1-a130-7b9cbfd0dc0e">
+                  <LayoutItem Id="BirthDate" ViewItem="BirthDate" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CRMProspects_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoa9879468-cd5d-4c6c-a92b-d2892658afbd">
+              <LayoutGroup Id="Item4">
+                <LayoutItem Id="SourceLead" ViewItem="SourceLead" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Quotes">
+              <LayoutItem Id="CRMQuote" ViewItem="CRMQuote" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CRMProspects_Notes_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CRMLead" Index="-1" />
+        <ColumnInfo Id="Status" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxEnumPropertyEditor" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CRMQuote_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="CRMLead" LookupEditorMode="AllItems" />
+      </Items>
+    </DetailView>
+    <ListView Id="Customer_Note_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CRMLead" Index="-1" />
+        <ColumnInfo Id="Status" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DefaultSetting_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DefaultSetting_col2">
+              <LayoutGroup Id="Item3">
+                <LayoutGroup Id="Item9">
+                  <LayoutGroup Id="Item10">
+                    <LayoutItem Id="StockInventory" ViewItem="StockInventory" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="ContactLogs" ViewItem="ContactLogs" />
+                <LayoutItem Id="NotesinClients" ViewItem="NotesinClients" />
+                <LayoutItem Id="NotesinOpportunities" ViewItem="NotesinOpportunities" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item7">
+                <LayoutItem Id="UnfollowedAccounts" ViewItem="UnfollowedAccounts" />
+                <LayoutItem Id="UnfollowedClients" ViewItem="UnfollowedClients" />
+                <LayoutItem Id="Accounts" ViewItem="Accounts" />
+                <LayoutItem Id="Opportuinty" ViewItem="Opportuinty" />
+                <LayoutItem Id="OpenOpportunity" ViewItem="OpenOpportunity" />
+                <LayoutItem Id="UnfollowedOpportunities" ViewItem="UnfollowedOpportunities" />
+                <LayoutItem Id="ClosedOpportunity" ViewItem="ClosedOpportunity" />
+                <LayoutItem Id="CRMContact" ViewItem="CRMContact" />
+                <LayoutItem Id="MyOpenOpportunities" ViewItem="MyOpenOpportunities" />
+                <LayoutItem Id="CRMAccount" ViewItem="CRMAccount" />
+                <LayoutItem Id="ClosedAccount" ViewItem="ClosedAccount" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item6">
+                <LayoutItem Id="PreKitting" ViewItem="PreKitting" />
+                <LayoutItem Id="FinalInspection" ViewItem="FinalInspection" />
+                <LayoutItem Id="Shipping" ViewItem="Shipping" />
+                <LayoutItem Id="OrderClosing" ViewItem="OrderClosing" />
+                <LayoutItem Id="Shipment" ViewItem="Shipment" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item5">
+                <LayoutItem Id="QCCheck" ViewItem="QCCheck" />
+                <LayoutItem Id="SDS" ViewItem="SDS" />
+                <LayoutItem Id="GHSLabeling" ViewItem="GHSLabeling" />
+                <LayoutItem Id="Packing" ViewItem="Packing" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DefaultSetting_col1">
+              <LayoutGroup Id="Item4">
+                <LayoutGroup Id="Item13">
+                  <LayoutGroup Id="Item14">
+                    <LayoutGroup Id="Item15">
+                      <LayoutGroup Id="Item16">
+                        <LayoutGroup Id="Item17">
+                          <LayoutGroup Id="Item18">
+                            <LayoutGroup Id="Item19">
+                              <LayoutItem Id="Preservative" ViewItem="Preservative" />
+                              <LayoutItem Id="QCTypes" ViewItem="QCTypes" />
+                              <LayoutItem Id="Units" ViewItem="Units" />
+                              <LayoutItem Id="ProductStorage" ViewItem="ProductStorage" />
+                              <LayoutItem Id="ProductCategory" ViewItem="ProductCategory" />
+                              <LayoutItem Id="ProductCodeandTestCodeLink" ViewItem="ProductCodeandTestCodeLink" />
+                              <LayoutItem Id="ProductCodeandTemplateLink" ViewItem="ProductCodeandTemplateLink" />
+                              <LayoutItem Id="Matrix" ViewItem="Matrix" />
+                              <LayoutItem Id="LoginImageEditor" ViewItem="LoginImageEditor" />
+                              <LayoutItem Id="DangerousGoods" ViewItem="DangerousGoods" />
+                              <LayoutItem Id="Containers" ViewItem="Containers" />
+                              <LayoutItem Id="Carriers" ViewItem="Carriers" />
+                              <LayoutItem Id="Boxing" ViewItem="Boxing" />
+                              <LayoutItem Id="Boxes" ViewItem="Boxes" />
+                              <LayoutItem Id="Utility" ViewItem="Utility" />
+                            </LayoutGroup>
+                            <LayoutItem Id="Companies" ViewItem="Companies" />
+                          </LayoutGroup>
+                          <LayoutItem Id="ChecklistSetup" ViewItem="ChecklistSetup" />
+                        </LayoutGroup>
+                        <LayoutItem Id="TestGroup" ViewItem="TestGroup" />
+                        <LayoutItem Id="RoundOffTest" ViewItem="RoundOffTest" />
+                        <LayoutItem Id="Test" ViewItem="Test" />
+                      </LayoutGroup>
+                      <LayoutItem Id="Roles" ViewItem="Roles" />
+                      <LayoutItem Id="Security" ViewItem="Security" />
+                    </LayoutGroup>
+                    <LayoutItem Id="MaxBottleLimit" ViewItem="MaxBottleLimit" />
+                    <LayoutItem Id="FormulationTemplateBuilder" ViewItem="FormulationTemplateBuilder" />
+                    <LayoutItem Id="CustomizedProductCodes" ViewItem="CustomizedProductCodes" />
+                    <LayoutItem Id="ProductCatalog" ViewItem="ProductCatalog" />
+                    <LayoutItem Id="ItemImpurityEditor" ViewItem="ItemImpurityEditor" />
+                    <LayoutItem Id="PriceList" ViewItem="PriceList" />
+                    <LayoutItem Id="Employee" ViewItem="Employee" />
+                  </LayoutGroup>
+                  <LayoutItem Id="KpiDefinition_ListView" ViewItem="KpiDefinition_ListView" />
+                  <LayoutItem Id="KpiScorecard_ListView" ViewItem="KpiScorecard_ListView" />
+                  <LayoutItem Id="KPI" ViewItem="KPI" />
+                </LayoutGroup>
+                <LayoutItem Id="Invoices" ViewItem="Invoices" />
+                <LayoutItem Id="MyQuotes" ViewItem="MyQuotes" />
+                <LayoutItem Id="OpenQuotes" ViewItem="OpenQuotes" />
+                <LayoutItem Id="Quote" ViewItem="Quote" />
+                <LayoutItem Id="CancelledsalesOrders" ViewItem="CancelledsalesOrders" />
+                <LayoutItem Id="SalesOrderTracking" ViewItem="SalesOrderTracking" />
+                <LayoutItem Id="SalesOrderReview2" ViewItem="SalesOrderReview2" />
+                <LayoutItem Id="ClosedsalesOrders" ViewItem="ClosedsalesOrders" />
+                <LayoutItem Id="ClosedQuotes" ViewItem="ClosedQuotes" />
+                <LayoutItem Id="SalesOrderFiles" ViewItem="SalesOrderFiles" />
+                <LayoutItem Id="SalesOrders" ViewItem="SalesOrders" />
+                <LayoutItem Id="Sales" ViewItem="Sales" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item2">
+                <LayoutGroup Id="Item8">
+                  <LayoutItem Id="QCLevel2" ViewItem="QCLevel2" />
+                  <LayoutGroup Id="Auto3536f78b-0ee1-410c-bab8-fa6386a89058">
+                    <LayoutItem Id="QCLevel3" ViewItem="QCLevel3" />
+                    <LayoutItem Id="JobStatusTracking" ViewItem="JobStatusTracking" />
+                  </LayoutGroup>
+                  <LayoutItem Id="SDMSResultEntry" ViewItem="SDMSResultEntry" />
+                  <LayoutItem Id="QCBatches" ViewItem="QCBatches" />
+                  <LayoutItem Id="QualityControl" ViewItem="QualityControl" />
+                </LayoutGroup>
+                <LayoutItem Id="ProcessDataEntry" ViewItem="ProcessDataEntry" />
+                <LayoutItem Id="ProcessDataEntryReview" ViewItem="ProcessDataEntryReview" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item1">
+                <LayoutItem Id="CalculationReview" ViewItem="CalculationReview" />
+                <LayoutItem Id="Calculation" ViewItem="Calculation" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Note_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Note">
+              <LayoutGroup Id="Note_col1">
+                <LayoutItem Id="CRMLead" Index="4" RelativeSize="11.538461538461538" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NotebookBuilder_DetailView">
+      <Items Id="Items">
+        <DashboardViewItem Id="CalibrationSettings" ViewId="CalibrationSettings_ListView" Caption="CalibrationSettings" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item7">
+              <LayoutItem Id="CalibrationSetting" ViewItem="CalibrationSetting" />
+              <LayoutItem Id="CalibrationSettings" ViewItem="CalibrationSettings" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ResultEntryQueryPanel_col1">
+              <LayoutItem Id="viewItemQCBatchID" ViewItem="viewItemQCBatchID" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="SampleRegistration">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="SampleregisterBottleAddRemove" ActionContainer="SampleBottleAddRemove" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="TurnAroundTime_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TurnAroundTime">
+              <LayoutGroup Id="TurnAroundTime_col2">
+                <LayoutItem Id="Welcome" ViewItem="Welcome" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="UnfollowedAccounts">
+        <Items Id="Items">
+          <Item Id="UnfollowedClients" ViewId="CRMAccount_ListView_UnfollowedClients" />
+        </Items>
+      </Item>
+      <Item Id="Maintenance">
+        <Items Id="Items">
+          <Item Id="System">
+            <Items Id="Items">
+              <Item Id="TestGroup" ViewId="TestGroup_ListView" />
+              <Item Id="TestForm" ViewId="TestForm_LookupListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Crm">
+        <Items Id="Items">
+          <Item Id="UnfollowedAccounts">
+            <Items Id="Items">
+              <Item Id="UnfollowedProspects" ViewId="CRMProspects_ListView_UnfollowedProspects" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Accounts">
+        <Items Id="Items">
+          <Item Id="CRMLead_ListView" ViewId="CRMLead_ListView">
+            <Items Id="Items">
+              <Item Id="OpenLeadsListView" ViewId="CRMLead_ListView_Copy_OpenLeads" />
+              <Item Id="navCRMMyOpenLeads" ViewId="CRMLead_ListView_Copy_MyOpenLeads" />
+              <Item Id="navClosedLeadsListView" ViewId="CRMLead_ListView_Copy_ClosedLeads" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="DataEntry">
+        <Items Id="Items">
+          <Item Id="QCbatches" ViewId="QCBatch_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="Utility">
+            <Items Id="Items">
+              <Item Id="Test">
+                <Items Id="Items">
+                  <Item Id="PrepMethodLabware" ViewId="PrepMethodLabware_ListView" />
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

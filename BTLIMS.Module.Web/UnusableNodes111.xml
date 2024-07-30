@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Requisition_DetailView_Receive">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Description" ViewItem="Description" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Requisition">
+              <LayoutGroup Id="Requisition_col1">
+                <LayoutItem Id="PackUnits" ViewItem="PackUnits" />
+                <LayoutItem Id="StockQty" ViewItem="StockQty" />
+                <LayoutItem Id="Brand" ViewItem="Brand" />
+                <LayoutItem Id="Vendor" ViewItem="Vendor" />
+                <LayoutItem Id="Category" ViewItem="Category" />
+                <LayoutItem Id="Grade" ViewItem="Grade" />
+                <LayoutItem Id="Specification" ViewItem="Specification" />
+                <LayoutItem Id="ItemCode" ViewItem="ItemCode" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="Consumption_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Consumption">
+              <LayoutGroup Id="Consumption_col1">
+                <LayoutItem Id="Category" RelativeSize="4.0404040404040407" />
+                <LayoutItem Id="Specification" RelativeSize="4.0404040404040407" />
+                <LayoutItem Id="ConsumptionItemQty" ViewItem="ConsumptionItemQty" />
+              </LayoutGroup>
+              <LayoutGroup Id="Consumption_col2">
+                <LayoutItem Id="StoredItemQty" RelativeSize="5.3872053872053876" />
+                <LayoutItem Id="ConsumptionDate" RelativeSize="4.0404040404040407" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+  </Views>
+</Application>

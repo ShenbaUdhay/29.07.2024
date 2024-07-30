@@ -1,0 +1,1864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LDM.Module</RootNamespace>
+    <AssemblyName>LDM.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ABCpdf, Version=5.0.2.3, Culture=neutral, PublicKeyToken=a7a0b3f5184f2169">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLL\ABCpdf.DLL</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLL\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Docs.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Chart.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Chart.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.CloneObject.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Dashboards.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.FileAttachment.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.HtmlPropertyEditor.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Kpi.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Notifications.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Notifications.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Office.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Scheduler.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.Scheduler.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Security.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.StateMachine.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Win.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Security.Xpo.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Drawing, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Export">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v20.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\06.ALPACA Codes\ALPACA_20220311\ALPACpre\ALPACpre.Module\bin\Debug\DevExpress.Spreadsheet.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\06.ALPACA Codes\ALPACA_20220311\ALPACpre\ALPACpre.Module\bin\Debug\DevExpress.Web.ASPxSpreadsheet.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Web, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.13.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.13.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=7.2.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.2.0\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net35\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net35\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLL\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NCalc, Version=1.3.8.0, Culture=neutral, PublicKeyToken=973cde3f1cafed03, processorArchitecture=MSIL">
+      <HintPath>..\packages\ncalc.1.3.8\lib\NCalc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Frameworks, Version=5.0.0.6, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Frameworks.5.0.0\lib\net40\NuGet.Frameworks.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Rebex.Net.Ftp">
+      <HintPath>..\..\..\..\DLL\Rebex.Net.Ftp.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Net.ProxySocket">
+      <HintPath>..\..\..\..\DLL\Rebex.Net.ProxySocket.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\FuncCurrentCompanyName.cs" />
+    <Compile Include="BusinessObjects\FuncCurrentUserIsAdmin.cs" />
+    <Compile Include="BusinessObjects\FuncCurrentUserIsAdministrative.cs" />
+    <Compile Include="BusinessObjects\FuncCurrentUserName.cs" />
+    <Compile Include="BusinessObjects\FuncCurrentCompanyOid.cs" />
+    <Compile Include="BusinessObjects\AuditTrail\XPAliesedMemberInfo.cs" />
+    <Compile Include="BusinessObjects\FuncSignificantNotation.cs" />
+    <Compile Include="BusinessObjects\GetTextAndRectangle.cs" />
+    <Compile Include="BusinessObjects\ImagePreviewHandler.cs" />
+    <Compile Include="BusinessObjects\MyLocationTextExtractionStrategy.cs" />
+    <Compile Include="Controllers\Accounting\DepositsViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Accounting\DepositsViewController.Designer.cs" />
+    <Compile Include="Controllers\Accrediation\AccrediationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Accrediation\AccrediationViewController.Designer.cs">
+      <DependentUpon>AccrediationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\BarcodeSampleCustody\SampleInOutController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\BarcodeSampleCustody\SampleInOutController.Designer.cs" />
+    <Compile Include="Controllers\CRM\CRMClientViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CRM\CRMClientViewController.designer.cs" />
+    <Compile Include="Controllers\CRM\CRMContactLogViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CRM\CRMContactLogViewController.Designer.cs" />
+    <Compile Include="Controllers\CRM\ProspectsFilterController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CRM\ProspectsFilterController.designer.cs" />
+    <Compile Include="Controllers\CRM\QuoteViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CRM\QuoteViewController.Designer.cs" />
+    <Compile Include="Controllers\DailyQC\DailyQCViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DailyQC\DailyQCViewController.Designer.cs" />
+    <Compile Include="Controllers\Dashboard\AssignDashboardViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Dashboard\AssignDashboardViewController.Designer.cs" />
+    <Compile Include="Controllers\Dashboard\MainDashboardViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Dashboard\MainDashboardViewController.Designer.cs" />
+    <Compile Include="Controllers\Dashboard\SortViewController.cs" />
+    <Compile Include="Controllers\Dashboard\SortViewController.Designer.cs" />
+    <Compile Include="Controllers\DataCenter\DataCenterViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DataCenter\DataCenterViewController.Designer.cs">
+      <DependentUpon>DataCenterViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DataExplorer\DataExplorerViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DataExplorer\DataExplorerViewController.Designer.cs" />
+    <Compile Include="Controllers\DataReview\DataReviewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DataReview\DataReviewController.Designer.cs" />
+    <Compile Include="Controllers\DataReview\DataReviewQueryPanelController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DataReview\DataReviewQueryPanelController.designer.cs" />
+    <Compile Include="Controllers\DocumentManagement\ManualDocumentManagementController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DocumentManagement\ManualDocumentManagementController.Designer.cs" />
+    <Compile Include="Controllers\DOC\DOCViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DOC\DOCViewController.Designer.cs" />
+    <Compile Include="Controllers\DynamicReportDesigner\DynamicReportDesigner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DynamicReportDesigner\DynamicReportDesigner.Designer.cs">
+      <DependentUpon>DynamicReportDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\EDD\EDDBuilderViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\EDD\EDDBuilderViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\AlertViewControllercs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\AlertViewControllercs.Designer.cs" />
+    <Compile Include="Controllers\ICM\AsgnItemstoTestViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\AsgnItemstoTestViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\AssignItemsAndTestsController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\AssignItemsAndTestsController.Designer.cs" />
+    <Compile Include="Controllers\ICM\AssignTestToItemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\AssignTestToItemController.Designer.cs" />
+    <Compile Include="Controllers\ICM\ConsumptionViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ConsumptionViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\CopyToAllCell\CopyToAllCell\DistributionCopyToAllCallViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\CopyToAllCell\CopyToAllCell\DistributionCopyToAllCallViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\DecimalPlaceViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\DecimalPlaceViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\DisposalViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\DisposalViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\DistributionViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\DistributionViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\ExistingstockViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ExistingstockViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\FileUploadFilterController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\FileUploadFilterController.Designer.cs" />
+    <Compile Include="Controllers\ICM\IcmDismissController.cs" />
+    <Compile Include="Controllers\ICM\IcmDismissController.Designer.cs" />
+    <Compile Include="Controllers\ICM\ICMLTReportController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ICMLTReportController.Designer.cs" />
+    <Compile Include="Controllers\ICM\ICMRollbackReasonViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ICMRollbackReasonViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\ICMRollbackViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ICMRollbackViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\IcmSortOrderViewController.cs" />
+    <Compile Include="Controllers\ICM\IcmSortOrderViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\ICMValidationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ICMValidationViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\ItemBarCodeController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ItemBarCodeController.Designer.cs" />
+    <Compile Include="Controllers\ICM\ItemStockQtyEditorController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ItemStockQtyEditorController.Designer.cs" />
+    <Compile Include="Controllers\ICM\ItemViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ItemViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\POViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\POViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\PropertyGridEditorEventArgs.cs" />
+    <Compile Include="Controllers\ICM\ReagentCertificate\VendorReagentCertificateViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ReagentCertificate\VendorReagentCertificateViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\ReceiveViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\ReceiveViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\RequisitionViewcontroller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\RequisitionViewcontroller.Designer.cs" />
+    <Compile Include="Controllers\ICM\SelectCheckboxPageViewController.cs" />
+    <Compile Include="Controllers\ICM\SelectCheckboxPageViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\VendorViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\VendorViewController.Designer.cs" />
+    <Compile Include="Controllers\ICM\WorkflowConfigViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ICM\WorkflowConfigViewController.Designer.cs" />
+    <Compile Include="Controllers\Language\LanguageController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Language\LanguageController.Designer.cs">
+      <DependentUpon>LanguageController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Metrc\Metrcdetailviewopen.cs" />
+    <Compile Include="Controllers\Metrc\Metrcdetailviewopen.Designer.cs">
+      <DependentUpon>Metrcdetailviewopen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Metrc\MetrcController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Metrc\MetrcController.Designer.cs">
+      <DependentUpon>MetrcController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\PTstudy\PTStudyLogViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\PTstudy\PTStudyLogViewController.Designer.cs" />
+    <Compile Include="Controllers\Public\AuditlogsummaryViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\AuditlogsummaryViewController.Designer.cs" />
+    <Compile Include="Controllers\Public\CalendarTabViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\CalendarTabViewController.Designer.cs">
+      <DependentUpon>CalendarTabViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\CalenderController.cs" />
+    <Compile Include="Controllers\Public\CalenderController.Designer.cs">
+      <DependentUpon>CalenderController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\DateFormatDetailViewController.cs" />
+    <Compile Include="Controllers\Public\DateFormatDetailViewController.Designer.cs" />
+    <Compile Include="Controllers\Public\DownloadHttpHandler.cs" />
+    <Compile Include="Controllers\Public\ExceptionTrackingViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\ExceptionTrackingViewController.Designer.cs">
+      <DependentUpon>ExceptionTrackingViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\FileLinkSepDBController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\FileLinkSepDBController.designer.cs" />
+    <Compile Include="Controllers\Public\FTPSetup\FtpInfo.cs" />
+    <Compile Include="Controllers\Public\HideAutofilterRowViewController.cs" />
+    <Compile Include="Controllers\Public\HideAutofilterRowViewController.Designer.cs">
+      <DependentUpon>HideAutofilterRowViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\ListViewColumnWidthController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\ListViewColumnWidthController.Designer.cs" />
+    <Compile Include="Controllers\Public\ListViewNamingConventionController.cs" />
+    <Compile Include="Controllers\Public\ListViewNamingConventionController.Designer.cs">
+      <DependentUpon>ListViewNamingConventionController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\LogoffWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\LogoffWindowController.Designer.cs">
+      <DependentUpon>LogoffWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\MyDetailsWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\MyDetailsWindowController.Designer.cs">
+      <DependentUpon>MyDetailsWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\NavBarScrollController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\NavBarScrollController.Designer.cs">
+      <DependentUpon>NavBarScrollController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\NavigationRefreshController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\NavigationRefreshController.Designer.cs">
+      <DependentUpon>NavigationRefreshController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\NavigationViewHideController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\NavigationViewHideController.Designer.cs">
+      <DependentUpon>NavigationViewHideController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\PopupwindowSizeViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\PopupwindowSizeViewController.Designer.cs">
+      <DependentUpon>PopupwindowSizeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\RuleRequiredFieldDisableViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\RuleRequiredFieldDisableViewController.Designer.cs">
+      <DependentUpon>RuleRequiredFieldDisableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\RuleRequiredFieldStyleController.cs" />
+    <Compile Include="Controllers\Public\RuleRequiredFieldStyleController.Designer.cs">
+      <DependentUpon>RuleRequiredFieldStyleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\ValidationMessageViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\HideActionViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\HideActionViewController.Designer.cs">
+      <DependentUpon>HideActionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\HideDetailViewController.cs" />
+    <Compile Include="Controllers\Public\HideDetailViewController.Designer.cs">
+      <DependentUpon>HideDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\RefreshPublicVariableViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\RefreshPublicVariableViewController.Designer.cs">
+      <DependentUpon>RefreshPublicVariableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Public\DeleteValidationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\DeleteValidationViewController.Designer.cs">
+      <DependentUpon>DeleteValidationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ReagentPreparation\ReagentPreparationLogViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ReagentPreparation\ReagentPreparationLogViewController.Designer.cs" />
+    <Compile Include="Controllers\ReagentPreparation\ReagentPrepCalculationEditorViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ReagentPreparation\ReagentPrepCalculationEditorViewController.Designer.cs" />
+    <Compile Include="Controllers\Reporting\BatchReportingViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Reporting\BatchReportingViewController.Designer.cs" />
+    <Compile Include="Controllers\Reporting\ReportingQueryPanelViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Reporting\ReportingQueryPanelViewController.Designer.cs" />
+    <Compile Include="Controllers\Reporting\ReportingViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Reporting\ReportingViewController.Designer.cs" />
+    <Compile Include="Controllers\Reporting\ReportManagementViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Reporting\ReportManagementViewController.Designer.cs" />
+    <Compile Include="Controllers\Reporting\ReportPackageController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Reporting\ReportPackageController.Designer.cs" />
+    <Compile Include="Controllers\ResultEntry\SymbolViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ResultEntry\SymbolViewController.Designer.cs" />
+    <Compile Include="Controllers\SalesOrder\SalesOrderWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SalesOrder\SalesOrderWindowController.Designer.cs" />
+    <Compile Include="Controllers\SampleCheckIn\SampleCheckinViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SampleCheckIn\SampleCheckinViewController.Designer.cs" />
+    <Compile Include="Controllers\SampleLogIn\SampleLoginBarCodeReportViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SampleLogIn\SampleLoginBarCodeReportViewController.Designer.cs" />
+    <Compile Include="Controllers\SampleLogIn\SampleLoginCopySampleViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SampleLogIn\SampleLoginCopySampleViewController.Designer.cs" />
+    <Compile Include="Controllers\SampleLogIn\SampleLoginCopyTestGroupTestViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SampleLogIn\SampleLoginCopyTestGroupTestViewController.Designer.cs" />
+    <Compile Include="Controllers\SampleLogIn\SampleLogInViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SamplePreparation\SamplePreparationTabViewController.cs" />
+    <Compile Include="Controllers\SamplePreparation\SamplePreparationTabViewController.Designer.cs" />
+    <Compile Include="Controllers\SamplePreparation\SamplePreTreatmentController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SamplePreparation\SamplePreTreatmentController.Designer.cs" />
+    <Compile Include="Controllers\Public\AuditlogViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Public\AuditlogViewController.Designer.cs" />
+    <Compile Include="Controllers\SampleRegistration\SampleConditionCheckViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SampleRegistration\SampleConditionCheckViewController.Designer.cs" />
+    <Compile Include="Controllers\SampleRegistration\SampleRegistrationBottleAllocationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SampleRegistration\SampleRegistrationBottleAllocationViewController.Designer.cs" />
+    <Compile Include="Controllers\SampleRegistration\SampleRegistrationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SampleRegistration\SampleRegistrationViewController.Designer.cs" />
+    <Compile Include="Controllers\SampleRegistration\TabViewController.cs" />
+    <Compile Include="Controllers\SampleRegistration\TabViewController.Designer.cs" />
+    <Compile Include="Controllers\SampleSignOff\RegistrationSignOffController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SampleSignOff\RegistrationSignOffController.Designer.cs" />
+    <Compile Include="Controllers\SamplingManagement\FieldDataEntryViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SamplingManagement\FieldDataEntryViewController.Designer.cs">
+      <DependentUpon>FieldDataEntryViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SamplingManagement\FieldDataReviewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SamplingManagement\FieldDataReviewController.Designer.cs">
+      <DependentUpon>FieldDataReviewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SamplingManagement\FlutterAppViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SamplingManagement\FlutterAppViewController.Designer.cs">
+      <DependentUpon>FlutterAppViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SamplingManagement\SampleTransferViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SamplingManagement\SampleTransferViewController.Designer.cs" />
+    <Compile Include="Controllers\SamplingManagement\SamplingFieldConfigurationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SamplingManagement\SamplingFieldConfigurationViewController.designer.cs" />
+    <Compile Include="Controllers\SDA\FlutterTemplateBuilderController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SDA\FlutterTemplateBuilderController.Designer.cs" />
+    <Compile Include="Controllers\SDMS\ScientificDataTableController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SDMS\ScientificDataTableController.Designer.cs" />
+    <Compile Include="Controllers\SDMS\Sequencesetupcontroller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SDMS\Sequencesetupcontroller.Designer.cs" />
+    <Compile Include="Controllers\SDMS\TBViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SDMS\TBViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\CheckPointsSetupViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\CheckPointsSetupViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\COCSettingsBottleViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\COCSettingsBottleViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\COCSettingsController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\COCSettingsController.Designer.cs" />
+    <Compile Include="Controllers\Settings\COCSettingsCopyTestGroupTestViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\COCSettingsCopyTestGroupTestViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\COCSettingsSamplesViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\COCSettingsSamplesViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\COCSettingsViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\COCSettingsViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\CollectorsController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\CollectorsController.Designer.cs" />
+    <Compile Include="Controllers\Settings\CountryViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\CountryViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\CustomReportBuilderController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\CustomReportBuilderController.Designer.cs" />
+    <Compile Include="Controllers\Settings\DataEntryViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\DataEntryViewController.designer.cs">
+      <DependentUpon>DataEntryViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\DefaultSettingViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\DefaultSettingViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\DWQRReportTemplateSetupViewController1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\DWQRReportTemplateSetupViewController1.Designer.cs" />
+    <Compile Include="Controllers\Settings\EmilaContentTemplateViewControllercs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\EmilaContentTemplateViewControllercs.Designer.cs" />
+    <Compile Include="Controllers\Settings\FieldTestViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\FieldTestViewController.Designer.cs">
+      <DependentUpon>FieldTestViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\JobIDFormatController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\JobIDFormatController.Designer.cs" />
+    <Compile Include="Controllers\Settings\Labware\LabwareMaintenanceViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\Labware\LabwareMaintenanceViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\MessagesController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\MessagesController.Designer.cs" />
+    <Compile Include="Controllers\Settings\NCA\NCAViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\NCA\NCAViewController.designer.cs">
+      <DependentUpon>NCAViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\ParserSetupViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\ParserSetupViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\PaymentStatusViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\PaymentStatusViewController.Designer.cs">
+      <DependentUpon>PaymentStatusViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\AnalysisDepartmentChainController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\AnalysisDepartmentChainController.Designer.cs">
+      <DependentUpon>AnalysisDepartmentChainController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\CopyUserPermissionViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\CopyUserPermissionViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\Permission\EmployeeController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\EmployeeController.Designer.cs" />
+    <Compile Include="Controllers\Settings\Permission\PermissionViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\PermissionViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\Permission\RolePermissionController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\RolePermissionController.Designer.cs">
+      <DependentUpon>RolePermissionController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\SamplePreparationChainController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\SamplePreparationChainController.Designer.cs">
+      <DependentUpon>SamplePreparationChainController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\UserPermissionViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\Permission\UserPermissionViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\PermitViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\PermitViewController.Designer.cs">
+      <DependentUpon>PermitViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\Qualifier\QualifiersController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\Qualifier\QualifiersController.Designer.cs" />
+    <Compile Include="Controllers\Settings\QuotesDefaultController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\QuotesDefaultController.Designer.cs">
+      <DependentUpon>QuotesDefaultController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\ReportIDFormatViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\ReportIDFormatViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\ResultEntryDefaultSettingsController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\ResultEntryDefaultSettingsController.Designer.cs">
+      <DependentUpon>ResultEntryDefaultSettingsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\SampleMatrixFieldSetupController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\SampleMatrixFieldSetupController.designer.cs" />
+    <Compile Include="Controllers\Settings\SettingFormCriteriaViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\SetupDeleteValidationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\SetupDeleteValidationViewController.Designer.cs">
+      <DependentUpon>SetupDeleteValidationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Settings\TabDetailViewController.cs" />
+    <Compile Include="Controllers\Settings\TabDetailViewController.designer.cs" />
+    <Compile Include="Controllers\Settings\TabFieldConfigurationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\TabFieldConfigurationViewController.designer.cs" />
+    <Compile Include="Controllers\Settings\TATViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\TATViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\TestParameter\QCTestParameterController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\TestParameter\QCTestParameterController.Designer.cs" />
+    <Compile Include="Controllers\Settings\TestParameter\TestParameterEditViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\TestParameter\TestParameterEditViewController.Designer.cs" />
+    <Compile Include="Controllers\Settings\TestParameter\TestParameterViewControllercs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\TestParameter\TestParameterViewControllercs.Designer.cs" />
+    <Compile Include="Controllers\Settings\TestPrice\TestPriceViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Settings\TestPrice\TestPriceViewController.Designer.cs" />
+    <Compile Include="Controllers\SubOut\SuboutSampleRegistrationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SubOut\SuboutSampleRegistrationViewController.Designer.cs" />
+    <Compile Include="Controllers\SubOut\SubOutTrackingViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SubOut\SubOutTrackingViewController.Designer.cs" />
+    <Compile Include="Controllers\TrendAnalysis\AnalysisTrendViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\TrendAnalysis\AnalysisTrendViewController.Designer.cs" />
+    <Compile Include="Controllers\VersionCreation\VersionCreationViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\VersionCreation\VersionCreationViewController.Designer.cs">
+      <DependentUpon>VersionCreationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controllers\CRM\ProspctsController.resx" />
+    <EmbeddedResource Include="Controllers\DailyQC\DailyQCViewController.resx" />
+    <EmbeddedResource Include="Controllers\Dashboard\AssignDashboardViewController.resx" />
+    <EmbeddedResource Include="Controllers\Dashboard\MainDashboardViewController.resx" />
+    <EmbeddedResource Include="Controllers\DataExplorer\DataExplorerViewController.resx" />
+    <EmbeddedResource Include="Controllers\DataReview\DataReviewController.resx" />
+    <EmbeddedResource Include="Controllers\DataReview\DataReviewQueryPanelController.resx" />
+    <EmbeddedResource Include="Controllers\DynamicReportDesigner\DynamicReportDesigner.resx">
+      <DependentUpon>DynamicReportDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\ICM\ConsumptionViewController.resx" />
+    <EmbeddedResource Include="Controllers\ICM\DisposalViewController.resx" />
+    <EmbeddedResource Include="Controllers\ICM\DistributionViewController.resx" />
+    <EmbeddedResource Include="Controllers\ICM\ExistingstockViewController.resx" />
+    <EmbeddedResource Include="Controllers\ICM\ICMRollbackViewController.resx" />
+    <EmbeddedResource Include="Controllers\ICM\ItemBarCodeController.resx" />
+    <EmbeddedResource Include="Controllers\ICM\ItemViewController.resx" />
+    <EmbeddedResource Include="Controllers\ICM\POViewController.resx" />
+    <EmbeddedResource Include="Controllers\ICM\ReceiveViewController.resx" />
+    <EmbeddedResource Include="Controllers\ICM\RequisitionViewcontroller.resx" />
+    <EmbeddedResource Include="Controllers\Metrc\MetrcController.resx">
+      <DependentUpon>MetrcController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Public\NavBarScrollController.resx">
+      <DependentUpon>NavBarScrollController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Public\ValidationMessageViewController.resx">
+      <DependentUpon>ValidationMessageViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Reporting\BatchReportingViewController.resx" />
+    <EmbeddedResource Include="Controllers\Reporting\ReportingQueryPanelViewController.resx" />
+    <EmbeddedResource Include="Controllers\Reporting\ReportingViewController.resx" />
+    <EmbeddedResource Include="Controllers\ResultEntry\SymbolViewController.resx" />
+    <EmbeddedResource Include="Controllers\SampleCheckIn\SampleCheckinViewController.resx" />
+    <EmbeddedResource Include="Controllers\SampleLogIn\SampleLoginBarCodeReportViewController.resx" />
+    <EmbeddedResource Include="Controllers\SampleLogIn\SampleLoginCopySampleViewController.resx" />
+    <EmbeddedResource Include="Controllers\SampleLogIn\SampleLoginCopyTestGroupTestViewController.resx" />
+    <EmbeddedResource Include="Controllers\SampleLogIn\SampleLogInViewController.resx" />
+    <EmbeddedResource Include="Controllers\SampleRegistration\SampleRegistrationBottleAllocationViewController.resx" />
+    <EmbeddedResource Include="Controllers\SampleRegistration\SampleRegistrationViewController.resx" />
+    <EmbeddedResource Include="Controllers\SamplingManagement\SampleTransferViewController.resx" />
+    <EmbeddedResource Include="Controllers\SamplingManagement\SamplingFieldConfigurationViewController.resx" />
+    <EmbeddedResource Include="Controllers\Settings\DataEntryViewController.resx">
+      <DependentUpon>DataEntryViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Settings\ParserSetupViewController.resx" />
+    <EmbeddedResource Include="Controllers\Settings\Permission\EmployeeController.resx" />
+    <EmbeddedResource Include="Controllers\Settings\Permission\RolePermissionController.resx">
+      <DependentUpon>RolePermissionController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Settings\Permission\UserPermissionViewController.resx" />
+    <EmbeddedResource Include="Controllers\Settings\SettingFormCriteriaViewController.resx" />
+    <EmbeddedResource Include="Controllers\Settings\TestParameter\QCTestParameterController.resx" />
+    <EmbeddedResource Include="Controllers\Settings\TestParameter\TestParameterViewControllercs.resx" />
+    <EmbeddedResource Include="Controllers\SubOut\SubOutTrackingViewController.resx" />
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controllers\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\sample.ets" />
+    <EmbeddedResource Include="Images\ReadMe.txt" />
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.zh-CN.xafml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes1.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Images\AddFile_16x16.png" />
+    <EmbeddedResource Include="Images\AddFile_32x32.png" />
+    <EmbeddedResource Include="Images\AddFooter_16x16.png" />
+    <EmbeddedResource Include="Images\AddFooter_32x32.png" />
+    <EmbeddedResource Include="Images\AddGroupFooter_16x16.png" />
+    <EmbeddedResource Include="Images\AddGroupFooter_32x32.png" />
+    <EmbeddedResource Include="Images\AddGroupHeader_16x16.png" />
+    <EmbeddedResource Include="Images\AddGroupHeader_32x32.png" />
+    <EmbeddedResource Include="Images\AddHeader_16x16.png" />
+    <EmbeddedResource Include="Images\AddHeader_32x32.png" />
+    <EmbeddedResource Include="Images\AddItem_16x16.png" />
+    <EmbeddedResource Include="Images\AddItem_32x32.png" />
+    <EmbeddedResource Include="Images\AddNewDataSource_16x16.png" />
+    <EmbeddedResource Include="Images\AddNewDataSource_32x32.png" />
+    <EmbeddedResource Include="Images\Add_16x16.png" />
+    <EmbeddedResource Include="Images\Add_32x32.png" />
+    <EmbeddedResource Include="Images\AlignCenter_16x16.png" />
+    <EmbeddedResource Include="Images\AlignCenter_32x32.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalBottom2_16x16.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalBottom2_32x32.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalBottom_16x16.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalBottom_32x32.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalCenter2_16x16.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalCenter2_32x32.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalCenter_16x16.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalCenter_32x32.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalTop2_16x16.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalTop2_32x32.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalTop_16x16.png" />
+    <EmbeddedResource Include="Images\AlignHorizontalTop_32x32.png" />
+    <EmbeddedResource Include="Images\AlignJustify_16x16.png" />
+    <EmbeddedResource Include="Images\AlignJustify_32x32.png" />
+    <EmbeddedResource Include="Images\AlignLeft_16x16.png" />
+    <EmbeddedResource Include="Images\AlignLeft_32x32.png" />
+    <EmbeddedResource Include="Images\AlignRight_16x16.png" />
+    <EmbeddedResource Include="Images\AlignRight_32x32.png" />
+    <EmbeddedResource Include="Images\AlignVerticalCenter2_16x16.png" />
+    <EmbeddedResource Include="Images\AlignVerticalCenter2_32x32.png" />
+    <EmbeddedResource Include="Images\AlignVerticalCenter_16x16.png" />
+    <EmbeddedResource Include="Images\AlignVerticalCenter_32x32.png" />
+    <EmbeddedResource Include="Images\AlignVerticalLeft2_16x16.png" />
+    <EmbeddedResource Include="Images\AlignVerticalLeft2_32x32.png" />
+    <EmbeddedResource Include="Images\AlignVerticalLeft_16x16.png" />
+    <EmbeddedResource Include="Images\AlignVerticalLeft_32x32.png" />
+    <EmbeddedResource Include="Images\AlignVerticalRight2_16x16.png" />
+    <EmbeddedResource Include="Images\AlignVerticalRight2_32x32.png" />
+    <EmbeddedResource Include="Images\AlignVerticalRight_16x16.png" />
+    <EmbeddedResource Include="Images\AlignVerticalRight_32x32.png" />
+    <EmbeddedResource Include="Images\Announcement_16x16.png" />
+    <EmbeddedResource Include="Images\Announcement_32x32.png" />
+    <EmbeddedResource Include="Images\Apply_16x16.png" />
+    <EmbeddedResource Include="Images\Apply_32x32.png" />
+    <EmbeddedResource Include="Images\Area_16x16.png" />
+    <EmbeddedResource Include="Images\Area_32x32.png" />
+    <EmbeddedResource Include="Images\Article_16x16.png" />
+    <EmbeddedResource Include="Images\Article_32x32.png" />
+    <EmbeddedResource Include="Images\AssignToMe_16x16.png" />
+    <EmbeddedResource Include="Images\AssignToMe_32x32.png" />
+    <EmbeddedResource Include="Images\AssignTo_16x16.png" />
+    <EmbeddedResource Include="Images\AssignTo_32x32.png" />
+    <EmbeddedResource Include="Images\Attachment_16x16.png" />
+    <EmbeddedResource Include="Images\Attachment_32x32.png" />
+    <EmbeddedResource Include="Images\Attach_16x16.png" />
+    <EmbeddedResource Include="Images\Attach_32x32.png" />
+    <EmbeddedResource Include="Images\Backward_16x16.png" />
+    <EmbeddedResource Include="Images\Backward_32x32.png" />
+    <EmbeddedResource Include="Images\Barcode_16x16.png" />
+    <EmbeddedResource Include="Images\Barcode_32x32.png" />
+    <EmbeddedResource Include="Images\Bar_16x16.png" />
+    <EmbeddedResource Include="Images\Bar_32x32.png" />
+    <EmbeddedResource Include="Images\BehindText_16x16.png" />
+    <EmbeddedResource Include="Images\BehindText_32x32.png" />
+    <EmbeddedResource Include="Images\Bold_16x16.png" />
+    <EmbeddedResource Include="Images\Bold_32x32.png" />
+    <EmbeddedResource Include="Images\BreakingChange_16x16.png" />
+    <EmbeddedResource Include="Images\BreakingChange_32x32.png" />
+    <EmbeddedResource Include="Images\BringForward_16x16.png" />
+    <EmbeddedResource Include="Images\BringForward_32x32.png" />
+    <EmbeddedResource Include="Images\BringToFrontOfText_16x16.png" />
+    <EmbeddedResource Include="Images\BringToFrontOfText_32x32.png" />
+    <EmbeddedResource Include="Images\BringToFront_16x16.png" />
+    <EmbeddedResource Include="Images\BringToFront_32x32.png" />
+    <EmbeddedResource Include="Images\Bubble_16x16.png" />
+    <EmbeddedResource Include="Images\Bubble_32x32.png" />
+    <EmbeddedResource Include="Images\BugReport_16x16.png" />
+    <EmbeddedResource Include="Images\BugReport_32x32.png" />
+    <EmbeddedResource Include="Images\Build_16x16.png" />
+    <EmbeddedResource Include="Images\Build_32x32.png" />
+    <EmbeddedResource Include="Images\Calendar_16x16.png" />
+    <EmbeddedResource Include="Images\Calendar_32x32.png" />
+    <EmbeddedResource Include="Images\Cancel_16x16.png" />
+    <EmbeddedResource Include="Images\Cancel_32x32.png" />
+    <EmbeddedResource Include="Images\Cards_16x16.png" />
+    <EmbeddedResource Include="Images\Cards_32x32.png" />
+    <EmbeddedResource Include="Images\ChangeFontStyle_16x16.png" />
+    <EmbeddedResource Include="Images\ChangeFontStyle_32x32.png" />
+    <EmbeddedResource Include="Images\ChartsRotate_16x16.png" />
+    <EmbeddedResource Include="Images\ChartsRotate_32x32.png" />
+    <EmbeddedResource Include="Images\ChartsShowLegend_16x16.png" />
+    <EmbeddedResource Include="Images\ChartsShowLegend_32x32.png" />
+    <EmbeddedResource Include="Images\ChartYAxisSettings_16x16.png" />
+    <EmbeddedResource Include="Images\ChartYAxisSettings_32x32.png" />
+    <EmbeddedResource Include="Images\Chart_16x16.png" />
+    <EmbeddedResource Include="Images\Chart_32x32.png" />
+    <EmbeddedResource Include="Images\CheckBox_16x16.png" />
+    <EmbeddedResource Include="Images\CheckBox_32x32.png" />
+    <EmbeddedResource Include="Images\ClearFilter_16x16.png" />
+    <EmbeddedResource Include="Images\ClearFilter_32x32.png" />
+    <EmbeddedResource Include="Images\ClearFormatting_16x16.png" />
+    <EmbeddedResource Include="Images\ClearFormatting_32x32.png" />
+    <EmbeddedResource Include="Images\Clear_16x16.png" />
+    <EmbeddedResource Include="Images\Clear_32x32.png" />
+    <EmbeddedResource Include="Images\Clip_16x16.png" />
+    <EmbeddedResource Include="Images\Clip_32x32.png" />
+    <EmbeddedResource Include="Images\Close_16x16.png" />
+    <EmbeddedResource Include="Images\Close_32x32.png" />
+    <EmbeddedResource Include="Images\Colors_16x16.png" />
+    <EmbeddedResource Include="Images\Colors_32x32.png" />
+    <EmbeddedResource Include="Images\Columns_16x16.png" />
+    <EmbeddedResource Include="Images\Columns_32x32.png" />
+    <EmbeddedResource Include="Images\Comment_16x16.png" />
+    <EmbeddedResource Include="Images\Comment_32x32.png" />
+    <EmbeddedResource Include="Images\Contact_16x16.png" />
+    <EmbeddedResource Include="Images\Contact_32x32.png" />
+    <EmbeddedResource Include="Images\ContentArrangeInColums_16x16.png" />
+    <EmbeddedResource Include="Images\ContentArrangeInColums_32x32.png" />
+    <EmbeddedResource Include="Images\ContentArrangeInRows_16x16.png" />
+    <EmbeddedResource Include="Images\ContentArrangeInRows_32x32.png" />
+    <EmbeddedResource Include="Images\ContentAutoArrange_16x16.png" />
+    <EmbeddedResource Include="Images\ContentAutoArrange_32x32.png" />
+    <EmbeddedResource Include="Images\Content_16x16.png" />
+    <EmbeddedResource Include="Images\Content_32x32.png" />
+    <EmbeddedResource Include="Images\ConvertToParagraphs_16x16.png" />
+    <EmbeddedResource Include="Images\ConvertToParagraphs_32x32.png" />
+    <EmbeddedResource Include="Images\Convert_16x16.png" />
+    <EmbeddedResource Include="Images\Convert_32x32.png" />
+    <EmbeddedResource Include="Images\Copy_16x16.png" />
+    <EmbeddedResource Include="Images\Copy_32x32.png" />
+    <EmbeddedResource Include="Images\Country_16x16.png" />
+    <EmbeddedResource Include="Images\Country_32x32.png" />
+    <EmbeddedResource Include="Images\CrossDataSourceFiltering _16x16.png" />
+    <EmbeddedResource Include="Images\CrossDataSourceFiltering_32x32.png" />
+    <EmbeddedResource Include="Images\CSharp_16x16.png" />
+    <EmbeddedResource Include="Images\CSharp_32x32.png" />
+    <EmbeddedResource Include="Images\Currency_16x16.png" />
+    <EmbeddedResource Include="Images\Currency_32x32.png" />
+    <EmbeddedResource Include="Images\Customer_16x16.png" />
+    <EmbeddedResource Include="Images\Customer_32x32.png" />
+    <EmbeddedResource Include="Images\Customization_16x16.png" />
+    <EmbeddedResource Include="Images\Customization_32x32.png" />
+    <EmbeddedResource Include="Images\CustomizeGrid_16x16.png" />
+    <EmbeddedResource Include="Images\CustomizeGrid_32x32.png" />
+    <EmbeddedResource Include="Images\Cut_16x16.png" />
+    <EmbeddedResource Include="Images\Cut_32x32.png" />
+    <EmbeddedResource Include="Images\Database_16x16.png" />
+    <EmbeddedResource Include="Images\Database_32x32.png" />
+    <EmbeddedResource Include="Images\DayView_16x16.png" />
+    <EmbeddedResource Include="Images\DayView_32x32.png" />
+    <EmbeddedResource Include="Images\DeleteDataSource_16x16.png" />
+    <EmbeddedResource Include="Images\DeleteDataSource_32x32.png" />
+    <EmbeddedResource Include="Images\DeleteFooter_16x16.png" />
+    <EmbeddedResource Include="Images\DeleteFooter_32x32.png" />
+    <EmbeddedResource Include="Images\DeleteGroupFooter_16x16.png" />
+    <EmbeddedResource Include="Images\DeleteGroupFooter_32x32.png" />
+    <EmbeddedResource Include="Images\DeleteGroupHeader_16x16.png" />
+    <EmbeddedResource Include="Images\DeleteGroupHeader_32x32.png" />
+    <EmbeddedResource Include="Images\DeleteHeader_16x16.png" />
+    <EmbeddedResource Include="Images\DeleteHeader_32x32.png" />
+    <EmbeddedResource Include="Images\DeleteList2_16x16.png" />
+    <EmbeddedResource Include="Images\DeleteList2_32x32.png" />
+    <EmbeddedResource Include="Images\DeleteList_16x16.png" />
+    <EmbeddedResource Include="Images\DeleteList_32x32.png" />
+    <EmbeddedResource Include="Images\Delete_16x16.png" />
+    <EmbeddedResource Include="Images\Delete_32x32.png" />
+    <EmbeddedResource Include="Images\Design_16x16.png" />
+    <EmbeddedResource Include="Images\Design_32x32.png" />
+    <EmbeddedResource Include="Images\DirectoryColse16x16.png" />
+    <EmbeddedResource Include="Images\DirectoryColse32x32.png" />
+    <EmbeddedResource Include="Images\DirectoryOpen16x16.png" />
+    <EmbeddedResource Include="Images\DirectoryOpen32x32.png" />
+    <EmbeddedResource Include="Images\DocumentMap_16x16.png" />
+    <EmbeddedResource Include="Images\DocumentMap_32x32.png" />
+    <EmbeddedResource Include="Images\DoubleFirst_16x16.png" />
+    <EmbeddedResource Include="Images\DoubleFirst_32x32.png" />
+    <EmbeddedResource Include="Images\DoubleLast_16x16.png" />
+    <EmbeddedResource Include="Images\DoubleLast_32x32.png" />
+    <EmbeddedResource Include="Images\DoubleNext_16x16.png" />
+    <EmbeddedResource Include="Images\DoubleNext_32x32.png" />
+    <EmbeddedResource Include="Images\DoublePrev_16x16.png" />
+    <EmbeddedResource Include="Images\DoublePrev_32x32.png" />
+    <EmbeddedResource Include="Images\Download_16x16.png" />
+    <EmbeddedResource Include="Images\Download_32x32.png" />
+    <EmbeddedResource Include="Images\DrillDownOnArguments_Chart_16x16.png" />
+    <EmbeddedResource Include="Images\DrillDownOnArguments_Chart_32x32.png" />
+    <EmbeddedResource Include="Images\DrillDownOnArguments_Pie_16x16.png" />
+    <EmbeddedResource Include="Images\DrillDownOnArguments_Pie_32x32.png" />
+    <EmbeddedResource Include="Images\DrillDownOnSeries_Chart_16x16.png" />
+    <EmbeddedResource Include="Images\DrillDownOnSeries_Chart_32x32.png" />
+    <EmbeddedResource Include="Images\DrillDownOnSeries_Pie_16x16.png" />
+    <EmbeddedResource Include="Images\DrillDownOnSeries_Pie_32x32.png" />
+    <EmbeddedResource Include="Images\DrillDown_16x16.png" />
+    <EmbeddedResource Include="Images\DrillDown_32x32.png" />
+    <EmbeddedResource Include="Images\EditContact_16x16.png" />
+    <EmbeddedResource Include="Images\EditContact_32x32.png" />
+    <EmbeddedResource Include="Images\EditDataSource_16x16.png" />
+    <EmbeddedResource Include="Images\EditDataSource_32x32.png" />
+    <EmbeddedResource Include="Images\EditFeed_16x16.png" />
+    <EmbeddedResource Include="Images\EditFeed_32x32.png" />
+    <EmbeddedResource Include="Images\EditPageHF_16x16.png" />
+    <EmbeddedResource Include="Images\EditPageHF_32x32.png" />
+    <EmbeddedResource Include="Images\EditTask_16x16.png" />
+    <EmbeddedResource Include="Images\EditTask_32x32.png" />
+    <EmbeddedResource Include="Images\EditWrapPoints_16x16.png" />
+    <EmbeddedResource Include="Images\EditWrapPoints_32x32.png" />
+    <EmbeddedResource Include="Images\Edit_16x16.png" />
+    <EmbeddedResource Include="Images\Edit_32x32.png" />
+    <EmbeddedResource Include="Images\EmailTemplate_16x16.png" />
+    <EmbeddedResource Include="Images\EmailTemplate_32x32.png" />
+    <EmbeddedResource Include="Images\Employee_16x16.png" />
+    <EmbeddedResource Include="Images\Employee_32x32.png" />
+    <EmbeddedResource Include="Images\EmptyParagraphSeparator_16x16.png" />
+    <EmbeddedResource Include="Images\EmptyParagraphSeparator_32x32.png" />
+    <EmbeddedResource Include="Images\EmptyTableRowSeparator_16x16.png" />
+    <EmbeddedResource Include="Images\EmptyTableRowSeparator_32x32.png" />
+    <EmbeddedResource Include="Images\Example_16x16.png" />
+    <EmbeddedResource Include="Images\Example_32x32.png" />
+    <EmbeddedResource Include="Images\ExportFile_16x16.png" />
+    <EmbeddedResource Include="Images\ExportFile_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToCSV_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToCSV_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToDOCX_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToDOCX_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToDOC_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToDOC_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToEPUB_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToEPUB_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToHTML_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToHTML_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToIMG_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToIMG_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToMHT_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToMHT_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToODT_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToODT_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToPDF_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToPDF_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToRTF_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToRTF_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToTXT_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToTXT_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToXLSX_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToXLSX_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToXLS_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToXLS_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToXML_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToXML_32x32.png" />
+    <EmbeddedResource Include="Images\ExportToXPS_16x16.png" />
+    <EmbeddedResource Include="Images\ExportToXPS_32x32.png" />
+    <EmbeddedResource Include="Images\Export_16x16.png" />
+    <EmbeddedResource Include="Images\Export_32x32.png" />
+    <EmbeddedResource Include="Images\Feature_16x16.png" />
+    <EmbeddedResource Include="Images\Feature_32x32.png" />
+    <EmbeddedResource Include="Images\FillBackground_16x16.png" />
+    <EmbeddedResource Include="Images\FillBackground_32x32.png" />
+    <EmbeddedResource Include="Images\FilterByArgument_Chart_16x16.png" />
+    <EmbeddedResource Include="Images\FilterByArgument_Chart_32x32.png" />
+    <EmbeddedResource Include="Images\FilterByArgument_Pie_16x16.png" />
+    <EmbeddedResource Include="Images\FilterByArgument_Pie_32x32.png" />
+    <EmbeddedResource Include="Images\FilterBySeries_Chart_16x16.png" />
+    <EmbeddedResource Include="Images\FilterBySeries_Chart_32x32.png" />
+    <EmbeddedResource Include="Images\FilterBySeries_Pie_16x16.png" />
+    <EmbeddedResource Include="Images\FilterBySeries_Pie_32x32.png" />
+    <EmbeddedResource Include="Images\Filter_16x16.png" />
+    <EmbeddedResource Include="Images\Filter_32x32.png" />
+    <EmbeddedResource Include="Images\FindByID_16x16.png" />
+    <EmbeddedResource Include="Images\FindByID_32x32.png" />
+    <EmbeddedResource Include="Images\FindCustomers_16x16.png" />
+    <EmbeddedResource Include="Images\FindCustomers_32x32.png" />
+    <EmbeddedResource Include="Images\Find_16x16.png" />
+    <EmbeddedResource Include="Images\Find_32x32.png" />
+    <EmbeddedResource Include="Images\First_16x16.png" />
+    <EmbeddedResource Include="Images\First_32x32.png" />
+    <EmbeddedResource Include="Images\FontSizeDecrease_16x16.png" />
+    <EmbeddedResource Include="Images\FontSizeDecrease_32x32.png" />
+    <EmbeddedResource Include="Images\FontSizeIncrease_16x16.png" />
+    <EmbeddedResource Include="Images\FontSizeIncrease_32x32.png" />
+    <EmbeddedResource Include="Images\FontSize_16x16.png" />
+    <EmbeddedResource Include="Images\FontSize_32x32.png" />
+    <EmbeddedResource Include="Images\ForceTesting_16x16.png" />
+    <EmbeddedResource Include="Images\ForceTesting_32x32.png" />
+    <EmbeddedResource Include="Images\Forward_16x16.png" />
+    <EmbeddedResource Include="Images\Forward_32x32.png" />
+    <EmbeddedResource Include="Images\FullStackedArea_16x16.png" />
+    <EmbeddedResource Include="Images\FullStackedArea_32x32.png" />
+    <EmbeddedResource Include="Images\FullStackedBar_16x16.png" />
+    <EmbeddedResource Include="Images\FullStackedBar_32x32.png" />
+    <EmbeddedResource Include="Images\FullStackedLine_16x16.png" />
+    <EmbeddedResource Include="Images\FullStackedLine_32x32.png" />
+    <EmbeddedResource Include="Images\FullStackedSplineArea_16x16.png" />
+    <EmbeddedResource Include="Images\FullStackedSplineArea_32x32.png" />
+    <EmbeddedResource Include="Images\GaugeStyleFullCircular_16x16.png" />
+    <EmbeddedResource Include="Images\GaugeStyleFullCircular_32x32.png" />
+    <EmbeddedResource Include="Images\GaugeStyleHalfCircular_16x16.png" />
+    <EmbeddedResource Include="Images\GaugeStyleHalfCircular_32x32.png" />
+    <EmbeddedResource Include="Images\GaugeStyleLeftQuarterCircular_16x16.png" />
+    <EmbeddedResource Include="Images\GaugeStyleLeftQuarterCircular_32x32.png" />
+    <EmbeddedResource Include="Images\GaugeStyleLinearHorizontal_16x16.png" />
+    <EmbeddedResource Include="Images\GaugeStyleLinearHorizontal_32x32.png" />
+    <EmbeddedResource Include="Images\GaugeStyleLinearVertical_16x16.png" />
+    <EmbeddedResource Include="Images\GaugeStyleLinearVertical_32x32.png" />
+    <EmbeddedResource Include="Images\GaugeStyleRightQuarterCircular_16x16.png" />
+    <EmbeddedResource Include="Images\GaugeStyleRightQuarterCircular_32x32.png" />
+    <EmbeddedResource Include="Images\GaugeStyleThreeForthCircular_16x16.png" />
+    <EmbeddedResource Include="Images\GaugeStyleThreeForthCircular_32x32.png" />
+    <EmbeddedResource Include="Images\Grid_16x16.png" />
+    <EmbeddedResource Include="Images\Grid_32x32.png" />
+    <EmbeddedResource Include="Images\GroupFieldCollection_16x16.png" />
+    <EmbeddedResource Include="Images\GroupFieldCollection_32x32.png" />
+    <EmbeddedResource Include="Images\GroupFooter_16x16.png" />
+    <EmbeddedResource Include="Images\GroupFooter_32x32.png" />
+    <EmbeddedResource Include="Images\GroupHeader_16x16.png" />
+    <EmbeddedResource Include="Images\GroupHeader_32x32.png" />
+    <EmbeddedResource Include="Images\Group_16x16.png" />
+    <EmbeddedResource Include="Images\Group_32x32.png" />
+    <EmbeddedResource Include="Images\HiddenText_16x16.png" />
+    <EmbeddedResource Include="Images\HiddenText_32x32.png" />
+    <EmbeddedResource Include="Images\Hide_16x16.png" />
+    <EmbeddedResource Include="Images\Hide_32x32.png" />
+    <EmbeddedResource Include="Images\HighlightActiveElements_16x16.png" />
+    <EmbeddedResource Include="Images\HighlightActiveElements_32x32.png" />
+    <EmbeddedResource Include="Images\HighlightField_16x16.png" />
+    <EmbeddedResource Include="Images\HighlightField_32x32.png" />
+    <EmbeddedResource Include="Images\HighLowClose_16x16.png" />
+    <EmbeddedResource Include="Images\HighLowClose_32x32.png" />
+    <EmbeddedResource Include="Images\HistoryItem_16x16.png" />
+    <EmbeddedResource Include="Images\HistoryItem_32x32.png" />
+    <EmbeddedResource Include="Images\Home_16x16.png" />
+    <EmbeddedResource Include="Images\Home_32x32.png" />
+    <EmbeddedResource Include="Images\IDE_16x16.png" />
+    <EmbeddedResource Include="Images\IDE_32x32.png" />
+    <EmbeddedResource Include="Images\IgnoreMasterFilter_16x16.png" />
+    <EmbeddedResource Include="Images\IgnoreMasterFilter_32x32.png" />
+    <EmbeddedResource Include="Images\Image_16x16.png" />
+    <EmbeddedResource Include="Images\Image_32x32.png" />
+    <EmbeddedResource Include="Images\ImportImage_16x16.png" />
+    <EmbeddedResource Include="Images\ImportImage_32x32.png" />
+    <EmbeddedResource Include="Images\IndentDecrease_16x16.png" />
+    <EmbeddedResource Include="Images\IndentDecrease_32x32.png" />
+    <EmbeddedResource Include="Images\IndentIncrease_16x16.png" />
+    <EmbeddedResource Include="Images\IndentIncrease_32x32.png" />
+    <EmbeddedResource Include="Images\Index_16x16.png" />
+    <EmbeddedResource Include="Images\Index_32x32.png" />
+    <EmbeddedResource Include="Images\Info_16x16.png" />
+    <EmbeddedResource Include="Images\Info_32x32.png" />
+    <EmbeddedResource Include="Images\InFrontOfText_16x16.png" />
+    <EmbeddedResource Include="Images\InFrontOfText_32x32.png" />
+    <EmbeddedResource Include="Images\InLineWithText_16x16.png" />
+    <EmbeddedResource Include="Images\InLineWithText_32x32.png" />
+    <EmbeddedResource Include="Images\InsertFooter_16x16.png" />
+    <EmbeddedResource Include="Images\InsertFooter_32x32.png" />
+    <EmbeddedResource Include="Images\InsertHeader_16x16.png" />
+    <EmbeddedResource Include="Images\InsertHeader_32x32.png" />
+    <EmbeddedResource Include="Images\InsertPageBreak_16x16.png" />
+    <EmbeddedResource Include="Images\InsertPageBreak_32x32.png" />
+    <EmbeddedResource Include="Images\InsertRangeFilter_16x16.png" />
+    <EmbeddedResource Include="Images\InsertRangeFilter_32x32.png" />
+    <EmbeddedResource Include="Images\Insert_16x16.png" />
+    <EmbeddedResource Include="Images\Insert_32x32.png" />
+    <EmbeddedResource Include="Images\Issue_16x16.png" />
+    <EmbeddedResource Include="Images\Issue_32x32.png" />
+    <EmbeddedResource Include="Images\Italic_16x16.png" />
+    <EmbeddedResource Include="Images\Italic_32x32.png" />
+    <EmbeddedResource Include="Images\KnowledgeBaseArticle_16x16.png" />
+    <EmbeddedResource Include="Images\KnowledgeBaseArticle_32x32.png" />
+    <EmbeddedResource Include="Images\KPI_16x16.png" />
+    <EmbeddedResource Include="Images\KPI_32x32.png" />
+    <EmbeddedResource Include="Images\Language_16x16.png" />
+    <EmbeddedResource Include="Images\Language_32x32.png" />
+    <EmbeddedResource Include="Images\Last_16x16.png" />
+    <EmbeddedResource Include="Images\Last_32x32.png" />
+    <EmbeddedResource Include="Images\Line_16x16.png" />
+    <EmbeddedResource Include="Images\Line_32x32.png" />
+    <EmbeddedResource Include="Images\ListBullets_16x16.png" />
+    <EmbeddedResource Include="Images\ListBullets_32x32.png" />
+    <EmbeddedResource Include="Images\ListMultilevel_16x16.png" />
+    <EmbeddedResource Include="Images\ListMultilevel_32x32.png" />
+    <EmbeddedResource Include="Images\ListNumbers_16x16.png" />
+    <EmbeddedResource Include="Images\ListNumbers_32x32.png" />
+    <EmbeddedResource Include="Images\LoadFrom_16x16.png" />
+    <EmbeddedResource Include="Images\LoadFrom_32x32.png" />
+    <EmbeddedResource Include="Images\LoadPageSetup_16x16.png" />
+    <EmbeddedResource Include="Images\LoadPageSetup_32x32.png" />
+    <EmbeddedResource Include="Images\Mail_16x16.png" />
+    <EmbeddedResource Include="Images\Mail_32x32.png" />
+    <EmbeddedResource Include="Images\MasterFilter_16x16.png" />
+    <EmbeddedResource Include="Images\MasterFilter_32x32.png" />
+    <EmbeddedResource Include="Images\Merge_16x16.png" />
+    <EmbeddedResource Include="Images\Merge_32x32.png" />
+    <EmbeddedResource Include="Images\MonthView_16x16.png" />
+    <EmbeddedResource Include="Images\MonthView_32x32.png" />
+    <EmbeddedResource Include="Images\MoreLayoutOptions_16x16.png" />
+    <EmbeddedResource Include="Images\MoreLayoutOptions_32x32.png" />
+    <EmbeddedResource Include="Images\MoveDown_16x16.png" />
+    <EmbeddedResource Include="Images\MoveDown_32x32.png" />
+    <EmbeddedResource Include="Images\MoveUp_16x16.png" />
+    <EmbeddedResource Include="Images\MoveUp_32x32.png" />
+    <EmbeddedResource Include="Images\MultiplePages_16x16.png" />
+    <EmbeddedResource Include="Images\MultiplePages_32x32.png" />
+    <EmbeddedResource Include="Images\NavigationBar_16x16.png" />
+    <EmbeddedResource Include="Images\NavigationBar_32x32.png" />
+    <EmbeddedResource Include="Images\NewContact_16x16.png" />
+    <EmbeddedResource Include="Images\NewContact_32x32.png" />
+    <EmbeddedResource Include="Images\NewFeed_16x16.png" />
+    <EmbeddedResource Include="Images\NewFeed_32x32.png" />
+    <EmbeddedResource Include="Images\NewMail_16x16.png" />
+    <EmbeddedResource Include="Images\NewMail_32x32.png" />
+    <EmbeddedResource Include="Images\NewTask_16x16.png" />
+    <EmbeddedResource Include="Images\NewTask_32x32.png" />
+    <EmbeddedResource Include="Images\New_16x16.png" />
+    <EmbeddedResource Include="Images\New_32x32.png" />
+    <EmbeddedResource Include="Images\Next_16x16 %282%29.png" />
+    <EmbeddedResource Include="Images\Next_16x16.png" />
+    <EmbeddedResource Include="Images\Next_32x32 %282%29.png" />
+    <EmbeddedResource Include="Images\Next_32x32.png" />
+    <EmbeddedResource Include="Images\None_16x16.png" />
+    <EmbeddedResource Include="Images\None_32x32.png" />
+    <EmbeddedResource Include="Images\Notes_16x16.png" />
+    <EmbeddedResource Include="Images\Notes_32x32.png" />
+    <EmbeddedResource Include="Images\OpenHighLowCloseCandleStick_16x16.png" />
+    <EmbeddedResource Include="Images\OpenHighLowCloseCandleStick_32x32.png" />
+    <EmbeddedResource Include="Images\OpenHighLowCloseStock_16x16.png" />
+    <EmbeddedResource Include="Images\OpenHighLowCloseStock_32x32.png" />
+    <EmbeddedResource Include="Images\Open_16x16.png" />
+    <EmbeddedResource Include="Images\Open_32x32.png" />
+    <EmbeddedResource Include="Images\OperatingSystem_32x32.png" />
+    <EmbeddedResource Include="Images\OperatingSyste_16x16.png" />
+    <EmbeddedResource Include="Images\PackageProduct_16x16.png" />
+    <EmbeddedResource Include="Images\PackageProduct_32x32.png" />
+    <EmbeddedResource Include="Images\PageMargins_16x16.png" />
+    <EmbeddedResource Include="Images\PageMargins_32x32.png" />
+    <EmbeddedResource Include="Images\PageOrientationLandscape_32x32.png" />
+    <EmbeddedResource Include="Images\PageOrientationPortrait_32x32.png" />
+    <EmbeddedResource Include="Images\PageOrientation_16x16.png" />
+    <EmbeddedResource Include="Images\PageOrientation_32x32.png" />
+    <EmbeddedResource Include="Images\PageSetup_16x16.png" />
+    <EmbeddedResource Include="Images\PageSetup_32x32.png" />
+    <EmbeddedResource Include="Images\Palette_16x16.png" />
+    <EmbeddedResource Include="Images\Palette_32x32.png" />
+    <EmbeddedResource Include="Images\PaperKind_A3.png" />
+    <EmbeddedResource Include="Images\PaperKind_A4.png" />
+    <EmbeddedResource Include="Images\PaperKind_A5.png" />
+    <EmbeddedResource Include="Images\PaperKind_A6.png" />
+    <EmbeddedResource Include="Images\PaperKind_Executive.png" />
+    <EmbeddedResource Include="Images\PaperKind_Legal.png" />
+    <EmbeddedResource Include="Images\PaperKind_Letter.png" />
+    <EmbeddedResource Include="Images\PaperKind_Tabloid.png" />
+    <EmbeddedResource Include="Images\PaperSize_16x16.png" />
+    <EmbeddedResource Include="Images\PaperSize_32x32.png" />
+    <EmbeddedResource Include="Images\Parameters_16x16.png" />
+    <EmbeddedResource Include="Images\Parameters_32x32.png" />
+    <EmbeddedResource Include="Images\Paste_16x16.png" />
+    <EmbeddedResource Include="Images\Paste_32x32.png" />
+    <EmbeddedResource Include="Images\PictureShapeFillColor_16x16.png" />
+    <EmbeddedResource Include="Images\PictureShapeFillColor_32x32.png" />
+    <EmbeddedResource Include="Images\PictureShapeOutlineColor_16x16.png" />
+    <EmbeddedResource Include="Images\PictureShapeOutlineColor_32x32.png" />
+    <EmbeddedResource Include="Images\PieLabelsDataLabels_16x16.png" />
+    <EmbeddedResource Include="Images\PieLabelsDataLabels_32x32.png" />
+    <EmbeddedResource Include="Images\PieLabelsTooltips_16x16.png" />
+    <EmbeddedResource Include="Images\PieLabelsTooltips_32x32.png" />
+    <EmbeddedResource Include="Images\PieStyleDonut_16x16.png" />
+    <EmbeddedResource Include="Images\PieStyleDonut_32x32.png" />
+    <EmbeddedResource Include="Images\PieStylePie_16x16.png" />
+    <EmbeddedResource Include="Images\PieStylePie_32x32.png" />
+    <EmbeddedResource Include="Images\Pie_16x16.png" />
+    <EmbeddedResource Include="Images\Pie_32x32.png" />
+    <EmbeddedResource Include="Images\Pivot_16x16.png" />
+    <EmbeddedResource Include="Images\Pivot_32x32.png" />
+    <EmbeddedResource Include="Images\Point_16x16.png" />
+    <EmbeddedResource Include="Images\Point_32x32.png" />
+    <EmbeddedResource Include="Images\PreviewChart_16x16.png" />
+    <EmbeddedResource Include="Images\PreviewChart_32x32.png" />
+    <EmbeddedResource Include="Images\Preview_16x16.png" />
+    <EmbeddedResource Include="Images\Preview_32x32.png" />
+    <EmbeddedResource Include="Images\Previous_16x16.png" />
+    <EmbeddedResource Include="Images\Previous_32x32.png" />
+    <EmbeddedResource Include="Images\Prev_16x16.png" />
+    <EmbeddedResource Include="Images\Prev_32x32.png" />
+    <EmbeddedResource Include="Images\PrintDialog_16x16.png" />
+    <EmbeddedResource Include="Images\PrintDialog_32x32.png" />
+    <EmbeddedResource Include="Images\PrintViaPDF_16x16.png" />
+    <EmbeddedResource Include="Images\PrintViaPDF_32x32.png" />
+    <EmbeddedResource Include="Images\Print_16x16.png" />
+    <EmbeddedResource Include="Images\Print_32x32.png" />
+    <EmbeddedResource Include="Images\Product_16x16.png" />
+    <EmbeddedResource Include="Images\Product_32x32.png" />
+    <EmbeddedResource Include="Images\ProgrammingLanguage_16x16.png" />
+    <EmbeddedResource Include="Images\ProgrammingLanguage_32x32.png" />
+    <EmbeddedResource Include="Images\ProjectDirectory_16x16.png" />
+    <EmbeddedResource Include="Images\ProjectDirectory_32x32.png" />
+    <EmbeddedResource Include="Images\ProjectFile_16x16.png" />
+    <EmbeddedResource Include="Images\ProjectFile_32x32.png" />
+    <EmbeddedResource Include="Images\Project_16x16.png" />
+    <EmbeddedResource Include="Images\Project_32x32.png" />
+    <EmbeddedResource Include="Images\Properties_16x16.png" />
+    <EmbeddedResource Include="Images\Properties_32x32.png" />
+    <EmbeddedResource Include="Images\PublicFix_16x16.png" />
+    <EmbeddedResource Include="Images\PublicFix_32x32.png" />
+    <EmbeddedResource Include="Images\Publish_16x16.png" />
+    <EmbeddedResource Include="Images\Publish_32x32.png" />
+    <EmbeddedResource Include="Images\Question_16x16.png" />
+    <EmbeddedResource Include="Images\Question_32x32.png" />
+    <EmbeddedResource Include="Images\RangeArea_16x16.png" />
+    <EmbeddedResource Include="Images\RangeArea_32x32.png" />
+    <EmbeddedResource Include="Images\RangeBar_16x16.png" />
+    <EmbeddedResource Include="Images\RangeBar_32x32.png" />
+    <EmbeddedResource Include="Images\Recurrence_16x16.png" />
+    <EmbeddedResource Include="Images\Recurrence_32x32.png" />
+    <EmbeddedResource Include="Images\Redo_16x16.png" />
+    <EmbeddedResource Include="Images\Redo_32x32.png" />
+    <EmbeddedResource Include="Images\Refresh2_16x16.png" />
+    <EmbeddedResource Include="Images\Refresh2_32x32.png" />
+    <EmbeddedResource Include="Images\Refresh_16x16.png" />
+    <EmbeddedResource Include="Images\Refresh_32x32.png" />
+    <EmbeddedResource Include="Images\RemoveItem_16x16.png" />
+    <EmbeddedResource Include="Images\RemoveItem_32x32.png" />
+    <EmbeddedResource Include="Images\Remove_16x16.png" />
+    <EmbeddedResource Include="Images\Remove_32x32.png" />
+    <EmbeddedResource Include="Images\Replace_16x16.png" />
+    <EmbeddedResource Include="Images\Replace_32x32.png" />
+    <EmbeddedResource Include="Images\Report_16x16.png" />
+    <EmbeddedResource Include="Images\Report_32x32.png" />
+    <EmbeddedResource Include="Images\Role_16x16.png" />
+    <EmbeddedResource Include="Images\Role_32x32.png" />
+    <EmbeddedResource Include="Images\SaveAll_16x16.png" />
+    <EmbeddedResource Include="Images\SaveAll_32x32.png" />
+    <EmbeddedResource Include="Images\SaveAndClose_16x16.png" />
+    <EmbeddedResource Include="Images\SaveAndClose_32x32.png" />
+    <EmbeddedResource Include="Images\SaveAndNew_16x16.png" />
+    <EmbeddedResource Include="Images\SaveAndNew_32x32.png" />
+    <EmbeddedResource Include="Images\SaveAs_16x16.png" />
+    <EmbeddedResource Include="Images\SaveAs_32x32.png" />
+    <EmbeddedResource Include="Images\SaveDialog_16x16.png" />
+    <EmbeddedResource Include="Images\SaveDialog_32x32.png" />
+    <EmbeddedResource Include="Images\SavePageSetup_16x16.png" />
+    <EmbeddedResource Include="Images\SavePageSetup_32x32.png" />
+    <EmbeddedResource Include="Images\SaveTo_16x16.png" />
+    <EmbeddedResource Include="Images\SaveTo_32x32.png" />
+    <EmbeddedResource Include="Images\Save_16x16.png" />
+    <EmbeddedResource Include="Images\Save_32x32.png" />
+    <EmbeddedResource Include="Images\Scripts_16x16.png" />
+    <EmbeddedResource Include="Images\Scripts_32x32.png" />
+    <EmbeddedResource Include="Images\SendBackward_16x16.png" />
+    <EmbeddedResource Include="Images\SendBackward_32x32.png" />
+    <EmbeddedResource Include="Images\SendBehindText_16x16.png" />
+    <EmbeddedResource Include="Images\SendBehindText_32x32.png" />
+    <EmbeddedResource Include="Images\SendCSV_16x16.png" />
+    <EmbeddedResource Include="Images\SendCSV_32x32.png" />
+    <EmbeddedResource Include="Images\SendIMG_16x16.png" />
+    <EmbeddedResource Include="Images\SendIMG_32x32.png" />
+    <EmbeddedResource Include="Images\SendMHT_16x16.png" />
+    <EmbeddedResource Include="Images\SendMHT_32x32.png" />
+    <EmbeddedResource Include="Images\SendPDF_16x16.png" />
+    <EmbeddedResource Include="Images\SendPDF_32x32.png" />
+    <EmbeddedResource Include="Images\SendRTF_16x16.png" />
+    <EmbeddedResource Include="Images\SendRTF_32x32.png" />
+    <EmbeddedResource Include="Images\SendToBack_16x16.png" />
+    <EmbeddedResource Include="Images\SendToBack_32x32.png" />
+    <EmbeddedResource Include="Images\SendTXT_16x16.png" />
+    <EmbeddedResource Include="Images\SendTXT_32x32.png" />
+    <EmbeddedResource Include="Images\SendXLSX_16x16.png" />
+    <EmbeddedResource Include="Images\SendXLSX_32x32.png" />
+    <EmbeddedResource Include="Images\SendXLS_16x16.png" />
+    <EmbeddedResource Include="Images\SendXLS_32x32.png" />
+    <EmbeddedResource Include="Images\Send_16x16.png" />
+    <EmbeddedResource Include="Images\Send_32x32.png" />
+    <EmbeddedResource Include="Images\Separator_16x16.png" />
+    <EmbeddedResource Include="Images\Separator_32x32.png" />
+    <EmbeddedResource Include="Images\ShowHidden_16x16.png" />
+    <EmbeddedResource Include="Images\ShowHidden_32x32.png" />
+    <EmbeddedResource Include="Images\ShowTestReport_16x16.png" />
+    <EmbeddedResource Include="Images\ShowTestReport_32x32.png" />
+    <EmbeddedResource Include="Images\Show_16x16.png" />
+    <EmbeddedResource Include="Images\Show_32x32.png" />
+    <EmbeddedResource Include="Images\SideBySideRangeBar_16x16.png" />
+    <EmbeddedResource Include="Images\SideBySideRangeBar_32x32.png" />
+    <EmbeddedResource Include="Images\Solution_16x16.png" />
+    <EmbeddedResource Include="Images\Solution_32x32.png" />
+    <EmbeddedResource Include="Images\SortAsc_16x16.png" />
+    <EmbeddedResource Include="Images\SortAsc_32x32.png" />
+    <EmbeddedResource Include="Images\SortDesc_16x16.png" />
+    <EmbeddedResource Include="Images\SortDesc_32x32.png" />
+    <EmbeddedResource Include="Images\SpellCheckAsYouType_16x16.png" />
+    <EmbeddedResource Include="Images\SpellCheckAsYouType_32x32.png" />
+    <EmbeddedResource Include="Images\SplineArea_16x16.png" />
+    <EmbeddedResource Include="Images\SplineArea_32x32.png" />
+    <EmbeddedResource Include="Images\Spline_16x16.png" />
+    <EmbeddedResource Include="Images\Spline_32x32.png" />
+    <EmbeddedResource Include="Images\Sqare_16x16.png" />
+    <EmbeddedResource Include="Images\Sqare_32x32.png" />
+    <EmbeddedResource Include="Images\Squeeze_16x16.png" />
+    <EmbeddedResource Include="Images\Squeeze_32x32.png" />
+    <EmbeddedResource Include="Images\StackedArea_16x16.png" />
+    <EmbeddedResource Include="Images\StackedArea_32x32.png" />
+    <EmbeddedResource Include="Images\StackedBar_16x16.png" />
+    <EmbeddedResource Include="Images\StackedBar_32x32.png" />
+    <EmbeddedResource Include="Images\StackedLine_16x16.png" />
+    <EmbeddedResource Include="Images\StackedLine_32x32.png" />
+    <EmbeddedResource Include="Images\StackedSplineArea_16x16.png" />
+    <EmbeddedResource Include="Images\StackedSplineArea_32x32.png" />
+    <EmbeddedResource Include="Images\Status_16x16.png" />
+    <EmbeddedResource Include="Images\Status_32x32.png" />
+    <EmbeddedResource Include="Images\StepArea_16x16.png" />
+    <EmbeddedResource Include="Images\StepArea_32x32.png" />
+    <EmbeddedResource Include="Images\Stepline_16x16.png" />
+    <EmbeddedResource Include="Images\Stepline_32x32.png" />
+    <EmbeddedResource Include="Images\Stretch_16x16.png" />
+    <EmbeddedResource Include="Images\Stretch_32x32.png" />
+    <EmbeddedResource Include="Images\StrikeoutDouble_16x16.png" />
+    <EmbeddedResource Include="Images\StrikeoutDouble_32x32.png" />
+    <EmbeddedResource Include="Images\Strikeout_16x16.png" />
+    <EmbeddedResource Include="Images\Strikeout_32x32.png" />
+    <EmbeddedResource Include="Images\Subscript_16x16.png" />
+    <EmbeddedResource Include="Images\Subscript_32x32.png" />
+    <EmbeddedResource Include="Images\Suggestion_16x16.png" />
+    <EmbeddedResource Include="Images\Suggestion_32x32.png" />
+    <EmbeddedResource Include="Images\Summary_16x16.png" />
+    <EmbeddedResource Include="Images\Summary_32x32.png" />
+    <EmbeddedResource Include="Images\Superscript_16x16.png" />
+    <EmbeddedResource Include="Images\Superscript_32x32.png" />
+    <EmbeddedResource Include="Images\Tag_16x16.png" />
+    <EmbeddedResource Include="Images\Tag_32x32.png" />
+    <EmbeddedResource Include="Images\Task_16x16.png" />
+    <EmbeddedResource Include="Images\Task_32x32.png" />
+    <EmbeddedResource Include="Images\Team_16x16.png" />
+    <EmbeddedResource Include="Images\Team_32x32.png" />
+    <EmbeddedResource Include="Images\Technology_16x16.png" />
+    <EmbeddedResource Include="Images\Technology_32x32.png" />
+    <EmbeddedResource Include="Images\Template_16x16.png" />
+    <EmbeddedResource Include="Images\Template_32x32.png" />
+    <EmbeddedResource Include="Images\TextBox_16x16.png" />
+    <EmbeddedResource Include="Images\TextBox_32x32.png" />
+    <EmbeddedResource Include="Images\Through_16x16.png" />
+    <EmbeddedResource Include="Images\Through_32x32.png" />
+    <EmbeddedResource Include="Images\Tight_16x16.png" />
+    <EmbeddedResource Include="Images\Tight_32x32.png" />
+    <EmbeddedResource Include="Images\TimeLineView_16x16.png" />
+    <EmbeddedResource Include="Images\TimeLineView_32x32.png" />
+    <EmbeddedResource Include="Images\Time_16x16.png" />
+    <EmbeddedResource Include="Images\Time_32x32.png" />
+    <EmbeddedResource Include="Images\Today_16x16.png" />
+    <EmbeddedResource Include="Images\Today_32x32.png" />
+    <EmbeddedResource Include="Images\TopAndButtom_16x16.png" />
+    <EmbeddedResource Include="Images\TopAndButtom_32x32.png" />
+    <EmbeddedResource Include="Images\UnderlineDouble_16x16.png" />
+    <EmbeddedResource Include="Images\UnderlineDouble_32x32.png" />
+    <EmbeddedResource Include="Images\UnderlineWord_16x16.png" />
+    <EmbeddedResource Include="Images\UnderlineWord_32x32.png" />
+    <EmbeddedResource Include="Images\Underline_16x16.png" />
+    <EmbeddedResource Include="Images\Underline_32x32.png" />
+    <EmbeddedResource Include="Images\Undo_16x16.png" />
+    <EmbeddedResource Include="Images\Undo_32x32.png" />
+    <EmbeddedResource Include="Images\Up_16x16.png" />
+    <EmbeddedResource Include="Images\Up_32x32.png" />
+    <EmbeddedResource Include="Images\UserGroup_16x16.png" />
+    <EmbeddedResource Include="Images\UserGroup_32x32.png" />
+    <EmbeddedResource Include="Images\VB_16x16.png" />
+    <EmbeddedResource Include="Images\VB_32x32.png" />
+    <EmbeddedResource Include="Images\Version_16x16.png" />
+    <EmbeddedResource Include="Images\Version_32x32.png" />
+    <EmbeddedResource Include="Images\Video_16x16.png" />
+    <EmbeddedResource Include="Images\Video_32x32.png" />
+    <EmbeddedResource Include="Images\ViewOnWeb_16x16.png" />
+    <EmbeddedResource Include="Images\ViewOnWeb_32x32.png" />
+    <EmbeddedResource Include="Images\Watermark_16x16.png" />
+    <EmbeddedResource Include="Images\Watermark_32x32.png" />
+    <EmbeddedResource Include="Images\WeekView_16x16.png" />
+    <EmbeddedResource Include="Images\WeekView_32x32.png" />
+    <EmbeddedResource Include="Images\Windows_16x16.png" />
+    <EmbeddedResource Include="Images\Windows_32x32.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_BottomCenter_16x16.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_BottomCenter_32x32.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_BottomLeft_16x16.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_BottomLeft_32x32.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_BottomRight_16x16.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_BottomRight_32x32.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_CenterCenter_16x16.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_CenterCenter_32x32.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_CenterLeft_16x16.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_CenterLeft_32x32.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_CenterRight_16x16.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_CenterRight_32x32.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_TopCenter_16x16.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_TopCenter_32x32.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_TopLeft_16x16.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_TopLeft_32x32.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_TopRight_16x16.png" />
+    <EmbeddedResource Include="Images\WithTextWrapping_TopRight_32x32.png" />
+    <EmbeddedResource Include="Images\Wizard_16x16.png" />
+    <EmbeddedResource Include="Images\Wizard_32x32.png" />
+    <EmbeddedResource Include="Images\WorkWeekView_16x16.png" />
+    <EmbeddedResource Include="Images\WorkWeekView_32x32.png" />
+    <EmbeddedResource Include="Images\WrapText_16x16.png" />
+    <EmbeddedResource Include="Images\WrapText_32x32.png" />
+    <EmbeddedResource Include="Images\Zoom100%25_16x16.png" />
+    <EmbeddedResource Include="Images\Zoom100%25_32x32.png" />
+    <EmbeddedResource Include="Images\Zoom2_16x16.png" />
+    <EmbeddedResource Include="Images\Zoom2_32x32.png" />
+    <EmbeddedResource Include="Images\ZoomIn_16x16.png" />
+    <EmbeddedResource Include="Images\ZoomIn_32x32.png" />
+    <EmbeddedResource Include="Images\ZoomOut_16x16.png" />
+    <EmbeddedResource Include="Images\ZoomOut_32x32.png" />
+    <EmbeddedResource Include="Images\Zoom_16x16.png" />
+    <EmbeddedResource Include="Images\Zoom_32x32.png" />
+    <None Include="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\MyDashboard.xml" />
+    <None Include="UnusableNodes_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes2.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes3.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes1_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes4.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes5.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes7.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes8.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes9.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes10.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes11.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes12.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes13.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes14.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes16.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes2_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes17.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes18.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes19.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes21.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes4_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes22.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes23.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes24.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes25.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes5_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes27.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes6_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes28.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Welcome.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomAuthentication\" />
+    <Folder Include="Editor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicReportDesigner\SDMS Result Entry - CCIC\DynamicDesigner\DynamicDesigner.vbproj">
+      <Project>{78ef2291-d75d-4415-a0c0-c4c34dcc6de4}</Project>
+      <Name>DynamicDesigner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DynamicReportDesigner\SDMS Result Entry - CCIC\Multi Language\BusinessLayer\DynamicReportBusinessLayer.vbproj">
+      <Project>{d9467f34-b5fc-4f50-834d-08c37fe366c4}</Project>
+      <Name>DynamicReportBusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DynamicReportDesigner\SDMS Result Entry - CCIC\Multi Language\ML\DynamicReportML.vbproj">
+      <Project>{ffeedea7-aa0d-45bf-8b72-e52e07fedd1c}</Project>
+      <Name>DynamicReportML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\References\Modules\Modules.csproj">
+      <Project>{3fb7385f-8538-4aee-8f17-35e3a172b100}</Project>
+      <Name>Modules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Roundoff\E_RoundOff\E_RoundOff.vbproj">
+      <Project>{98bcf628-6b15-4ede-96af-89b58b3ea53e}</Project>
+      <Name>E_RoundOff</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

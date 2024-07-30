@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="MyWork">
+        <Items Id="Items">
+          <Item Id="Portal" Caption="应用中心" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

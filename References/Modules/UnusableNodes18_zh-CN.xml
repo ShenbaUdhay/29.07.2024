@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="TestMethod_SampleLogIns_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="VisualMatrix" Caption="样品类型" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

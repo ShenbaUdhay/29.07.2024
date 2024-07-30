@@ -1,0 +1,17 @@
+﻿ <?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Seting.MeasureTemplateResult">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="TestItem" Caption="检测项目" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="MeasureTemplateResult_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CategoryName" Caption="专业大类" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

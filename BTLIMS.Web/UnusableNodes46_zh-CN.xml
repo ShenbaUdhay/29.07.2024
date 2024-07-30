@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="MyDesktop">
+        <Items Id="Items">
+          <Item Id="Calendar" Caption="日历" />
+          <Item Id="Agenda" Caption="待定议程" />
+          <Item Id="TaskTracking" Caption="任务跟踪" />
+          <Item Id="Project Tracking" Caption="项目进度跟踪" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

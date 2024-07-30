@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Seting">
+        <Items Id="Items">
+          <Item Id="@28ee78b2-1e82-48b7-bb4e-cf9e1985b077">
+            <Items Id="Items">
+              <Item Id="DocumentCodingRule_ListView" ViewId="DocumentCodingRule_ListView" />
+            </Items>
+          </Item>
+          <Item Id="MeasureTestItemInherit_ListView" ViewId="MeasureTestItemInherit_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Assets">
+        <Items Id="Items">
+          <Item Id="LabwareInherit_ListView" ViewId="LabwareInherit_ListView" />
+        </Items>
+      </Item>
+      <Item Id="MyWork">
+        <Items Id="Items">
+          <Item Id="Event_ListView" ViewId="Event_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

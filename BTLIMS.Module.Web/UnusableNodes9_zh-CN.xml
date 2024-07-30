@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Labware_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="DepartmentUsed" Caption="使用部门" />
+      </Items>
+    </DetailView>
+    <ListView Id="Labware_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DepartmentUsed" Caption="使用部门" />
+      </Columns>
+    </ListView>
+    <ListView Id="MeasureTestItem_Labwares_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DepartmentUsed" Caption="使用部门" />
+      </Columns>
+    </ListView>
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Assets.Labware">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="DepartmentUsed" Caption="使用部门" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Modules.BusinessObjects.Hr.NavigationItem" Value="导航项目">
+        <LocalizationItem Name="DataExplorer" Value="数据综合查询" />
+        <LocalizationItem Name="MyDesktop" Value="我的桌面" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+</Application>

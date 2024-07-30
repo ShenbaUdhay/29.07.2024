@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="localhost_XAF_Connection" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="Samplecheckin">
+        <Tables>
+          <Table Name="Samplecheckin" X="50" Y="40" Width="125" Height="524" />
+          <Table Name="SampleCheckinSampleCategory" X="210" Y="200" Width="125" Height="150" />
+          <Table Name="SamplecheckinVisualMatrix" X="340" Y="30" Width="125" Height="150" />
+          <Table Name="SampleLogIn" X="495" Y="30" Width="125" Height="612" />
+          <Table Name="Project" X="650" Y="30" Width="125" Height="260" />
+          <Table Name="SampleParameter" X="805" Y="30" Width="125" Height="788" />
+          <Table Name="Testparameter" X="960" Y="30" Width="125" Height="172" />
+          <Table Name="TestMethod" X="1115" Y="30" Width="125" Height="260" />
+          <Table Name="Customer" X="1270" Y="30" Width="125" Height="700" />
+          <Table Name="VisualMatrix" X="1425" Y="30" Width="125" Height="260" />
+          <Table Name="Test" X="1580" Y="30" Width="125" Height="238" />
+          <Relation Type="Inner" Parent="Samplecheckin" Nested="SampleCheckinSampleCategory">
+            <KeyColumn Parent="Oid" Nested="Samplecheckins" />
+          </Relation>
+          <Relation Type="Inner" Parent="Samplecheckin" Nested="SamplecheckinVisualMatrix">
+            <KeyColumn Parent="Oid" Nested="Samplecheckins" />
+          </Relation>
+          <Relation Type="Inner" Parent="Samplecheckin" Nested="SampleLogIn">
+            <KeyColumn Parent="Oid" Nested="JobID" />
+          </Relation>
+          <Relation Type="Inner" Parent="Samplecheckin" Nested="Project">
+            <KeyColumn Parent="ProjectID" Nested="Oid" />
+          </Relation>
+          <Relation Type="Inner" Parent="SampleLogIn" Nested="SampleParameter">
+            <KeyColumn Parent="Oid" Nested="Samplelogin" />
+          </Relation>
+          <Relation Type="Inner" Parent="SampleParameter" Nested="Testparameter">
+            <KeyColumn Parent="Testparameter" Nested="Oid" />
+          </Relation>
+          <Relation Type="Inner" Parent="Testparameter" Nested="TestMethod">
+            <KeyColumn Parent="TestMethod" Nested="Oid" />
+          </Relation>
+          <Relation Type="Inner" Parent="Samplecheckin" Nested="Customer">
+            <KeyColumn Parent="ClientName" Nested="Oid" />
+          </Relation>
+          <Relation Type="Inner" Parent="SampleLogIn" Nested="VisualMatrix">
+            <KeyColumn Parent="VisualMatrix" Nested="Oid" />
+          </Relation>
+          <Relation Type="Inner" Parent="TestMethod" Nested="Test">
+            <KeyColumn Parent="TestName" Nested="Oid" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="SampleLogIn" Name="VisualMatrix" />
+          <Column Table="Samplecheckin" Name="RecievedDate" />
+          <Column Table="Samplecheckin" Name="JobID" />
+          <Column Table="Samplecheckin" Name="ClientName" />
+          <Column Table="Samplecheckin" Name="ProjectID" />
+          <Column Table="SampleLogIn" Name="SampleNo" />
+          <Column Table="Project" Name="ProjectName" />
+          <Column Table="TestMethod" Name="TestName" />
+          <Column Table="TestMethod" Name="MethodName" />
+          <Column Table="SampleParameter" Name="Testparameter" />
+          <Column Table="SampleCheckinSampleCategory" Name="SampleCategoryName" />
+          <Column Table="Customer" Name="CustomerName" />
+          <Column Table="VisualMatrix" Name="VisualMatrixName" />
+          <Column Table="Test" Name="TestName" Alias="Test_TestName" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Samplecheckin">
+            <Field Name="VisualMatrix" Type="Guid" />
+            <Field Name="RecievedDate" Type="DateTime" />
+            <Field Name="JobID" Type="String" />
+            <Field Name="ClientName" Type="Guid" />
+            <Field Name="ProjectID" Type="Guid" />
+            <Field Name="SampleNo" Type="Int32" />
+            <Field Name="ProjectName" Type="String" />
+            <Field Name="TestName" Type="Guid" />
+            <Field Name="MethodName" Type="Guid" />
+            <Field Name="Testparameter" Type="Guid" />
+            <Field Name="SampleCategoryName" Type="Guid" />
+            <Field Name="CustomerName" Type="String" />
+            <Field Name="VisualMatrixName" Type="String" />
+            <Field Name="Test_TestName" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Weekly Sample  Received" DataSource="dashboardSqlDataSource1" DataMember="Samplecheckin">
+      <DataItems>
+        <Dimension DataMember="RecievedDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+        <Measure DataMember="SampleNo" DefaultId="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Weighted>
+              <Value DefaultId="DataItem0" />
+            </Weighted>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Grid ComponentName="gridDashboardItem1" Name="" DataSource="dashboardSqlDataSource1" DataMember="Samplecheckin">
+      <DataItems>
+        <Dimension DataMember="VisualMatrixName" DefaultId="DataItem0" />
+        <Measure DataMember="SampleNo" Name="Total Number of Samples" DefaultId="DataItem1" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="Matrix" Weight="99.77064220183486">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Count" Weight="50.22935779816514">
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+    <Grid ComponentName="gridDashboardItem2" Name="" DataSource="dashboardSqlDataSource1" DataMember="Samplecheckin">
+      <DataItems>
+        <Dimension DataMember="CustomerName" DefaultId="DataItem0" />
+        <Measure DataMember="SampleNo" DefaultId="DataItem1" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="Client" Weight="124.46808510638297">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Count" Weight="25.531914893617021">
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+    <Grid ComponentName="gridDashboardItem3" Name="" DataSource="dashboardSqlDataSource1" DataMember="Samplecheckin">
+      <DataItems>
+        <Dimension DataMember="Test_TestName" DefaultId="DataItem0" />
+        <Measure DataMember="SampleNo" DefaultId="DataItem1" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="Test" Weight="107.58620689655173">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Count" Weight="42.413793103448278">
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem3" Name="Matrix " DataSource="dashboardSqlDataSource1" DataMember="Samplecheckin">
+      <DataItems>
+        <Dimension DataMember="VisualMatrixName" DefaultId="DataItem0" />
+        <Measure DataMember="SampleNo" Name="Count" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="Count">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem4" Name="Test" DataSource="dashboardSqlDataSource1" DataMember="Samplecheckin">
+      <DataItems>
+        <Measure DataMember="SampleNo" Name="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="Test_TestName" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem5" Name="Client" DataSource="dashboardSqlDataSource1" DataMember="Samplecheckin">
+      <DataItems>
+        <Measure DataMember="SampleNo" Name="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="CustomerName" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="Count">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="37.333333333333336" />
+      <LayoutGroup Weight="25">
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="32.864864864864863" />
+        <LayoutItem DashboardItem="gridDashboardItem2" Weight="35.135135135135137" />
+        <LayoutItem DashboardItem="gridDashboardItem3" Weight="32" />
+      </LayoutGroup>
+      <LayoutGroup Weight="37.666666666666664">
+        <LayoutItem DashboardItem="chartDashboardItem3" Weight="32.864864864864863" />
+        <LayoutItem DashboardItem="chartDashboardItem5" Weight="35.135135135135137" />
+        <LayoutItem DashboardItem="chartDashboardItem4" Weight="32" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="QCBatch_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Instrument" Caption="分析仪器" />
+      </Columns>
+    </ListView>
+    <DetailView Id="QCBatch_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Instrument" Caption="分析仪器" />
+      </Items>
+    </DetailView>
+    <ListView Id="QCBatch_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Instrument" Caption="分析仪器" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

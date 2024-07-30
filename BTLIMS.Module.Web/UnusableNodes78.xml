@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Subsupply_DetailView" Caption="Sub Supply" />
+    <ListView Id="Subsupply_ListView" Caption="Sub Supply" />
+    <ListView Id="Subsupply_LookupListView" Caption="Sub Supply" />
+    <ListView Id="Subsupply_supplies_ListView" Caption="Supply" />
+    <DetailView Id="Supplies_DetailView" ObjectCaptionFormat="{0:Supplycode}" Caption="Supply">
+      <Items Id="Items">
+        <PropertyEditor Id="Category" LookupEditorMode="AllItemsWithSearch" LookupProperty="category" />
+        <PropertyEditor Id="Grade" LookupEditorMode="AllItemsWithSearch" LookupProperty="Grade" />
+        <PropertyEditor Id="Supplycode" Caption="Supply Code" DisplayFormat="{0:000}" AllowEdit="False" />
+        <PropertyEditor Id="SupplyUnit" Caption="Supply/Unit" />
+        <PropertyEditor Id="Unit" LookupEditorMode="AllItemsWithSearch" LookupProperty="Option" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Supplies" Caption="Supply" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Subsupplyname" Caption="Sub Supply" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Supplies_ListView" Caption="Supply">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SupplyDescription" Caption="SupplyDescription" />
+        <ColumnInfo Id="Supplycode" DisplayFormat="{0:000}" Caption="SupplyCode" />
+        <ColumnInfo Id="Category" LookupProperty="category" />
+        <ColumnInfo Id="Grade" LookupProperty="Grade" />
+        <ColumnInfo Id="Unit" LookupProperty="Option" />
+        <ColumnInfo Id="SupplyUnit" Caption="Supply/Unit" />
+        <ColumnInfo Id="AlertQty" Caption="AlertQty" />
+        <ColumnInfo Id="IsVendorLT" Caption="IsVendorLT" />
+        <ColumnInfo Id="IsLabLT" Caption="IsLabLT" />
+        <ColumnInfo Id="RetireDate" Caption="RetireDate" />
+      </Columns>
+    </ListView>
+    <ListView Id="Supplies_LookupListView" Caption="Supply">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AlertQty" Index="-1" />
+        <ColumnInfo Id="Category" Index="-1" />
+        <ColumnInfo Id="IsLabLT" Index="-1" />
+        <ColumnInfo Id="IsVendorLT" Index="-1" />
+        <ColumnInfo Id="RetireDate" Index="-1" />
+        <ColumnInfo Id="Supplycode" Width="80" Index="-1" />
+        <ColumnInfo Id="SupplyUnit" Index="-1" Width="132" />
+        <ColumnInfo Id="Unit" Index="-1" />
+        <ColumnInfo Id="Supply" Index="0" />
+        <ColumnInfo Id="Specification" Index="1" Width="90" />
+        <ColumnInfo Id="Grade" Index="2" />
+      </Columns>
+    </ListView>
+    <ListView Id="Supplies_Subsupplyname_ListView" AllowLink="False" AllowUnlink="False" Caption="Sub Supply">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SubSupplyName" Caption="SubSupplyName" Width="119" />
+      </Columns>
+    </ListView>
+    <ListView Id="Supplies_Upload_ListView" AllowLink="False" AllowUnlink="False" Caption="Supplies Upload" />
+    <DetailView Id="Suppliesupload_DetailView" Caption="Supplies Upload">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Suppliesupload" Caption="Refrence" Direction="Horizontal" RelativeSize="93.262411347517727">
+              <LayoutItem Id="Refrence" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="FileAttachmentBase" RelativeSize="6.73758865248227">
+              <LayoutItem Id="File" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Suppliesupload_ListView" Caption="Supplies Upload" />
+    <ListView Id="Suppliesupload_LookupListView" Caption="Supplies Upload" />
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="Result_DV">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item3">
+              <LayoutItem Id="QC" ViewItem="QC" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="ICM">
+        <Items Id="Items">
+          <Item Id="Operations">
+            <Items Id="Items">
+              <Item Id="Approve" ViewId="Requisition_ListView_Approve" />
+              <Item Id="Review" ViewId="Requisition_ListView_Review" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

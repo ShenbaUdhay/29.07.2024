@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SequenceSetupTestRun_ListView" Criteria="" />
+    <DetailView Id="SequenceTest_DetailView">
+      <Items Id="Items">
+        <DashboardViewItem Id="lstSequenceDisplay" ViewId="SampleLogIn_LookupListView_SequenceTest" ActionsToolbarVisibility="Hide" Criteria="[Oid] Is Null" />
+        <PropertyEditor Id="TestType" PropertyEditorType="LDM.Module.Web.Editors.EnumRadioButtonListPropertyEditor" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SequenceTest" RelativeSize="100">
+              <LayoutItem Id="TestType" Index="0" RelativeSize="6.2992125984251972" />
+              <LayoutItem Id="NoOfSamples" Index="1" RelativeSize="4.7244094488188972" />
+              <LayoutItem Id="JobID" RelativeSize="4.7244094488188972" />
+              <LayoutItem Id="NoOfRun" ViewItem="NoOfRun" Index="3" RelativeSize="4.7244094488188972" Removed="True" />
+              <LayoutItem Id="lstSequenceDisplay" ViewItem="lstSequenceDisplay" Index="4" RelativeSize="79.5275590551181" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestMethod_ListView_AnalysisQueue">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SpikeSample" PropertyName="SpikeSample" Width="50" Index="-1" />
+        <ColumnInfo Id="ShowClosingQCTestRun" PropertyName="ShowClosingQCTestRun" Width="50" Index="-1" />
+        <ColumnInfo Id="Frequency" PropertyName="Frequency" Width="50" Index="-1" />
+        <ColumnInfo Id="DupSample" PropertyName="DupSample" Width="50" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="SequenceSetup_SampleTestRun_ListView" ClassName="Modules.BusinessObjects.Setting.SequenceSetupTestRun" DetailViewID="" AllowDelete="False" AllowLink="False" AllowNew="False" AllowEdit="True" InlineEditMode="Batch">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClosingTestRun" PropertyName="ClosingTestRun" Width="50" Index="-1" />
+        <ColumnInfo Id="InitialTestRun" PropertyName="InitialTestRun" Width="50" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="SampelTestRun" PropertyName="SampelTestRun" Width="50" Index="-1" />
+        <ColumnInfo Id="QCType" PropertyName="QCType" Width="70" Index="0" />
+        <ColumnInfo Id="QCRole" PropertyName="QCType.QCRole" Width="70" Index="1" />
+        <ColumnInfo Id="QCRootRole" PropertyName="QCType.QCRootRole" Width="70" Index="2" Caption="QCRootRole" />
+        <ColumnInfo Id="Sort" PropertyName="Sort" Width="50" Index="3" SortIndex="0" SortOrder="Ascending" AllowEdit="False" />
+      </Columns>
+      <Sorting Id="Sorting">
+        <SortProperty Id="sortOrder" PropertyName="Sort" Index="0" />
+      </Sorting>
+    </ListView>
+    <ListView Id="SequenceSetup_InitialTestRun_ListView" ClassName="Modules.BusinessObjects.Setting.SequenceSetupTestRun" DetailViewID="" AllowDelete="False" AllowLink="False" AllowNew="False" AllowEdit="True" InlineEditMode="Batch">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClosingTestRun" PropertyName="ClosingTestRun" Width="50" Index="-1" />
+        <ColumnInfo Id="InitialTestRun" PropertyName="InitialTestRun" Width="50" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="SampelTestRun" PropertyName="SampelTestRun" Width="50" Index="-1" />
+        <ColumnInfo Id="QCType" PropertyName="QCType" Width="70" Index="0" />
+        <ColumnInfo Id="QCRole" PropertyName="QCType.QCRole" Width="70" Index="1" />
+        <ColumnInfo Id="QCRootRole" PropertyName="QCType.QCRootRole" Width="70" Index="2" Caption="QCRootRole" />
+        <ColumnInfo Id="Sort" PropertyName="Sort" Width="50" Index="3" SortIndex="0" SortOrder="Ascending" AllowEdit="False" />
+      </Columns>
+      <Sorting Id="Sorting">
+        <SortProperty Id="sortOrder" PropertyName="Sort" Index="0" />
+      </Sorting>
+    </ListView>
+    <DetailView Id="SequenceSetup_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="SpikeSample" PropertyName="SpikeSample" />
+        <PropertyEditor Id="ShowClosingQCTestRun" PropertyName="ShowClosingQCTestRun" />
+        <PropertyEditor Id="SampleTestRun" PropertyName="SampleTestRun" View="SequenceSetup_SampleTestRun_ListView" />
+        <PropertyEditor Id="InitialTestRun" PropertyName="InitialTestRun" View="SequenceSetup_InitialTestRun_ListView" />
+        <PropertyEditor Id="Frequency" PropertyName="Frequency" />
+        <PropertyEditor Id="DupSample" PropertyName="DupSample" />
+        <PropertyEditor Id="ClosingTestRun" PropertyName="ClosingTestRun" View="SequenceSetup_ClosingTestRun_ListView" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item1">
+            <TabbedGroup Id="Tabs">
+              <LayoutGroup Id="ClosingQCTestRun">
+                <LayoutItem Id="ClosingTestRun" ViewItem="ClosingTestRun" />
+                <LayoutGroup Id="Auto1225705d-0b63-48bd-85cb-d891c0dee31d">
+                  <LayoutItem Id="ShowClosingQCTestRun" ViewItem="ShowClosingQCTestRun" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="SampleQCTestRun">
+                <LayoutItem Id="SampleTestRun" ViewItem="SampleTestRun" />
+              </LayoutGroup>
+              <LayoutGroup Id="InitialQCTestRun">
+                <LayoutItem Id="InitialTestRun" ViewItem="InitialTestRun" />
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SequenceSetup_col1">
+              <LayoutItem Id="SpikeSample" ViewItem="SpikeSample" />
+              <LayoutItem Id="DupSample" ViewItem="DupSample" />
+              <LayoutItem Id="Frequency" ViewItem="Frequency" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SequenceSetup_ClosingTestRun_ListView" ClassName="Modules.BusinessObjects.Setting.SequenceSetupTestRun" DetailViewID="" AllowDelete="False" AllowLink="False" AllowNew="False" AllowEdit="True" InlineEditMode="Batch">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ClosingTestRun" PropertyName="ClosingTestRun" Width="50" Index="-1" />
+        <ColumnInfo Id="InitialTestRun" PropertyName="InitialTestRun" Width="50" Index="-1" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="SampelTestRun" PropertyName="SampelTestRun" Width="50" Index="-1" />
+        <ColumnInfo Id="QCType" PropertyName="QCType" Width="70" Index="0" />
+        <ColumnInfo Id="QCRole" PropertyName="QCType.QCRole" Width="70" Index="1" />
+        <ColumnInfo Id="QCRootRole" PropertyName="QCType.QCRootRole" Width="70" Index="2" Caption="QCRootRole" />
+        <ColumnInfo Id="Sort" PropertyName="Sort" Width="50" Index="3" SortIndex="0" SortOrder="Ascending" AllowEdit="False" />
+      </Columns>
+      <Sorting Id="Sorting">
+        <SortProperty Id="sortOrder" PropertyName="Sort" Index="0" />
+      </Sorting>
+    </ListView>
+    <DetailView Id="ResultViewQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_Validation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportingQueryPanel_DetailView_ResultView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultValidation">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_ResultApproval">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <ListView Id="BottleSetup_Test_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DupSample" Index="-1" />
+        <ColumnInfo Id="Frequency" Index="-1" />
+        <ColumnInfo Id="ShowClosingQCTestRun" Index="-1" />
+        <ColumnInfo Id="SpikeSample" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="BottleTest_TestMethods_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DupSample" Index="-1" />
+        <ColumnInfo Id="Frequency" Index="-1" />
+        <ColumnInfo Id="ShowClosingQCTestRun" Index="-1" />
+        <ColumnInfo Id="SpikeSample" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="GroupTest_TestMethods_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DupSample" Index="-1" />
+        <ColumnInfo Id="Frequency" Index="-1" />
+        <ColumnInfo Id="ShowClosingQCTestRun" Index="-1" />
+        <ColumnInfo Id="SpikeSample" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="QCBatch_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="qcreset" ActionContainer="qcreset" />
+        <ActionContainerViewItem Id="qcload" ActionContainer="qcload" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Qc_BatchIDPopUp" ActionContainer="RE_QCBatchIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="TestMethod_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autof41af155-9776-4c91-848f-f62f0a69ca8f">
+              <LayoutGroup Id="Autoe423ea68-cf7b-493f-9322-4b5229229eac">
+                <LayoutGroup Id="Auto58b13ec3-7ee9-4865-b86f-9fbcfb63921c">
+                  <LayoutGroup Id="Autoe3a35350-4a18-477c-a7ab-e1f71b88ba8c">
+                    <LayoutItem Id="Container" ViewItem="Container" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestMethod_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DupSample" Index="-1" />
+        <ColumnInfo Id="Frequency" Index="-1" />
+        <ColumnInfo Id="ShowClosingQCTestRun" Index="-1" />
+        <ColumnInfo Id="SpikeSample" Index="-1" />
+      </Columns>
+    </ListView>
+  </Views>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="moveTestRunDownAction" ImageName="ModelEditor_IndexDown" />
+      <Action Id="moveTestRunUpAction" ImageName="ModelEditor_IndexUp" />
+      <Action Id="newSequenceTestRunAction" ImageName="Add_16x16" PaintStyle="Image" />
+      <Action Id="removeSequenceTestRunAction" ImageName="Action_Delete" PaintStyle="Image" />
+      <Action Id="saveSequenceSetupAction" ImageName="Action_Save" />
+    </Actions>
+  </ActionDesign>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="System">
+        <Items Id="Items">
+          <Item Id="TestGroup" ViewId="TestGroup_ListView" />
+          <Item Id="TestForm" ViewId="TestForm_LookupListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.CodingRule.DocumentCodingRule">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="DocumentName" Index="1" />
+        <Member Name="Description" Index="2" />
+        <Member Name="Belongs" Index="3" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="Employee_DetailView_Qualifications">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="MeasureQualifications">
+              <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureQualifications_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="Employee" ViewItem="Employee" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureQualificationsAuthorize_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureQualificationsAuthorize_col1">
+              <LayoutGroup Id="Auto22255a84-fc4d-4efd-bad8-82c0b2b67150">
+                <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

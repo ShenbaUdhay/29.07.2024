@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="Utility">
+            <Items Id="Items">
+              <Item Id="SDMSsetup">
+                <Items Id="Items">
+                  <Item Id="ScientificDataTable" Caption="科学数据表" />
+                  <Item Id="SequenceSetup" Caption="顺序设置" />
+                  <Item Id="TemplateType" Caption="模板类型" />
+                  <Item Id="SDMS_templates" Caption="SDMS模板" />
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

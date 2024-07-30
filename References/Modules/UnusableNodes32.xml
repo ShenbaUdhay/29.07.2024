@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="PermissionPolicyUser_Roles_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CanEditModel" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView_Qualifications">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="MeasureQualifications">
+              <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Roles" View="PermissionPolicyUser_Roles_ListView" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CustomSystemUser_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="PermissionPolicyUser" Index="0" RelativeSize="100">
+              <LayoutItem Id="UserName" RelativeSize="37.2093023255814" Index="0" />
+              <LayoutItem Id="IsActive" RelativeSize="27.906976744186046" Index="1" />
+              <LayoutItem Id="ChangePasswordOnFirstLogon" RelativeSize="34.883720930232556" Index="2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomSystemRole_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="PermissionPolicyRoleBase" Index="0" RelativeSize="100">
+              <LayoutItem Id="Name" RelativeSize="34.782608695652172" />
+              <LayoutItem Id="PermissionPolicy" RelativeSize="26.086956521739129" Index="1" />
+              <LayoutGroup Id="Auto21a3bd57-7a94-47de-98cb-4edae8fa9436" ShowCaption="False" Direction="Horizontal" Index="2" RelativeSize="39.130434782608695">
+                <LayoutItem Id="IsAdministrative" ViewItem="IsAdministrative" Index="0" RelativeSize="50" />
+                <LayoutItem Id="CanEditModel" ViewItem="CanEditModel" Index="1" RelativeSize="50" />
+              </LayoutGroup>
+              <LayoutItem Id="IsAdministrative" RelativeSize="21.818181818181817" Index="2" Removed="True" />
+              <LayoutItem Id="CanEditModel" RelativeSize="27.272727272727273" Index="3" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CustomSystemUser_CustomRoles_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PermissionPolicy" Index="1" Width="82" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="PermissionPolicyUser" Index="1" RelativeSize="41.776315789473685" Direction="Horizontal" Removed="True">
+              <LayoutItem Id="IsActive" RelativeSize="23.776223776223777" Index="1" Removed="True" />
+              <LayoutItem Id="ChangePasswordOnFirstLogon" RelativeSize="35.416666666666664" Removed="True" />
+              <LayoutItem Id="UserName" RelativeSize="19.58041958041958" Removed="True" />
+            </LayoutGroup>
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Employee">
+                <LayoutGroup Id="Employee_col2">
+                  <LayoutItem Id="Photo3" ViewItem="Photo3" />
+                  <LayoutItem Id="Signature3" ViewItem="Signature3" />
+                  <LayoutItem Id="Signature2" ViewItem="Signature2" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Labware_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="Item3">
+                <LayoutGroup Id="Auto3c6e70e6-20ab-46c2-a56c-50fab6eb5739">
+                  <LayoutItem Id="InspectCategory" ViewItem="InspectCategory" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureQualifications_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="Employee" ViewItem="Employee" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureQualificationsAuthorize_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureQualificationsAuthorize_col1">
+              <LayoutGroup Id="Auto22255a84-fc4d-4efd-bad8-82c0b2b67150">
+                <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

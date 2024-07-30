@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="TestMethod_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodName" Caption="分析方法名称" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

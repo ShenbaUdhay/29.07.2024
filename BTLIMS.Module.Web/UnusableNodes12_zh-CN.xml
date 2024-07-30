@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SampleLogIn_ListView_Copy_SampleRegistration">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CollectTimeDisplay" Caption="采样时间" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CollectTimeDisplay" Caption="采样时间" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

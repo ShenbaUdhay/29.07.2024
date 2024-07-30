@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SampleParameter_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Samplelogin" Caption="方案样品序号" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="XpoStateAppearance_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Visibility" Caption="能见度" />
+      </Columns>
+    </ListView>
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="DevExpress.ExpressApp.StateMachine.Xpo.XpoState">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Caption" Caption="标题" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.StateMachine.Xpo.XpoStateAppearance">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Visibility" Caption="能见度" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.StateMachine.Xpo.XpoStateMachine">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Active" Caption="活跃" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.StateMachine.Xpo.XpoTransition">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Caption" Caption="标题" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="Bottle" Caption="容器" />
+      <Action Id="Clearall" Caption="取消" />
+      <Action Id="Deletesetup" ToolTip="删除" ShortCaption="删除" Caption="删除" />
+      <Action Id="Distribution" Caption="分发" />
+      <Action Id="DistributionClose" ShortCaption="关闭" Caption="关闭" />
+      <Action Id="DistributionNext" ToolTip="下一个" />
+      <Action Id="DistributionPrevious" ToolTip="上一个" />
+      <Action Id="Next" Caption="Next &gt;" />
+      <Action Id="Previous" Caption="&lt; 上一个" />
+      <Action Id="sampleBottleAllocationAdd" ToolTip="新加" ShortCaption="新加" Caption="新加" />
+      <Action Id="sampleBottleAllocationRemove" ToolTip="删除" ShortCaption="删除" Caption="删除" />
+      <Action Id="Saveall" ToolTip="保存" ShortCaption="保存" Caption="保存" />
+    </Actions>
+  </ActionDesign>
+</Application>

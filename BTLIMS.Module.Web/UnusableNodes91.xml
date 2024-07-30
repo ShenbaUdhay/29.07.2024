@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Brand_DetailView" ObjectCaptionFormat="{0:brand}">
+      <Items Id="Items">
+        <PropertyEditor Id="brand" Caption="Brand" />
+        <PropertyEditor Id="brandDescription" Caption="Brand Description" />
+      </Items>
+    </DetailView>
+    <ListView Id="Brand_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="brand" Caption="Brand" />
+        <ColumnInfo Id="brandDescription" Caption="BrandDescription" />
+      </Columns>
+    </ListView>
+    <ListView Id="Brand_LookupListView" AllowNew="False" AllowUnlink="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="brand" Caption="Brand" />
+        <ColumnInfo Id="brandDescription" Caption="BrandDescription" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <ListView Id="Requisition_LookupListView_POID">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Brand" PropertyName="Brand" Width="70" LookupProperty="brand" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView_Review">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Brand" PropertyName="Brand" Width="70" Index="7" LookupProperty="brand" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView_Receive_Vendor">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Brand" PropertyName="Brand" Width="70" Index="12" LookupProperty="brand" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView_Receive_POID">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Brand" PropertyName="Brand" Width="70" Index="11" LookupProperty="brand" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView_Receive">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Brand" PropertyName="Brand" Width="70" Index="11" LookupProperty="brand" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Brand" PropertyName="Brand" Width="70" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView_Approve">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Brand" PropertyName="Brand" Width="70" Index="7" LookupProperty="brand" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Requisition_DetailView_Receive">
+      <Items Id="Items">
+        <PropertyEditor Id="Brand" PropertyName="Brand" LookupEditorMode="AllItemsWithSearch" LookupProperty="brand" AllowEdit="False" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="Items_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Items">
+              <LayoutGroup Id="Items_col2">
+                <LayoutItem Id="ItemUnit" RelativeSize="17.391304347826086" />
+                <LayoutItem Id="AlertQty" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="IsVendorLT" RelativeSize="11.413043478260869" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Items_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AlertQty" Index="-1" Caption="AlertQty" />
+        <ColumnInfo Id="IsLabLT" Index="-1" />
+        <ColumnInfo Id="IsToxic" Index="-1" />
+        <ColumnInfo Id="IsVendorLT" Index="-1" />
+        <ColumnInfo Id="RetireDate" Index="-1" />
+        <ColumnInfo Id="Category" Index="0" LookupProperty="category" />
+        <ColumnInfo Id="ItemCode" Caption="ItemCode" Index="1" />
+        <ColumnInfo Id="items" Caption="Item" Index="2" />
+        <ColumnInfo Id="Specification" Index="3" Width="90" />
+        <ColumnInfo Id="Grade" Index="4" LookupProperty="Grade" />
+        <ColumnInfo Id="Unit" Index="5" Caption="PackageUnits" LookupProperty="Option" />
+        <ColumnInfo Id="ItemUnit" Caption="Item/Unit" />
+      </Columns>
+    </ListView>
+    <ListView Id="Purchaseorder_Item_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Brand" LookupProperty="brand" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="Requisition_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Brand" LookupEditorMode="AllItemsWithSearch" LookupProperty="brand" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Requisition">
+              <LayoutGroup Id="Requisition_col1">
+                <LayoutItem Id="Brand" RelativeSize="7.8947368421052628" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Requisition_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Brand" LookupProperty="brand" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Brand" LookupProperty="brand" Index="-1" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="ICM">
+        <Items Id="Items">
+          <Item Id="Basic Settings">
+            <Items Id="Items">
+              <Item Id="Brand" ViewId="Brand_ListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

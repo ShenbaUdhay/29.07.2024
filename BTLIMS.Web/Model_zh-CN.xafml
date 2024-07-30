@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application VersionFormat="版本 {0}.{1}">
+  <ActionDesign>
+    <Actions>
+      <Action Id="ChangePasswordByUser" Caption="更改密码" />
+      <Action Id="Download" Caption="下载" />
+      <Action Id="Edit" Caption="编辑" />
+      <Action Id="Export" Caption="导出" />
+      <Action Id="InlineEdit" Caption="行编辑" />
+      <Action Id="MyDetails" Caption="我的信息" />
+      <Action Id="ReportViewerDialogControllerV2_Close" Caption="关闭" />
+      <Action Id="ResetPassword" Caption="重置密码" ToolTip="为所选用户生成一个新的密码" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordOnLogonParameters" Caption="第一次登录更改密码">
+      <OwnMembers>
+        <Member Name="ConfirmPassword" Caption="确认密码" />
+        <Member Name="NewPassword" Caption="新密码" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordParameters" Caption="更改密码">
+      <OwnMembers>
+        <Member Name="OldPassword" Caption="旧密码" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ResetPasswordParameters" Caption="重置密码">
+      <OwnMembers>
+        <Member Name="Password" Caption="密码" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Captions">
+      <LocalizationItem Name="MyAccount" Value="我的帐号" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Confirmations">
+      <LocalizationItem Name="Cancel" Value="未保存的更改将丢失。你想继续吗?" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Controls">
+      <LocalizationGroup Name="DevExpress.ASPxEditors">
+        <LocalizationItem Name="BinaryImage_Cancel" Value="取消" />
+        <LocalizationItem Name="BinaryImage_Clear" Value="清除" />
+        <LocalizationItem Name="Calendar_Cancel" Value="取消" />
+        <LocalizationItem Name="Calendar_Clear" Value="清除" />
+        <LocalizationItem Name="Calendar_OK" Value="确定" />
+        <LocalizationItem Name="Calendar_Today" Value="今天" />
+        <LocalizationItem Name="CheckBox_Checked" Value="已选择" />
+        <LocalizationItem Name="CheckBox_Unchecked" Value="未选择" />
+        <LocalizationItem Name="ColorEdit_Cancel" Value="取消" />
+        <LocalizationItem Name="ColorEdit_OK" Value="确定" />
+        <LocalizationItem Name="FilterControl_Cancel" Value="取消" />
+        <LocalizationItem Name="FilterControl_ClearFilter" Value="清除" />
+        <LocalizationItem Name="FilterControl_OK" Value="确定" />
+        <LocalizationItem Name="ListBoxFilteringEditorNullText" Value="输入文本筛选..." />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ASPxGridView">
+        <LocalizationItem Name="CommandBatchEditCancel" Value="取消更改" />
+        <LocalizationItem Name="CommandBatchEditUpdate" Value="保存更改" />
+        <LocalizationItem Name="CommandCancel" Value="取消" />
+        <LocalizationItem Name="CommandClearFilter" Value="清除" />
+        <LocalizationItem Name="CommandClearSearchPanelFilter" Value="清除" />
+        <LocalizationItem Name="CommandEdit" Value="编辑" />
+        <LocalizationItem Name="CommandNew" Value="新建" />
+        <LocalizationItem Name="CommandUpdate" Value="&#xD;&#xA;更新" />
+        <LocalizationItem Name="ConfirmDelete" Value="确认删除?" />
+        <LocalizationItem Name="ContextMenu_EditRow" Value="编辑" />
+        <LocalizationItem Name="ContextMenu_NewRow" Value="新建" />
+        <LocalizationItem Name="EmptyDataRow" Value="没有数据显示" />
+        <LocalizationItem Name="GroupContinuedOnNextPage" Value="(连接下页)" />
+        <LocalizationItem Name="HeaderFilterCancelButton" Value="取消" />
+        <LocalizationItem Name="HeaderFilterFrom" Value="从" />
+        <LocalizationItem Name="HeaderFilterLastMonth" Value="上个月" />
+        <LocalizationItem Name="HeaderFilterLastWeek" Value="上周" />
+        <LocalizationItem Name="HeaderFilterLastYear" Value="去年" />
+        <LocalizationItem Name="HeaderFilterNextMonth" Value="下个月" />
+        <LocalizationItem Name="HeaderFilterNextYear" Value="明年" />
+        <LocalizationItem Name="HeaderFilterOkButton" Value="确定" />
+        <LocalizationItem Name="HeaderFilterShowAllItem" Value="(全部)" />
+        <LocalizationItem Name="HeaderFilterShowBlanksItem" Value="(空白)" />
+        <LocalizationItem Name="HeaderFilterShowNonBlanksItem" Value="(非空白)" />
+        <LocalizationItem Name="HeaderFilterThisMonth" Value="这个月" />
+        <LocalizationItem Name="HeaderFilterThisWeek" Value="这周" />
+        <LocalizationItem Name="HeaderFilterThisYear" Value="今年" />
+        <LocalizationItem Name="HeaderFilterTo" Value="到" />
+        <LocalizationItem Name="HeaderFilterToday" Value="今天" />
+        <LocalizationItem Name="HeaderFilterTomorrow" Value="明天" />
+        <LocalizationItem Name="HeaderFilterYesterday" Value="昨天" />
+        <LocalizationItem Name="Outlook_LastMonth" Value="上个月" />
+        <LocalizationItem Name="Outlook_LastWeek" Value="上周" />
+        <LocalizationItem Name="Outlook_NextMonth" Value="下个月" />
+        <LocalizationItem Name="Outlook_Today" Value="今天" />
+        <LocalizationItem Name="Outlook_Tomorrow" Value="明天" />
+        <LocalizationItem Name="Outlook_Yesterday" Value="昨天" />
+        <LocalizationItem Name="PageSizeAllRecords" Value="全部" />
+        <LocalizationItem Name="PageSizeCaption" Value="每页显示:" />
+        <LocalizationItem Name="SearchPanelEditorNullText" Value="输入文本搜索..." />
+        <LocalizationItem Name="Summary_Average" Value="平均数={0}" />
+        <LocalizationItem Name="Summary_Count" Value="计数={0}" />
+        <LocalizationItem Name="Summary_Max" Value="最大值={0}" />
+        <LocalizationItem Name="Summary_Min" Value="最小值={0}" />
+        <LocalizationItem Name="Summary_Sum" Value="合计={0}" />
+        <LocalizationItem Name="Toolbar_Cancel" Value="取消" />
+        <LocalizationItem Name="Toolbar_Edit" Value="编辑" />
+        <LocalizationItem Name="Toolbar_New" Value="新建" />
+        <LocalizationItem Name="Toolbar_Update" Value="&#xD;&#xA;更新" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ASPxHtmlEditor">
+        <LocalizationItem Name="ButtonCancel" Value="取消" />
+        <LocalizationItem Name="ButtonOk" Value="确定" />
+        <LocalizationItem Name="ChangeElementProperties_Checked" Value="已选择" />
+        <LocalizationItem Name="ChangeLink" Value="修改超链接" />
+        <LocalizationItem Name="CommandBackColor" Value="背景色" />
+        <LocalizationItem Name="CommandBold" Value="粗体" />
+        <LocalizationItem Name="CommandBulletList" Value="项目符号" />
+        <LocalizationItem Name="CommandCenter" Value="居中对齐" />
+        <LocalizationItem Name="CommandCopy" Value="复制" />
+        <LocalizationItem Name="CommandCut" Value="剪切" />
+        <LocalizationItem Name="CommandForeColor" Value="前景色" />
+        <LocalizationItem Name="CommandFullscreen" Value="全屏" />
+        <LocalizationItem Name="CommandIndent" Value="缩进" />
+        <LocalizationItem Name="CommandItalic" Value="斜体" />
+        <LocalizationItem Name="CommandLeft" Value="左对齐" />
+        <LocalizationItem Name="CommandOrderedList" Value="编号" />
+        <LocalizationItem Name="CommandOutdent" Value="减少缩进" />
+        <LocalizationItem Name="CommandPaste" Value="粘贴" />
+        <LocalizationItem Name="CommandPasteRtf" Value="粘贴Word格式" />
+        <LocalizationItem Name="CommandRedo" Value="恢复" />
+        <LocalizationItem Name="CommandRemoveFormat" Value="清除格式" />
+        <LocalizationItem Name="CommandRight" Value="右对齐" />
+        <LocalizationItem Name="CommandStrikethrough" Value="删除线" />
+        <LocalizationItem Name="CommandSubscript" Value="下标" />
+        <LocalizationItem Name="CommandSuperscript" Value="上标" />
+        <LocalizationItem Name="CommandUnderline" Value="下划线" />
+        <LocalizationItem Name="CommandUndo" Value="撤消" />
+        <LocalizationItem Name="DesignViewTab" Value="设计" />
+        <LocalizationItem Name="FindAndReplace" Value="查找和替换" />
+        <LocalizationItem Name="FontName" Value="字体" />
+        <LocalizationItem Name="FontSize" Value="字号" />
+        <LocalizationItem Name="HtmlViewTab" Value="代码" />
+        <LocalizationItem Name="InsertImage" Value="插入图片" />
+        <LocalizationItem Name="InsertLink" Value="插入超链接" />
+        <LocalizationItem Name="InsertTable" Value="插入表格" />
+        <LocalizationItem Name="Paragraph" Value="段落" />
+        <LocalizationItem Name="PreviewTab" Value="预览" />
+        <LocalizationItem Name="RibbonGroup_Undo" Value="撤消" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ASPxperience">
+        <LocalizationItem Name="Accessibility_BlankEditor" Value="空白" />
+        <LocalizationItem Name="Accessibility_Checked" Value="已选择" />
+        <LocalizationItem Name="Accessibility_ClientCalendarRangeFormat" Value="from {0} to {1}" />
+        <LocalizationItem Name="Accessibility_PagerSummaryFormat" Value="页数 {0} 页 {1}" />
+        <LocalizationItem Name="Accessibility_Unchecked" Value="未选择" />
+        <LocalizationItem Name="DataView_PagerSummaryFormat" Value="页数 {0} 页 {1}" />
+        <LocalizationItem Name="FileManager_Cancel" Value="取消" />
+        <LocalizationItem Name="FileManager_GridViewFilter_DateToday" Value="今天" />
+        <LocalizationItem Name="FileManager_Ok" Value="确定" />
+        <LocalizationItem Name="Loading" Value="载入中&amp;hellip;" />
+        <LocalizationItem Name="Pager_All" Value="全部" />
+        <LocalizationItem Name="Pager_PageSize" Value="每页显示:" />
+        <LocalizationItem Name="Pager_PageSizeAllItem" Value="全部" />
+        <LocalizationItem Name="Pager_SummaryAllPagesFormat" Value="页数: {0} - {1} ({2}标准物质)" />
+        <LocalizationItem Name="Pager_SummaryFormat" Value="页数 {0} 页 {1} ({2} 标准物质)" />
+        <LocalizationItem Name="UploadControl_BrowseButton" Value="浏览..." />
+        <LocalizationItem Name="UploadControl_CancelButton" Value="取消" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.XtraReports">
+        <LocalizationItem Name="DocumentViewer_RibbonCommandText_FirstPage" Value="第一页" />
+        <LocalizationItem Name="ReportDesigner_QueryBuilder_SearchBox_EmptyText" Value="输入文本搜索..." />
+        <LocalizationItem Name="SearchDialog_Cancel" Value="取消" />
+        <LocalizationItem Name="SearchDialog_Case" Value="区分大小写" />
+        <LocalizationItem Name="SearchDialog_Header" Value="搜索" />
+        <LocalizationItem Name="SearchDialog_WholeWord" Value="只匹配整个单词" />
+        <LocalizationItem Name="ToolBarItemText_FirstPage" Value="第一页" />
+        <LocalizationItem Name="ToolBarItemText_LastPage" Value="最后一页" />
+        <LocalizationItem Name="ToolBarItemText_NextPage" Value="下一页" />
+        <LocalizationItem Name="ToolBarItemText_PageLabel" Value="页数" />
+        <LocalizationItem Name="ToolBarItemText_PreviousPage" Value="上一页" />
+        <LocalizationItem Name="ToolBarItemText_PrintPage" Value="打印当前页面" />
+        <LocalizationItem Name="ToolBarItemText_PrintReport" Value="打印报告" />
+        <LocalizationItem Name="WebDocumentViewer_ExportToText" Value="导出" />
+        <LocalizationItem Name="WebDocumentViewer_SearchPageNumberText" Value="页数" />
+        <LocalizationItem Name="WebDocumentViewer_ToggleMultipageMode" Value="多页切换方式" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="DateRanges">
+      <LocalizationItem Name="Yesterday" Value="昨天" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="DialogButtons">
+      <LocalizationItem Name="Clear" Value="清除" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Modules.BusinessObjects.SampleManagement.SampleCustody.SampleCustodyMode">
+        <LocalizationItem Name="In" Value="入库" />
+        <LocalizationItem Name="Out" Value="出库" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Exceptions">
+      <LocalizationGroup Name="UserVisibleExceptions">
+        <LocalizationGroup Name="Validation">
+          <LocalizationItem Name="SaveErrorMessageHeader" Value="数据验证失败。" />
+        </LocalizationGroup>
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="System">
+        <Items>
+          <Item Id="HumanResources" Caption="人力资源">
+            <Items>
+              <Item Id="Employee_ListView" Caption="员工管理" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items>
+          <Item Id="E-mail" Caption="电子邮件">
+            <Items>
+              <Item Id="Email" Caption="电子邮件" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <ErrorMessageTemplates>
+      <RuleRequiredField MessageTemplateMustNotBeEmpty="&quot;{TargetPropertyName}&quot; 不能为空。" />
+      <RuleUniqueValue MessageTemplateMustBeUnique="有一个具有相同值的对象 &quot;{TargetPropertyName}&quot;. &quot;{TargetPropertyName}&quot;结果必须是唯一的。" />
+    </ErrorMessageTemplates>
+    <Rules>
+      <RuleRequiredField Id="Labware.LabwareName" CustomMessageTemplate="仪器器皿 不能为空" />
+    </Rules>
+  </Validation>
+  <Views>
+    <DetailView Id="ChangePasswordOnLogonParameters_DetailView" Caption="第一次登录更改密码">
+      <Items>
+        <StaticText Id="ChangePasswordText" Text="请输入新密码：" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ChangePasswordParameters_DetailView" Caption="更改密码">
+      <Items>
+        <StaticText Id="ChangePasswordText" Text="更改密码,请在下面的文本框中输入你的旧密码和新密码。" />
+      </Items>
+    </DetailView>
+    <ListView Id="Contact_LookupListView_Copy_SampleCheckin_Invoice" Caption="联系人">
+      <Columns>
+        <ColumnInfo Id="FirstName" Caption="名" />
+        <ColumnInfo Id="FullName" Caption="姓名" />
+        <ColumnInfo Id="Street1" Caption="街1" />
+        <ColumnInfo Id="Street2" Caption="街2" />
+        <ColumnInfo Id="Phone" Caption="电话" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Customer_DetailView_SampleRegistration" Caption="委托单位">
+      <Items>
+        <PropertyEditor Id="Zone" Caption="区" />
+        <PropertyEditor Id="Account" Caption="账户" />
+        <PropertyEditor Id="Address" Caption="地址1" />
+        <PropertyEditor Id="Address1" Caption="地址2" />
+        <PropertyEditor Id="AnnualRevenue" Caption="年收入" />
+        <PropertyEditor Id="CreateTime" Caption="创建时间" />
+        <PropertyEditor Id="CustomerName" Caption="委托单位" />
+        <PropertyEditor Id="NumberOfEmployees" Caption="在职员工人数" />
+        <PropertyEditor Id="OfficePhone" Caption="电话" />
+        <PropertyEditor Id="PrimaryContact" Caption="主要联系人" />
+        <PropertyEditor Id="SICCode" Caption="SIC代码" />
+        <PropertyEditor Id="UpdateTime" Caption="更新时间" />
+        <PropertyEditor Id="WebSite" Caption="网站" />
+      </Items>
+    </DetailView>
+    <ListView Id="Customer_LookupListView_COCSettings" Caption="委托单位">
+      <Columns>
+        <ColumnInfo Id="CustomerName" Caption="委托单位" />
+        <ColumnInfo Id="Phone" Caption="电话" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView_EmailProfile">
+      <Items>
+        <PropertyEditor Id="Address" Caption="地址" />
+        <PropertyEditor Id="City" Caption="城市" />
+        <PropertyEditor Id="EmploymentDate" Caption="就业日期" />
+        <PropertyEditor Id="Initial" Caption="草签" />
+        <PropertyEditor Id="OfficePhone" Caption="办公室电话" />
+        <PropertyEditor Id="Position" Caption="职位名称" />
+        <PropertyEditor Id="State" Caption="省直辖市" />
+        <PropertyEditor Id="UpdatedBy" Caption="更新人" />
+        <PropertyEditor Id="WorkflowConfig" Caption="工作流程配置" />
+      </Items>
+    </DetailView>
+    <ListView Id="Employee_ListView_EmailProfile">
+      <Columns>
+        <ColumnInfo Id="Address" Caption="地址" />
+        <ColumnInfo Id="City" Caption="城市" />
+        <ColumnInfo Id="CreatedBy" Caption="批次产生人" />
+        <ColumnInfo Id="EmploymentDate" Caption="就业日期" />
+        <ColumnInfo Id="FirstName" Caption="名" />
+        <ColumnInfo Id="HomePhone" Caption="家庭电话" />
+        <ColumnInfo Id="Initial" Caption="草签" />
+        <ColumnInfo Id="IsActive" Caption="激活" />
+        <ColumnInfo Id="IsEnabledLanguage" Caption="是否启用语言" />
+        <ColumnInfo Id="JobTitle" Caption="职称" />
+        <ColumnInfo Id="LastName" Caption="姓" />
+        <ColumnInfo Id="MobilePhone" Caption="手机号码" />
+        <ColumnInfo Id="OfficePhone" Caption="办公室电话" />
+        <ColumnInfo Id="OtherPhone" Caption="其它电话" />
+        <ColumnInfo Id="Position" Caption="职位名称" />
+        <ColumnInfo Id="RetireDate" Caption="退役日期" />
+        <ColumnInfo Id="State" Caption="省直辖市" />
+        <ColumnInfo Id="UpdatedBy" Caption="更新人" />
+        <ColumnInfo Id="FullName" Caption="姓名" />
+        <ColumnInfo Id="UserName" Caption="用户名" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="PortalDashboard" Caption="Portal" />
+    <DetailView Id="ResetPasswordParameters_DetailView" Caption="重置密码">
+      <Items>
+        <PropertyEditor Id="Password" Caption="密码" />
+        <StaticText Id="ResetPasswordText" Text="系统将自动为用户创建一个新密码，同时禁用旧密码。你确定要这样做吗?" />
+      </Items>
+    </DetailView>
+    <ListView Id="Samplecheckin_ListView_Copy_Reporting" Caption="样品接收">
+      <Columns>
+        <ColumnInfo Id="BroughtBy" Caption="送样人" />
+        <ColumnInfo Id="ClientAddress" Caption="地址" />
+        <ColumnInfo Id="ClientAddress2" Caption="地址" />
+        <ColumnInfo Id="ClientPhone" Caption="办公室电话" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContactName" Caption="联系人" />
+        <ColumnInfo Id="CoolerId" Caption="样品冷却箱编号" />
+        <ColumnInfo Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="NumberOfSample" Caption="样品数量" />
+        <ColumnInfo Id="PresevitiveCode" Caption="抑制剂代码" />
+        <ColumnInfo Id="RecievedBy" Caption="受理人" />
+        <ColumnInfo Id="TestDescription" Caption="描述" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="DueDate" Caption="交付日期" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_Copy_ResultEntry" Caption="样品接收">
+      <Columns>
+        <ColumnInfo Id="BroughtBy" Caption="送样人" />
+        <ColumnInfo Id="ClientAddress" Caption="地址" />
+        <ColumnInfo Id="ClientAddress2" Caption="地址" />
+        <ColumnInfo Id="ClientPhone" Caption="办公室电话" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContactName" Caption="联系人" />
+        <ColumnInfo Id="CoolerId" Caption="样品冷却箱编号" />
+        <ColumnInfo Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <ColumnInfo Id="DueDate" Caption="交付日期" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="NumberOfSample" Caption="样品数量" />
+        <ColumnInfo Id="PresevitiveCode" Caption="抑制剂代码" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="RecievedBy" Caption="受理人" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="TestDescription" Caption="描述" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_Copy_ResultView" Caption="样品接收">
+      <Columns>
+        <ColumnInfo Id="BroughtBy" Caption="送样人" />
+        <ColumnInfo Id="ClientAddress" Caption="地址" />
+        <ColumnInfo Id="ClientAddress2" Caption="地址" />
+        <ColumnInfo Id="ClientPhone" Caption="办公室电话" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContactName" Caption="联系人" />
+        <ColumnInfo Id="CoolerId" Caption="样品冷却箱编号" />
+        <ColumnInfo Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <ColumnInfo Id="DueDate" Caption="交付日期" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="NumberOfSample" Caption="样品数量" />
+        <ColumnInfo Id="PresevitiveCode" Caption="抑制剂代码" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="RecievedBy" Caption="受理人" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="TestDescription" Caption="描述" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_ListView_SamplingAllocation" Caption="样品接收">
+      <Columns>
+        <ColumnInfo Id="BroughtBy" Caption="送样人" />
+        <ColumnInfo Id="ClientAddress" Caption="地址" />
+        <ColumnInfo Id="ClientAddress2" Caption="地址" />
+        <ColumnInfo Id="ClientPhone" Caption="办公室电话" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ContactName" Caption="联系人" />
+        <ColumnInfo Id="CoolerId" Caption="样品冷却箱编号" />
+        <ColumnInfo Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <ColumnInfo Id="DueDate" Caption="交付日期" />
+        <ColumnInfo Id="ModifiedBy" Caption="变更人" />
+        <ColumnInfo Id="ModifiedDate" Caption="变更时间" />
+        <ColumnInfo Id="NumberOfSample" Caption="样品数量" />
+        <ColumnInfo Id="PresevitiveCode" Caption="抑制剂代码" />
+        <ColumnInfo Id="RecievedBy" Caption="受理人" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="TestDescription" Caption="描述" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_ResultEntry_Testing" Caption="结果录入">
+      <Columns>
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="DF" Caption="稀释倍数" />
+        <ColumnInfo Id="EnteredBy" Caption="键入人" />
+        <ColumnInfo Id="EnteredDate" Caption="键入日期" />
+        <ColumnInfo Id="FinalResult" Caption="最终报告结果" />
+        <ColumnInfo Id="FinalResultUnits" Caption="最终结果单位" />
+        <ColumnInfo Id="LOQ" Caption="最低标定浓度" />
+        <ColumnInfo Id="MCL" Caption="法规允许限" />
+        <ColumnInfo Id="MDL" Caption="检出限" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目" />
+        <ColumnInfo Id="Rec" Caption="回收率" />
+        <ColumnInfo Id="ReceivedDate" Caption="收到日期" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="ResultNumeric" Caption="数字结果" />
+        <ColumnInfo Id="RPD" Caption="相对偏差" />
+        <ColumnInfo Id="RptLimit" Caption="报告限" />
+        <ColumnInfo Id="Samplelogin" Caption="样品编号" />
+        <ColumnInfo Id="Station" Caption="点位" />
+        <ColumnInfo Id="Status" Caption="状态" />
+        <ColumnInfo Id="Surrogate" Caption="示踪物" />
+        <ColumnInfo Id="SurrogateHighLimit" Caption="替代物上限" />
+        <ColumnInfo Id="SurrogateLowLimit" Caption="替代物下限" />
+        <ColumnInfo Id="SurrogateSpikeAmount" Caption="替代物加标量" />
+        <ColumnInfo Id="SurrogateUnits" Caption="替代物单位" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="UQL" Caption="最高标定浓度" />
+        <ColumnInfo Id="JOBID" Caption="工作编号" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="SpecificSymbolDashboard" Caption="特殊符号">
+      <Items>
+        <CustomUserControlViewItemWeb Id="SpecificSymbol" Caption="特殊符号" />
+      </Items>
+    </DashboardView>
+    <ListView Id="Testparameter_LookupListView_Sampling_AvailableTest" Caption="参数名称">
+      <Columns>
+        <ColumnInfo Id="Parameter" Caption="参数" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="TestMethod" Caption="基质" />
+        <ColumnInfo Id="MethodName" Caption="分析方法 " />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

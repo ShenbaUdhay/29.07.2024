@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.SampleManagement.BottleSetup">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Bottleid" Caption="样瓶编号" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="BottleSetup_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Bottleid" Caption="样瓶编号" />
+      </Items>
+    </DetailView>
+    <ListView Id="BottleSetup_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Bottleid" Caption="样瓶编号" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

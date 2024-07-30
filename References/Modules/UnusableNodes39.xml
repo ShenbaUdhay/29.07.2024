@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Employee_DetailView_Qualifications">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="MeasureQualifications">
+              <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Roles" View="PermissionPolicyUser_Roles_ListView" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Employee">
+                <LayoutGroup Id="Employee_col2">
+                  <LayoutItem Id="Photo3" ViewItem="Photo3" />
+                  <LayoutItem Id="Signature3" ViewItem="Signature3" />
+                  <LayoutItem Id="Signature2" ViewItem="Signature2" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Labware_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="Item3">
+                <LayoutGroup Id="Auto3c6e70e6-20ab-46c2-a56c-50fab6eb5739">
+                  <LayoutItem Id="InspectCategory" ViewItem="InspectCategory" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureQualifications_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="Employee" ViewItem="Employee" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureQualificationsAuthorize_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureQualificationsAuthorize_col1">
+              <LayoutGroup Id="Auto22255a84-fc4d-4efd-bad8-82c0b2b67150">
+                <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

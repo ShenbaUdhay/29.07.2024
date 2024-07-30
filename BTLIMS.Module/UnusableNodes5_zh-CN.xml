@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="AuditDataItemPersistent_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="AuditedObjectTypeName" Caption="界面名称" />
+      </Items>
+    </DetailView>
+    <ListView Id="AuditDataItemPersistent_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AuditedObjectTypeName" Caption="界面名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_AuditTrail_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AuditedObjectTypeName" Caption="界面名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_AuditTrail_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AuditedObjectTypeName" Caption="界面名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_AuditTrail_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AuditedObjectTypeName" Caption="界面名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="Testparameter_AuditTrail_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AuditedObjectTypeName" Caption="界面名称" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

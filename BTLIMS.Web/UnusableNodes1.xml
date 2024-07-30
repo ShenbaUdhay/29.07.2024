@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="MyWork" QuickAccessItem="True" Visible="True" ViewId="PortalDashboard">
+        <Items Id="Items">
+          <Item Id="Portal" ViewId="PortalDashboard" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="ClauseInspection_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="txtResult" Caption="检测结果" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ClauseInspection_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="txtResult" Caption="检验结果" />
+      </Items>
+    </DetailView>
+    <ListView Id="ClauseInspection_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="txtResult" Caption="检测结果" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Testparameter_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="IsRetire" PropertyName="IsRetire" Width="50" Index="21" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <ListView Id="GroupTest_Testparameters_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="IsRetire" Index="-1" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+    <ListView Id="SampleLogIn_Testparameters_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="IsRetire" Index="-1" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Reports">
+        <Items Id="Items">
+          <Item Id="BizRequest_DetailView_Report" ViewId="BizRequest_ListView_Report" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

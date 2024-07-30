@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Employee_DetailView_Qualifications">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="MeasureQualifications">
+              <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomLogonParameters_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="conn" ActionContainer="Conn" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Employee">
+                <LayoutGroup Id="Employee_col2">
+                  <LayoutItem Id="Photo3" ViewItem="Photo3" />
+                  <LayoutItem Id="Signature3" ViewItem="Signature3" />
+                  <LayoutItem Id="Signature2" ViewItem="Signature2" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Samplecheckin">
+              <LayoutGroup Id="Samplecheckin_col2">
+                <LayoutItem Id="CoolerId" RelativeSize="11.538461538461538" />
+                <LayoutItem Id="CoolerTemp" RelativeSize="11.538461538461538" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="Test" ViewId="Test_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

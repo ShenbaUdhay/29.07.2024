@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Samplecheckin_DetailView_Copy_SampleRegistration">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Col1">
+            <LayoutGroup Id="General Information" Caption="登记信息">
+              <LayoutGroup Id="GeneralInfo2" Caption="联系人" />
+            </LayoutGroup>
+            <LayoutGroup Id="Sample Information" Caption="样机信息">
+              <LayoutGroup Id="SampleInfo1" Caption="样品分类" />
+              <LayoutGroup Id="SampleInfo2" Caption="批次号" />
+            </LayoutGroup>
+            <LayoutGroup Id="Report Requirments" Caption="报告需求">
+              <LayoutGroup Id="ReportInfo1" Caption="提交日期" />
+              <LayoutGroup Id="ReportInfo2" Caption="描述" />
+            </LayoutGroup>
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Item5" Caption="样品条件检查" />
+              <LayoutGroup Id="Item6" Caption="上传图片" />
+              <LayoutGroup Id="Item1" Caption="上传文件" />
+              <LayoutGroup Id="Item3" Caption="日志" />
+              <LayoutGroup Id="Item4" Caption="自定义请求" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

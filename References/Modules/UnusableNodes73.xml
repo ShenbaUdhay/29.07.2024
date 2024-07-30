@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SampleLogIn_TestParameters_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ParameterName" PropertyName="ParameterName" Width="70" Index="4" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView_Qualifications">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="MeasureQualifications">
+              <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Roles" View="PermissionPolicyUser_Roles_ListView" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Employee">
+                <LayoutGroup Id="Employee_col2">
+                  <LayoutItem Id="Photo3" ViewItem="Photo3" />
+                  <LayoutItem Id="Signature3" ViewItem="Signature3" />
+                  <LayoutItem Id="Signature2" ViewItem="Signature2" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SampleParameter_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ParameterName" PropertyName="TestMethod.ParameterName.ParameterName" Index="3" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestMethod_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SampleLogIns_Group" Caption="Sample Log Ins" RelativeSize="37.373737373737377" Removed="True">
+            <LayoutItem Id="SampleLogIns" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TestMethod">
+              <LayoutGroup Id="TestMethod_col1" RelativeSize="50">
+                <LayoutItem Id="MatrixName" RelativeSize="36.363636363636367" />
+                <LayoutItem Id="TestName" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="MethodName" RelativeSize="36.363636363636367" />
+              </LayoutGroup>
+              <LayoutGroup Id="TestMethod_col2" RelativeSize="50" Caption="TestMethod_col2">
+                <LayoutItem Id="ParameterName" RelativeSize="36.363636363636367" />
+                <LayoutItem Id="ModifiedBy" RelativeSize="63.636363636363633" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestMethod_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ParameterName" Caption="ParameterName" PropertyName="ParameterName.ParameterName" Index="5" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

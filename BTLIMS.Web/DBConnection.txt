@@ -1,0 +1,1 @@
+Data Source=BTLIMS32\SQL2020;Initial Catalog=AlpacaLims_Batta;User ID=sa;Password=bclims@1;Integrated Security=False;

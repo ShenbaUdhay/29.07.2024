@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="TestPrice_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Component" Caption="要素" />
+        <PropertyEditor Id="CreatedBy" Caption="批次创建人" />
+        <PropertyEditor Id="CreatedDate" Caption="创建日期" />
+      </Items>
+    </DetailView>
+    <ListView Id="TestPrice_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+        <ColumnInfo Id="CreatedDate" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestPrice_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="FastestTAT" Caption="最快交付时间" />
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+        <ColumnInfo Id="CreatedDate" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestPriceDetail_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="CreatedBy" Caption="批次创建人" />
+        <PropertyEditor Id="CreatedDate" Caption="创建日期" />
+      </Items>
+    </DetailView>
+    <ListView Id="TestPriceDetail_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+        <ColumnInfo Id="CreatedDate" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestPriceDetail_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+        <ColumnInfo Id="CreatedDate" Caption="创建日期" />
+        <ColumnInfo Id="TestPrice" Caption="监测项目价格" />
+        <ColumnInfo Id="TestMethod" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestPriceDetail_ListView_Copy_pertest">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+        <ColumnInfo Id="CreatedDate" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestPriceDetail_ListView_Copy_perparameter">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+        <ColumnInfo Id="CreatedDate" Caption="创建日期" />
+      </Columns>
+    </ListView>
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Setting.TestPrice" Caption="监测项目价格">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Component" Caption="要素" />
+        <Member Name="CreatedBy" Caption="批次创建人" />
+        <Member Name="CreatedDate" Caption="创建日期" />
+        <Member Name="FastestTAT" Caption="最快交付时间" />
+        <Member Name="LastUpdatedBy" Caption="最后变更人" />
+        <Member Name="LastUpdatedDate" Caption="最后变更时间" />
+        <Member Name="Price" Caption="价格" />
+        <Member Name="PriceType" Caption="价格类型" />
+        <Member Name="RegularTAT" Caption="常规交付时间" />
+        <Member Name="TAT" Caption="任务用时" />
+        <Member Name="TestMethod" Caption="分析方法" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.TestPriceDetail">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CreatedBy" Caption="批次创建人" />
+        <Member Name="CreatedDate" Caption="创建日期" />
+        <Member Name="LastUpdatedBy" Caption="最后变更人" />
+        <Member Name="LastUpdatedDate" Caption="最后变更时间" />
+        <Member Name="Price" Caption="价格" />
+        <Member Name="TAT" Caption="任务用时" />
+        <Member Name="TestMethod" Caption="分析方法" />
+        <Member Name="TestPrice" Caption="监测项目价格" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

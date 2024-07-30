@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SampleLogIn_TestParameters_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodName" Caption="分析方法名称" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

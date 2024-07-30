@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.ICM.Purchaseorder">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Address" Caption="委托单位地址" />
+        <Member Name="Contact" Caption="联系人" />
+        <Member Name="ShipVia" Caption="通过" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="Purchaseorder_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Address" Caption="委托单位地址" />
+        <PropertyEditor Id="ShipVia" Caption="通过" />
+      </Items>
+    </DetailView>
+    <ListView Id="Purchaseorder_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Address" Caption="委托单位地址" />
+        <ColumnInfo Id="ShipVia" Caption="通过" />
+      </Columns>
+    </ListView>
+    <ListView Id="Purchaseorder_ListView_Copy_ViewMode">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ShipVia" Caption="通过" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_items_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Address" Caption="委托单位地址" />
+        <ColumnInfo Id="ShipVia" Caption="通过" />
+      </Columns>
+    </ListView>
+  </Views>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="POrollback" ToolTip="删除" ShortCaption="删除" Caption="删除" />
+    </Actions>
+  </ActionDesign>
+</Application>

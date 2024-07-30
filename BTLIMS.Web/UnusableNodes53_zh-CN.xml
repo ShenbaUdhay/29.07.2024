@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Crm.Customer">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Category" Caption="方案取消" />
+        <Member Name="County" Caption="国家" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="Parameter_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Parameter">
+              <LayoutGroup Id="Parameter_col1" RelativeSize="99.827882960413078">
+                <LayoutItem Id="ParameterCode" ViewItem="ParameterCode" Index="0" RelativeSize="11.428571428571429" />
+                <LayoutItem Id="ParameterName" ViewItem="ParameterName" Index="1" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="Synonym" Index="2" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="Formula" Index="3" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="Equivalent" ViewItem="Equivalent" Index="4" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="StateOfMatter" Index="5" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="BoilingPoint" ViewItem="BoilingPoint" Index="6" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="MeltingPoint" ViewItem="MeltingPoint" Index="7" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="FlashPoint" ViewItem="FlashPoint" Index="8" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="MW" Index="9" RelativeSize="8.5714285714285712" />
+                <LayoutItem Id="RetireDate" ViewItem="RetireDate" Index="10" RelativeSize="11.428571428571429" />
+              </LayoutGroup>
+              <LayoutGroup Id="Parameter_col2" Index="1" RelativeSize="0.1721170395869191" Caption="Parameter_col2" Direction="Horizontal">
+                <LayoutItem Id="BoilingPoint" RelativeSize="17.391304347826086" Index="0" Removed="True" />
+                <LayoutItem Id="FlashPoint" RelativeSize="13.793103448275861" Index="0" Removed="True" />
+                <LayoutItem Id="MeltingPoint" RelativeSize="15.384615384615385" Index="0" Removed="True" />
+                <LayoutItem Id="RetireDate" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="Equivalent" RelativeSize="20" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TestMethod_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TestMethod">
+              <LayoutGroup Id="TestMethod_col1">
+                <LayoutItem Id="ISRetire" ViewItem="ISRetire" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Reports">
+        <Items Id="Items">
+          <Item Id="BizRequest_DetailView_Report" ViewId="BizRequest_ListView_Report" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

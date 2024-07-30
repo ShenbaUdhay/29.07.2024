@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Validation Id="Validation">
+    <Contexts Id="Contexts">
+      <ValidationContext Id="Accept" Caption="接受" />
+    </Contexts>
+    <Rules Id="Rules">
+      <RuleRequiredField Id="Select the DueDate" CustomMessageTemplate="选择截止日期&#xD;&#xA;" Name="选择截止日期&#xD;&#xA;" />
+      <RuleRequiredField Id="Select the SampleMatrix" Name="选择样品类型" CustomMessageTemplate="选择样品类型" />
+    </Rules>
+  </Validation>
+</Application>

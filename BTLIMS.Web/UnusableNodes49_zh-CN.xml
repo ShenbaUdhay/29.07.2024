@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Validation Id="Validation">
+    <Rules Id="Rules">
+      <RuleRequiredField Id="ClientContactPhone" Name="委托单位联系人电话" />
+      <RuleRequiredField Id="Enter the Client" Name="进入客户&#xD;&#xA;" />
+      <RuleRequiredField Id="WhenAct" Name="何时行动" />
+    </Rules>
+  </Validation>
+</Application>

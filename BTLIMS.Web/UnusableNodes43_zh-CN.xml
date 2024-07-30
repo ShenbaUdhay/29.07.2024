@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="QCBatch_DetailView" Caption="质控批次">
+      <Items Id="Items">
+        <PropertyEditor Id="CreatedBy" Caption="质量批次创建人" />
+        <PropertyEditor Id="Datecreated" Caption="质量批次创建日期" />
+        <PropertyEditor Id="Humidity" Caption="湿度 (%)" />
+        <PropertyEditor Id="Jobid" Caption="工作编号" />
+        <PropertyEditor Id="Matrix" Caption="样品类型" />
+        <PropertyEditor Id="Method" Caption="分析方法" />
+        <PropertyEditor Id="Noruns" Caption="运行次数" />
+        <PropertyEditor Id="NPJobid" Caption="工作编号" />
+        <PropertyEditor Id="QCBatchID" Caption="质量批次编号" />
+        <PropertyEditor Id="Roomtemp" Caption="室温 (°C)" />
+        <PropertyEditor Id="Test" Caption="检测项目" />
+        <PropertyEditor Id="PendingApprovalSamplesCount" Caption="样品数量" />
+        <PropertyEditor Id="PendingEntrySamplesCount" Caption="样品数量" />
+        <PropertyEditor Id="PendingValidationSamplesCount" Caption="样品数量" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Autob5993f55-c4f6-431c-ae83-d8442a1230e4">
+          <LayoutGroup Id="General Information" Caption="登记信息" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="QCBatch_Instruments_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ExpirationDate" Caption="失效期" />
+        <ColumnInfo Id="UpdatedBy" Caption="更新人" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView" Caption="质量批次">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="PendingApprovalSamplesCount" Caption="样品数量" />
+        <ColumnInfo Id="PendingEntrySamplesCount" Caption="样品数量" />
+        <ColumnInfo Id="PendingValidationSamplesCount" Caption="样品数量" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Method" Caption="分析方法" />
+        <ColumnInfo Id="Datecreated" Caption="质量批次创建日期" />
+        <ColumnInfo Id="CreatedBy" Caption="质量批次创建人" />
+        <ColumnInfo Id="Matrix" Caption="样品类型" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PendingApprovalSamplesCount" Caption="样品数量" />
+        <ColumnInfo Id="PendingEntrySamplesCount" Caption="样品数量" />
+        <ColumnInfo Id="PendingValidationSamplesCount" Caption="样品数量" />
+        <ColumnInfo Id="Matrix" Caption="样品类型" />
+        <ColumnInfo Id="Datecreated" Caption="质量批次创建日期" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Humidity" Caption="湿度" />
+        <ColumnInfo Id="CreatedBy" Caption="质量批次创建人" />
+        <ColumnInfo Id="Method" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_Reagents_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+        <ColumnInfo Id="CreatedDate" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="Labware_QcBatchs_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_qcdetail_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Sort" Caption="排序" />
+        <ColumnInfo Id="Multiplier" Caption="乘数" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reagent_QcBatchs_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_QCResultView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_QCResultValidation_Level1Review">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_QCResultValidation">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_QCResultEntry">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_QCResultApproval_Level2Review">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_QCResultApproval">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultView_Level2ReviewView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="CreatedBy" Caption="创建人" />
+        <ColumnInfo Id="Datecreated" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultView_Level1ReviewView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="CreatedBy" Caption="创建人" />
+        <ColumnInfo Id="Datecreated" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="CreatedBy" Caption="创建人" />
+        <ColumnInfo Id="Datecreated" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultValidation_Level1Review" Caption="一级数据审核">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="CreatedBy" Caption="创建人" />
+        <ColumnInfo Id="Datecreated" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultValidation" Caption="一级数据审核">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="CreatedBy" Caption="创建人" />
+        <ColumnInfo Id="Datecreated" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultEntry">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="CreatedBy" Caption="创建人" />
+        <ColumnInfo Id="Datecreated" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultApproval_Level2Review" Caption="二级数据审核">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="CreatedBy" Caption="创建人" />
+        <ColumnInfo Id="Datecreated" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_ResultApproval" Caption="二级数据审核">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="CreatedBy" Caption="创建人" />
+        <ColumnInfo Id="Datecreated" Caption="创建日期" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCBatch_ListView_Copy">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="创建人" />
+        <ColumnInfo Id="Datecreated" Caption="创建日期" />
+        <ColumnInfo Id="QCBatchID" Caption="质控批次编号" />
+        <ColumnInfo Id="ABID" Caption="分析批次编号" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView">
+      <Items Id="Items">
+        <DashboardViewItem Id="viewItemQCBatchID" Caption="质控批次" />
+      </Items>
+    </DetailView>
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.QC.QCBatch" Caption="质控批次">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Method" Caption="分析方法" />
+        <Member Name="Test" Caption="检测项目" />
+        <Member Name="ABID" Caption="分析批次编号" />
+        <Member Name="Comments" Caption="备注" />
+        <Member Name="CreatedBy" Caption="批次创建人" />
+        <Member Name="Datecreated" Caption="质量批次创建日期" />
+        <Member Name="Humidity" Caption="湿度" />
+        <Member Name="Instrument" Caption="分析仪器" />
+        <Member Name="Jobid" Caption="工作编号" />
+        <Member Name="Matrix" Caption="基质" />
+        <Member Name="PendingApprovalSamplesCount" Caption="样品数量" />
+        <Member Name="PendingEntrySamplesCount" Caption="样品数量" />
+        <Member Name="PendingValidationSamplesCount" Caption="样品数量" />
+        <Member Name="QCBatchID" Caption="质控批次编号" />
+        <Member Name="Reagents" Caption="试剂" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.SampleManagement.SpreadSheetEntry_AnalyticalBatch">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="qcbatchID" Caption="质控批次编号" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

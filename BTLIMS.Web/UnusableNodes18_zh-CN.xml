@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="SampleWeighing">
+      <Items Id="Items">
+        <DashboardViewItem Id="qctype" Caption="添加质控" />
+      </Items>
+    </DashboardView>
+  </Views>
+</Application>

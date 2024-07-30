@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="PopupRegistrationBatch_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RegistrationBatchLabwareAction" Caption="RegistrationBatchLabwareAction(24)" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

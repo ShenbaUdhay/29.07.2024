@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Vendors_LookupListView_PO">
+      <Columns Id="Columns">
+        <ColumnInfo Id="city" PropertyName="city" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Vendors_ListView_Retire">
+      <Columns Id="Columns">
+        <ColumnInfo Id="city" PropertyName="city" Width="70" Index="5" Caption="City" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="SampleRegistration_DashboardView">
+      <Layout Id="Layout">
+        <LayoutItem Id="SampleLogIn_ListView" ViewItem="SampleLogIn_ListView" />
+      </Layout>
+    </DashboardView>
+    <DetailView Id="SampleLogIn_DetailView_TestPopup">
+      <Items Id="Items">
+        <PropertyEditor Id="Collector" View="Employee_LookupListView_Copy_SampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SampleLogIn_DetailView_Copy_Test">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SampleLogIn_col1">
+              <LayoutItem Id="SubOut" ViewItem="SubOut" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Collector" View="Employee_LookupListView_Copy_SampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_SampleRegistration">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto50e21cde-9268-4222-9826-501f79e548c5">
+              <LayoutItem Id="UploadMutlipleCOC" ViewItem="UploadMutlipleCOC" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" ActionContainer="GoToSampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Samplecheckin">
+              <LayoutGroup Id="Samplecheckin_col2">
+                <LayoutGroup Id="SampleCategoryName">
+                  <LayoutItem Id="SampleCategoryName" ViewItem="SampleCategoryName" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" ActionContainer="GoToSampleLogin" />
+      </Items>
+    </DetailView>
+    <ListView Id="Requisition_LookupListView_POID">
+      <Columns Id="Columns">
+        <ColumnInfo Id="#Items" PropertyName="PONumberItems" Caption="#Items" Index="2" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView_Receive_MainReceive">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PONumberItems" PropertyName="PONumberItems" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView_Purchaseorder_ViewMode">
+      <Columns Id="Columns">
+        <ColumnInfo Id="POIDvendor" PropertyName="POIDvendor" GroupIndex="-1" Caption="Parent" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView_Entermode">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PONumberItems" PropertyName="PONumberItems" Width="50" Index="-1" Caption="PONumberItems" />
+        <ColumnInfo Id="POIDvendor" PropertyName="POIDvendor" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Requisition_DetailView_Receive">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Description" ViewItem="Description" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Requisition">
+              <LayoutGroup Id="Requisition_col1">
+                <LayoutItem Id="PackUnits" ViewItem="PackUnits" />
+                <LayoutItem Id="StockQty" ViewItem="StockQty" />
+                <LayoutItem Id="Brand" ViewItem="Brand" />
+                <LayoutItem Id="Vendor" ViewItem="Vendor" />
+                <LayoutItem Id="Category" ViewItem="Category" />
+                <LayoutItem Id="Grade" ViewItem="Grade" />
+                <LayoutItem Id="Specification" ViewItem="Specification" />
+                <LayoutItem Id="ItemCode" ViewItem="ItemCode" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <ListView Id="Distribution_ListView_Viewmode">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PONumberItems" PropertyName="PONumberItems" Width="50" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Distribution_ListView_Receiveid">
+      <Columns Id="Columns">
+        <ColumnInfo Id="#Items" PropertyName="PONumberItems" Caption="#Items" Index="3" />
+      </Columns>
+    </ListView>
+    <ListView Id="Distribution_ListView_Existingstockview">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PONumberItems" PropertyName="PONumberItems" Width="50" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="1">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="VisualMatrixName" ViewItem="VisualMatrixName" />
+          <LayoutItem Id="SampleCategoryName" ViewItem="SampleCategoryName" />
+          <LayoutItem Id="AuditTrail" ViewItem="AuditTrail" />
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <ActionContainerViewItem Id="SampleLoginFromCheckin" ActionContainer="GoToSampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CopyPermission_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CopyPermission">
+              <LayoutGroup Id="Auto6016baa5-1e29-4a9e-bb8e-73ca15ea8eed">
+                <LayoutItem Id="strUser" ViewItem="strUser" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Customer_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item4">
+              <LayoutGroup Id="Auto07b91f9a-ad92-4a76-96bf-8dfd0f5176d3">
+                <LayoutItem Id="County" ViewItem="County" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Distribution_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Distribution">
+              <LayoutGroup Id="Distribution_col1">
+                <LayoutItem Id="RequestedBy" RelativeSize="6.3829787234042552" />
+                <LayoutItem Id="givento" RelativeSize="6.3829787234042552" />
+                <LayoutItem Id="Storage" RelativeSize="6.3829787234042552" />
+                <LayoutItem Id="VendorLT" RelativeSize="6.3829787234042552" />
+                <LayoutItem Id="ExpiryDate" RelativeSize="8.51063829787234" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Distribution_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PONumberItems" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Distribution_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PONumberItems" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Items_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Items">
+              <LayoutGroup Id="Items_col2">
+                <LayoutItem Id="IsToxic" RelativeSize="9.26517571884984" Index="0" Removed="True" />
+                <LayoutItem Id="RetireDate" RelativeSize="7.0588235294117645" Index="8" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Purchaseorder_Item_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="POIDvendor" Index="-1" />
+        <ColumnInfo Id="PONumberItems" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="QcParameter_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QcParameter_col2">
+              <LayoutItem Id="Component" ViewItem="Component" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCType_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QCType">
+              <LayoutItem Id="QCRole" ViewItem="QCRole" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="ReportingQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Requisition_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Requisition">
+              <LayoutGroup Id="Requisition_col2">
+                <LayoutItem Id="POIDvendor" Index="4" RelativeSize="9.375" Removed="True" />
+                <LayoutItem Id="PONumberItems" Index="4" RelativeSize="12.5" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Requisition_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="POIDvendor" Index="-1" />
+        <ColumnInfo Id="PONumberItems" Index="-1" Caption="PONumberItems" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="POIDvendor" Index="-1" />
+        <ColumnInfo Id="PONumberItems" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto50e21cde-9268-4222-9826-501f79e548c5">
+              <LayoutGroup Id="Item4">
+                <LayoutItem Id="SampleCategoryName" ViewItem="SampleCategoryName" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SampleLogIn_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SampleLogIn_col1">
+              <LayoutItem Id="SubOut" ViewItem="SubOut" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TestMethod_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autof41af155-9776-4c91-848f-f62f0a69ca8f">
+              <LayoutGroup Id="TestMethod_col1">
+                <LayoutItem Id="PrepMethod1" ViewItem="PrepMethod1" />
+                <LayoutItem Id="PrepMethod" ViewItem="PrepMethod" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="VendorReagentCertificate_LT_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PONumberItems" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Vendors_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="city" Caption="City" LookupEditorMode="Auto" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Vendors">
+              <LayoutGroup Id="Vendors_col1">
+                <LayoutItem Id="city" RelativeSize="7.8947368421052628" />
+                <LayoutItem Id="Contact" RelativeSize="7.8947368421052628" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Vendors_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="city" Caption="City" />
+      </Columns>
+    </ListView>
+    <ListView Id="Vendors_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="city" Index="-1" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="GroupTest" ViewId="GroupTest_ListView" />
+          <Item Id="Configuration">
+            <Items Id="Items">
+              <Item Id="SubContractLab" ViewId="SubContractLab_ListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Audit Trail">
+        <Items Id="Items">
+          <Item Id="SampleCheckInAuditTrail" ViewId="Samplecheckin_AuditTrail_ListView" />
+          <Item Id="Sample LogIn Audit Trail" ViewId="SampleLogIn_AuditTrail_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="AddItem" ImageName="Action_New" />
+    </Actions>
+    <ActionToContainerMapping Id="ActionToContainerMapping">
+      <ActionContainer Id="View">
+        <ActionLink ActionId="POReport" Index="0" />
+        <ActionLink ActionId="BarcodeReport" Index="14" />
+        <ActionLink ActionId="FolderLabel" Index="15" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+</Application>

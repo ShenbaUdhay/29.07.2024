@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="@a9a48b17-f0f5-4520-9696-3813e8651149" Caption="Storage" />
+          <Item Id="Matrix" Caption="Matrix" />
+          <Item Id="Method" Caption="Method" />
+          <Item Id="Parameter" Caption="Parameter" />
+          <Item Id="Project" Caption="Project" />
+          <Item Id="QCType" Caption="QCType" />
+          <Item Id="Test" Caption="Test" />
+          <Item Id="VisualMatrix" Caption="VisualMatrix" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Views Id="Views">
+    <DetailView Id="Company_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Company_col1" Caption="Company_col1">
+              <LayoutGroup Id="Auto2afc17e3-0d04-4402-9575-cda824770c02" Caption="Auto2afc17e3-0d04-4402-9575-cda824770c02(4)">
+                <LayoutGroup Id="Autof53dc83c-c4c8-4d58-bc01-c03533d38e4f" Caption="Autof53dc83c-c4c8-4d58-bc01-c03533d38e4f(5)">
+                  <TabbedGroup Id="Item2">
+                    <LayoutGroup Id="Item1" Caption="基本信息">
+                      <LayoutGroup Id="Autobc490310-3bc1-4948-a5ef-939a5e7669b8" Caption="Autobc490310-3bc1-4948-a5ef-939a5e7669b8(7)">
+                        <LayoutGroup Id="Auto6f9f8c64-7c64-4024-bd6d-568792befad0" Caption="Auto6f9f8c64-7c64-4024-bd6d-568792befad0(9)">
+                          <LayoutGroup Id="Auto8059c483-7687-4ce4-b5e1-d6214f74db61" Caption="Auto8059c483-7687-4ce4-b5e1-d6214f74db61(10)" />
+                          <LayoutGroup Id="Auto8fd567b2-3a51-4e5f-93b0-1223a4a99313" Caption="Auto8fd567b2-3a51-4e5f-93b0-1223a4a99313(15)" />
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                    <LayoutGroup Id="Item3" Caption="联系方式">
+                      <LayoutGroup Id="Auto11ffb61c-1050-458f-8039-99b4b60b1efa" Caption="Auto11ffb61c-1050-458f-8039-99b4b60b1efa(21)">
+                        <LayoutGroup Id="Auto3d27bd61-03ac-42ed-8ce6-988d968a409b" Caption="Auto3d27bd61-03ac-42ed-8ce6-988d968a409b(22)" />
+                        <LayoutGroup Id="Autoe38a6c19-cf36-412c-b00c-cdc4b21a322f" Caption="Autoe38a6c19-cf36-412c-b00c-cdc4b21a322f(26)" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                    <LayoutGroup Id="Item4" Caption="Logo" />
+                    <LayoutGroup Id="Item5" Caption="二维码" />
+                    <LayoutGroup Id="Item6" Caption="强检标志" />
+                  </TabbedGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomCountry_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CustomCountry_col2" Caption="CustomCountry_col2" />
+            <LayoutGroup Id="CustomCountry">
+              <LayoutGroup Id="Autoc0f90f12-a73d-416e-a79c-301bb1c86149" Caption="Autoc0f90f12-a73d-416e-a79c-301bb1c86149(4)">
+                <LayoutGroup Id="Auto6d01052f-8ac6-417e-9eff-acb180cea70c" Caption="Auto6d01052f-8ac6-417e-9eff-acb180cea70c(5)" />
+                <LayoutGroup Id="Auto2dda1537-74a0-4641-aa92-24cff647dfce" Caption="Auto2dda1537-74a0-4641-aa92-24cff647dfce(8)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Employee" Caption="基本信息">
+                <LayoutGroup Id="Employee_col2" Caption="Employee_col2" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item3" Caption="组织信息">
+                <LayoutGroup Id="Auto1d720e82-fe67-45bd-8cd5-60eaacfdd01c" Caption="Auto1d720e82-fe67-45bd-8cd5-60eaacfdd01c(18)">
+                  <LayoutGroup Id="Autoc0c8cfc1-89cc-4b70-8aea-ff6fbd360b61" Caption="Autoc0c8cfc1-89cc-4b70-8aea-ff6fbd360b61(19)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item5" Caption="联系方式">
+                <LayoutGroup Id="Autob4d64242-e4ff-4933-b596-7b9b946fe02d" Caption="Autob4d64242-e4ff-4933-b596-7b9b946fe02d(22)">
+                  <LayoutGroup Id="Autof7d78854-995b-4bf8-88cb-e4e92bc09998" Caption="Autof7d78854-995b-4bf8-88cb-e4e92bc09998(23)" />
+                  <LayoutGroup Id="Autof2b78755-0d91-4e79-ae8b-3e3a379d83af" Caption="Autof2b78755-0d91-4e79-ae8b-3e3a379d83af(29)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" Caption="简历" />
+              <LayoutGroup Id="Item1" Caption="用户信息">
+                <LayoutGroup Id="Auto79d81b8a-1434-461f-a024-a36347ba76cd" Caption="Auto79d81b8a-1434-461f-a024-a36347ba76cd(37)">
+                  <LayoutGroup Id="Auto44539dfb-85d7-4bec-a393-ce5773a5c59c" Caption="Auto44539dfb-85d7-4bec-a393-ce5773a5c59c(38)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item6" Caption="角色" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="VisualMatrixName" Caption="样品类型" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

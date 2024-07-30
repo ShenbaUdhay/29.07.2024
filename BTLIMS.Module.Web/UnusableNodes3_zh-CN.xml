@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="StockCancel" ToolTip="取消" ShortCaption="取消" Caption="取消" />
+    </Actions>
+  </ActionDesign>
+</Application>

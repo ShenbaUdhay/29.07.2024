@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Hr.Employee">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="FullNameCN" Caption="姓名" />
+        <Member Name="FullNameEN" Caption="Full Name" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

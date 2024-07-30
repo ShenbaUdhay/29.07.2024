@@ -1,0 +1,1318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FB7385F-8538-4AEE-8F17-35E3A172B100}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Modules</RootNamespace>
+    <AssemblyName>Modules</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.CloneObject.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Scheduler.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.ExpressApp.Scheduler.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Scheduler.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.ExpressApp.Scheduler.Web.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Web.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Win.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Security.Xpo.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Export">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v20.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v20.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\Accounting\Receivables\DepositEDDExpot.cs" />
+    <Compile Include="BusinessObjects\Accounting\Receivables\DepositPayment.cs" />
+    <Compile Include="BusinessObjects\Accounting\Receivables\Deposits.cs" />
+    <Compile Include="BusinessObjects\Assets\Enum.cs" />
+    <Compile Include="BusinessObjects\Assets\InspectCategory.cs" />
+    <Compile Include="BusinessObjects\Assets\Labware.cs" />
+    <Compile Include="BusinessObjects\Assets\LabwareCategory.cs" />
+    <Compile Include="BusinessObjects\Assets\LabwareCertificate.cs" />
+    <Compile Include="BusinessObjects\Assets\LabwareMaintenance.cs" />
+    <Compile Include="BusinessObjects\Assets\MaintenanceCategory.cs" />
+    <Compile Include="BusinessObjects\Assets\MaintenanceSetup.cs" />
+    <Compile Include="BusinessObjects\Assets\MaintenanceTaskCheckList.cs" />
+    <Compile Include="BusinessObjects\BarcodeSampleCustody\SampleCustodyTest.cs" />
+    <Compile Include="BusinessObjects\BarcodeSampleCustody\SampleIn.cs" />
+    <Compile Include="BusinessObjects\Crm\Activity.cs" />
+    <Compile Include="BusinessObjects\Crm\AlertNotification.cs" />
+    <Compile Include="BusinessObjects\Crm\Classification.cs" />
+    <Compile Include="BusinessObjects\Crm\Contact.cs" />
+    <Compile Include="BusinessObjects\Crm\CRMActivity.cs" />
+    <Compile Include="BusinessObjects\Crm\CRMProspects.cs" />
+    <Compile Include="BusinessObjects\Crm\Customer.cs" />
+    <Compile Include="BusinessObjects\Crm\Enum.cs" />
+    <Compile Include="BusinessObjects\Crm\Order.cs" />
+    <Compile Include="BusinessObjects\Crm\ProspectClient.cs" />
+    <Compile Include="BusinessObjects\Crm\Prospects.cs" />
+    <Compile Include="BusinessObjects\Crm\SaleBase.cs" />
+    <Compile Include="BusinessObjects\Crm\TypeOfUse.cs" />
+    <Compile Include="BusinessObjects\Dashboard\AssignDashboardEmployees.cs" />
+    <Compile Include="BusinessObjects\Dashboard\AssignDashboardToUserDepartment.cs" />
+    <Compile Include="BusinessObjects\Dashboard\NavigationItemDemo.cs" />
+    <Compile Include="BusinessObjects\Dashboard\SpecificSymbol.cs" />
+    <Compile Include="BusinessObjects\Dashboard\WEBCustomDashboardData.cs" />
+    <Compile Include="BusinessObjects\E-Mail\ActionEmail.cs" />
+    <Compile Include="BusinessObjects\E-Mail\CalLog.cs" />
+    <Compile Include="BusinessObjects\E-Mail\Email.cs" />
+    <Compile Include="BusinessObjects\E-Mail\EmailAction.cs" />
+    <Compile Include="BusinessObjects\E-Mail\EmailSetting.cs" />
+    <Compile Include="BusinessObjects\E-Mail\EmailStatus.cs" />
+    <Compile Include="BusinessObjects\E-Mail\EmailUser.cs" />
+    <Compile Include="BusinessObjects\EDD\EDDBuilder.cs" />
+    <Compile Include="BusinessObjects\EDD\EDDCategory.cs" />
+    <Compile Include="BusinessObjects\EDD\EDDFieldEditor.cs" />
+    <Compile Include="BusinessObjects\EDD\EDDQueryBuilder.cs" />
+    <Compile Include="BusinessObjects\EDD\EDDReportGenerator.cs" />
+    <Compile Include="BusinessObjects\HelpCenter\HelpCenter.cs" />
+    <Compile Include="BusinessObjects\HelpCenter\HelpCenterAttachments.cs" />
+    <Compile Include="BusinessObjects\HelpCenter\UserManualEditorCategory.cs" />
+    <Compile Include="BusinessObjects\HelpCenter\VersionLog.cs" />
+    <Compile Include="BusinessObjects\Hr\Area.cs" />
+    <Compile Include="BusinessObjects\Hr\City.cs" />
+    <Compile Include="BusinessObjects\Hr\Company.cs" />
+    <Compile Include="BusinessObjects\Hr\CustomCountry.cs" />
+    <Compile Include="BusinessObjects\Hr\CustomLogonParameters.cs" />
+    <Compile Include="BusinessObjects\Hr\CustomState.cs" />
+    <Compile Include="BusinessObjects\Hr\CustomSystemRole.cs" />
+    <Compile Include="BusinessObjects\Hr\CustomSystemUser.cs" />
+    <Compile Include="BusinessObjects\Hr\Department.cs" />
+    <Compile Include="BusinessObjects\Hr\Employee.cs" />
+    <Compile Include="BusinessObjects\Hr\Enum.cs" />
+    <Compile Include="BusinessObjects\Hr\KeyValue.cs" />
+    <Compile Include="BusinessObjects\Hr\Navigation.cs" />
+    <Compile Include="BusinessObjects\Hr\OperationLog.cs" />
+    <Compile Include="BusinessObjects\Hr\Position.cs" />
+    <Compile Include="BusinessObjects\Hr\UserRightDC.cs" />
+    <Compile Include="BusinessObjects\ICM\Category.cs" />
+    <Compile Include="BusinessObjects\ICM\ConsumptionHistory.cs" />
+    <Compile Include="BusinessObjects\ICM\ConsumptionQuerypanel.cs" />
+    <Compile Include="BusinessObjects\ICM\DeliveryPriority.cs" />
+    <Compile Include="BusinessObjects\ICM\DisposalHistory.cs" />
+    <Compile Include="BusinessObjects\ICM\DisposalQuerypanel.cs" />
+    <Compile Include="BusinessObjects\ICM\Distribution.cs" />
+    <Compile Include="BusinessObjects\ICM\Distributionquerypanel.cs" />
+    <Compile Include="BusinessObjects\ICM\ExistingStock.cs" />
+    <Compile Include="BusinessObjects\ICM\Existingstockquerypanel.cs" />
+    <Compile Include="BusinessObjects\ICM\Grades.cs" />
+    <Compile Include="BusinessObjects\ICM\ICMAlert.cs" />
+    <Compile Include="BusinessObjects\ICM\ICMProject.cs" />
+    <Compile Include="BusinessObjects\ICM\ICMRollBack.cs" />
+    <Compile Include="BusinessObjects\ICM\ICMStorage.cs" />
+    <Compile Include="BusinessObjects\ICM\Items.cs" />
+    <Compile Include="BusinessObjects\ICM\ItemsFileUpload.cs" />
+    <Compile Include="BusinessObjects\ICM\ItemsUpload.cs" />
+    <Compile Include="BusinessObjects\ICM\ItemTestMethodLink.cs" />
+    <Compile Include="BusinessObjects\ICM\LevelApprovalHistory.cs" />
+    <Compile Include="BusinessObjects\ICM\Manufacturer.cs" />
+    <Compile Include="BusinessObjects\ICM\NFPAGHSKey.cs" />
+    <Compile Include="BusinessObjects\ICM\NPFileData.cs" />
+    <Compile Include="BusinessObjects\ICM\OrderingItemSetup.cs" />
+    <Compile Include="BusinessObjects\ICM\Packageunits.cs" />
+    <Compile Include="BusinessObjects\ICM\POquerypanel.cs" />
+    <Compile Include="BusinessObjects\ICM\Purchaseorder.cs" />
+    <Compile Include="BusinessObjects\ICM\ReceiveDistributionHistory.cs" />
+    <Compile Include="BusinessObjects\ICM\Receivequerypanel.cs" />
+    <Compile Include="BusinessObjects\ICM\Requisition.cs" />
+    <Compile Include="BusinessObjects\ICM\Requisitionquerypanel.cs" />
+    <Compile Include="BusinessObjects\ICM\Shippingoptions.cs" />
+    <Compile Include="BusinessObjects\ICM\ShipVia.cs" />
+    <Compile Include="BusinessObjects\ICM\SubItems.cs" />
+    <Compile Include="BusinessObjects\ICM\VendorEvaluation.cs" />
+    <Compile Include="BusinessObjects\ICM\VendorEvaluationItem.cs" />
+    <Compile Include="BusinessObjects\ICM\VendorReagentCertificate.cs" />
+    <Compile Include="BusinessObjects\ICM\Vendors.cs" />
+    <Compile Include="BusinessObjects\ICM\Vendorsupload.cs" />
+    <Compile Include="BusinessObjects\ICM\WorkflowConfig.cs" />
+    <Compile Include="BusinessObjects\InfoClass\TestMethodInfo.cs" />
+    <Compile Include="BusinessObjects\Invoice\Invoicing.cs" />
+    <Compile Include="BusinessObjects\Invoice\InvoicingAnalysisCharge.cs" />
+    <Compile Include="BusinessObjects\Invoice\InvoicingContact.cs" />
+    <Compile Include="BusinessObjects\Invoice\InvoicingEDDExport.cs" />
+    <Compile Include="BusinessObjects\Invoice\InvoicingItemCharge.cs" />
+    <Compile Include="BusinessObjects\Libraries\Library.cs" />
+    <Compile Include="BusinessObjects\Libraries\MessageBoxUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Libraries\MessageText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Libraries\TextMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\LogIn\LoginOneTimePin.cs" />
+    <Compile Include="BusinessObjects\Metrc\MetrcDC.cs" />
+    <Compile Include="BusinessObjects\Metrc\MetrcIncomingData.cs" />
+    <Compile Include="BusinessObjects\Mold\SpreadsheetEntry_MoldAirResults.cs" />
+    <Compile Include="BusinessObjects\Mold\SpreadsheetEntry_MoldResults.cs" />
+    <Compile Include="BusinessObjects\PermitLibraries\PermitLibrary .cs" />
+    <Compile Include="BusinessObjects\PermitLibraries\Permitsetup.cs" />
+    <Compile Include="BusinessObjects\PermitLibraries\PermitTypes.cs" />
+    <Compile Include="BusinessObjects\PLM\PLMCopyToCombo.cs" />
+    <Compile Include="BusinessObjects\PLM\NPPLMExam.cs" />
+    <Compile Include="BusinessObjects\PLM\PLMExam.cs" />
+    <Compile Include="BusinessObjects\PLM\PLMQualityControl.cs" />
+    <Compile Include="BusinessObjects\PLM\NPPLMStereoscopicObservation.cs" />
+    <Compile Include="BusinessObjects\PLM\PLMStereoscopicObservation.cs" />
+    <Compile Include="BusinessObjects\PTStudyLog\PTStudyLog.cs" />
+    <Compile Include="BusinessObjects\PTStudyLog\PTStudyLogComment.cs" />
+    <Compile Include="BusinessObjects\PTStudyLog\PTStudyLogResults.cs" />
+    <Compile Include="BusinessObjects\PTStudyLog\Source.cs" />
+    <Compile Include="BusinessObjects\PTStudyLog\StudyID.cs" />
+    <Compile Include="BusinessObjects\PTStudyLog\StudyName.cs" />
+    <Compile Include="BusinessObjects\QC\NonPersistentQcComment.cs" />
+    <Compile Include="BusinessObjects\QC\QCBatch.cs" />
+    <Compile Include="BusinessObjects\QC\QCBatchInstrument.cs" />
+    <Compile Include="BusinessObjects\QC\QCBatchSequence.cs" />
+    <Compile Include="BusinessObjects\QC\SDMSDC.cs" />
+    <Compile Include="BusinessObjects\QC\SDMSRollback.cs" />
+    <Compile Include="BusinessObjects\QC\SDMSUploadImage.cs" />
+    <Compile Include="BusinessObjects\ReagentPreparation\CalculationApproach.cs" />
+    <Compile Include="BusinessObjects\ReagentPreparation\NonPersistentReagent.cs" />
+    <Compile Include="BusinessObjects\ReagentPreparation\NPReagentPrepLog.cs" />
+    <Compile Include="BusinessObjects\ReagentPreparation\ReagentOperator.cs" />
+    <Compile Include="BusinessObjects\ReagentPreparation\ReagentPreparation.cs" />
+    <Compile Include="BusinessObjects\ReagentPreparation\ReagentPrepLog.cs" />
+    <Compile Include="BusinessObjects\ReagentPreparation\ReagentUnits.cs" />
+    <Compile Include="BusinessObjects\ReagentPreparation\RegentPrepCalculationEditor.cs" />
+    <Compile Include="BusinessObjects\ReagentPreparation\VariableAndUnits.cs" />
+    <Compile Include="BusinessObjects\Report\COC_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\COC_Report.Designer.cs">
+      <DependentUpon>COC_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\DOCCertificate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\DOCCertificate.Designer.cs" />
+    <Compile Include="BusinessObjects\Report\EmailForms.cs" />
+    <Compile Include="BusinessObjects\Report\FolderLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\FolderLabel.Designer.cs">
+      <DependentUpon>FolderLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\FolderLabelReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\FolderLabelReport.Designer.cs">
+      <DependentUpon>FolderLabelReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\SampleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\SampleReport.Designer.cs">
+      <DependentUpon>SampleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\XrDOCReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\XrDOCReport.Designer.cs" />
+    <Compile Include="BusinessObjects\Report\XrMDLReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Report\XrMDLReport.Designer.cs" />
+    <Compile Include="BusinessObjects\SampleCustody\HazardousCategory.cs" />
+    <Compile Include="BusinessObjects\SampleCustody\SampleCustodyStorage.cs" />
+    <Compile Include="BusinessObjects\SampleCustody\WasteDrums.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\Attachment.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\BatchReporting.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\Calibration.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\CalibrationCurve.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\CalibrationInfo.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\CustomDueDate.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\eNotificationContentTemplate.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\Notes.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\NPSampleLogIn_Bottle.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\NpSampleSourceSetup.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\PDFPreview.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\ProjectCategory.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\QCCategory.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\QcParameter.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\QCResults.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\QCResultValidationQueryPanel.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\QCTestParameter.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\RegistrationSignOff.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\Reporting.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\ReportingQueryPanel.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\ReportRollbackLog.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\ResultEntryQueryPanel.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleBottleAllocation.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\Samplecheckin.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleCheckinItemChargePricing.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleConditionCheck.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleConditionCheckComment.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleConditionCheckData.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleConditionCheckPoint.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleCustody\SampleCustody.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleLogIn.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleParameter.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SamplePreparation\CopyFromSamplePrepBatch.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SamplePreparation\Reagent.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SamplePreparation\SamplePreparationChain.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SamplePreparation\SamplePrepBatch.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SamplePreparation\SamplePretreatmentBatch.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SamplePreparation\SamplePretreatmentBatchSequence.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SamplePrepBatchSequence.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleRegistrationFileImport.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleSourceSetup.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleStatus.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SampleUpload.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SL_CopyNoOfSamples.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SpreadSheetEntry_AnalyticalBatch.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SpreadsheetEntry_PLMResults.cs" />
+    <Compile Include="BusinessObjects\SampleManagement\SpreadSheetEntry_SampleInfocs.cs" />
+    <Compile Include="BusinessObjects\SamplingManagement\SamplingAllocation.cs" />
+    <Compile Include="BusinessObjects\SamplingManagement\TaskJobIDAutomation.cs" />
+    <Compile Include="BusinessObjects\SamplingManagement\TaskRecurranceSetup.cs" />
+    <Compile Include="BusinessObjects\SamplingManagement\TaskSchedulerEventList.cs" />
+    <Compile Include="BusinessObjects\SDA\FlutterDefaultSettings.cs" />
+    <Compile Include="BusinessObjects\SDA\FlutterSDARRA_FieldDataEntryInfo.cs" />
+    <Compile Include="BusinessObjects\SDA\FlutterSDARRA_SamplingAlternateStation.cs" />
+    <Compile Include="BusinessObjects\SDA\SDATemplate.cs" />
+    <Compile Include="BusinessObjects\SDA\SDATemplateDetail.cs" />
+    <Compile Include="BusinessObjects\SDA\tbl_FlutterSDA_FieldEntryColumn.cs" />
+    <Compile Include="BusinessObjects\SDMS\RawDataResultEntry.cs" />
+    <Compile Include="BusinessObjects\SDMS\RawDataResultReview.cs" />
+    <Compile Include="BusinessObjects\SDMS\RawDataResultVerify.cs" />
+    <Compile Include="BusinessObjects\SDMS\RawDataResultView.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_CDetail.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_CHeader.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_ClosingQCTestRun.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_DataParsing.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_DataTransfer.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_Detail.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_FieldSetUp.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_Header.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_InitialQCTestRun.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_SampleQCTestRun.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_ScientificData.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_SequencePattern.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_TemplateInfo.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_TemplateType.cs" />
+    <Compile Include="BusinessObjects\SDMS\SpreadSheetBuilder_TestParameter.cs" />
+    <Compile Include="BusinessObjects\SDMS\Template Category .cs" />
+    <Compile Include="BusinessObjects\Seting\Enum.cs" />
+    <Compile Include="BusinessObjects\Seting\KeyType.cs" />
+    <Compile Include="BusinessObjects\Setting\Accrediation.cs" />
+    <Compile Include="BusinessObjects\Setting\AnalysisDepartmentChain.cs" />
+    <Compile Include="BusinessObjects\Setting\AuditData.cs" />
+    <Compile Include="BusinessObjects\Setting\Bare.cs" />
+    <Compile Include="BusinessObjects\Setting\BottleSharing.cs" />
+    <Compile Include="BusinessObjects\Setting\BroughtBy.cs" />
+    <Compile Include="BusinessObjects\Setting\CCID\CompliantInitiation.cs" />
+    <Compile Include="BusinessObjects\Setting\Certificates.cs" />
+    <Compile Include="BusinessObjects\Setting\COCSettings.cs" />
+    <Compile Include="BusinessObjects\Setting\COCSettingsBottleAllocation.cs" />
+    <Compile Include="BusinessObjects\Setting\COCSettingsSamples.cs" />
+    <Compile Include="BusinessObjects\Setting\COCSettingsTest.cs" />
+    <Compile Include="BusinessObjects\Setting\Collector.cs" />
+    <Compile Include="BusinessObjects\Setting\Component.cs" />
+    <Compile Include="BusinessObjects\Setting\Container.cs" />
+    <Compile Include="BusinessObjects\Setting\ContainerSettings.cs" />
+    <Compile Include="BusinessObjects\Setting\CopyPermission.cs" />
+    <Compile Include="BusinessObjects\Setting\CreditRating.cs" />
+    <Compile Include="BusinessObjects\Setting\CurrentLanguage.cs" />
+    <Compile Include="BusinessObjects\Setting\CustomerCategory.cs" />
+    <Compile Include="BusinessObjects\Setting\CustomReportBuilder.cs" />
+    <Compile Include="BusinessObjects\Setting\DailyQC.cs" />
+    <Compile Include="BusinessObjects\Setting\DailyQCChart.cs" />
+    <Compile Include="BusinessObjects\Setting\DailyQCSettings.cs" />
+    <Compile Include="BusinessObjects\Setting\DataEntry.cs" />
+    <Compile Include="BusinessObjects\Setting\DataSourceEmailTemplate.cs" />
+    <Compile Include="BusinessObjects\Setting\DBConnection.cs" />
+    <Compile Include="BusinessObjects\Setting\DefaultSetting.cs" />
+    <Compile Include="BusinessObjects\Setting\DOC.cs" />
+    <Compile Include="BusinessObjects\Setting\DOCDetails.cs" />
+    <Compile Include="BusinessObjects\Setting\DocumentAttachment.cs" />
+    <Compile Include="BusinessObjects\Setting\DocumentCategory.cs" />
+    <Compile Include="BusinessObjects\Setting\DrinkingWaterQualityReports.cs" />
+    <Compile Include="BusinessObjects\Setting\DummyClass.cs" />
+    <Compile Include="BusinessObjects\Setting\DWQRReportTemplateSetup.cs" />
+    <Compile Include="BusinessObjects\Setting\EmailContentTemplate.cs" />
+    <Compile Include="BusinessObjects\Setting\ExceptionTracking.cs" />
+    <Compile Include="BusinessObjects\Setting\Glossary.cs" />
+    <Compile Include="BusinessObjects\Setting\GroupTestMethod.cs" />
+    <Compile Include="BusinessObjects\Setting\HoldingTimes.cs" />
+    <Compile Include="BusinessObjects\Setting\Holidays.cs" />
+    <Compile Include="BusinessObjects\Setting\Image.cs" />
+    <Compile Include="BusinessObjects\Setting\InstrumentSoftware.cs" />
+    <Compile Include="BusinessObjects\Setting\ItemDepletion.cs" />
+    <Compile Include="BusinessObjects\Setting\JobIDFormat.cs" />
+    <Compile Include="BusinessObjects\Setting\LabMasterAccessLog.cs" />
+    <Compile Include="BusinessObjects\Setting\Labware\Schedular.cs" />
+    <Compile Include="BusinessObjects\Setting\Labware\SkipReason.cs" />
+    <Compile Include="BusinessObjects\Setting\Labware\TaskCheckList.cs" />
+    <Compile Include="BusinessObjects\Setting\LinkedClasses.cs" />
+    <Compile Include="BusinessObjects\Setting\Manual.cs" />
+    <Compile Include="BusinessObjects\Setting\Matrix.cs" />
+    <Compile Include="BusinessObjects\Setting\MCLAndSCLLimits.cs" />
+    <Compile Include="BusinessObjects\Setting\MCLAndSCLLimitsAnalyteNotes.cs" />
+    <Compile Include="BusinessObjects\Setting\Messages.cs" />
+    <Compile Include="BusinessObjects\Setting\Method.cs" />
+    <Compile Include="BusinessObjects\Setting\MethodCategory.cs" />
+    <Compile Include="BusinessObjects\Setting\MOLD\MoldParameters.cs" />
+    <Compile Include="BusinessObjects\Setting\NavigationItem.cs" />
+    <Compile Include="BusinessObjects\Setting\NCA\ActionCategory.cs" />
+    <Compile Include="BusinessObjects\Setting\NCA\CorrectiveActionLog.cs" />
+    <Compile Include="BusinessObjects\Setting\NCA\CorrectiveActionVerification .cs" />
+    <Compile Include="BusinessObjects\Setting\NCA\NCAReason.cs" />
+    <Compile Include="BusinessObjects\Setting\NCA\NonConformityInitiation.cs" />
+    <Compile Include="BusinessObjects\Setting\NCA\ProblemCategory.cs" />
+    <Compile Include="BusinessObjects\Setting\NPCOCSettingsSample_Bottle.cs" />
+    <Compile Include="BusinessObjects\Setting\NPSampleFields.cs" />
+    <Compile Include="BusinessObjects\Setting\NPSamplingFieldConfiguration.cs" />
+    <Compile Include="BusinessObjects\Setting\Parameter.cs" />
+    <Compile Include="BusinessObjects\Setting\ParameterMatch.cs" />
+    <Compile Include="BusinessObjects\Setting\PaymentStatus.cs" />
+    <Compile Include="BusinessObjects\Setting\PaymentTerms.cs" />
+    <Compile Include="BusinessObjects\Setting\PermitAlert.cs" />
+    <Compile Include="BusinessObjects\Setting\PLM\AsbestosFibers.cs" />
+    <Compile Include="BusinessObjects\Setting\PLM\FiberTypes.cs" />
+    <Compile Include="BusinessObjects\Setting\PLM\FiberTypesValues.cs" />
+    <Compile Include="BusinessObjects\Setting\PLM\Materials.cs" />
+    <Compile Include="BusinessObjects\Setting\PLM\Non-AsbestosFibers.cs" />
+    <Compile Include="BusinessObjects\Setting\PLM\Non-FibrousComponents.cs" />
+    <Compile Include="BusinessObjects\Setting\PLM\OtherComponents.cs" />
+    <Compile Include="BusinessObjects\Setting\PLM\ResultRange.cs" />
+    <Compile Include="BusinessObjects\Setting\PrepMethod.cs" />
+    <Compile Include="BusinessObjects\Setting\PrepTypes.cs" />
+    <Compile Include="BusinessObjects\Setting\Preservative.cs" />
+    <Compile Include="BusinessObjects\Setting\PreserveCondition.cs" />
+    <Compile Include="BusinessObjects\Setting\Project.cs" />
+    <Compile Include="BusinessObjects\Setting\PWSSystem.cs" />
+    <Compile Include="BusinessObjects\Setting\QcRole.cs" />
+    <Compile Include="BusinessObjects\Setting\QCRootRole.cs" />
+    <Compile Include="BusinessObjects\Setting\QCSource.cs" />
+    <Compile Include="BusinessObjects\Setting\QCType.cs" />
+    <Compile Include="BusinessObjects\Setting\QCTypeMatch.cs" />
+    <Compile Include="BusinessObjects\Setting\Qualifier\DefinitionCategory .cs" />
+    <Compile Include="BusinessObjects\Setting\Qualifier\QualifierAutomation.cs" />
+    <Compile Include="BusinessObjects\Setting\Qualifier\Qualifiers .cs" />
+    <Compile Include="BusinessObjects\Setting\QuotesDefaultSettings.cs" />
+    <Compile Include="BusinessObjects\Setting\Region.cs" />
+    <Compile Include="BusinessObjects\Setting\ReminderActivity.cs" />
+    <Compile Include="BusinessObjects\Setting\ReportCategory.cs" />
+    <Compile Include="BusinessObjects\Setting\ReportComment.cs" />
+    <Compile Include="BusinessObjects\Setting\ReportIDFormat.cs" />
+    <Compile Include="BusinessObjects\Setting\ReportingContact.cs" />
+    <Compile Include="BusinessObjects\Setting\ReportLogo.cs" />
+    <Compile Include="BusinessObjects\Setting\ReportPackage.cs" />
+    <Compile Include="BusinessObjects\Setting\ReportType.cs" />
+    <Compile Include="BusinessObjects\Setting\ResultDefaultValue.cs" />
+    <Compile Include="BusinessObjects\Setting\ResultEntryDefaultSettings.cs" />
+    <Compile Include="BusinessObjects\Setting\RoleNavigationPermission.cs" />
+    <Compile Include="BusinessObjects\Setting\RoleNavigationPermissionDetails.cs" />
+    <Compile Include="BusinessObjects\Setting\Roundofftest.cs" />
+    <Compile Include="BusinessObjects\Setting\SampleCategory.cs" />
+    <Compile Include="BusinessObjects\Setting\SampleMatrixSetupFields.cs" />
+    <Compile Include="BusinessObjects\Setting\SamplePrepTemplateFields.cs" />
+    <Compile Include="BusinessObjects\Setting\SamplePrepTemplates.cs" />
+    <Compile Include="BusinessObjects\Setting\SampleType.cs" />
+    <Compile Include="BusinessObjects\Setting\SamplingFieldConfiguration.cs" />
+    <Compile Include="BusinessObjects\Setting\SanitarianTemperature.cs" />
+    <Compile Include="BusinessObjects\Setting\ScreenAutoLock.cs" />
+    <Compile Include="BusinessObjects\Setting\Sizes.cs" />
+    <Compile Include="BusinessObjects\Setting\SLCode.cs" />
+    <Compile Include="BusinessObjects\Setting\SLKind.cs" />
+    <Compile Include="BusinessObjects\Setting\StatusDefinition.cs" />
+    <Compile Include="BusinessObjects\Setting\Storage.cs" />
+    <Compile Include="BusinessObjects\Setting\SubContractLab.cs" />
+    <Compile Include="BusinessObjects\Setting\SystemTypes.cs" />
+    <Compile Include="BusinessObjects\Setting\TabControls.cs" />
+    <Compile Include="BusinessObjects\Setting\TabFieldConfiguration.cs" />
+    <Compile Include="BusinessObjects\Setting\TabFields.cs" />
+    <Compile Include="BusinessObjects\Setting\tbl_Public_CustomReportDesignerDetails.cs" />
+    <Compile Include="BusinessObjects\Setting\Technology.cs" />
+    <Compile Include="BusinessObjects\Setting\TestCopy.cs" />
+    <Compile Include="BusinessObjects\Setting\TestDescription.cs" />
+    <Compile Include="BusinessObjects\Setting\TestFileUpload.cs" />
+    <Compile Include="BusinessObjects\Setting\TestGuide.cs" />
+    <Compile Include="BusinessObjects\Setting\TestMethod.cs" />
+    <Compile Include="BusinessObjects\Setting\Testparameter.cs" />
+    <Compile Include="BusinessObjects\Setting\Topic.cs" />
+    <Compile Include="BusinessObjects\Setting\TrendAnalysis\TrendAnalysis.cs" />
+    <Compile Include="BusinessObjects\Setting\TurnAroundTime.cs" />
+    <Compile Include="BusinessObjects\Setting\UnconventionalAnalysisDataEntryConfigBOSourceCodeCaption.cs" />
+    <Compile Include="BusinessObjects\Setting\UnFollowSettings.cs" />
+    <Compile Include="BusinessObjects\Setting\Unit.cs" />
+    <Compile Include="BusinessObjects\Setting\UserNavigationPermission.cs" />
+    <Compile Include="BusinessObjects\Setting\UserNavigationPermissionDetails.cs" />
+    <Compile Include="BusinessObjects\Setting\VersionControl.cs" />
+    <Compile Include="BusinessObjects\Setting\VersionPosts.cs" />
+    <Compile Include="BusinessObjects\Setting\VisualMatrix.cs" />
+    <Compile Include="BusinessObjects\Setting\WaterTypes.cs" />
+    <Compile Include="BusinessObjects\SuboutTracking\CertifiedTests.cs" />
+    <Compile Include="BusinessObjects\SuboutTracking\SubOutContractLab.cs" />
+    <Compile Include="BusinessObjects\SuboutTracking\SuboutDeliveryService.cs" />
+    <Compile Include="BusinessObjects\SuboutTracking\SubOutEnum.cs" />
+    <Compile Include="BusinessObjects\SuboutTracking\SuboutQcSample.cs" />
+    <Compile Include="BusinessObjects\SuboutTracking\SubOutSampleRegistrations.cs" />
+    <Compile Include="BusinessObjects\TaskManagement\Client Request General Information.cs" />
+    <Compile Include="BusinessObjects\TaskManagement\Client Request GridView Control.cs" />
+    <Compile Include="BusinessObjects\TaskManagement\SampleSites.cs" />
+    <Compile Include="BusinessObjects\TestPrice\AnalysisPricing.cs" />
+    <Compile Include="BusinessObjects\TestPrice\ConstituentPricing.cs" />
+    <Compile Include="BusinessObjects\TestPrice\ConstituentPricingTier.cs" />
+    <Compile Include="BusinessObjects\TestPrice\Credit.cs" />
+    <Compile Include="BusinessObjects\TestPrice\CRMQuotes.cs" />
+    <Compile Include="BusinessObjects\TestPrice\DefaultPricing.cs" />
+    <Compile Include="BusinessObjects\TestPrice\ItemChargePricing.cs" />
+    <Compile Include="BusinessObjects\TestPrice\ItemChargePricingCategory.cs" />
+    <Compile Include="BusinessObjects\TestPrice\PaymentMethod.cs" />
+    <Compile Include="BusinessObjects\TestPrice\PretreatmentPricing.cs" />
+    <Compile Include="BusinessObjects\TestPrice\Priority.cs" />
+    <Compile Include="BusinessObjects\TestPrice\QuotesItemChargePrice.cs" />
+    <Compile Include="BusinessObjects\TestPrice\SourceOpportunity.cs" />
+    <Compile Include="BusinessObjects\TestPrice\TestPriceCode.cs" />
+    <Compile Include="BusinessObjects\TestPrice\TestPriceSurcharge.cs" />
+    <Compile Include="BusinessObjects\WS\StandardName.cs" />
+    <Compile Include="BusinessObjects\WS\WSPrepType.cs" />
+    <Compile Include="BusinessObjects\WS\WSStorageName.cs" />
+    <Compile Include="ConnectionForm\frmConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionForm\frmConnection.Designer.cs">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Login\CustomLogOnViewController.cs" />
+    <Compile Include="Controllers\Login\CustomLogOnViewController.Designer.cs">
+      <DependentUpon>CustomLogOnViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CriteriaString.cs" />
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BusinessObjects\Report\COC_Report.resx">
+      <DependentUpon>COC_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Report\DOCCertificate.resx" />
+    <EmbeddedResource Include="BusinessObjects\Report\FolderLabel.resx">
+      <DependentUpon>FolderLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Report\FolderLabelReport.resx">
+      <DependentUpon>FolderLabelReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Report\SampleReport.resx">
+      <DependentUpon>SampleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Report\XrDOCReport.resx" />
+    <EmbeddedResource Include="BusinessObjects\Report\XrMDLReport.resx" />
+    <EmbeddedResource Include="ConnectionForm\frmConnection.resx">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Login\CustomLogOnViewController.resx">
+      <DependentUpon>CustomLogOnViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BusinessObjects\ReadMe.txt" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="ClassDiagram5.cd" />
+    <None Include="ClassDiagram6.cd" />
+    <None Include="ClassDiagram7.cd" />
+    <None Include="Controllers\ReadMe.txt" />
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ReadMe.txt" />
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.zh-CN.xafml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes28.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes1.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes2.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes3.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes4.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes1_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes5.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes6.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes2_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes7.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes8.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes9.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes10.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes11.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes12.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes3_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes13.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes4_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes14.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes5_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes15.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes16.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes17.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes18.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes19.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes20.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes21.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes22.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes23.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes24.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes6_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes25.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes26.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes27.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes7_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes29.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes30.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes31.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes32.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes8_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes33.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes34.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes9_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes35.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes36.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes37.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes38.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes10_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes39.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes40.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes41.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes42.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes43.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes44.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes11_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes45.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes46.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes12_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes47.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes48.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes49.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes50.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes51.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes52.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes13_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes53.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes14_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes54.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes55.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes56.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes57.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes58.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes59.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes60.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes61.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes62.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes63.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes64.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes65.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes66.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes67.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes68.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes15_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes69.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes70.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes71.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes16_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes72.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes73.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes17_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes74.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes75.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes18_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes76.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes77.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes19_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes78.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\LogOn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\SDMS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes80.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes20_zh-CN.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONSCI_COC_LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oil_COC_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Batta_coc_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SFL_Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTS_PrimaryLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BusinessObjects\SamplingManagement\Settings\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

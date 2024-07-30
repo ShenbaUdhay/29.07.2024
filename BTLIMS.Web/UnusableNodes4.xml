@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Samplecheckin_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Samplecheckin">
+              <LayoutGroup Id="Samplecheckin_col1">
+                <LayoutItem Id="CoolerId" Index="11" RelativeSize="4.1811846689895473" Removed="True" />
+                <LayoutItem Id="CoolerTemp" Index="11" RelativeSize="4.18848167539267" Removed="True" />
+                <LayoutItem Id="ClientAddress2" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Samplecheckin_col2">
+                <LayoutItem Id="TestDescription" RelativeSize="16.724738675958189" Removed="True" />
+                <LayoutGroup Id="Auto47048566-2917-43fa-bfb9-376adf953c2c">
+                  <LayoutItem Id="Comment" RelativeSize="95.8656330749354" Removed="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="System">
+        <Items Id="Items">
+          <Item Id="TestGroup" ViewId="TestGroup_ListView" />
+          <Item Id="TestForm" ViewId="TestForm_LookupListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

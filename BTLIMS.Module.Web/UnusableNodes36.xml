@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="Parameter_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="35.968379446640313">
+            <LayoutGroup Id="Parameter" Caption="Retire Date">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Parameter">
+                <LayoutItem Id="ParameterCode" ViewItem="ParameterCode" Index="0" RelativeSize="22.535211267605632" />
+                <LayoutItem Id="ParameterName" ViewItem="ParameterName" Index="1" RelativeSize="16.901408450704224" />
+                <LayoutItem Id="Comment" ViewItem="Comment" Index="2" RelativeSize="38.028169014084504" />
+                <LayoutItem Id="RetireDate" ViewItem="RetireDate" Index="3" RelativeSize="22.535211267605632" />
+              </LayoutGroup>
+              <LayoutItem Id="ParameterCode" RelativeSize="24.587458745874589" Index="1" Removed="True" />
+              <LayoutItem Id="ParameterName" RelativeSize="25.412541254125411" Index="2" Removed="True" />
+              <LayoutItem Id="RetireDate" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="64.031620553359687" Caption="Comment" Direction="Horizontal">
+            <LayoutItem Id="Comment" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="TestMethods_Group" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Reports">
+        <Items Id="Items">
+          <Item Id="BizRequest_DetailView_Report" ViewId="BizRequest_ListView_Report" />
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="Matrix" Index="5" />
+          <Item Id="Method" Index="6" />
+          <Item Id="QCType" Index="8" />
+          <Item Id="SampleCategory" Index="10" />
+          <Item Id="SampleType" Index="11" />
+          <Item Id="Storage" Index="12" />
+          <Item Id="Test" Index="13" />
+          <Item Id="Unit" Index="16" />
+          <Item Id="VisualMatrix" Index="17" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

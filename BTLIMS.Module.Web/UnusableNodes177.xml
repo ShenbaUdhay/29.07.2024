@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="BottleTest_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="BottleID" LookupProperty="BottleId" LookupEditorMode="AllItems" AllowClear="False" View="BottleID_ListView_Copy_BottleTest" />
+        <ActionContainerViewItem Id="BottleTestSave" ActionContainer="BottleTestSave" Caption="Save" />
+        <PropertyEditor Id="TestMethods" LookupProperty="Object.TestName" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="9.026128266033254">
+            <LayoutGroup Id="BottleTest" RelativeSize="100">
+              <LayoutItem Id="BottleID" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="TestMethods_Group" Caption="Test" Direction="Vertical" RelativeSize="82.422802850356291">
+            <LayoutItem Id="TestMethods" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="Autob1def3f3-4ab7-4b33-bfa7-185d46fa88ab" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="8.5510688836104514">
+            <LayoutItem Id="BottleTestSave" ViewItem="BottleTestSave" Index="0" RelativeSize="23.385300668151448" />
+            <LayoutItem Id="Item1" Index="1" RelativeSize="76.614699331848556" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="BottleTest_TestMethods_ListView" AllowDelete="False" AllowNew="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Category" Index="-1" />
+        <ColumnInfo Id="Component" Index="-1" />
+        <ColumnInfo Id="MatrixName" Index="-1" />
+        <ColumnInfo Id="MethodName" Index="-1" />
+        <ColumnInfo Id="ModifiedBy" Index="-1" />
+        <ColumnInfo Id="PrepMethod" Index="-1" />
+        <ColumnInfo Id="PrepMethod1" Index="-1" />
+        <ColumnInfo Id="Preservative" Index="-1" />
+        <ColumnInfo Id="RetireDate" Index="-1" />
+        <ColumnInfo Id="SubOut" Index="-1" />
+        <ColumnInfo Id="TestCode" Index="-1" />
+        <ColumnInfo Id="TestName" Caption="TestName" />
+      </Columns>
+    </ListView>
+    <ListView Id="NavigationItem_UserNavigationPermissions_ListView" Criteria="[Exclude] = False" />
+    <ListView Id="UserNavigationPermission_NavigationItems_ListView" AllowEdit="True" InlineEditMode="Batch" AllowDelete="False" AllowLink="False" AllowNew="False" AutoExpandAllGroups="True" ShowAutoFilterRow="True" Criteria="[Exclude] = False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Itempath" Index="-1" />
+        <ColumnInfo Id="NavigationId" Index="-1" />
+        <ColumnInfo Id="NavigationModelClass" Index="-1" />
+        <ColumnInfo Id="NavigationView" Index="-1" />
+        <ColumnInfo Id="Read" Index="-1" />
+        <ColumnInfo Id="NavigationCaption" SortIndex="0" SortOrder="Ascending" Caption="NavigationCaption" />
+        <ColumnInfo Id="Parent" GroupIndex="0" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="SampleRegistration_DashboardView">
+      <Layout Id="Layout">
+        <LayoutItem Id="SampleLogIn_ListView" ViewItem="SampleLogIn_ListView" />
+      </Layout>
+    </DashboardView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_SampleRegistration">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Requisition_DetailView_Receive">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Description" ViewItem="Description" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Requisition">
+              <LayoutGroup Id="Requisition_col1">
+                <LayoutItem Id="PackUnits" ViewItem="PackUnits" />
+                <LayoutItem Id="StockQty" ViewItem="StockQty" />
+                <LayoutItem Id="Brand" ViewItem="Brand" />
+                <LayoutItem Id="Vendor" ViewItem="Vendor" />
+                <LayoutItem Id="Category" ViewItem="Category" />
+                <LayoutItem Id="Grade" ViewItem="Grade" />
+                <LayoutItem Id="Specification" ViewItem="Specification" />
+                <LayoutItem Id="ItemCode" ViewItem="ItemCode" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="ReportPackage">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="CustomReportDesigner" ViewItem="CustomReportDesigner" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <ListView Id="BottleID_ListView_Copy_BottleTest" ClassName="Modules.BusinessObjects.SampleManagement.SL_BottleID.BottleID" AllowNew="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" />
+        <ColumnInfo Id="BottleId" PropertyName="BottleId" Width="70" Index="0" SortIndex="0" SortOrder="Ascending" Caption="BottleID" />
+      </Columns>
+    </ListView>
+    <DetailView Id="1">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CopyPermission_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CopyPermission">
+              <LayoutGroup Id="Auto6016baa5-1e29-4a9e-bb8e-73ca15ea8eed">
+                <LayoutItem Id="strUser" ViewItem="strUser" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="ReportingQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ReportPackage_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ReportPackage">
+              <LayoutGroup Id="ReportPackage_col2">
+                <LayoutItem Id="PageDisplay" RelativeSize="100" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="DataEntry">
+        <Items Id="Items">
+          <Item Id="SDMS" ViewId="Spreadsheet_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="excelReportsAction" IsPostBackRequired="False" />
+      <Action Id="OpenJobId" ImageName="Action_Open" />
+      <Action Id="popupWindowQueryPanel" PaintStyle="Image" Caption="Query Data" />
+      <Action Id="QCResultValidationQueryPanel" ImageName="Action_Filter" />
+      <Action Id="ReportingQueryPanelPopupWindow" PaintStyle="Image" Caption="Query Data" />
+    </Actions>
+    <ActionToContainerMapping Id="ActionToContainerMapping">
+      <ActionContainer Id="RecordEdit">
+        <ActionLink ActionId="ActionAssignBottle" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="View">
+        <ActionLink ActionId="QCResultValidationQueryPanel" Index="30" />
+        <ActionLink ActionId="SaveReport" Index="53" />
+        <ActionLink ActionId="ReportingQueryPanelPopupWindow" Index="72" />
+        <ActionLink ActionId="popupWindowQueryPanel" Index="75" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+</Application>

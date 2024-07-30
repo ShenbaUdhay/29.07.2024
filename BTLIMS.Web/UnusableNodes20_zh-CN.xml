@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Employee_LookupListView_AnalysisDepartmentChain">
+      <Columns Id="Columns">
+        <ColumnInfo Id="UserName" Caption="用户名" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

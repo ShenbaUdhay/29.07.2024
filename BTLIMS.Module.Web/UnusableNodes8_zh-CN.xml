@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="StringObject_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Name" Caption="名称" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="StringObject" Caption="名称" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="StringObject_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Caption="名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="StringObject_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Caption="名称" />
+      </Columns>
+    </ListView>
+    <DetailView Id="XpoState_DetailView" Caption="省直辖市" />
+    <ListView Id="XpoState_ListView" Caption="省直辖市" />
+    <ListView Id="XpoState_LookupListView" Caption="省直辖市" />
+    <DetailView Id="XpoStateMachine_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Name" Caption="名称" />
+        <PropertyEditor Id="States" Caption="省直辖市" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="States_Group" Caption="省直辖市" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="XpoStateMachine_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Caption="名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="XpoStateMachine_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Caption="名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="XpoStateMachine_States_ListView" Caption="省直辖市" />
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="DevExpress.ExpressApp.StateMachine.Xpo.XpoState" Caption="省直辖市" />
+    <Class Name="DevExpress.ExpressApp.StateMachine.Xpo.XpoStateMachine">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Name" Caption="名称" />
+        <Member Name="States" Caption="省直辖市" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Utils.StringObject">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Name" Caption="名称" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Modules.BusinessObjects.Hr.QCRoleCN">
+        <LocalizationItem Name="加标" Value="样品加标" />
+        <LocalizationItem Name="平行" Value="平行" />
+        <LocalizationItem Name="标准" Value="标准" />
+        <LocalizationItem Name="空白" Value="空白" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+  <Validation Id="Validation">
+    <Rules Id="Rules">
+      <RuleRequiredField Id="Labware.LabwareID" CustomMessageTemplate="仪器代码不能为空" />
+      <RuleRequiredField Id="MethodName2" Name="分析方法2" />
+    </Rules>
+  </Validation>
+</Application>

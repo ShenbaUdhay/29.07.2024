@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Hr.InfoNotice" Caption="信息公告">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Content" Caption="内容" />
+        <Member Name="CreatedBy" Caption="创建人" />
+        <Member Name="MessageCategory" Caption="消息类型" />
+        <Member Name="Recipient" Caption="接收人" />
+        <Member Name="Sender" Caption="发送人" />
+        <Member Name="SendTime" Caption="发送时间" />
+        <Member Name="Subject" Caption="主题" />
+        <Member Name="UpdatedBy" Caption="修改人" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="Samplecheckin_VisualMatrixName_ListView" Caption="样品类型">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+        <ColumnInfo Id="VisualMatrixName" Caption="样品类型" />
+        <ColumnInfo Id="VisualMatrixCode" Caption="样品类型代码" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="SampleCategoryName" Caption="任务分类" />
+        <PropertyEditor Id="VisualMatrixName" Caption="样品类型" />
+      </Items>
+    </DetailView>
+  </Views>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Modules.BusinessObjects.Hr.MessageCategory">
+        <LocalizationItem Name="Business" Value="业务" />
+        <LocalizationItem Name="Inform" Value="通知公告" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+</Application>

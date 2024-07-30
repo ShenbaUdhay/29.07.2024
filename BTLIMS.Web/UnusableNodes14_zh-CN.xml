@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Reporting_ListView_Recall">
+      <Columns Id="Columns">
+        <ColumnInfo Id="RecalledMethod" Caption="收回方式 " />
+        <ColumnInfo Id="RecalledFrom" Caption="收回联系人 " />
+        <ColumnInfo Id="RecalledBy" Caption="收回人" />
+        <ColumnInfo Id="DateRecalled" Caption="收回日期 " />
+        <ColumnInfo Id="RecalledCopies" Caption="#收回份数 " />
+      </Columns>
+    </ListView>
+    <DetailView Id="Reporting_DetailView_Recalled">
+      <Items Id="Items">
+        <PropertyEditor Id="RecalledBy" Caption="收回人" />
+        <PropertyEditor Id="Recalled Method" Caption="收回方式 " />
+        <PropertyEditor Id="Recalled From" Caption="收回联系人 " />
+        <PropertyEditor Id="Recalled Copies" Caption="#收回份数 " />
+        <PropertyEditor Id="Recall Comment" Caption="备注" />
+        <PropertyEditor Id="Date Recalled" Caption="收回日期 " />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

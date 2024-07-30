@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyMemberPermissionsObject">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Criteria" Caption="条件" />
+        <Member Name="Members" Caption="成员" />
+        <Member Name="ReadState" Caption="读" />
+        <Member Name="TypePermissionObject" Caption="类型权限对象" />
+        <Member Name="WriteState" Caption="写" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyObjectPermissionsObject">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Criteria" Caption="条件" />
+        <Member Name="DeleteState" Caption="删除" />
+        <Member Name="NavigateState" Caption="导航" />
+        <Member Name="ReadState" Caption="读" />
+        <Member Name="TypePermissionObject" Caption="类型权限对象" />
+        <Member Name="WriteState" Caption="写" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyRole">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Users" Caption="用户" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyRoleBase">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CanEditModel" Caption="编辑模型编辑器" />
+        <Member Name="IsAdministrative" Caption="管理员" />
+        <Member Name="Name" Caption="名称" />
+        <Member Name="PermissionPolicy" Caption="权限策略" />
+        <Member Name="TypePermissions" Caption="类型权限" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyTypePermissionObject">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CreateState" Caption="创建" />
+        <Member Name="DeleteState" Caption="删除" />
+        <Member Name="MemberPermissions" Caption="成员权限" />
+        <Member Name="NavigateState" Caption="导航" />
+        <Member Name="ObjectPermissions" Caption="对象权限" />
+        <Member Name="ReadState" Caption="读" />
+        <Member Name="Role" Caption="角色" />
+        <Member Name="TargetType" Caption="目标类型" />
+        <Member Name="WriteState" Caption="写" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="ChangePasswordOnFirstLogon" Caption="第一次登陆修改密码" />
+        <Member Name="IsActive" Caption="激活" />
+        <Member Name="Roles" Caption="角色" />
+        <Member Name="UserName" Caption="用户名" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="CustomSystemRole_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="PermissionPolicyRoleBase">
+              <LayoutGroup Id="Auto21a3bd57-7a94-47de-98cb-4edae8fa9436" Caption="Auto21a3bd57-7a94-47de-98cb-4edae8fa9436(6)" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

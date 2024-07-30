@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="Report" Caption="报告" />
+    </Actions>
+  </ActionDesign>
+  <Validation Id="Validation">
+    <Rules Id="Rules">
+      <RuleRequiredField Id="Unit" Name="单位" />
+    </Rules>
+  </Validation>
+</Application>

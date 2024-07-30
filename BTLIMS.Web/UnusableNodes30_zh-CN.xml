@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Setting.COCSettings">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="InspectionCategory" Caption="检验类别" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="SampleParameter_ListView_Copy_ResultValidation">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="COCSettings_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="InspectionCategory" Caption="检验类别" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

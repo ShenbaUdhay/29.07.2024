@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Biz.PopupFlowLog" Caption="流程日志" />
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="PopupFlowLog_DataSource_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OperationDate" DisplayFormat="{0:F}" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PopupFlowLog_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Caption="Main" />
+      </Layout>
+    </DetailView>
+  </Views>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="FlowLogAction" Caption="流程日志" />
+    </Actions>
+  </ActionDesign>
+</Application>

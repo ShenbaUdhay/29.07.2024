@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Setting.QCType">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="QCRole" Caption="质控角色" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Validation Id="Validation">
+    <Rules Id="Rules">
+      <RuleRequiredField Id="QCRole" Name="质控角色" />
+      <RuleRequiredField Id="QCRootRole" Name="质控基本角色" />
+    </Rules>
+  </Validation>
+</Application>

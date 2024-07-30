@@ -1,0 +1,529 @@
+﻿using DevExpress.Data.Filtering;
+using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.Actions;
+using DevExpress.ExpressApp.SystemModule;
+using DevExpress.ExpressApp.Web;
+using DevExpress.ExpressApp.Web.Editors.ASPx;
+using DevExpress.ExpressApp.Web.SystemModule;
+using DevExpress.ExpressApp.Web.Templates;
+using DevExpress.ExpressApp.Xpo;
+using DevExpress.Persistent.Base;
+using DevExpress.Web;
+using DevExpress.Xpo;
+using LDM.Module.Controllers.Public;
+using Modules.BusinessObjects.InfoClass;
+using Modules.BusinessObjects.Setting;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+
+namespace LDM.Module.Controllers.Settings
+{
+    // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppViewControllertopic.aspx.
+    public partial class DataEntryViewController : ViewController, IXafCallbackHandler
+    {
+        MessageTimer timer = new MessageTimer();
+        //SimpleAction DataEntryAdd;
+        //SimpleAction DataEntryRemove;
+        SimpleAction DataEntrySave;
+        UADECInfo objdataentryInfo = new UADECInfo();
+        bool Isparameter = false;
+        public DataEntryViewController()
+        {
+            InitializeComponent();
+            TargetViewId = "DataEntry_ListView_Copy;" + "DataEntry_ListView;" + "TestMethod_LookupListView_DataEntry;" + "DataEntry_ListView_Copy_Edit;"
+                + "LoginLog_ListView;";
+            AlpacaLimsAccessLogDateFilter.TargetViewId = "LoginLog_ListView;";
+            /*SaveButtonProperties*/
+            DataEntrySave = new SimpleAction(this, "DataEntrySave", PredefinedCategory.RecordEdit);
+            DataEntrySave.Caption = "Save";
+            DataEntrySave.ToolTip = "Save";
+            DataEntrySave.Category = "Edit";
+            DataEntrySave.ImageName = "Action_Save";
+            DataEntrySave.TargetViewId = "DataEntry_ListView_Copy;" + "DataEntry_ListView_Copy_Edit;";
+            DataEntrySave.PaintStyle = DevExpress.ExpressApp.Templates.ActionItemPaintStyle.CaptionAndImage;
+
+        }
+
+        protected override void OnActivated()
+        {
+            base.OnActivated();
+            try
+            {
+                if (View.Id == "DataEntry_ListView_Copy")
+                {
+                    ((ListView)View).CollectionSource.Criteria["BOSourceCodeCaption"] = CriteriaOperator.Parse("1=2");
+                    IList<DataEntry> dataEntries = ObjectSpace.GetObjects<DataEntry>(CriteriaOperator.Parse(""));
+                    IList<UnconventionalAnalysisDataEntryConfigBOSourceCodeCaption> litcaption = new List<UnconventionalAnalysisDataEntryConfigBOSourceCodeCaption>();
+                    if (dataEntries.Count > 0)
+                    {
+                        litcaption = ObjectSpace.GetObjects<UnconventionalAnalysisDataEntryConfigBOSourceCodeCaption>(CriteriaOperator.Parse("Not [Oid] In(" + string.Format("'{0}'", string.Join("','", dataEntries.ToList().Select(x => x.BOSourceCodeCaption.Oid))) + ")"));
+                    }
+                    else
+                    {
+                        litcaption = ObjectSpace.GetObjects<UnconventionalAnalysisDataEntryConfigBOSourceCodeCaption>(CriteriaOperator.Parse(""));
+                    }
+                    foreach (UnconventionalAnalysisDataEntryConfigBOSourceCodeCaption objUAD in litcaption)
+                    {
+                        DataEntry objde = ObjectSpace.CreateObject<DataEntry>();
+                        objde.BOSourceCodeCaption = objUAD;
+                        ((ListView)View).CollectionSource.Add(objde);
+                        ((ListView)View).Refresh();
+                    }
+                    DataEntrySave.Executing += DataEntrySave_Executing;
+                }
+                if (View.Id == "DataEntry_ListView_Copy_Edit")
+                {
+                    DataEntrySave.Executing += DataEntrySave_Executing;
+                }
+                if (View.Id == "DataEntry_ListView")
+                {
+                    Frame.GetController<NewObjectViewController>().NewObjectAction.Execute += NewObjectAction_Execute;
+                    Frame.GetController<ListViewController>().EditAction.Executing += EditAction_Executing;
+                }
+
+                if (View.Id == "DataEntry_ListView_Copy")
+                {
+                    Frame.GetController<NewObjectViewController>().NewObjectAction.Executing += NewObjectAction_Executing;
+                }
+                else if (View.Id == "LoginLog_ListView")
+                {
+                    if (AlpacaLimsAccessLogDateFilter.Items.Count == 0)
+                    {
+                        var item1 = new ChoiceActionItem();
+                        var item2 = new ChoiceActionItem();
+                        var item3 = new ChoiceActionItem();
+                        var item4 = new ChoiceActionItem();
+                        var item5 = new ChoiceActionItem();
+                        var item6 = new ChoiceActionItem();
+                        var item7 = new ChoiceActionItem();
+                        AlpacaLimsAccessLogDateFilter.Items.Add(new ChoiceActionItem("1M", item1));
+                        AlpacaLimsAccessLogDateFilter.Items.Add(new ChoiceActionItem("3M", item2));
+                        AlpacaLimsAccessLogDateFilter.Items.Add(new ChoiceActionItem("6M", item3));
+                        AlpacaLimsAccessLogDateFilter.Items.Add(new ChoiceActionItem("1Y", item4));
+                        AlpacaLimsAccessLogDateFilter.Items.Add(new ChoiceActionItem("2Y", item5));
+                        AlpacaLimsAccessLogDateFilter.Items.Add(new ChoiceActionItem("5Y", item6));
+                        AlpacaLimsAccessLogDateFilter.Items.Add(new ChoiceActionItem("ALL", item7));
+                    }
+                    AlpacaLimsAccessLogDateFilter.SelectedIndex = 1;
+                    ((ListView)View).CollectionSource.Criteria["DateFilter"] = CriteriaOperator.Parse("DateDiffMonth(LoginDateTime , Now()) <= 3 And [LoginDateTime] Is Not Null");
+                }
+            }
+            catch (Exception ex)
+            {
+                Frame.GetController<ExceptionTrackingViewController>().InsertException(ex.Message, ex.StackTrace, this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().Name, View.Id);
+                Application.ShowViewStrategy.ShowMessage(ex.Message, InformationType.Error, timer.Seconds, InformationPosition.Top);
+            }
+        }
+
+        private void EditAction_Executing(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                if (View.Id == "DataEntry_ListView")
+                {
+                    if (View.SelectedObjects.Count == 1)
+                    {
+                        e.Cancel = true;
+                        if (View.CurrentObject != null)
+                        {
+                            DataEntry objDataEntry = (DataEntry)View.CurrentObject;
+                            IObjectSpace objectSpace = Application.CreateObjectSpace();
+                            CollectionSource cs = new CollectionSource(objectSpace, typeof(DataEntry));
+                            cs.Criteria["filter"] = CriteriaOperator.Parse("[Oid]=?", objDataEntry.Oid);
+                            ListView CreateListView = Application.CreateListView("DataEntry_ListView_Copy_Edit", cs, false);
+                            Frame.SetView(CreateListView);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Frame.GetController<ExceptionTrackingViewController>().InsertException(ex.Message, ex.StackTrace, this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().Name, View.Id);
+                Application.ShowViewStrategy.ShowMessage(ex.Message, InformationType.Error, timer.Seconds, InformationPosition.Top);
+            }
+        }
+
+        private void DataEntrySave_Executing(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                bool Test = true;
+                if (View.Id == "DataEntry_ListView_Copy")
+                {
+                    DataEntry dataEntry = (DataEntry)Application.MainWindow.View.CurrentObject;
+                    ASPxGridListEditor ObjGrid = ((ListView)View).Editor as ASPxGridListEditor;
+                    if (View is ListView)
+                    {
+                        IObjectSpace objectspace = View.ObjectSpace;
+                        var selection = ObjGrid.GetSelectedObjects();
+                        IList<DataEntry> report = new List<DataEntry>();
+                        foreach (DataEntry entry in selection)
+                        {
+                            if (entry.Test == null)
+                            {
+                                Test = false;
+                            }
+                        }
+                        if (Test == true)
+                        {
+                            if (Test == true && selection.Count > 0)
+                            {
+                                foreach (DataEntry reobj in ((ListView)View).CollectionSource.List)
+                                {
+                                    if (!selection.Contains(reobj))
+                                    {
+                                        report.Add(reobj);
+                                    }
+                                }
+                                foreach (DataEntry package in report)
+                                {
+                                    ((ListView)View).CollectionSource.Remove(package);
+                                    objectspace.RemoveFromModifiedObjects(package);
+                                }
+                                foreach (DataEntry objDE in selection)
+                                {
+                                    IObjectSpace os = Application.CreateObjectSpace();
+                                    DataEntry objde = os.CreateObject<DataEntry>();
+                                    DataEntry data = View.ObjectSpace.FindObject<DataEntry>(CriteriaOperator.Parse("[Oid] = ?", objDE.Oid));
+                                    objde.BOSourceCodeCaption = os.GetObject(objDE.BOSourceCodeCaption);
+                                    objde.Test = os.GetObject(objDE.Test);
+                                    objde.TestNameOid = os.GetObject(objDE.TestNameOid);
+                                    objde.Comment = os.GetObject(objDE.Comment);
+                                    if (ObjGrid != null)
+                                    {
+                                        ASPxGridView ObjView = ObjGrid.Grid;
+                                        ObjView.UpdateEdit();
+                                    }
+                                    // os.CommitChanges();
+                                }
+                                Application.ShowViewStrategy.ShowMessage("Saved successfully.", InformationType.Success, 4000, InformationPosition.Top);
+                                View.Close();
+                            }
+                            else
+                            {
+                                Application.ShowViewStrategy.ShowMessage("Please select atleast one check box.", InformationType.Warning, 4000, InformationPosition.Top);
+                            }
+                        }
+                        else
+                        {
+                            Application.ShowViewStrategy.ShowMessage("Enter the test.", InformationType.Warning, 4000, InformationPosition.Top);
+                        }
+                    }
+                }
+
+                else if (View.Id == "DataEntry_ListView_Copy_Edit")
+                {
+                    //IObjectSpace os = Application.CreateObjectSpace();
+                    //DataEntry objDE=((ListView)View).CollectionSource.CommitChanges();
+                    ////DataEntry objDE = View. as DataEntry;
+                    //objDE.TestNameOid = os.GetObject(objDE.TestNameOid);
+                    ((ListView)View).CollectionSource.ObjectSpace.CommitChanges();
+                    Application.ShowViewStrategy.ShowMessage("Saved successfully.", InformationType.Success, 4000, InformationPosition.Top);
+                    View.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Frame.GetController<ExceptionTrackingViewController>().InsertException(ex.Message, ex.StackTrace, this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().Name, View.Id);
+                Application.ShowViewStrategy.ShowMessage(ex.Message, InformationType.Error, timer.Seconds, InformationPosition.Top);
+            }
+        }
+
+        private void NewObjectAction_Executing(object sender, CancelEventArgs e)
+        {
+
+            try
+            {
+                if (View.Id == "DataEntry_ListView_Copy")
+                {
+                    e.Cancel = true;
+                    ASPxGridListEditor editor = ((ListView)View).Editor as ASPxGridListEditor;
+                    DataEntry objde = ObjectSpace.CreateObject<DataEntry>();
+                    ((ListView)View).CollectionSource.Add(objde);
+                }
+            }
+            catch (Exception ex)
+            {
+                Frame.GetController<ExceptionTrackingViewController>().InsertException(ex.Message, ex.StackTrace, this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().Name, View.Id);
+                Application.ShowViewStrategy.ShowMessage(ex.Message, InformationType.Error, timer.Seconds, InformationPosition.Top);
+            }
+        }
+
+        private void NewObjectAction_Execute(object sender, SingleChoiceActionExecuteEventArgs e)
+        {
+            try
+            {
+                if (View.Id == "DataEntry_ListView")
+                {
+                    IObjectSpace objectSpace = Application.CreateObjectSpace();
+                    CollectionSource cs = new CollectionSource(objectSpace, typeof(DataEntry));
+                    ListView CreateListView = Application.CreateListView("DataEntry_ListView_Copy", cs, true);
+                    e.ShowViewParameters.CreatedView = CreateListView;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Frame.GetController<ExceptionTrackingViewController>().InsertException(ex.Message, ex.StackTrace, this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().Name, View.Id);
+                Application.ShowViewStrategy.ShowMessage(ex.Message, InformationType.Error, timer.Seconds, InformationPosition.Top);
+            }
+        }
+
+        protected override void OnViewControlsCreated()
+        {
+            base.OnViewControlsCreated();
+
+            try
+            {
+                if (View.Id == "DataEntry_ListView_Copy" || View.Id == "DataEntry_ListView_Copy_Edit")
+                {
+                    ASPxGridListEditor gridListEditor = ((ListView)View).Editor as ASPxGridListEditor;
+
+                    //gridListEditor.Grid.Load += Grid_Load;
+                    XafCallbackManager parameter = ((ICallbackManagerHolder)WebWindow.CurrentRequestPage).CallbackManager;
+                    parameter.RegisterHandler("DataEntryTypePopup", this);
+                    gridListEditor.Grid.ClientInstanceName = "DataEntryType";
+                    gridListEditor.Grid.HtmlDataCellPrepared += Grid_HtmlDataCellPrepared;
+                    gridListEditor.Grid.ClientSideEvents.SelectionChanged = @"function(s,e) { 
+                      if (e.visibleIndex != '-1')
+                      {
+                        s.GetRowValues(e.visibleIndex, 'Oid', function(Oidvalue) {      
+                         if (s.IsRowSelectedOnPage(e.visibleIndex)) {                             
+                            RaiseXafCallback(globalCallbackControl, 'DataEntryType', 'Selected|' + Oidvalue , '', false);    
+                         }else{
+                            RaiseXafCallback(globalCallbackControl, 'DataEntryType', 'UNSelected|' + Oidvalue, '', false);    
+                         }
+                        }); 
+                      }
+                      else if(e.visibleIndex == '-1' && s.GetSelectedRowCount() == s.cpVisibleRowCount)
+                      {        
+                        RaiseXafCallback(globalCallbackControl, 'DataEntryType', 'Selectall', '', false);     
+                      }
+                      else if(e.visibleIndex == '-1' && s.GetSelectedRowCount() == 0)
+                      {
+                        RaiseXafCallback(globalCallbackControl, 'DataEntryType', 'UNSelectall', '', false);                        
+                      }                      
+                    }";
+
+
+                    if (gridListEditor != null)
+                    {
+                        ASPxGridView gv = gridListEditor.Grid;
+                        if (gv != null)
+                        {
+                            gv.Settings.ShowStatusBar = GridViewStatusBarMode.Hidden;
+                        }
+                    }
+                }
+                if (View.Id == "TestMethod_LookupListView_DataEntry")
+                {
+                    ASPxGridListEditor gridListEditor = ((ListView)View).Editor as ASPxGridListEditor;
+                    using (XPView lstview = new XPView(((XPObjectSpace)this.ObjectSpace).Session, typeof(TestMethod)))
+                    {
+                        lstview.Properties.Add(new ViewProperty("TestName", SortDirection.Ascending, "TestName", true, true));
+                        lstview.Properties.Add(new ViewProperty("Toid", SortDirection.Ascending, "MAX(Oid)", false, true));
+                        List<object> groups = new List<object>();
+                        foreach (ViewRecord rec in lstview)
+                            groups.Add(rec["Toid"]);
+                        if (groups.Count > 0)
+                        {
+                            ((ListView)View).CollectionSource.Criteria["Distinct"] = new InOperator("Oid", groups);
+                        }
+                    }
+                    gridListEditor.Grid.PreRender += Grid_PreRender;
+                }
+            }
+            catch (Exception ex)
+            {
+                Frame.GetController<ExceptionTrackingViewController>().InsertException(ex.Message, ex.StackTrace, this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().Name, View.Id);
+                Application.ShowViewStrategy.ShowMessage(ex.Message, InformationType.Error, timer.Seconds, InformationPosition.Top);
+            }
+        }
+
+        private void Grid_PreRender(object sender, EventArgs e)
+        {
+            ASPxGridView grid = (ASPxGridView)sender;
+            if (grid != null && objdataentryInfo.TestName != null && objdataentryInfo.TestName.Count > 0)
+            {
+                if (View.Id == "TestMethod_LookupListView_DataEntry")
+                {
+                    foreach (TestMethod obj in ((ListView)View).CollectionSource.List)
+                    {
+                        if (objdataentryInfo.TestName.Contains(obj.TestName))
+                        {
+                            grid.Selection.SelectRowByKey(obj.Oid);
+                        }
+                    }
+                    objdataentryInfo.TestName = null;
+                }
+            }
+
+        }
+
+        private void Grid_HtmlDataCellPrepared(object sender, ASPxGridViewTableDataCellEventArgs e)
+        {
+            try
+            {
+                if (View.Id == "DataEntry_ListView_Copy" || View.Id == "DataEntry_ListView_Copy_Edit")
+                {
+                    if (e.DataColumn.FieldName == "Test")
+                    {
+                        e.Cell.Attributes.Add("ondblclick", string.Format(@"RaiseXafCallback(globalCallbackControl, 'DataEntryTypePopup', 'Test|'+{0}, '', false)", e.VisibleIndex));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Frame.GetController<ExceptionTrackingViewController>().InsertException(ex.Message, ex.StackTrace, this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().Name, View.Id);
+                Application.ShowViewStrategy.ShowMessage(ex.Message, InformationType.Error, timer.Seconds, InformationPosition.Top);
+            }
+        }
+
+
+        protected override void OnDeactivated()
+        {
+            base.OnDeactivated();
+            DataEntrySave.Executing -= DataEntrySave_Executing;
+        }
+
+        public void ProcessAction(string parameter)
+        {
+            try
+            {
+                string[] param = parameter.Split('|');
+                ASPxGridListEditor editor = ((ListView)View).Editor as ASPxGridListEditor;
+                if (!string.IsNullOrEmpty(parameter) && View.Id == "DataEntry_ListView_Copy" || View.Id == "DataEntry_ListView_Copy_Edit")
+                {
+                    if (editor != null && editor.Grid != null && param != null && param.Count() > 1)
+                    {
+                        editor.Grid.Selection.UnselectAll();
+                        object CurrentTest = editor.Grid.GetRowValues(int.Parse(param[1]), "Oid");
+                        Guid currentguid = new Guid(CurrentTest.ToString());
+                        for (int i = 0; i <= editor.Grid.VisibleRowCount; i++)
+                        {
+                            object currentOid1 = editor.Grid.GetRowValues(i, "Oid");
+                            if (currentOid1 != null)
+                            {
+                                Guid selectguid = new Guid(currentOid1.ToString());
+                                if (currentguid == selectguid)
+                                {
+                                    editor.Grid.Selection.SelectRow(i);
+                                }
+                            }
+                        }
+                        DataEntry objdataentry = Application.MainWindow.View.CurrentObject as DataEntry;
+
+                        if (param[0] == "Test")
+                        {
+                            if (objdataentry != null && objdataentry.Test != null)
+                            {
+                                objdataentryInfo.TestName = objdataentry.Test.Split(';').Select(i => i.ToString()).ToList();
+                            }
+                            IObjectSpace objspace = Application.CreateObjectSpace();
+                            CollectionSource cs = new CollectionSource(objspace, typeof(TestMethod));
+                            //List<TestMethod> objGTM = ObjectSpace.GetObjects<TestMethod>(CriteriaOperator.Parse("[TestMethod] = ?", objGroupTestPricingInfo.CurrentOid)).Cast<GroupTestMethod>().ToList();
+
+                            //if (objGTM.Count > 0)
+                            //{
+                            //    cs.Criteria["TestFilter"] = CriteriaOperator.Parse("[Oid] In(" + string.Format("'{0}'", string.Join("','", objGTM.ToList().Select(x => x.Tests.Oid))) + ")");
+                            //}
+                            //else
+                            //{
+                            //    cs.Criteria["TestFilter"] = CriteriaOperator.Parse("1=2");
+                            //}
+                            ListView createListView = Application.CreateListView("TestMethod_LookupListView_DataEntry", cs, false);
+                            ShowViewParameters showViewParameters = new ShowViewParameters(createListView);
+                            showViewParameters.Context = TemplateContext.PopupWindow;
+                            showViewParameters.TargetWindow = TargetWindow.NewModalWindow;
+                            DialogController dc = Application.CreateController<DialogController>();
+                            dc.Accepting += Dc_Accepting;
+                            showViewParameters.Controllers.Add(dc);
+                            Application.ShowViewStrategy.ShowView(showViewParameters, new ShowViewSource(null, null));
+                        }
+                    }
+                    //}
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Frame.GetController<ExceptionTrackingViewController>().InsertException(ex.Message, ex.StackTrace, this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().Name, View.Id);
+                Application.ShowViewStrategy.ShowMessage(ex.Message, InformationType.Error, timer.Seconds, InformationPosition.Top);
+            }
+        }
+
+        private void Dc_Accepting(object sender, DialogControllerAcceptingEventArgs e)
+        {
+            try
+            {
+                IObjectSpace os = Application.CreateObjectSpace();
+                DataEntry objdataentry = Application.MainWindow.View.CurrentObject as DataEntry;
+                string CurrentTestOid = null;
+                string strTest = string.Join(";", e.AcceptActionArgs.SelectedObjects.Cast<TestMethod>().Select(i => i.TestName).ToList());
+                foreach (TestMethod objTM in e.AcceptActionArgs.SelectedObjects)
+                {
+                    IList<TestMethod> lstTM = ObjectSpace.GetObjects<TestMethod>(CriteriaOperator.Parse("[TestName] = ?", objTM.TestName));
+                    string CurrentTestOid1 = (string.Join(";", lstTM.Cast<TestMethod>().Select(i => i.Oid).ToList()));
+                    CurrentTestOid = CurrentTestOid + (string.IsNullOrEmpty(CurrentTestOid) ? "" : ";") + CurrentTestOid1;
+                }
+                //string CurrentTestOid = string.Join(";", e.AcceptActionArgs.SelectedObjects.Cast<TestMethod>().Select(i => i.Oid).ToList());
+                objdataentry.Test = strTest;
+                objdataentry.TestNameOid = CurrentTestOid;
+            }
+            catch (Exception ex)
+            {
+                Frame.GetController<ExceptionTrackingViewController>().InsertException(ex.Message, ex.StackTrace, this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().Name, View.Id);
+                Application.ShowViewStrategy.ShowMessage(ex.Message, InformationType.Error, timer.Seconds, InformationPosition.Top);
+            }
+        }
+        private void AlpacaLimsAccessLogDateFilter_SelectedItemChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (View != null && AlpacaLimsAccessLogDateFilter != null && AlpacaLimsAccessLogDateFilter.SelectedItem != null)
+                {
+                    string strSelectedItem = ((DevExpress.ExpressApp.Actions.SingleChoiceAction)sender).SelectedItem.Id.ToString();
+                    if (View.Id == "LoginLog_ListView")
+                    {
+                        if (strSelectedItem == "1M")
+                        {
+                            ((ListView)View).CollectionSource.Criteria["DateFilter"] = CriteriaOperator.Parse("DateDiffMonth(LoginDateTime, Now()) <= 1 And [LoginDateTime] Is Not Null");
+                        }
+                        else if (strSelectedItem == "3M")
+                        {
+                            ((ListView)View).CollectionSource.Criteria["DateFilter"] = CriteriaOperator.Parse("DateDiffMonth(LoginDateTime, Now()) <= 3 And [LoginDateTime] Is Not Null");
+                        }
+                        else if (strSelectedItem == "6M")
+                        {
+                            ((ListView)View).CollectionSource.Criteria["DateFilter"] = CriteriaOperator.Parse("DateDiffMonth(LoginDateTime, Now()) <= 6 And [LoginDateTime] Is Not Null");
+                        }
+                        else if (strSelectedItem == "1Y")
+                        {
+                            ((ListView)View).CollectionSource.Criteria["DateFilter"] = CriteriaOperator.Parse("DateDiffYear(LoginDateTime, Now()) <= 1 And [LoginDateTime] Is Not Null");
+                        }
+                        else if (strSelectedItem == "2Y")
+                        {
+                            ((ListView)View).CollectionSource.Criteria["DateFilter"] = CriteriaOperator.Parse("DateDiffYear(LoginDateTime, Now()) <= 2 And [LoginDateTime] Is Not Null");
+                        }
+                        else if (strSelectedItem == "5Y")
+                        {
+                            ((ListView)View).CollectionSource.Criteria["DateFilter"] = CriteriaOperator.Parse("DateDiffYear(LoginDateTime, Now()) <= 5 And [LoginDateTime] Is Not Null");
+                        }
+                        else if (strSelectedItem == "ALL")
+                        {
+                            ((ListView)View).CollectionSource.Criteria.Remove("DateFilter");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Frame.GetController<ExceptionTrackingViewController>().InsertException(ex.Message, ex.StackTrace, this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().Name, View.Id);
+                Application.ShowViewStrategy.ShowMessage(ex.Message, InformationType.Error, timer.Seconds, InformationPosition.Top);
+            }
+        }
+
+    }
+}

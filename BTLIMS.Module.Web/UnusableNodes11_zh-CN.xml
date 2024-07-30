@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="ICM.Module.BusinessObjects.Vendors">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="city" Caption="城市" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ICM.Module.BusinessObjects.Requisition">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="POIDvendor" Caption="订单号供应商" />
+        <Member Name="PONumberItems" Caption="订单号物品" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ICM.Module.BusinessObjects.Grades">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Comment" Caption="备注" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.ICM.Distribution">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="PONumberItems" Caption="订单号物品" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="Requisition_ListView_Purchaseorder_ViewMode">
+      <Columns Id="Columns">
+        <ColumnInfo Id="POIDvendor" Caption="母体" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView_Entermode">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PONumberItems" Caption="订单号物品" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Grades_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Comment" Caption="备注" />
+      </Items>
+    </DetailView>
+    <ListView Id="Grades_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Comment" Caption="备注" />
+      </Columns>
+    </ListView>
+    <ListView Id="Grades_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Comment" Caption="备注" />
+      </Columns>
+    </ListView>
+    <ListView Id="Requisition_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PONumberItems" Caption="订单号物品" />
+      </Columns>
+    </ListView>
+    <ListView Id="VendorEvaluation_vendors_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="city" Caption="城市" />
+      </Columns>
+    </ListView>
+    <ListView Id="VendorReagentCertificate_LT_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PONumberItems" Caption="订单号物品" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Vendors_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="city" Caption="城市" />
+      </Items>
+    </DetailView>
+    <ListView Id="Vendors_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="city" Caption="城市" />
+      </Columns>
+    </ListView>
+    <ListView Id="Vendors_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="city" Caption="城市" />
+      </Columns>
+    </ListView>
+  </Views>
+  <Validation Id="Validation">
+    <Rules Id="Rules">
+      <RuleRequiredField Id="Sort1" Name="序号1" />
+    </Rules>
+  </Validation>
+</Application>

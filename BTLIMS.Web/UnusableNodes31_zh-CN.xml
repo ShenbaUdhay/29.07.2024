@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="dispositionModeAction">
+        <ChoiceActionItems Id="ChoiceActionItems">
+          <ChoiceActionItem Id="CurrentSamples" Caption="当前样品" />
+          <ChoiceActionItem Id="DisposedSamples" Caption="已处置样品" />
+          <ChoiceActionItem Id="PendingDisposals" Caption="待处置" />
+        </ChoiceActionItems>
+      </Action>
+    </Actions>
+  </ActionDesign>
+</Application>

@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="绍兴市柯桥区质量技术监督检测所" Company="" Copyright="" VersionFormat="版本 {0}.{1}.{2}">
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" Caption="取消" />
+      <Action Id="CopySamples" Caption="拷贝多个样品" />
+      <Action Id="Delete" Caption="删除" />
+      <Action Id="Delete Item" Caption="删除选中项" />
+      <Action Id="DialogCancel" Caption="取消" />
+      <Action Id="DialogClose" Caption="关闭" />
+      <Action Id="DialogOK" Caption="确定" />
+      <Action Id="FullTextSearch" Caption="根据文本过滤" NullValuePrompt="文本搜索……" ShortCaption="搜索" ToolTip="通过文本搜索记录" />
+      <Action Id="Link" Caption="关联" />
+      <Action Id="ListViewShowObject" Caption="打开" />
+      <Action Id="Logoff" Caption="退出" />
+      <Action Id="Logon" Caption="登录" />
+      <Action Id="NavigateBack" Caption="后退" />
+      <Action Id="NavigateForward" Caption="前进" />
+      <Action Id="New" Caption="新建" />
+      <Action Id="NextObject" Caption="下一条" />
+      <Action Id="PreviewReportV2" Caption="预览" />
+      <Action Id="PreviousObject" Caption="上一条" />
+      <Action Id="Refresh" Caption="刷新" />
+      <Action Id="ResetViewSettings" Caption="重置布局" />
+      <Action Id="Save" Caption="保存" />
+      <Action Id="SaveAndClose" Caption="保存并关闭" />
+      <Action Id="SaveAndNew" Caption="保存并新建" />
+      <Action Id="SetFilter" Caption="过滤" />
+      <Action Id="SymbolAction" Caption="符号" />
+      <Action Id="Unlink" Caption="取消关联" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="Modules.BusinessObjects.Crm.Contact">
+      <OwnMembers>
+        <Member Name="Account" Caption="账户" />
+        <Member Name="Birthday" Caption="生日" />
+        <Member Name="City" Caption="城市" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="Country" Caption="国家" />
+        <Member Name="Email" Caption="邮件" />
+        <Member Name="Fax" Caption="传真" />
+        <Member Name="FirstName" Caption="名" />
+        <Member Name="FullName" Caption="姓名" />
+        <Member Name="Gender" Caption="性别" />
+        <Member Name="HomePhone" Caption="家庭电话" />
+        <Member Name="LastName" Caption="姓" />
+        <Member Name="MobilePhone" Caption="手机号码" />
+        <Member Name="OfficePhone" Caption="办公电话" />
+        <Member Name="OtherPhone" Caption="其它电话" />
+        <Member Name="Photo" Caption="照片" />
+        <Member Name="Position" Caption="职务" />
+        <Member Name="State" Caption="省直辖市" />
+        <Member Name="Zip" Caption="邮编" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Crm.Customer">
+      <OwnMembers>
+        <Member Name="Address" Caption="地址" />
+        <Member Name="Address1" Caption="地址1" />
+        <Member Name="Area" Caption="采样面积" />
+        <Member Name="City" Caption="城市" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="Contacts" Caption="联系" />
+        <Member Name="Country" Caption="国家" />
+        <Member Name="CreatedBy" Caption="批次创建人" />
+        <Member Name="CustomerName" Caption="客户" />
+        <Member Name="Email" Caption="电子邮件" />
+        <Member Name="Fax" Caption="传真" />
+        <Member Name="Industry" Caption="工业" />
+        <Member Name="OfficePhone" Caption="办公电话" />
+        <Member Name="OtherPhone" Caption="其它电话" />
+        <Member Name="Projects" Caption="项目" />
+        <Member Name="State" Caption="省直辖市" />
+        <Member Name="Type" Caption="类别" />
+        <Member Name="UpdatedBy" Caption="更新人" />
+        <Member Name="WebSite" Caption="网址" />
+        <Member Name="Zip" Caption="邮编" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.Company">
+      <OwnMembers>
+        <Member Name="CreatedBy" Caption="批次产生人" />
+        <Member Name="UpdatedBy" Caption="更新人" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.CustomLogonParameters">
+      <OwnMembers>
+        <Member Name="RememberPassword" Caption="记住密码" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.Department">
+      <OwnMembers>
+        <Member Name="CreatedBy" Caption="批次产生人" />
+        <Member Name="UpdatedBy" Caption="更新人" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.Employee">
+      <OwnMembers>
+        <Member Name="CreatedBy" Caption="批次产生人" />
+        <Member Name="FullName" Caption="姓名" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.SampleManagement.Samplecheckin" Caption="样品接收" />
+    <Class Name="Modules.BusinessObjects.SampleManagement.SampleLogIn" Caption="样品登录" />
+  </BOModel>
+  <CreatableItems>
+    <CreatableItem ClassName="Modules.BusinessObjects.SampleManagement.Samplecheckin" Caption="样品接收" />
+  </CreatableItems>
+  <NavigationItems>
+    <Items>
+      <Item Id="Reports" Caption="报表">
+        <Items>
+          <Item Id="BizRequest_Measures_ListView_Report_Order" Caption="订单统计" />
+          <Item Id="BizRequest_Measures_ListView_Chart_Employee" Caption="业务量汇总" />
+          <Item Id="ReportsV2" Caption="报表设计" />
+          <Item Id="Dashboards" Caption="公告栏设置" />
+        </Items>
+      </Item>
+      <Item Id="MyDesktop" Caption="我的工作台" />
+      <Item Id="DataEntry" Caption="数据录入">
+        <Items>
+          <Item Id="SDMS" Caption="科学数据管理系统" />
+          <Item Id="Result Entry" Caption="结果录入" />
+          <Item Id="Result Validation" Caption="结果校对" />
+          <Item Id="Result Approval" Caption="结果审核" />
+        </Items>
+      </Item>
+      <Item Id="Reporting" Caption="报告管理">
+        <Items>
+          <Item Id="ReportView" Caption="自定义报告设计器" />
+        </Items>
+      </Item>
+      <Item Id="Assets" Caption="资产管理">
+        <Items>
+          <Item Id="InspectCategory_ListView" Caption="检定类型" />
+          <Item Id="LabwareInherit_ListView" Caption="仪器设备" />
+          <Item Id="Labware_ListView" Caption="仪器设备" />
+          <Item Id="LabwareCertificate_ListView" Caption="设备证书" />
+          <Item Id="LabwareMaintenance_ListView" Caption="保养记录" />
+        </Items>
+      </Item>
+      <Item Id="Customer" Caption="客户管理">
+        <Items>
+          <Item Id="Customer_ListView" Caption="客户信息" />
+          <Item Id="Contact_ListView" Caption="联系人" />
+          <Item Id="Project" Caption="用途" />
+        </Items>
+      </Item>
+      <Item Id="HumanResources" Caption="人力资源">
+        <Items>
+          <Item Id="Employee_ListView" Caption="员工管理" />
+        </Items>
+      </Item>
+      <Item Id="Settings">
+        <Items>
+          <Item Id="QCType" Caption="质控种类" />
+          <Item Id="Report Designer" Caption="报告设计器" />
+          <Item Id="Unit" Caption="单位" />
+          <Item Id="Utility">
+            <Items>
+              <Item Id="Test">
+                <Items>
+                  <Item Id="@43494701-1b31-41f5-a074-cf4947e4b20a" Caption="送样人" />
+                  <Item Id="QCType" Caption="质控种类" />
+                  <Item Id="SampleCategory" Caption="任务分类" />
+                  <Item Id="SampleType" Caption="样品类型" />
+                  <Item Id="Storage" Caption="库房" />
+                  <Item Id="Unit" Caption="单位" />
+                </Items>
+              </Item>
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Audit Trail" Caption="审计">
+        <Items>
+          <Item Id="SampleCheckIn" Caption="样品接收" />
+          <Item Id="SampleLogIn" Caption="样品登录" />
+          <Item Id="TestParameter" Caption="参数名称" />
+        </Items>
+      </Item>
+      <Item Id="MeasurementBusiness" Caption="计量业务">
+        <Items>
+          <Item Id="BizRequest_ListView" Caption="业务受理" />
+          <Item Id="BizRequest_Measures_ListView_Allocation" Caption="任务分配" />
+          <Item Id="BizRequest_Measures_ListView_Registration" Caption="结果登记" />
+          <Item Id="BizRequest_Measures_ListView_Audit" Caption="审核" />
+          <Item Id="BizRequest_Measures_ListView_Approval" Caption="批准" />
+          <Item Id="BizRequest_Measures_ListView_Printing" Caption="打印" />
+          <Item Id="BizRequest_Measures_ListView_Reception" Caption="证书接收" />
+          <Item Id="BizRequest_Measures_ListView_Release" Caption="发放" />
+          <Item Id="BizRequest_Measures_ListView_Archiving" Caption="归档" />
+          <Item Id="BizRequest_Measures_ListView_Sample" Caption="器具入库" />
+          <Item Id="BizRequest_Measures_ListView_Sample_Verified" Caption="器具领取" />
+          <Item Id="InstrumentManagement" Caption="器具管理">
+            <Items>
+              <Item Id="BizRequest_Measures_ListView_Sample_InStorage" Caption="入库" />
+              <Item Id="BizRequest_Measures_ListView_Sample_Unclaimed" Caption="领取" />
+              <Item Id="BizRequest_Measures_ListView_Sample_Returned" Caption="归还" />
+              <Item Id="BizRequest_Measures_ListView_Sample_Confirmation" Caption="归还确认" />
+              <Item Id="BizRequest_Measures_ListView_Sample_Release" Caption="发放" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="DataExplorer" Caption="数据综合查询" />
+      <Item Id="System" Caption="系统管理">
+        <Items>
+          <Item Id="CustomSystemUser_ListView" Caption="用户" />
+          <Item Id="CustomSystemRole_ListView" Caption="角色" />
+          <Item Id="MyDetails" Caption="我的信息" />
+        </Items>
+      </Item>
+      <Item Id="Default" Caption="bak" />
+    </Items>
+  </NavigationItems>
+  <Views>
+    <DetailView Id="AssignDashboardToUserDepartment_DetailView">
+      <Items>
+        <PropertyEditor Id="EmployeeName" Caption="员工" />
+        <PropertyEditor Id="DepartmentName" Caption="使用科室" />
+      </Items>
+    </DetailView>
+    <ListView Id="AssignDashboardToUserDepartment_ListView">
+      <Columns>
+        <ColumnInfo Id="DepartmentName" Caption="使用科室" />
+      </Columns>
+    </ListView>
+    <DetailView Id="AuditDataItemPersistent_DetailView">
+      <Items>
+        <PropertyEditor Id="Description" Caption="描述" />
+        <PropertyEditor Id="ModifiedOn" Caption="更改时间" />
+        <PropertyEditor Id="NewValue" Caption="变更后" />
+        <PropertyEditor Id="OldValue" Caption="变更前" />
+        <PropertyEditor Id="OperationType" Caption="操作按钮" />
+        <PropertyEditor Id="PropertyName" Caption="属性" />
+        <PropertyEditor Id="UserName" Caption="用户名" />
+      </Items>
+    </DetailView>
+    <ListView Id="AuditDataItemPersistent_ListView" Caption="审计">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="用户名" />
+        <ColumnInfo Id="ModifiedOn" Caption="更改时间" />
+        <ColumnInfo Id="OperationType" Caption="操作按钮" />
+        <ColumnInfo Id="PropertyName" Caption="属性" />
+        <ColumnInfo Id="OldValue" Caption="变更前" />
+        <ColumnInfo Id="NewValue" Caption="变更后" />
+        <ColumnInfo Id="Description" Caption="描述" />
+      </Columns>
+    </ListView>
+    <ListView Id="AuditDataItemPersistent_LookupListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="用户名" />
+      </Columns>
+    </ListView>
+    <DetailView Id="BroughtBy_DetailView">
+      <Items>
+        <PropertyEditor Id="BroughtByCode" Caption="送样人代码" />
+        <PropertyEditor Id="BroughtByName" Caption="送样人" />
+        <PropertyEditor Id="Comment" Caption="备注" />
+        <PropertyEditor Id="ModifiedBy" Caption="更改人" />
+        <PropertyEditor Id="ModifiedDate" Caption="更改时间" />
+      </Items>
+    </DetailView>
+    <ListView Id="BroughtBy_ListView" Caption="送样人">
+      <Columns>
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ModifiedBy" Caption="更改人" />
+        <ColumnInfo Id="ModifiedDate" Caption="更改时间" />
+        <ColumnInfo Id="BroughtByName" Caption="送样人" />
+        <ColumnInfo Id="BroughtByCode" Caption="送样人代码" />
+      </Columns>
+    </ListView>
+    <ListView Id="BroughtBy_LookupListView" Caption="送样人">
+      <Columns>
+        <ColumnInfo Id="BroughtByName" Caption="送样人" />
+      </Columns>
+    </ListView>
+    <ListView Id="Company_ListView">
+      <Columns>
+        <ColumnInfo Id="CompanyName" Caption="公司名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="Company_LookupListView">
+      <Columns>
+        <ColumnInfo Id="CompanyName" Caption="公司名称" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Contact_DetailView">
+      <Items>
+        <PropertyEditor Id="Account" Caption="账户" />
+        <PropertyEditor Id="Anniversary" Caption="周年纪念" />
+        <PropertyEditor Id="Birthday" Caption="生日" />
+        <PropertyEditor Id="Customer" Caption="顾客" />
+        <PropertyEditor Id="HomePhone" Caption="家庭电话" />
+        <PropertyEditor Id="MaritalStatus" Caption="婚姻状况" />
+        <PropertyEditor Id="Street1" Caption="地址1" />
+        <PropertyEditor Id="Street2" Caption="地址2" />
+      </Items>
+    </DetailView>
+    <ListView Id="Contact_ListView">
+      <Columns>
+        <ColumnInfo Id="FullName" Caption="姓名" />
+        <ColumnInfo Id="FirstName" Caption="名" />
+        <ColumnInfo Id="LastName" Caption="姓" />
+        <ColumnInfo Id="Customer" Caption="顾客" />
+        <ColumnInfo Id="OfficePhone" Caption="办公电话" />
+        <ColumnInfo Id="HomePhone" Caption="家庭电话" />
+        <ColumnInfo Id="MobilePhone" Caption="手机号码" />
+        <ColumnInfo Id="MaritalStatus" Caption="婚姻状况" />
+      </Columns>
+    </ListView>
+    <ListView Id="Contact_LookupListView">
+      <Columns>
+        <ColumnInfo Id="FullName" Caption="姓名" />
+      </Columns>
+    </ListView>
+    <ListView Id="CurrentLanguage_ListView">
+      <Columns>
+        <ColumnInfo Id="Chinese" Caption="中文" />
+        <ColumnInfo Id="English" Caption="英文" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Customer_DetailView" Caption="顾客">
+      <Items>
+        <PropertyEditor Id="AnnualRevenue" Caption="年收入" />
+        <PropertyEditor Id="CreateTime" Caption="创建时间" />
+        <PropertyEditor Id="CustomerName" Caption="客户" />
+        <PropertyEditor Id="NumberOfEmployees" Caption="在职员工人数" />
+        <PropertyEditor Id="PrimaryContact" Caption="主要联系人" />
+        <PropertyEditor Id="UpdateTime" Caption="更新时间" />
+      </Items>
+    </DetailView>
+    <ListView Id="Customer_ListView">
+      <Columns>
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+        <ColumnInfo Id="CreateTime" Caption="创建时间" />
+        <ColumnInfo Id="UpdatedBy" Caption="更新人" />
+        <ColumnInfo Id="UpdateTime" Caption="更新时间" />
+        <ColumnInfo Id="CustomerName" Caption="客户" />
+        <ColumnInfo Id="AnnualRevenue" Caption="年收入" />
+        <ColumnInfo Id="NumberOfEmployees" Caption="在职员工人数" />
+        <ColumnInfo Id="PrimaryContact" Caption="主要联系人" />
+        <ColumnInfo Id="OfficePhone" Caption="办公电话" />
+        <ColumnInfo Id="OtherPhone" Caption="其它电话" />
+        <ColumnInfo Id="WebSite" Caption="网址" />
+      </Columns>
+    </ListView>
+    <ListView Id="Customer_LookupListView">
+      <Columns>
+        <ColumnInfo Id="CustomerName" Caption="客户" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView">
+      <Items>
+        <PropertyEditor Id="UpdatedBy" Caption="更新人" />
+      </Items>
+    </DetailView>
+    <ListView Id="Employee_ListView">
+      <Columns>
+        <ColumnInfo Id="CreatedBy" Caption="批次产生人" />
+        <ColumnInfo Id="EmploymentDate" Caption="聘用日期" />
+        <ColumnInfo Id="FirstName" Caption="名" />
+        <ColumnInfo Id="HomePhone" Caption="家庭电话" />
+        <ColumnInfo Id="IsActive" Caption="激活" />
+        <ColumnInfo Id="IsEnabledLanguage" Caption="是否启用语言" />
+        <ColumnInfo Id="LastName" Caption="姓" />
+        <ColumnInfo Id="OtherPhone" Caption="其它电话" />
+        <ColumnInfo Id="RetireDate" Caption="退役日期" />
+        <ColumnInfo Id="UpdatedBy" Caption="更新人" />
+        <ColumnInfo Id="FullName" Caption="姓名" />
+        <ColumnInfo Id="UserName" Caption="用户名" />
+        <ColumnInfo Id="OfficePhone" Caption="办公电话" />
+      </Columns>
+    </ListView>
+    <ListView Id="Method_ListView">
+      <Columns>
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <ListView Id="Method_LookupListView">
+      <Columns>
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Parameter_DetailView">
+      <Items>
+        <PropertyEditor Id="TestMethods" Caption="分析方法" />
+      </Items>
+    </DetailView>
+    <ListView Id="Parameter_ListView">
+      <Columns>
+        <ColumnInfo Id="ParameterName" Caption="参数名" />
+      </Columns>
+    </ListView>
+    <ListView Id="Parameter_LookupListView">
+      <Columns>
+        <ColumnInfo Id="ParameterName" Caption="参数名" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Preservative_DetailView">
+      <Items>
+        <PropertyEditor Id="Comment" Caption="备注" />
+        <PropertyEditor Id="ModifiedBy" Caption="更改人" />
+        <PropertyEditor Id="ModifiedDate" Caption="更改时间" />
+      </Items>
+    </DetailView>
+    <ListView Id="Preservative_ListView">
+      <Columns>
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ModifiedBy" Caption="更改人" />
+        <ColumnInfo Id="ModifiedDate" Caption="更改时间" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Project_DetailView">
+      <Items>
+        <PropertyEditor Id="customername" Caption="客户" />
+      </Items>
+    </DetailView>
+    <ListView Id="Project_ListView">
+      <Columns>
+        <ColumnInfo Id="ModifiedBy" Caption="更改人" />
+        <ColumnInfo Id="ModifiedDate" Caption="更改时间" />
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+        <ColumnInfo Id="ProjectId" Caption="项目编号" />
+        <ColumnInfo Id="customername" Caption="客户" />
+      </Columns>
+    </ListView>
+    <ListView Id="Project_LookupListView">
+      <Columns>
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+        <ColumnInfo Id="Project ID" Caption="项目编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCType_ListView">
+      <Columns>
+        <ColumnInfo Id="QCTypeName" Caption="质控种类" />
+      </Columns>
+    </ListView>
+    <ListView Id="QCType_LookupListView">
+      <Columns>
+        <ColumnInfo Id="QCTypeName" Caption="质控种类" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView">
+      <Items>
+        <PropertyEditor Id="ClientName" Caption="受检单位" />
+        <PropertyEditor Id="JobID" Caption="工作编号" />
+        <PropertyEditor Id="MatrixName" Caption="基质" />
+        <PropertyEditor Id="MethodName" Caption="分析方法" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目名称" />
+        <PropertyEditor Id="TestName" Caption="检测项目" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SampleCategory_DetailView" Caption="任务分类" />
+    <ListView Id="SampleCategory_ListView" Caption="任务分类" />
+    <ListView Id="SampleCategory_LookupListView" Caption="任务分类">
+      <Columns>
+        <ColumnInfo Id="SampleCategoryName" Caption="任务分类" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView" Caption="样品接收">
+      <Items>
+        <PropertyEditor Id="SampleLocation" Caption="采样图像" />
+        <PropertyEditor Id="TestDescription" Caption="监测项目" />
+        <PropertyEditor Id="UploadCOC" Caption="上传COC" />
+      </Items>
+    </DetailView>
+    <ListView Id="Samplecheckin_ListView" Caption="样品接收" />
+    <ListView Id="Samplecheckin_LookupListView" Caption="样品接收">
+      <Columns>
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="Client Name" Caption="受检单位" />
+        <ColumnInfo Id="Project Name" Caption="项目名称" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_ListView" Caption="样品登录">
+      <Columns>
+        <ColumnInfo Id="Time" Caption="时间" />
+        <ColumnInfo Id="RecievedDate" Caption="收到日期" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_LookupListView" Caption="样品登录">
+      <Columns>
+        <ColumnInfo Id="Job ID" Caption="工作编号" />
+        <ColumnInfo Id="ProjectName" Caption="样品编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_Testparameters_ListView" Caption="参数名称">
+      <Columns>
+        <ColumnInfo Id="TestMethod" Caption="基质" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Method" Caption="方法依据" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleParameter_DetailView" Caption="结果录入" />
+    <ListView Id="SampleParameter_ListView" Caption="结果录入">
+      <Columns>
+        <ColumnInfo Id="Samplelogin" Caption="方案样品序号" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Parameter" Caption="检测参数" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="Status" Caption="企业状态" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="EnteredDate" Caption="录入日期" />
+        <ColumnInfo Id="EnteredBy" Caption="录入人" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_Reporting" Caption="结果录入">
+      <Columns>
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="EnteredBy" Caption="录入人" />
+        <ColumnInfo Id="EnteredDate" Caption="录入日期" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="Samplelogin" Caption="方案样品序号" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Parameter" Caption="检测参数" />
+        <ColumnInfo Id="Status" Caption="企业状态" />
+        <ColumnInfo Id="ClientName" Caption="委托单位" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_ResultApproval" Caption="结果审核">
+      <Columns>
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Samplelogin" Caption="方案样品序号" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Parameter" Caption="检测参数" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="Status" Caption="企业状态" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="EnteredDate" Caption="录入日期" />
+        <ColumnInfo Id="EnteredBy" Caption="录入人" />
+        <ColumnInfo Id="ValidatedDate" Caption="审核时间" />
+        <ColumnInfo Id="ValidatedBy" Caption="审核人" />
+        <ColumnInfo Id="ApprovedDate" Caption="批准时间" />
+        <ColumnInfo Id="ApprovedBy" Caption="批准人" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_ResultEntry" Caption="结果录入">
+      <Columns>
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Samplelogin" Caption="方案样品序号" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Parameter" Caption="检测参数" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="Status" Caption="企业状态" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="EnteredDate" Caption="录入日期" />
+        <ColumnInfo Id="EnteredBy" Caption="录入人" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_ResultValidation" Caption="结果校对">
+      <Columns>
+        <ColumnInfo Id="MethodName" Caption="分析方法" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+        <ColumnInfo Id="Units" Caption="单位" />
+        <ColumnInfo Id="Samplelogin" Caption="方案样品序号" />
+        <ColumnInfo Id="Testparameter" Caption="基质" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Parameter" Caption="检测参数" />
+        <ColumnInfo Id="Result" Caption="结果" />
+        <ColumnInfo Id="Status" Caption="企业状态" />
+        <ColumnInfo Id="AnalyzedDate" Caption="分析时间" />
+        <ColumnInfo Id="AnalyzedBy" Caption="分析人" />
+        <ColumnInfo Id="EnteredDate" Caption="录入日期" />
+        <ColumnInfo Id="EnteredBy" Caption="录入人" />
+        <ColumnInfo Id="ValidatedDate" Caption="审核时间" />
+        <ColumnInfo Id="ValidatedBy" Caption="审核人" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleType_DetailView" Caption="样品类型" />
+    <ListView Id="SampleType_ListView" Caption="样品类型" />
+    <ListView Id="SampleType_LookupListView" Caption="样品类型" />
+    <DetailView Id="SL_CopyNoOfSamples_DetailView">
+      <Items>
+        <PropertyEditor Id="NoOfSamples" Caption="采购数量" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Storage_DetailView" Caption="库房" />
+    <ListView Id="Storage_ListView" Caption="库房" />
+    <ListView Id="Storage_LookupListView" Caption="库房" />
+    <ListView Id="TestMethod_AuditTrail_ListView" Caption="分析方法">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="用户名" />
+        <ColumnInfo Id="ModifiedOn" Caption="更改时间" />
+        <ColumnInfo Id="OperationType" Caption="操作按钮" />
+        <ColumnInfo Id="PropertyName" Caption="属性" />
+        <ColumnInfo Id="OldValue" Caption="变更前" />
+        <ColumnInfo Id="NewValue" Caption="变更后" />
+        <ColumnInfo Id="Description" Caption="描述" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestMethod_DetailView" Caption="分析方法" />
+    <ListView Id="TestMethod_ListView" Caption="分析方法">
+      <Columns>
+        <ColumnInfo Id="TestName" Caption="检测项目" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_LookupListView" Caption="分析方法">
+      <Columns>
+        <ColumnInfo Id="MatrixName.MatrixName" Caption="基质" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Testparameter_DetailView" Caption="参数名称">
+      <Items>
+        <PropertyEditor Id="TestMethod" Caption="分析方法" />
+      </Items>
+    </DetailView>
+    <ListView Id="Testparameter_ListView" Caption="参数名称">
+      <Columns>
+        <ColumnInfo Id="TestMethod" Caption="分析方法" />
+      </Columns>
+    </ListView>
+    <ListView Id="Testparameter_LookupListView" Caption="参数名称">
+      <Columns>
+        <ColumnInfo Id="Test" Caption="检测项目" />
+        <ColumnInfo Id="Method Name" Caption="方法依据" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Unit_DetailView" Caption="单位">
+      <Items>
+        <PropertyEditor Id="Comment" Caption="备注" />
+        <PropertyEditor Id="ModifiedBy" Caption="更改人" />
+        <PropertyEditor Id="ModifiedDate" Caption="更改时间" />
+        <PropertyEditor Id="UnitName" Caption="单位" />
+      </Items>
+    </DetailView>
+    <ListView Id="Unit_ListView" Caption="单位">
+      <Columns>
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="ModifiedBy" Caption="更改人" />
+        <ColumnInfo Id="ModifiedDate" Caption="更改人" />
+        <ColumnInfo Id="UnitName" Caption="单位" />
+      </Columns>
+    </ListView>
+    <ListView Id="Unit_LookupListView">
+      <Columns>
+        <ColumnInfo Id="UnitName" Caption="单位" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

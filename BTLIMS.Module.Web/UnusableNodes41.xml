@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="GroupTest_Testparameters_ListView" AllowNew="False" AllowDelete="False" AllowLink="True" AllowUnlink="True">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Comment" Index="-1" />
+        <ColumnInfo Id="CutOff" Index="-1" />
+        <ColumnInfo Id="Decimal" Index="-1" />
+        <ColumnInfo Id="DefaultResult" Index="-1" />
+        <ColumnInfo Id="DefaultUnits" Index="-1" />
+        <ColumnInfo Id="FinalDefaultResult" Index="-1" />
+        <ColumnInfo Id="FinalDefaultUnits" Index="-1" />
+        <ColumnInfo Id="InternalStandard" Index="-1" />
+        <ColumnInfo Id="LOQ" Index="-1" />
+        <ColumnInfo Id="MCL" Index="-1" />
+        <ColumnInfo Id="MDL" Index="-1" />
+        <ColumnInfo Id="RptLimit" Index="-1" />
+        <ColumnInfo Id="SigFig" Index="-1" />
+        <ColumnInfo Id="Sort" Index="-1" />
+        <ColumnInfo Id="Surroagate" Index="-1" />
+        <ColumnInfo Id="SurrogateAmount" Index="-1" />
+        <ColumnInfo Id="SurrogateHighLimit" Index="-1" />
+        <ColumnInfo Id="SurrogateLowLimit" Index="-1" />
+        <ColumnInfo Id="SurrogateUnits" Index="-1" />
+        <ColumnInfo Id="UQL" Index="-1" />
+        <ColumnInfo Id="TestMethod" Index="0" Caption="Matrix" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="TestName" PropertyName="TestMethod" LookupProperty="TestName" Caption="Test" Index="1" SortIndex="1" SortOrder="Ascending" />
+        <ColumnInfo Id="Method" Caption="Method" PropertyName="TestMethod" LookupProperty="MethodName.MethodName" Index="2" SortIndex="2" SortOrder="Ascending" />
+        <ColumnInfo Id="Component" PropertyName="TestMethod" LookupProperty="Component" Caption="Component" Index="3" SortIndex="3" SortOrder="Ascending" />
+        <ColumnInfo Id="Parameter" Index="4" SortIndex="4" SortOrder="Ascending" />
+      </Columns>
+    </ListView>
+    <ListView Id="Testparameter_GroupTests_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestGroupName" Caption="Test" />
+      </Columns>
+    </ListView>
+    <ListView Id="Testparameter_LookupListView_Copy_SampleLogin">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestGroupName" Caption="TestGroupName" PropertyName="GroupTests" Index="-1" LookupProperty="TestGroupName" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="GroupTest_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupTest" />
+      </Items>
+    </DetailView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+    <ListView Id="SampleLogIn_Testparameters_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestGroupName" PropertyName="GroupTests" Index="-1" Caption="TestGroupName" SortIndex="0" SortOrder="Ascending" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Reports">
+        <Items Id="Items">
+          <Item Id="BizRequest_DetailView_Report" ViewId="BizRequest_ListView_Report" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

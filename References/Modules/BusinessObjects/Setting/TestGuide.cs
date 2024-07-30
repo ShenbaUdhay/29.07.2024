@@ -1,0 +1,163 @@
+﻿using DevExpress.ExpressApp;
+using DevExpress.Persistent.Base;
+using DevExpress.Persistent.BaseImpl;
+using DevExpress.Persistent.Validation;
+using DevExpress.Xpo;
+using Modules.BusinessObjects.Hr;
+using System;
+
+namespace Modules.BusinessObjects.Setting
+{
+    [DefaultClassOptions]
+    //[ImageName("BO_Contact")]
+    //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
+    //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
+    //[Persistent("DatabaseTableName")]
+    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
+
+    // [RuleCombinationOfPropertiesIsUnique("TestGuide",DefaultContexts.Save, "Container,Preservative,TestMethod", SkipNullOrEmptyValues = false)]
+    public class TestGuide : BaseObject
+    { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
+        public TestGuide(Session session)
+            : base(session)
+        {
+        }
+        public override void AfterConstruction()
+        {
+            base.AfterConstruction();
+            if (SecuritySystem.CurrentUserId == null || string.IsNullOrWhiteSpace(SecuritySystem.CurrentUserId.ToString())) return;
+            CreatedBy = Session.GetObjectByKey<Employee>(SecuritySystem.CurrentUserId);
+            CreatedDate = DateTime.Now;
+            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+        }
+        protected override void OnSaving()
+        {
+            base.OnSaving();
+            if (SecuritySystem.CurrentUserId == null || string.IsNullOrWhiteSpace(SecuritySystem.CurrentUserId.ToString())) return;
+            ModifiedBy = Session.GetObjectByKey<Employee>(SecuritySystem.CurrentUserId);
+            ModifiedDate = DateTime.Now;
+        }
+        //private string _PersistentProperty;
+        //[XafDisplayName("My display name"), ToolTip("My hint message")]
+        //[ModelDefault("EditMask", "(000)-00"), Index(0), VisibleInListView(false)]
+        //[Persistent("DatabaseColumnName"), RuleRequiredField(DefaultContexts.Save)]
+        //public string PersistentProperty {
+        //    get { return _PersistentProperty; }
+        //    set { SetPropertyValue(nameof(PersistentProperty), ref _PersistentProperty, value); }
+        //}
+
+        //[Action(Caption = "My UI Action", ConfirmationMessage = "Are you sure?", ImageName = "Attention", AutoCommit = true)]
+        //public void ActionMethod() {
+        //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
+        //    this.PersistentProperty = "Paid";
+        //}
+        #region Container
+        private Container _Container;
+        [RuleRequiredField("Container1", DefaultContexts.Save)]
+        public Container Container
+        {
+            get { return _Container; }
+            set { SetPropertyValue("Container", ref _Container, value); }
+        }
+        #endregion
+
+        #region Preservative
+        private Preservative _Preservative;
+        [RuleRequiredField("Preservative1", DefaultContexts.Save)]
+        public Preservative Preservative
+        {
+            get { return _Preservative; }
+            set { SetPropertyValue("Preservative", ref _Preservative, value); }
+        }
+        #endregion
+
+        #region Temperature
+        private String _Temperature;
+        [VisibleInListView(false)]
+        public String Temperature
+        {
+            get { return _Temperature; }
+            set { SetPropertyValue("Temperature", ref _Temperature, value); }
+        }
+        #endregion
+
+        #region HoldingTimeBeforePrep
+        private HoldingTimes _HoldingTimeBeforePrep;
+        [VisibleInListView(false)]
+        public HoldingTimes HoldingTimeBeforePrep
+        {
+            get { return _HoldingTimeBeforePrep; }
+            set { SetPropertyValue("HoldingTimeBeforePrep", ref _HoldingTimeBeforePrep, value); }
+        }
+        #endregion
+
+        #region HoldingTimeBeforeAnalysis
+        private HoldingTimes _HoldingTimeBeforeAnalysis;
+        [VisibleInListView(false)]
+        public HoldingTimes HoldingTimeBeforeAnalysis
+        {
+            get { return _HoldingTimeBeforeAnalysis; }
+            set { SetPropertyValue("HoldingTimeBeforeAnalysis", ref _HoldingTimeBeforeAnalysis, value); }
+        }
+        #endregion
+
+        #region SetPrepTimeAsAnalysisTime
+        private bool _SetPrepTimeAsAnalysisTime;
+        [ImmediatePostData]
+        [VisibleInListView(false)]
+        public bool SetPrepTimeAsAnalysisTime
+        {
+            get { return _SetPrepTimeAsAnalysisTime; }
+            set
+            {
+                SetPropertyValue("SetPrepTimeAsAnalysisTime", ref _SetPrepTimeAsAnalysisTime, value);
+            }
+        }
+        #endregion
+
+        private DateTime _CreatedDate;
+        [VisibleInDetailView(false)]
+        [VisibleInLookupListView(false)]
+        [VisibleInListView(false)]
+        public DateTime CreatedDate
+        {
+            get { return _CreatedDate; }
+            set { SetPropertyValue(nameof(CreatedDate), ref _CreatedDate, value); }
+        }
+        private Employee _CreatedBy;
+        [VisibleInDetailView(false)]
+        [VisibleInLookupListView(false)]
+        [VisibleInListView(false)]
+        public Employee CreatedBy
+        {
+            get { return _CreatedBy; }
+            set { SetPropertyValue(nameof(CreatedBy), ref _CreatedBy, value); }
+        }
+        private DateTime _ModifiedDate;
+        [VisibleInDetailView(false)]
+        [VisibleInLookupListView(false)]
+        [VisibleInListView(false)]
+        public DateTime ModifiedDate
+        {
+            get { return _ModifiedDate; }
+            set { SetPropertyValue(nameof(ModifiedDate), ref _ModifiedDate, value); }
+        }
+        private Employee _ModifiedBy;
+        [VisibleInDetailView(false)]
+        [VisibleInLookupListView(false)]
+        [VisibleInListView(false)]
+        public Employee ModifiedBy
+        {
+            get { return _ModifiedBy; }
+            set { SetPropertyValue(nameof(ModifiedBy), ref _ModifiedBy, value); }
+        }
+
+        private TestMethod _TestMethod;
+        [Association("TestMethod-TestGuides")]
+        public TestMethod TestMethod
+        {
+            get { return _TestMethod; }
+            set { SetPropertyValue("TestMethod", ref _TestMethod, value); }
+        }
+    }
+}

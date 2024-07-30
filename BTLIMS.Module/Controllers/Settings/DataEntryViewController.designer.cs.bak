@@ -1,0 +1,60 @@
+﻿using System;
+using DevExpress.ExpressApp.Actions;
+
+namespace LDM.Module.Controllers.Settings
+{
+    partial class DataEntryViewController
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.AlpacaLimsAccessLogDateFilter = new DevExpress.ExpressApp.Actions.SingleChoiceAction(this.components);
+
+
+            // 
+            // DateFilter
+            // 
+            this.AlpacaLimsAccessLogDateFilter.Caption = "Date Filter";
+            this.AlpacaLimsAccessLogDateFilter.Category = "View";
+            this.AlpacaLimsAccessLogDateFilter.ConfirmationMessage = null;
+            this.AlpacaLimsAccessLogDateFilter.Id = "AlpacaLimsAccessLogDateFilter";
+            this.AlpacaLimsAccessLogDateFilter.ConfirmationMessage = null;
+            this.AlpacaLimsAccessLogDateFilter.SelectedItemChanged += AlpacaLimsAccessLogDateFilter_SelectedItemChanged;
+
+            //
+            //DataEntryViewController
+            //
+            this.Actions.Add(this.AlpacaLimsAccessLogDateFilter);
+
+
+        }
+
+        #endregion
+
+
+        private SingleChoiceAction AlpacaLimsAccessLogDateFilter;
+    }
+}

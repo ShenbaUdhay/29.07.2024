@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="ResultEntry_Approval">
+      <Items Id="Items">
+        <DashboardViewItem Id="Sample" Caption="样品" />
+      </Items>
+    </DashboardView>
+  </Views>
+</Application>

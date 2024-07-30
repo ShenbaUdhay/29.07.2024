@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="ICM.Module.BusinessObjects.Vendors">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="city" Caption="城市" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.TestMethod">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="PrepMethod" Caption="准备方法" />
+        <Member Name="PrepMethod1" Caption="准备方法 1" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="TestMethod_DetailView_Copy_GroupTest">
+      <Items Id="Items">
+        <PropertyEditor Id="PrepMethod1" Caption="准备方法2" />
+        <PropertyEditor Id="PrepMethod" Caption="准备方法1" />
+      </Items>
+    </DetailView>
+    <ListView Id="Parameter_TestMethods_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod" Caption="准备方法" />
+        <ColumnInfo Id="PrepMethod1" Caption="准备方法1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestMethod_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="PrepMethod" Caption="准备方法1" />
+        <PropertyEditor Id="PrepMethod1" Caption="准备方法2" />
+      </Items>
+    </DetailView>
+    <ListView Id="TestMethod_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PrepMethod" Caption="准备方法1" />
+        <ColumnInfo Id="PrepMethod1" Caption="准备方法2" />
+      </Columns>
+    </ListView>
+    <ListView Id="VendorEvaluation_vendors_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="city" Caption="城市" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Vendors_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="city" Caption="城市" />
+      </Items>
+    </DetailView>
+    <ListView Id="Vendors_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="city" Caption="城市" />
+      </Columns>
+    </ListView>
+    <ListView Id="Vendors_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="city" Caption="城市" />
+      </Columns>
+    </ListView>
+  </Views>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="CopyPermission" Caption="复制权限" />
+    </Actions>
+  </ActionDesign>
+  <Validation Id="Validation">
+    <Rules Id="Rules">
+      <RuleRequiredField Id="Sort" Name="序号" />
+      <RuleRequiredField Id="Sort1" Name="序号1" />
+    </Rules>
+  </Validation>
+</Application>

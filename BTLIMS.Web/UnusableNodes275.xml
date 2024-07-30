@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="TaskManagement">
+        <Items Id="Items">
+          <Item Id="TaskAcceptance" ViewId="Tasks_ListView_Copy_TaskAcceptance" />
+          <Item Id="TaskRelease" ViewId="Tasks_ListView_Copy_TaskRelease" />
+          <Item Id="RegistrationCancellation" ViewId="Tasks_ListView_PropsalCancellation" />
+          <Item Id="RegistrationValidation " ViewId="Tasks_ListView_Copy_ProposalValidation" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

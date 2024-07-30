@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="AssignDashboardToUserDepartment_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="EmployeeName" Caption="员工" />
+      </Columns>
+    </ListView>
+    <ListView Id="AssignDashboardToUserDepartment_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="EmployeeName.FullName" Caption="员工" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="LabwareCategory_Labwares_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="UpdatedBy" Caption="更新人" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

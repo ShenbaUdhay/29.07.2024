@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SampleLogIn_ListView_Copy_RegistrationSignOffSamples">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SignOffBy" Caption="收到日期" />
+        <ColumnInfo Id="SignOffDate" Caption="收到日期" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

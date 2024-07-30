@@ -1,0 +1,6 @@
+InvoiceClient,ItemCode,Qty,UnitPrice,InvoiceDate,InvoiceNo,Terms,PONum,DateDue,InvoiceClients,InvoiceContact,InvoiceAdd1,InvoiceAdd2,InvoiceCity,InvoiceState,InvoicZip,Sample ID,ShipToLine1,ShipToLine2,ShipToLine3,ShipToLine4,SalesRep,ReceivedDate,ParamSynonym,TAT
+ZXP Technologies,,5,45,11:22:2023 03:40,IV231122001,Net 30,,11:29:2023 00:21,ZXP Technologies,Attn:,,,,,,23642-01,,Sample:11:22:2023,Jinn,,,11:22:2023 03:45,,5 Days
+ZXP Technologies,,5,45,11:22:2023 03:40,IV231122001,Net 30,,11:29:2023 00:21,ZXP Technologies,Attn:,,,,,,23642-02,,Sample:11:22:2023,Jinn,,,11:22:2023 03:45,,5 Days
+ZXP Technologies,,5,45,11:22:2023 03:40,IV231122001,Net 30,,11:29:2023 00:21,ZXP Technologies,Attn:,,,,,,23642-03,,Sample:11:22:2023,Jinn,,,11:22:2023 03:45,,5 Days
+ZXP Technologies,,5,45,11:22:2023 03:40,IV231122001,Net 30,,11:29:2023 00:21,ZXP Technologies,Attn:,,,,,,23642-04,,Sample:11:22:2023,Jinn,,,11:22:2023 03:45,,5 Days
+ZXP Technologies,,5,45,11:22:2023 03:40,IV231122001,Net 30,,11:29:2023 00:21,ZXP Technologies,Attn:,,,,,,23642-05,,Sample:11:22:2023,Jinn,,,11:22:2023 03:45,,5 Days

@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" Caption="取消" />
+      <Action Id="CloneObject" Caption="克隆..." ToolTip="克隆对象" />
+      <Action Id="Delete" ConfirmationMessage="你确定要删除所选的记录吗?" Caption="删除" />
+      <Action Id="Delete Item" ConfirmationMessage="你确定要删除所选的记录吗?" />
+      <Action Id="DialogCancel" Caption="取消" />
+      <Action Id="DialogClose" Caption="关闭" />
+      <Action Id="DialogOK" Caption="确定" />
+      <Action Id="FullTextSearch" Caption="文本搜索" NullValuePrompt="文本搜索..." ToolTip="通过文本过滤记录" />
+      <Action Id="Logon" Caption="Log on" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="Modules.BusinessObjects.Hr.Area" Caption="区">
+      <OwnMembers>
+        <Member Name="AreaName" Caption="名称" />
+        <Member Name="City" Caption="市" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.City" Caption="城市">
+      <OwnMembers>
+        <Member Name="Areas" Caption="区" />
+        <Member Name="CityName" Caption="名称" />
+        <Member Name="State" Caption="省" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.Company" Caption="公司管理">
+      <OwnMembers>
+        <Member Name="Address" Caption="地址" />
+        <Member Name="City" Caption="市" />
+        <Member Name="CompanyName" Caption="公司名称" />
+        <Member Name="ContactName" Caption="联系人" />
+        <Member Name="Country" Caption="国家" />
+        <Member Name="Departments" Caption="部门" />
+        <Member Name="Email" Caption="邮箱" />
+        <Member Name="Employees" Caption="员工" />
+        <Member Name="Fax" Caption="传真" />
+        <Member Name="HomePhone" Caption="家庭电话" />
+        <Member Name="IsValid" Caption="是否有效" />
+        <Member Name="Language" Caption="语言" />
+        <Member Name="MeasureCVFlag" Caption="强检标志" />
+        <Member Name="MobilePhone" Caption="手机" />
+        <Member Name="OfficePhone" Caption="办公电话" />
+        <Member Name="OtherPhone" Caption="其它电话" />
+        <Member Name="Positions" Caption="职务" />
+        <Member Name="QRCode" Caption="二维码" />
+        <Member Name="Remark" Caption="备注" />
+        <Member Name="State" Caption="省" />
+        <Member Name="WebSite" Caption="网站" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.CustomCountry" Caption="国家">
+      <OwnMembers>
+        <Member Name="ChineseLongName" Caption="中文名称" />
+        <Member Name="ChineseShortName" Caption="中文简称" />
+        <Member Name="EnglishLongName" Caption="英文名称" />
+        <Member Name="EnglishShortName" Caption="英文简称" />
+        <Member Name="NationalFlag" Caption="国旗" />
+        <Member Name="States" Caption="省" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.CustomLogonParameters" Caption="登录">
+      <OwnMembers>
+        <Member Name="Password" Caption="密码" />
+        <Member Name="UserName" Caption="用户名" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.CustomState" Caption="省">
+      <OwnMembers>
+        <Member Name="Cities" Caption="市" />
+        <Member Name="Country" Caption="国家" />
+        <Member Name="LongName" Caption="名称" />
+        <Member Name="ShortName" Caption="简称" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.CustomSystemRole" Caption="角色">
+      <OwnMembers>
+        <Member Name="Company" Caption="公司" />
+        <Member Name="IsBatchExport" Caption="批量导出" />
+        <Member Name="Navigations" Caption="导航权限" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.CustomSystemUser" Caption="用户" />
+    <Class Name="Modules.BusinessObjects.Hr.Department" Caption="部门">
+      <OwnMembers>
+        <Member Name="Employees" Caption="员工" />
+        <Member Name="Name" Caption="部门名称" />
+        <Member Name="Parent" Caption="上层组织" />
+        <Member Name="Sort" Caption="排序" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.Employee" Caption="员工管理">
+      <OwnMembers>
+        <Member Name="Address" Caption="住址" />
+        <Member Name="Birthday" Caption="出生日期" />
+        <Member Name="City" Caption="市" />
+        <Member Name="Company" Caption="公司" />
+        <Member Name="Country" Caption="国家" />
+        <Member Name="Department" Caption="部门" />
+        <Member Name="Email" Caption="邮箱" />
+        <Member Name="EmploymentDate" Caption="聘用日期" />
+        <Member Name="Fax" Caption="传真" />
+        <Member Name="FirstName" Caption="名" />
+        <Member Name="Gender" Caption="性别" />
+        <Member Name="HomePhone" Caption="家庭电话" />
+        <Member Name="IsEnabledLanguage" Caption="是否启用语言" />
+        <Member Name="Language" Caption="语言" />
+        <Member Name="LastName" Caption="姓" />
+        <Member Name="MobilePhone" Caption="手机" />
+        <Member Name="OfficePhone" Caption="办公电话" />
+        <Member Name="OtherPhone" Caption="其它电话" />
+        <Member Name="Photo" Caption="照片" />
+        <Member Name="Position" Caption="职务" />
+        <Member Name="Resume" Caption="简历" />
+        <Member Name="RetireDate" Caption="退役日期" />
+        <Member Name="Signature" Caption="签名" />
+        <Member Name="State" Caption="省" />
+        <Member Name="Zip" Caption="邮编" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.Navigation" Caption="导航权限">
+      <OwnMembers>
+        <Member Name="NavigationId" Caption="导航编码" />
+        <Member Name="NavigationName" Caption="导航名称" />
+        <Member Name="Parent" Caption="上级导航" />
+        <Member Name="Roles" Caption="角色" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.OperationLog" Caption="操作日志">
+      <OwnMembers>
+        <Member Name="Category" Caption="类别" />
+        <Member Name="Employee" Caption="操作人" />
+        <Member Name="OperationDate" Caption="操作时间" />
+        <Member Name="OperationEvent" Caption="操作事件" />
+        <Member Name="Remark" Caption="备注" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.Position" Caption="职务">
+      <OwnMembers>
+        <Member Name="PositionName" Caption="职务名称" />
+        <Member Name="Sort" Caption="排序" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.SampleManagement.Samplecheckin">
+      <OwnMembers>
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.Matrix" Caption="基质">
+      <OwnMembers>
+        <Member Name="Comment" Caption="备注" />
+        <Member Name="MatrixName" Caption="基质" />
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.Method" Caption="方法依据">
+      <OwnMembers>
+        <Member Name="Comment" Caption="备注" />
+        <Member Name="MethodName" Caption="方法依据" />
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.Parameter" Caption="参数">
+      <OwnMembers>
+        <Member Name="Comment" Caption="备注" />
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+        <Member Name="ParameterName" Caption="参数" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.Project" Caption="物品用途">
+      <OwnMembers>
+        <Member Name="Comment" Caption="备注" />
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+        <Member Name="ProjectId" Caption="项目编号" />
+        <Member Name="ProjectName" Caption="项目名称" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.QCType" Caption="质控种类">
+      <OwnMembers>
+        <Member Name="Comment" Caption="备注" />
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+        <Member Name="QCTypeName" Caption="质控种类" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.SampleCategory">
+      <OwnMembers>
+        <Member Name="Comment" Caption="备注" />
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.SampleType">
+      <OwnMembers>
+        <Member Name="Comment" Caption="备注" />
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.Storage">
+      <OwnMembers>
+        <Member Name="Comment" Caption="备注" />
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.TestMethod">
+      <OwnMembers>
+        <Member Name="Comment" Caption="备注" />
+        <Member Name="MatrixName" Caption="基质" />
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+        <Member Name="TestName" Caption="检测项目" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Setting.VisualMatrix">
+      <OwnMembers>
+        <Member Name="Comment" Caption="备注" />
+        <Member Name="MatrixName" Caption="基质" />
+        <Member Name="ModifiedBy" Caption="更改人" />
+        <Member Name="ModifiedDate" Caption="更改时间" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Modules.BusinessObjects.Hr.Gender">
+        <LocalizationItem Name="Female" Value="女" />
+        <LocalizationItem Name="Male" Value="男" />
+        <LocalizationItem Name="None" Value="无" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Hr.Language">
+        <LocalizationItem Name="Chinese" Value="中文" />
+        <LocalizationItem Name="English" Value="英文" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Modules.BusinessObjects.Hr.OperationCategory">
+        <LocalizationItem Name="Error" Value="错误" />
+        <LocalizationItem Name="Flow" Value="流程" />
+        <LocalizationItem Name="Operation" Value="操作" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="SampleCategory_ListView" Caption="任务分类" />
+          <Item Id="SampleLogIn_ListView" Caption="样品登录" />
+          <Item Id="SampleType_ListView" Caption="样品种类" />
+          <Item Id="Storage_ListView" Caption="库房" />
+          <Item Id="TestMethod_ListView" Caption="分析方法" />
+        </Items>
+      </Item>
+      <Item Id="SampleManagement" Caption="样品管理">
+        <Items>
+          <Item Id="SampleCheckin" Caption="样品接收" />
+          <Item Id="SampleLogin" Caption="样品登录" />
+        </Items>
+      </Item>
+      <Item Id="Settings" Caption="基础设置">
+        <Items>
+          <Item Id="Language" Caption="选择语言" />
+          <Item Id="Test Parameter" Caption="检测参数" />
+          <Item Id="SampleCategory" Caption="任务分类" />
+          <Item Id="SampleType" Caption="样品类型" />
+          <Item Id="Storage" Caption="库房" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <Rules>
+      <RuleCombinationOfPropertiesIsUnique Id="Matrix" Name="基质" />
+      <RuleRequiredField Id="MethodNumber" Name="方法编号" />
+      <RuleCombinationOfPropertiesIsUnique Id="Parameter" Name="参数" />
+    </Rules>
+  </Validation>
+  <Views>
+    <DetailView Id="Area_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Area" Caption="Area" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Company_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Company_col1">
+              <LayoutGroup Id="Auto2afc17e3-0d04-4402-9575-cda824770c02">
+                <LayoutGroup Id="Autof53dc83c-c4c8-4d58-bc01-c03533d38e4f">
+                  <TabbedGroup Id="Item2">
+                    <LayoutGroup Id="Item1" Caption="基础信息" />
+                    <LayoutGroup Id="Item3" Caption="联系人" />
+                    <LayoutGroup Id="Item4" Caption="图标" />
+                    <LayoutGroup Id="Item6" Caption="强制检测标志" />
+                  </TabbedGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CurrentLanguage_DetailView">
+      <Items>
+        <PropertyEditor Id="Chinese" Caption="中文" />
+        <PropertyEditor Id="English" Caption="英文" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CustomCountry_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CustomCountry" Caption="CustomCountry" />
+          </LayoutGroup>
+          <LayoutGroup Id="States_Group" Caption="省" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomSystemRole_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CustomSystemRole" Caption="批量导出" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Matrix_DetailView" Caption="基质">
+      <Items>
+        <PropertyEditor Id="MatrixCode" Caption="基质代码" />
+        <PropertyEditor Id="MatrixName" Caption="基质" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Matrix" Caption="基质" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Matrix_ListView" Caption="基质">
+      <Columns>
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+        <ColumnInfo Id="MatrixCode" Caption="基质代码" />
+      </Columns>
+    </ListView>
+    <ListView Id="Matrix_LookupListView" Caption="基质">
+      <Columns>
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Method_DetailView">
+      <Items>
+        <PropertyEditor Id="MethodCode" Caption="方法代码" />
+        <PropertyEditor Id="MethodNumber" Caption="方法编号" />
+      </Items>
+    </DetailView>
+    <ListView Id="Method_ListView">
+      <Columns>
+        <ColumnInfo Id="MethodCode" Caption="方法代码" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="Method_LookupListView">
+      <Columns>
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Navigation_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="导航编码" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Parameter_DetailView">
+      <Items>
+        <PropertyEditor Id="ParameterCode" Caption="分析因子代码" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Parameter" Caption="参数" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Parameter_ListView">
+      <Columns>
+        <ColumnInfo Id="ParameterCode" Caption="分析因子代码" />
+      </Columns>
+    </ListView>
+    <DetailView Id="QCType_DetailView">
+      <Items>
+        <PropertyEditor Id="QCRootRole" Caption="质控基本角色" />
+        <PropertyEditor Id="QCSource" Caption="质控源" />
+      </Items>
+    </DetailView>
+    <ListView Id="QCType_ListView">
+      <Columns>
+        <ColumnInfo Id="QCRootRole" Caption="质控基本角色" />
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleCategory_DetailView">
+      <Items>
+        <PropertyEditor Id="SampleCategoryName" Caption="任务分类" />
+      </Items>
+    </DetailView>
+    <ListView Id="SampleCategory_ListView">
+      <Columns>
+        <ColumnInfo Id="SampleCategoryName" Caption="任务分类" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView">
+      <Items>
+        <PropertyEditor Id="BroughtBy" Caption="送样人" />
+        <PropertyEditor Id="ClientAddress" Caption="委托单位地址" />
+        <PropertyEditor Id="ClientAddress2" Caption="委托单位地址" />
+        <PropertyEditor Id="ClientName" Caption="受检单位" />
+        <PropertyEditor Id="ClientPhone" Caption="委托单位电话" />
+        <PropertyEditor Id="Comment" Caption="备注" />
+        <PropertyEditor Id="CoolerId" Caption="样品冷却箱编号" />
+        <PropertyEditor Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <PropertyEditor Id="DueDate" Caption="交付日期" />
+        <PropertyEditor Id="JobID" Caption="工作编号" />
+        <PropertyEditor Id="NumberOfSample" Caption="样品数量" />
+        <PropertyEditor Id="PresevitiveCode" Caption="抑制剂代码" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目名称" />
+        <PropertyEditor Id="RecievedBy" Caption="受理人" />
+        <PropertyEditor Id="RecievedDate" Caption="接收时间" />
+      </Items>
+    </DetailView>
+    <ListView Id="Samplecheckin_ListView">
+      <Columns>
+        <ColumnInfo Id="Comment" Caption="备注" />
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="RecievedDate" Caption="接收时间" />
+        <ColumnInfo Id="RecievedBy" Caption="受理人" />
+        <ColumnInfo Id="ClientName" Caption="受检单位" />
+        <ColumnInfo Id="ClientAddress" Caption="委托单位地址" />
+        <ColumnInfo Id="ClientAddress2" Caption="委托单位地址" />
+        <ColumnInfo Id="ClientPhone" Caption="委托单位电话" />
+        <ColumnInfo Id="ProjectID" Caption="项目编号" />
+        <ColumnInfo Id="ProjectName" Caption="项目名称" />
+        <ColumnInfo Id="BroughtBy" Caption="送样人" />
+        <ColumnInfo Id="DueDate" Caption="交付日期" />
+        <ColumnInfo Id="PresevitiveCode" Caption="抑制剂代码" />
+        <ColumnInfo Id="CoolerId" Caption="样品冷却箱编号" />
+        <ColumnInfo Id="CoolerTemp" Caption="样品冷却箱温度" />
+        <ColumnInfo Id="NumberOfSample" Caption="样品数量" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleLogIn_DetailView">
+      <Items>
+        <PropertyEditor Id="ClientSampleID" Caption="委托样品名称" />
+        <PropertyEditor Id="CollectDate" Caption="采样日" />
+        <PropertyEditor Id="Collector" Caption="采样者" />
+        <PropertyEditor Id="CollectTime" Caption="采样时间" />
+        <PropertyEditor Id="FlowRate" Caption="流速" />
+        <PropertyEditor Id="JobID" Caption="工作编号" />
+        <PropertyEditor Id="ProjectID" Caption="项目编号" />
+        <PropertyEditor Id="ProjectName" Caption="项目名称" />
+        <PropertyEditor Id="QCSource" Caption="质控源" />
+        <PropertyEditor Id="QCType" Caption="质控种类" />
+        <PropertyEditor Id="Qty" Caption="物品数量" />
+        <PropertyEditor Id="SampleID" Caption="样品编号" />
+        <PropertyEditor Id="SampleType" Caption="样品类型" />
+        <PropertyEditor Id="SamplingLocation" Caption="采样点位" />
+        <PropertyEditor Id="Storage" Caption="库房" />
+        <PropertyEditor Id="TimeEnd" Caption="结束时间" />
+        <PropertyEditor Id="TimeStart" Caption="起始时间" />
+        <PropertyEditor Id="VisualMatrix" Caption="样品类型" />
+        <PropertyEditor Id="Volume" Caption="采样体积" />
+      </Items>
+    </DetailView>
+    <ListView Id="SampleLogIn_ListView">
+      <Columns>
+        <ColumnInfo Id="JobID" Caption="工作编号" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="ClientSampleID" Caption="委托样品名称" />
+        <ColumnInfo Id="VisualMatrix" Caption="样品类型" />
+        <ColumnInfo Id="CollectDate" Caption="采样日" />
+        <ColumnInfo Id="SampleType" Caption="样品类型" />
+        <ColumnInfo Id="CollectTime" Caption="采样时间" />
+        <ColumnInfo Id="Collector" Caption="采样者" />
+        <ColumnInfo Id="Qty" Caption="物品数量" />
+        <ColumnInfo Id="SamplingLocation" Caption="采样点位" />
+        <ColumnInfo Id="QCType" Caption="质控种类" />
+        <ColumnInfo Id="QCSource" Caption="质控源" />
+        <ColumnInfo Id="Storage" Caption="库房" />
+        <ColumnInfo Id="FlowRate" Caption="流速" />
+        <ColumnInfo Id="TimeStart" Caption="起始时间" />
+        <ColumnInfo Id="TimeEnd" Caption="结束时间" />
+        <ColumnInfo Id="Volume" Caption="采样体积" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleType_DetailView">
+      <Items>
+        <PropertyEditor Id="SampleTypeName" Caption="样品类型" />
+      </Items>
+    </DetailView>
+    <ListView Id="SampleType_ListView">
+      <Columns>
+        <ColumnInfo Id="SampleTypeName" Caption="样品类型" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleType_LookupListView">
+      <Columns>
+        <ColumnInfo Id="SampleTypeName" Caption="样品类型" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Storage_DetailView">
+      <Items>
+        <PropertyEditor Id="StorageID" Caption="库房编号" />
+        <PropertyEditor Id="StorageName" Caption="库房" />
+      </Items>
+    </DetailView>
+    <ListView Id="Storage_ListView">
+      <Columns>
+        <ColumnInfo Id="StorageName" Caption="库房" />
+        <ColumnInfo Id="StorageID" Caption="库房编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="Storage_LookupListView">
+      <Columns>
+        <ColumnInfo Id="StorageName" Caption="库房" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestMethod_DetailView">
+      <Items>
+        <PropertyEditor Id="MatrixName" Caption="基质" />
+        <PropertyEditor Id="MethodName" Caption="分析方法名称" />
+      </Items>
+    </DetailView>
+    <ListView Id="TestMethod_ListView">
+      <Columns>
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+      </Columns>
+    </ListView>
+    <DetailView Id="VisualMatrix_DetailView" Caption="样品类型">
+      <Items>
+        <PropertyEditor Id="MatrixName" Caption="基质" />
+        <PropertyEditor Id="VisualMatrixCode" Caption="样品类型代码" />
+        <PropertyEditor Id="VisualMatrixName" Caption="样品类型" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="VisualMatrix" Caption="样品类型" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="VisualMatrix_ListView" Caption="样品类型">
+      <Columns>
+        <ColumnInfo Id="VisualMatrixName" Caption="样品类型" />
+        <ColumnInfo Id="VisualMatrixCode" Caption="样品类型代码" />
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+      </Columns>
+    </ListView>
+    <ListView Id="VisualMatrix_LookupListView" Caption="样品类型">
+      <Columns>
+        <ColumnInfo Id="VisualMatrixName" Caption="样品类型" />
+        <ColumnInfo Id="VisualMatrixCode" Caption="样品类型代码" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

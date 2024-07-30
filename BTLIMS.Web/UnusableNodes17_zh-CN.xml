@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SampleWeighingBatchSequence_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCType" Caption="质控类型" />
+        <ColumnInfo Id="Sort" Caption="序号" />
+        <ColumnInfo Id="SampleID" Caption="样品编号" />
+        <ColumnInfo Id="SYSSamplecode" Caption="系统样品代码" />
+        <ColumnInfo Id="Test" Caption="检测项目" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

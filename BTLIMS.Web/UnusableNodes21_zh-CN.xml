@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Validation Id="Validation">
+    <Rules Id="Rules">
+      <RuleCombinationOfPropertiesIsUnique Id="CustomState" CustomMessageTemplate="省的名称必须唯一" />
+      <RuleRequiredField Id="Image.ImageUpload" Name="图片上传" />
+      <RuleRequiredField Id="JobID" Name="工作编号" />
+      <RuleRequiredField Id="Labware.LabwareName" CustomMessageTemplate="仪器器皿 不能为空" />
+      <RuleCombinationOfPropertiesIsUnique Id="SampleType" Name="样品分类" />
+      <RuleRequiredField Id="Term" Name="术语" />
+      <RuleRequiredField Id="VendorCatName" Name="供应商名称" />
+      <RuleCombinationOfPropertiesIsUnique Id="VisualMatrix" Name="样品基质" />
+    </Rules>
+  </Validation>
+</Application>

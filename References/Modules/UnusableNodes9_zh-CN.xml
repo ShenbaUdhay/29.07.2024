@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Hr.CustomSystemRole">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CustomUsers" Caption="用户" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.CustomSystemUser">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CustomRoles" Caption="角色" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

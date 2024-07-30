@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Preservative_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="TestMethods" Caption="分析方法" />
+      </Items>
+    </DetailView>
+    <ListView Id="Preservative_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TestMethods" Caption="分析方法" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

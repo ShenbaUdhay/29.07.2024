@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Tasks_FieldDataEntry_Attachments_ListView" Caption="附件">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+        <ColumnInfo Id="CreatedDate" Caption="创建日期" />
+        <ColumnInfo Id="Name" Caption="名称" />
+        <ColumnInfo Id="Attachments" Caption="上传文件" />
+        <ColumnInfo Id="Date" Caption="作者" />
+        <ColumnInfo Id="Operator" Caption="操作" />
+      </Columns>
+    </ListView>
+    <ListView Id="Samplecheckin_Attachments_ListView_ReceiptNotification" Caption="附件">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreatedBy" Caption="批次创建人" />
+        <ColumnInfo Id="CreatedDate" Caption="创建日期" />
+        <ColumnInfo Id="Name" Caption="名称" />
+        <ColumnInfo Id="Attachments" Caption="上传文件" />
+        <ColumnInfo Id="Date" Caption="作者" />
+        <ColumnInfo Id="Operator" Caption="操作" />
+      </Columns>
+    </ListView>
+    <ListView Id="Invoice_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DueDate" Caption="提交日期" />
+      </Columns>
+    </ListView>
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.ContractManagement.Attachment" Caption="附件">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Attachments" Caption="上传文件" />
+        <Member Name="Category" Caption="方案取消" />
+        <Member Name="CreatedBy" Caption="批次创建人" />
+        <Member Name="CreatedDate" Caption="创建日期" />
+        <Member Name="Date" Caption="作者" />
+        <Member Name="ModifiedBy" Caption="变更人" />
+        <Member Name="ModifiedDate" Caption="变更时间" />
+        <Member Name="Name" Caption="名称" />
+        <Member Name="Operator" Caption="操作" />
+        <Member Name="SuboutSampleRegistration" Caption="分包样品登记" />
+        <Member Name="TaskRegistration" Caption="任务登记" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <CreatableItems Id="CreatableItems">
+    <CreatableItem ClassName="Modules.BusinessObjects.ContractManagement.Attachment" Caption="附件" />
+  </CreatableItems>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Modules.BusinessObjects.ContractManagement.Category" Value="方案取消" />
+    </LocalizationGroup>
+  </Localization>
+</Application>

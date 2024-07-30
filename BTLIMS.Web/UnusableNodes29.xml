@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Samplecheckin_DetailView_Copy_SampleRegistration">
+      <Items Id="Items">
+        <PropertyEditor Id="TechnicalData" PropertyName="TechnicalData" />
+        <PropertyEditor Id="Specification" PropertyName="Specification" Caption="Model/Specification" />
+        <PropertyEditor Id="ComponentName" PropertyName="ComponentName" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto8fc6667c-ae60-46fe-b07c-8d6cf4096192">
+              <LayoutGroup Id="Item7">
+                <LayoutGroup Id="Autoe8a2e942-6f58-4df7-b022-827313c44636">
+                  <LayoutItem Id="ComponentName" ViewItem="ComponentName" />
+                  <LayoutItem Id="TechnicalData" ViewItem="TechnicalData" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autodbc89dc6-ff63-4bc9-a2d0-feb0147ab1bc">
+                  <LayoutItem Id="Specification" ViewItem="Specification" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QCBatch_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="qcreset" ActionContainer="qcreset" />
+        <ActionContainerViewItem Id="qcload" ActionContainer="qcload" />
+      </Items>
+    </DetailView>
+    <DetailView Id="TestMethod_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autof41af155-9776-4c91-848f-f62f0a69ca8f">
+              <LayoutGroup Id="Autoe423ea68-cf7b-493f-9322-4b5229229eac">
+                <LayoutGroup Id="Auto58b13ec3-7ee9-4865-b86f-9fbcfb63921c">
+                  <LayoutGroup Id="Autoe3a35350-4a18-477c-a7ab-e1f71b88ba8c">
+                    <LayoutItem Id="Container" ViewItem="Container" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="System">
+        <Items Id="Items">
+          <Item Id="TestGroup" ViewId="TestGroup_ListView" />
+          <Item Id="TestForm" ViewId="TestForm_LookupListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

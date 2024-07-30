@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Image_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ImageUpload" Caption="图片上传" />
+      </Columns>
+    </ListView>
+  </Views>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="LimitSetup" Caption="默认" />
+    </Actions>
+  </ActionDesign>
+  <Validation Id="Validation">
+    <Rules Id="Rules">
+      <RuleCombinationOfPropertiesIsUnique Id="Preservative" Name="防腐剂" />
+      <RuleCombinationOfPropertiesIsUnique Id="QCType" Name="质控类型" />
+      <RuleCombinationOfPropertiesIsUnique Id="SampleCategory" Name="任务分类" />
+      <RuleRequiredField Id="SampleCategoryName" Name="任务分类" />
+      <RuleCombinationOfPropertiesIsUnique Id="VisualMatrix" Name="视觉矩阵" />
+    </Rules>
+  </Validation>
+</Application>

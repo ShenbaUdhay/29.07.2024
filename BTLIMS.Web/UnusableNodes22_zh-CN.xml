@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Distribution_ListView_ReceiveViewDirect">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Category" Caption="类别" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

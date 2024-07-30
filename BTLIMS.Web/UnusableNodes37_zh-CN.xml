@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="RemoveReportAction" ToolTip="删除" ShortCaption="删除" Caption="删除" />
+      <Action Id="addReportToPackageAction" ToolTip="加" ShortCaption="加" Caption="加" />
+      <Action Id="editReportPackageAction" Caption="编辑" />
+    </Actions>
+  </ActionDesign>
+</Application>

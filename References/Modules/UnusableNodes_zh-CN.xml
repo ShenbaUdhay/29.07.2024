@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.CodingRule.DocumentCodingRule" Caption="规则使用">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="DocumentName" Caption="单据名称" />
+        <Member Name="Description" Caption="备注" />
+        <Member Name="Belongs" Caption="使用编号规则" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

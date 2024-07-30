@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.Hr.Employee">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="FullNameCN" Index="" />
+        <Member Name="FullNameEN" Index="" Caption="Full Name" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="Employee_ListView_Qualifications">
+      <Columns Id="Columns">
+        <ColumnInfo Id="FullNameCN" PropertyName="FullNameCN" Width="84" Index="1" />
+        <ColumnInfo Id="FullNameEN" PropertyName="FullNameEN" View="" Width="70" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView_Qualifications">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="MeasureQualifications">
+              <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Roles" View="PermissionPolicyUser_Roles_ListView" />
+      </Items>
+    </DetailView>
+    <ListView Id="Company_Employees_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="FullNameEN" Index="-1" />
+        <ColumnInfo Id="FullNameCN" Index="0" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Customer_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Customer">
+              <LayoutGroup Id="Customer_col2">
+                <LayoutItem Id="Project" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Customer_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Project" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Department_Employees_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="FullNameEN" Index="-1" />
+        <ColumnInfo Id="FullNameCN" Width="111" SortIndex="-1" SortOrder="None" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Employee">
+                <LayoutGroup Id="Employee_col2">
+                  <LayoutItem Id="Photo3" ViewItem="Photo3" />
+                  <LayoutItem Id="Signature3" ViewItem="Signature3" />
+                  <LayoutItem Id="Signature2" ViewItem="Signature2" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Employee_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="FullNameEN" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Employee_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="FullNameCN" PropertyName="FullNameCN" Index="0" Width="233" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleCategory_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SampleCategory">
+              <LayoutItem Id="Samplecheckin" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SampleCategory_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Samplecheckin" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Samplecheckin">
+              <LayoutGroup Id="Samplecheckin_col2">
+                <LayoutItem Id="ProjectName" RelativeSize="15.384615384615385" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

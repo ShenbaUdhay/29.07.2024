@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="FileUploadCollectionVRC_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="FileAttachmentBase" Index="0" RelativeSize="100">
+              <LayoutItem Id="File" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="VendorReagentCertificate_Group" Caption="Vendor Reagent Certificate" RelativeSize="91.1214953271028" Removed="True">
+            <LayoutItem Id="VendorReagentCertificate" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="VendorReagentCertificate_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Catelog" AllowEdit="False" />
+        <PropertyEditor Id="Department" AllowEdit="False" />
+        <PropertyEditor Id="Item" LookupProperty="items" AllowEdit="False" />
+        <PropertyEditor Id="LoadedBy" AllowEdit="False" />
+        <PropertyEditor Id="LoadedDate" AllowEdit="False" />
+        <PropertyEditor Id="LT" AllowEdit="False" />
+        <PropertyEditor Id="POID" LookupProperty="POID" AllowEdit="False" />
+        <PropertyEditor Id="ReceiveID" AllowEdit="False" />
+        <PropertyEditor Id="Requestor" AllowEdit="False" />
+        <PropertyEditor Id="RQID" AllowEdit="False" />
+        <PropertyEditor Id="Upload" Caption="Upload Certidicates" />
+        <PropertyEditor Id="Vendor" LookupProperty="Vendor" AllowEdit="False" />
+        <PropertyEditor Id="VendorLT" AllowEdit="False" />
+      </Items>
+    </DetailView>
+    <ListView Id="VendorReagentCertificate_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="VendorLT" GroupIndex="0" />
+        <ColumnInfo Id="Vendor" LookupProperty="Vendor" />
+        <ColumnInfo Id="Item" LookupProperty="items" />
+        <ColumnInfo Id="LoadedBy" AllowEdit="True" />
+        <ColumnInfo Id="LoadedDate" AllowEdit="True" />
+        <ColumnInfo Id="POID" LookupProperty="POID" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Requisition_DetailView_Receive">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Description" ViewItem="Description" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Requisition">
+              <LayoutGroup Id="Requisition_col1">
+                <LayoutItem Id="PackUnits" ViewItem="PackUnits" />
+                <LayoutItem Id="StockQty" ViewItem="StockQty" />
+                <LayoutItem Id="Brand" ViewItem="Brand" />
+                <LayoutItem Id="Vendor" ViewItem="Vendor" />
+                <LayoutItem Id="Category" ViewItem="Category" />
+                <LayoutItem Id="Grade" ViewItem="Grade" />
+                <LayoutItem Id="Specification" ViewItem="Specification" />
+                <LayoutItem Id="ItemCode" ViewItem="ItemCode" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="CopyPermission_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CopyPermission">
+              <LayoutGroup Id="Auto6016baa5-1e29-4a9e-bb8e-73ca15ea8eed">
+                <LayoutItem Id="strUser" ViewItem="strUser" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="ICM">
+        <Items Id="Items">
+          <Item Id="Operations">
+            <Items Id="Items">
+              <Item Id="VendorReagentCertificate" ViewId="VendorReagentCertificate_ListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

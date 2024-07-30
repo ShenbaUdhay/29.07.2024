@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="RegistrationBatchLabwareActionContainer" IsNewNode="True">
+        <ActionLink ActionId="RegistrationBatchLabwareAction" IsNewNode="True" />
+      </ActionContainer>
+      <ActionContainer Id="RegistrationLabwareActionContainer" IsNewNode="True">
+        <ActionLink ActionId="RegistrationLabwareAction" IsNewNode="True" />
+      </ActionContainer>
+      <ActionContainer Id="SearchTestItemActionContainer" IsNewNode="True">
+        <ActionLink ActionId="BizSearchTestItemAction" IsNewNode="True" />
+      </ActionContainer>
+      <ActionContainer Id="Security">
+        <ActionLink ActionId="Logoff" Index="9" />
+      </ActionContainer>
+      <ActionContainer Id="SymbolActionContainer" IsNewNode="True">
+        <ActionLink ActionId="SymbolAction" IsNewNode="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="Modules.BusinessObjects.Hr.CustomCountry" Caption="Country" />
+    <Class Name="Modules.BusinessObjects.Hr.CustomState" Caption="State" />
+    <Class Name="Modules.BusinessObjects.Hr.CustomSystemRole" Caption="System Role" />
+    <Class Name="Modules.BusinessObjects.Hr.CustomSystemUser" Caption="System User" />
+    <Class Name="Modules.BusinessObjects.Hr.Department">
+      <OwnMembers>
+        <Member Name="Parent" DataSourceCriteria="[Company] = CurrentCompanyOid()" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.Employee">
+      <OwnMembers>
+        <Member Name="Department" DataSourceCriteria="[Company] = CurrentCompanyOid()" />
+        <Member Name="Position" DataSourceCriteria="[Company] = CurrentCompanyOid()" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.Hr.Navigation">
+      <OwnMembers>
+        <Member Name="NavigationId" RowCount="1" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Modules.BusinessObjects.SampleManagement.SampleLogIn" Caption="样品登录" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="DataEntry" Caption="Data Entry" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Result Entry" ViewId="SampleParameter_ListView" Caption="Result Entry" Index="0" IsNewNode="True" />
+          <Item Id="Result Validation" Caption="Result Validation" Index="1" ViewId="SampleParameter_ListView_Copy_ResultValidation" IsNewNode="True" />
+          <Item Id="Result Approval" Index="2" ViewId="SampleParameter_ListView_Copy_ResultApproval" Caption="Result Approval" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="SampleManagement" Caption="Sample Management" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="SampleCheckin" ViewId="Samplecheckin_ListView" ObjectKey="" Caption="Sample Checkin" IsNewNode="True" />
+          <Item Id="SampleLogin" ViewId="SampleLogIn_ListView" Caption="Sample LogIn" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Settings" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Language" ViewId="CurrentLanguage_ListView" Index="0" IsNewNode="True" />
+          <Item Id="Matrix" ViewId="Matrix_ListView" Index="1" IsNewNode="True" />
+          <Item Id="VisualMatrix" ViewId="VisualMatrix_ListView" Index="2" IsNewNode="True" />
+          <Item Id="Test" ViewId="Test_ListView" Index="3" IsNewNode="True" />
+          <Item Id="Method" ViewId="Method_ListView" Index="4" IsNewNode="True" />
+          <Item Id="Parameter" ViewId="Parameter_ListView" Index="5" IsNewNode="True" />
+          <Item Id="Test Parameter" ViewId="TestMethod_ListView" Caption="Test Parameter" Index="6" IsNewNode="True" />
+          <Item Id="QCType" ViewId="QCType_ListView" Index="7" IsNewNode="True" />
+          <Item Id="SampleCategory" ViewId="SampleCategory_ListView" Index="8" IsNewNode="True" />
+          <Item Id="SampleType" ViewId="SampleType_ListView" Index="9" IsNewNode="True" />
+          <Item Id="Storage" ViewId="Storage_ListView" Index="10" IsNewNode="True" />
+          <Item Id="Unit" ViewId="Unit_ListView" Index="11" IsNewNode="True" />
+          <Item Id="Project" ViewId="Project_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options LookupSmallCollectionItemCount="0">
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="20.1.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerAspNetModule" Version="20.1.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="20.1.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="20.1.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Area_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Area" RelativeSize="100" Direction="Vertical" Caption="Area Number">
+              <LayoutItem Id="AreaName" ViewItem="AreaName" Index="0" RelativeSize="4.2666666666666666" IsNewNode="True" Removed="True" />
+              <LayoutItem Id="City" ViewItem="City" Index="1" RelativeSize="95.733333333333334" IsNewNode="True" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Area_ListView" Criteria="">
+      <Columns>
+        <ColumnInfo Id="AreaName" Index="1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="City_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="8.2666666666666675">
+            <LayoutGroup Id="City" RelativeSize="100">
+              <LayoutItem Id="CityName" RelativeSize="51.612903225806448" />
+              <LayoutItem Id="State" RelativeSize="48.387096774193552" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Areas_Group" Direction="Vertical" RelativeSize="91.733333333333334">
+            <LayoutItem Id="Areas" ShowCaption="False" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="City_ListView">
+      <Columns>
+        <ColumnInfo Id="CityName" Index="1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Company_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="38.96907216494845" Direction="Vertical">
+            <LayoutGroup Id="Company_col1" ShowCaption="False" Index="0" RelativeSize="100" Direction="Vertical" IsNewNode="True">
+              <LayoutGroup Id="Auto2afc17e3-0d04-4402-9575-cda824770c02" ShowCaption="False" Index="0" RelativeSize="100" Direction="Vertical" IsNewNode="True">
+                <LayoutGroup Id="Autof53dc83c-c4c8-4d58-bc01-c03533d38e4f" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                  <TabbedGroup Id="Item2" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+                    <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="0" RelativeSize="100" Caption="Basic Information" IsNewNode="True">
+                      <LayoutGroup Id="Autobc490310-3bc1-4948-a5ef-939a5e7669b8" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                        <LayoutGroup Id="Auto6f9f8c64-7c64-4024-bd6d-568792befad0" ShowCaption="False" Direction="Horizontal" Index="0" RelativeSize="77.464788732394368" IsNewNode="True">
+                          <LayoutGroup Id="Auto8059c483-7687-4ce4-b5e1-d6214f74db61" ShowCaption="False" Index="0" RelativeSize="49.275362318840578" IsNewNode="True">
+                            <LayoutItem Id="CompanyName" ViewItem="CompanyName" Index="0" RelativeSize="29.09090909090909" IsNewNode="True" />
+                            <LayoutItem Id="WebSite" ViewItem="WebSite" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
+                            <LayoutItem Id="Address" ViewItem="Address" Index="2" RelativeSize="21.818181818181817" IsNewNode="True" />
+                            <LayoutItem Id="Language" ViewItem="Language" Index="3" RelativeSize="27.272727272727273" IsNewNode="True" />
+                          </LayoutGroup>
+                          <LayoutGroup Id="Auto8fd567b2-3a51-4e5f-93b0-1223a4a99313" ShowCaption="False" Index="1" RelativeSize="50.724637681159422" IsNewNode="True">
+                            <LayoutItem Id="Country" ViewItem="Country" Index="0" RelativeSize="29.09090909090909" IsNewNode="True" />
+                            <LayoutItem Id="State" ViewItem="State" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
+                            <LayoutItem Id="City" ViewItem="City" Index="2" RelativeSize="21.818181818181817" IsNewNode="True" />
+                            <LayoutItem Id="IsValid" ViewItem="IsValid" Index="3" RelativeSize="27.272727272727273" IsNewNode="True" />
+                          </LayoutGroup>
+                        </LayoutGroup>
+                        <LayoutItem Id="Remark" ViewItem="Remark" Index="1" RelativeSize="22.535211267605632" IsNewNode="True" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                    <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" RelativeSize="100" Caption="Contact " IsNewNode="True">
+                      <LayoutItem Id="ContactName" ViewItem="ContactName" Index="0" RelativeSize="22.535211267605632" IsNewNode="True" />
+                      <LayoutGroup Id="Auto11ffb61c-1050-458f-8039-99b4b60b1efa" ShowCaption="False" Direction="Horizontal" Index="1" RelativeSize="77.464788732394368" IsNewNode="True">
+                        <LayoutGroup Id="Auto3d27bd61-03ac-42ed-8ce6-988d968a409b" ShowCaption="False" Index="0" RelativeSize="49.275362318840578" IsNewNode="True">
+                          <LayoutItem Id="OfficePhone" ViewItem="OfficePhone" Index="0" RelativeSize="27.272727272727273" IsNewNode="True" />
+                          <LayoutItem Id="MobilePhone" ViewItem="MobilePhone" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
+                          <LayoutItem Id="Fax" ViewItem="Fax" Index="2" RelativeSize="50.909090909090907" IsNewNode="True" />
+                        </LayoutGroup>
+                        <LayoutGroup Id="Autoe38a6c19-cf36-412c-b00c-cdc4b21a322f" ShowCaption="False" Index="1" RelativeSize="50.724637681159422" IsNewNode="True">
+                          <LayoutItem Id="HomePhone" ViewItem="HomePhone" Index="0" RelativeSize="27.272727272727273" IsNewNode="True" />
+                          <LayoutItem Id="OtherPhone" ViewItem="OtherPhone" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
+                          <LayoutItem Id="Email" ViewItem="Email" Index="2" RelativeSize="50.909090909090907" IsNewNode="True" />
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                    <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="2" RelativeSize="100" IsNewNode="True">
+                      <LayoutItem Id="Logo" ViewItem="Logo" Index="0" RelativeSize="100" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Item5" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="3" RelativeSize="100" IsNewNode="True">
+                      <LayoutItem Id="QRCode" ShowCaption="True" ViewItem="QRCode" Index="0" RelativeSize="100" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Item6" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="4" RelativeSize="100" Caption="Mandatory Testing Flag" IsNewNode="True">
+                      <LayoutItem Id="MeasureCVFlag" ViewItem="MeasureCVFlag" Index="0" RelativeSize="100" IsNewNode="True" />
+                    </LayoutGroup>
+                  </TabbedGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Company" RelativeSize="100" Removed="True">
+              <LayoutGroup Id="Company_col1" RelativeSize="50">
+                <LayoutItem Id="WebSite" ViewItem="WebSite" Index="2" RelativeSize="36" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="CompanyCode" RelativeSize="36" />
+                <LayoutItem Id="CompanyName" RelativeSize="28" />
+              </LayoutGroup>
+              <LayoutGroup Id="Company_col2" RelativeSize="50">
+                <LayoutItem Id="Country" RelativeSize="36" />
+                <LayoutItem Id="IsValid" RelativeSize="36" />
+                <LayoutItem Id="Language" RelativeSize="28" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="61.03092783505155" Index="1">
+            <LayoutGroup Id="Employees" RelativeSize="100" Index="0">
+              <LayoutItem Id="Employees" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Departments" RelativeSize="100" Index="1">
+              <LayoutItem Id="Departments" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Positions" RelativeSize="100" Index="2">
+              <LayoutItem Id="Positions" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="6.804123711340206" Direction="Horizontal" Removed="True">
+            <LayoutItem Id="Address" ViewItem="Address" Index="0" RelativeSize="47.368421052631582" Removed="True" />
+            <LayoutItem Id="Remark" Index="0" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Company_Employees_ListView" Criteria="[Company.Oid] = CurrentCompanyOid() And ([UserName] = CurrentUserName() Or IsAdmin() = '1' Or IsAdministrative() = '1') And [UserName] &lt;&gt; 'Administrator' And [UserName] &lt;&gt; 'admin'">
+      <Columns>
+        <ColumnInfo Id="Birthday" Index="-1" />
+        <ColumnInfo Id="City" Index="-1" />
+        <ColumnInfo Id="Country" Index="-1" />
+        <ColumnInfo Id="EmploymentDate" Index="-1" />
+        <ColumnInfo Id="Fax" Index="-1" />
+        <ColumnInfo Id="FirstName" Index="-1" />
+        <ColumnInfo Id="Gender" Index="-1" />
+        <ColumnInfo Id="HomePhone" Index="-1" />
+        <ColumnInfo Id="IsEnabledLanguage" Index="-1" />
+        <ColumnInfo Id="Language" Index="-1" />
+        <ColumnInfo Id="LastName" Index="-1" />
+        <ColumnInfo Id="OtherPhone" Index="-1" />
+        <ColumnInfo Id="Photo" Index="-1" />
+        <ColumnInfo Id="RetireDate" Index="-1" />
+        <ColumnInfo Id="State" Index="-1" />
+        <ColumnInfo Id="Zip" Index="-1" />
+        <ColumnInfo Id="UserName" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Company_ListView" Criteria="[Oid] = CurrentCompanyOid()">
+      <Columns>
+        <ColumnInfo Id="City" Index="-1" />
+        <ColumnInfo Id="Country" Index="-1" />
+        <ColumnInfo Id="Fax" Index="-1" />
+        <ColumnInfo Id="HomePhone" Index="-1" />
+        <ColumnInfo Id="OtherPhone" Index="-1" />
+        <ColumnInfo Id="State" Index="-1" />
+        <ColumnInfo Id="WebSite" Index="-1" />
+        <ColumnInfo Id="CompanyName" Index="1" />
+        <ColumnInfo Id="ContactName" Index="2" />
+        <ColumnInfo Id="OfficePhone" Index="3" />
+        <ColumnInfo Id="MobilePhone" Index="4" />
+        <ColumnInfo Id="Logo" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="Company_LookupListView" Filter="" Criteria="[Oid] = CurrentCompanyOid()" />
+    <DetailView Id="CustomCountry_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="22.680412371134022" Direction="Horizontal">
+            <LayoutGroup Id="CustomCountry_col1" ShowCaption="False" Index="0" RelativeSize="52.961672473867594" IsNewNode="True">
+              <LayoutItem Id="ChineseLongName" ViewItem="ChineseLongName" Index="0" RelativeSize="29.09090909090909" IsNewNode="True" />
+              <LayoutItem Id="ChineseShortName" ViewItem="ChineseShortName" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
+              <LayoutItem Id="EnglishLongName" ViewItem="EnglishLongName" Index="2" RelativeSize="21.818181818181817" IsNewNode="True" />
+              <LayoutItem Id="EnglishShortName" ViewItem="EnglishShortName" Index="3" RelativeSize="27.272727272727273" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="CustomCountry_col2" ShowCaption="False" Index="1" RelativeSize="47.038327526132406" IsNewNode="True">
+              <LayoutItem Id="NationalFlag" ViewItem="NationalFlag" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="CustomCountry" RelativeSize="100" Removed="True">
+              <LayoutGroup Id="Autoc0f90f12-a73d-416e-a79c-301bb1c86149" ShowCaption="False" Direction="Horizontal" Index="0" RelativeSize="67.3913043478261" IsNewNode="True">
+                <LayoutGroup Id="Auto6d01052f-8ac6-417e-9eff-acb180cea70c" ShowCaption="False" Index="0" RelativeSize="49.835345773874863" IsNewNode="True">
+                  <LayoutItem Id="Name" ViewItem="Name" Index="0" RelativeSize="51.612903225806448" IsNewNode="True" />
+                  <LayoutItem Id="ChineseAcronym" ViewItem="ChineseAcronym" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Auto2dda1537-74a0-4641-aa92-24cff647dfce" ShowCaption="False" Index="1" RelativeSize="50.164654226125137" IsNewNode="True">
+                  <LayoutItem Id="EnglishName" ViewItem="EnglishName" Index="0" RelativeSize="51.612903225806448" IsNewNode="True" />
+                  <LayoutItem Id="EnglishAcronym" ViewItem="EnglishAcronym" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="States_Group" Direction="Vertical" RelativeSize="77.319587628865975">
+            <LayoutItem Id="States" RelativeSize="100" ShowCaption="False" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Customer_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="47.27592267135325">
+            <LayoutGroup Id="Customer" RelativeSize="100">
+              <LayoutGroup Id="Customer_col1" RelativeSize="49.906890130353815">
+                <LayoutItem Id="Type" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="AnnualRevenue" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="NumberOfEmployees" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Industry" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Zone" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="PrimaryContact" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="OfficePhone" RelativeSize="13.793103448275861" />
+              </LayoutGroup>
+              <LayoutGroup Id="Customer_col2" RelativeSize="50.093109869646185" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="30.052724077328648">
+            <LayoutItem Id="Address" RelativeSize="31.578947368421051" />
+            <LayoutItem Id="Address1" RelativeSize="35.087719298245617" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomLogonParameters_DetailView">
+      <Items>
+        <ActionContainerViewItem Id="conn" ActionContainer="Conn" Caption="conn(6)" IsNewNode="True" />
+        <StaticImage Id="LogInImage" SizeMode="CenterImage" ImageName="LogOn" Caption="LogInImage(7)" IsNewNode="True" />
+        <StaticText Id="txtLogIn" Text="Welcome To SDMS" Caption="txtLogIn(12)" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="CustomLogonParameters" RelativeSize="100" Direction="Vertical" Caption="CustomLogonParameters">
+              <LayoutGroup Id="Autoe955ae48-2eaa-466c-88e8-fbefb6860173" ShowCaption="False" Caption="Autoe955ae48-2eaa-466c-88e8-fbefb6860173(5)" Index="0" RelativeSize="100" Direction="Horizontal" IsNewNode="True">
+                <LayoutGroup Id="Autoaa38c380-dd73-4b33-acb6-8914f450da7d" ShowCaption="False" Caption="" Index="0" RelativeSize="22.377622377622377" IsNewNode="True">
+                  <LayoutItem Id="Item3" Index="0" RelativeSize="2.197802197802198" IsNewNode="True" />
+                  <LayoutItem Id="LogInImage" ViewItem="LogInImage" Index="1" RelativeSize="97.8021978021978" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autod9973b10-71b1-42ec-9226-da2b8503d7ff" ShowCaption="False" Caption="Autod9973b10-71b1-42ec-9226-da2b8503d7ff(6)" Index="1" RelativeSize="77.622377622377627" IsNewNode="True">
+                  <LayoutGroup Id="Autoab7e0b13-5e68-405c-9094-130160eb69a6" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="5.4945054945054945" IsNewNode="True">
+                    <LayoutItem Id="txtLogIn" ViewItem="txtLogIn" Index="0" RelativeSize="49.849849849849846" IsNewNode="True" />
+                    <LayoutItem Id="Item2" Index="1" RelativeSize="50.150150150150154" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutItem Id="UserName" ViewItem="UserName" Index="1" RelativeSize="5.2747252747252746" IsNewNode="True" />
+                  <LayoutItem Id="Password" ViewItem="Password" Index="2" RelativeSize="5.2747252747252746" IsNewNode="True" />
+                  <LayoutGroup Id="Auto91ada543-7f40-448a-822d-2af88bc586cb" ShowCaption="False" Caption="Auto91ada543-7f40-448a-822d-2af88bc586cb(9)" Direction="Vertical" Index="3" RelativeSize="83.956043956043956" IsNewNode="True">
+                    <LayoutGroup Id="Auto1e292fe4-1eab-4463-b7de-74511f0893df" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="8.9005235602094235" IsNewNode="True">
+                      <LayoutItem Id="conn" ViewItem="conn" Index="0" RelativeSize="27.327327327327328" IsNewNode="True" />
+                      <LayoutItem Id="Item1" Index="1" RelativeSize="72.672672672672675" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutItem Id="Item4" Index="1" RelativeSize="91.099476439790578" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="Password" RelativeSize="48.387096774193552" Removed="True" />
+              <LayoutItem Id="UserName" RelativeSize="51.612903225806448" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomState_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="8.2666666666666675">
+            <LayoutGroup Id="CustomState" RelativeSize="100">
+              <LayoutItem Id="Country" RelativeSize="48.387096774193552" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Cities_Group" Direction="Vertical" RelativeSize="91.733333333333334">
+            <LayoutItem Id="Cities" ShowCaption="False" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CustomState_ListView">
+      <Columns>
+        <ColumnInfo Id="Country" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CustomSystemRole_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="17.373737373737374">
+            <LayoutGroup Id="CustomSystemRole" Direction="Horizontal" RelativeSize="22.857142857142858" Removed="True">
+              <LayoutItem Id="IsBatchExport" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="82.62626262626263">
+            <LayoutGroup Id="TypePermissions" RelativeSize="100" Index="0">
+              <LayoutItem Id="TypePermissions" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Users" RelativeSize="100" Index="0" Removed="True">
+              <LayoutItem Id="Users" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Navigations" RelativeSize="100" Index="3" Removed="True">
+              <LayoutItem Id="Navigations" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CustomSystemRole_ListView" Criteria="[Company] = CurrentCompanyOid() Or IsAdministrative() = '1'" />
+    <DetailView Id="CustomSystemUser_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="11.466666666666667" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CustomSystemUser_ListView" Criteria="[UserName] &lt;&gt; 'Administrator'" />
+    <DetailView Id="Department_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="17.7319587628866">
+            <LayoutGroup Id="Department" RelativeSize="100">
+              <LayoutItem Id="Name" RelativeSize="37.2093023255814" />
+              <LayoutItem Id="Parent" RelativeSize="27.906976744186046" />
+              <LayoutItem Id="Sort" RelativeSize="34.883720930232556" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="82.268041237113408">
+            <LayoutGroup Id="Employees" RelativeSize="100">
+              <LayoutItem Id="Employees" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Children" Caption="Child Department" RelativeSize="100">
+              <LayoutItem Id="Children" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Department_Employees_ListView">
+      <Columns>
+        <ColumnInfo Id="Country" Index="-1" />
+        <ColumnInfo Id="Fax" Index="-1" />
+        <ColumnInfo Id="FirstName" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="HomePhone" Index="-1" />
+        <ColumnInfo Id="IsEnabledLanguage" Index="-1" />
+        <ColumnInfo Id="Language" Index="-1" />
+        <ColumnInfo Id="LastName" Index="-1" />
+        <ColumnInfo Id="OtherPhone" Index="-1" />
+        <ColumnInfo Id="Photo" Index="-1" />
+        <ColumnInfo Id="RetireDate" Index="-1" />
+        <ColumnInfo Id="Signature" Index="-1" />
+        <ColumnInfo Id="Zip" Index="-1" />
+        <ColumnInfo Id="Gender" Index="1" />
+        <ColumnInfo Id="State" Index="2" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="City" Index="3" />
+        <ColumnInfo Id="Birthday" Index="4" />
+        <ColumnInfo Id="Position" Index="5" />
+        <ColumnInfo Id="OfficePhone" Index="6" />
+        <ColumnInfo Id="MobilePhone" Index="7" />
+        <ColumnInfo Id="EmploymentDate" Index="8" />
+      </Columns>
+    </ListView>
+    <ListView Id="Department_ListView" Criteria="[Company] = CurrentCompanyOid()" IsGroupPanelVisible="False" AutoExpandAllGroups="True">
+      <Columns>
+        <ColumnInfo Id="Name" Index="1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <TabbedGroup Id="Item2" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Employee" ShowCaption="True" Direction="Horizontal" Index="0" RelativeSize="100" Caption="Basic Information" IsNewNode="True">
+                <LayoutGroup Id="Employee_col1" ShowCaption="False" Index="0" RelativeSize="46.8671679197995" IsNewNode="True">
+                  <LayoutItem Id="FirstName" ViewItem="FirstName" Index="0" RelativeSize="7.8239608801955987" IsNewNode="True" />
+                  <LayoutItem Id="LastName" ViewItem="LastName" Index="1" RelativeSize="5.8679706601467" IsNewNode="True" />
+                  <LayoutItem Id="Gender" ViewItem="Gender" Index="2" RelativeSize="5.8679706601467" IsNewNode="True" />
+                  <LayoutItem Id="Birthday" ViewItem="Birthday" Index="3" RelativeSize="5.8679706601467" IsNewNode="True" />
+                  <LayoutItem Id="Signature" ViewItem="Signature" Index="4" RelativeSize="74.5721271393643" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Employee_col2" ShowCaption="False" Index="1" RelativeSize="53.1328320802005" IsNewNode="True">
+                  <LayoutItem Id="Photo" ViewItem="Photo" Index="0" RelativeSize="7.8239608801955987" IsNewNode="True" />
+                  <LayoutItem Id="Signature2" ViewItem="Signature2" Index="1" RelativeSize="16.136919315403421" IsNewNode="True" />
+                  <LayoutItem Id="Signature3" ViewItem="Signature3" Index="2" RelativeSize="16.136919315403421" IsNewNode="True" />
+                  <LayoutItem Id="Photo3" ViewItem="Photo3" Index="3" RelativeSize="59.902200488997558" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" RelativeSize="100" Caption="Organization" IsNewNode="True">
+                <LayoutGroup Id="Auto1d720e82-fe67-45bd-8cd5-60eaacfdd01c" ShowCaption="False" Direction="Vertical" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutGroup Id="Autoc0c8cfc1-89cc-4b70-8aea-ff6fbd360b61" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                    <LayoutItem Id="Department" ViewItem="Department" Index="0" RelativeSize="7.8239608801955987" IsNewNode="True" />
+                    <LayoutItem Id="Position" ViewItem="Position" Index="1" RelativeSize="5.8679706601467" IsNewNode="True" />
+                    <LayoutItem Id="EmploymentDate" ViewItem="EmploymentDate" Index="2" RelativeSize="5.8679706601467" IsNewNode="True" />
+                    <LayoutItem Id="RetireDate" ViewItem="RetireDate" Index="3" RelativeSize="80.440097799511008" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item5" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="2" RelativeSize="100" Caption="Contact" IsNewNode="True">
+                <LayoutGroup Id="Autob4d64242-e4ff-4933-b596-7b9b946fe02d" ShowCaption="False" Direction="Horizontal" Index="0" RelativeSize="32.762836185819069" IsNewNode="True">
+                  <LayoutGroup Id="Autof7d78854-995b-4bf8-88cb-e4e92bc09998" ShowCaption="False" Index="0" RelativeSize="48.496240601503757" IsNewNode="True">
+                    <LayoutItem Id="OfficePhone" ViewItem="OfficePhone" Index="0" RelativeSize="23.880597014925375" IsNewNode="True" />
+                    <LayoutItem Id="MobilePhone" ViewItem="MobilePhone" Index="1" RelativeSize="17.910447761194028" IsNewNode="True" />
+                    <LayoutItem Id="OtherPhone" ViewItem="OtherPhone" Index="2" RelativeSize="17.910447761194028" IsNewNode="True" />
+                    <LayoutItem Id="Country" ViewItem="Country" Index="3" RelativeSize="17.910447761194028" IsNewNode="True" />
+                    <LayoutItem Id="Zip" ViewItem="Zip" Index="4" RelativeSize="22.388059701492537" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Autof2b78755-0d91-4e79-ae8b-3e3a379d83af" ShowCaption="False" Index="1" RelativeSize="51.503759398496243" IsNewNode="True">
+                    <LayoutItem Id="HomePhone" ViewItem="HomePhone" Index="0" RelativeSize="23.880597014925375" IsNewNode="True" />
+                    <LayoutItem Id="Fax" ViewItem="Fax" Index="1" RelativeSize="17.910447761194028" IsNewNode="True" />
+                    <LayoutItem Id="Email" ViewItem="Email" Index="2" RelativeSize="17.910447761194028" IsNewNode="True" />
+                    <LayoutItem Id="State" ViewItem="State" Index="3" RelativeSize="17.910447761194028" IsNewNode="True" />
+                    <LayoutItem Id="City" ViewItem="City" Index="4" RelativeSize="22.388059701492537" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="Address" ViewItem="Address" Index="1" RelativeSize="67.237163814180931" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="3" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Resume" ViewItem="Resume" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="4" RelativeSize="100" Caption="User Infomation" IsNewNode="True">
+                <LayoutItem Id="UserName" ViewItem="UserName" Index="0" RelativeSize="7.8239608801955987" IsNewNode="True" />
+                <LayoutGroup Id="Auto79d81b8a-1434-461f-a024-a36347ba76cd" ShowCaption="False" Direction="Vertical" Index="1" RelativeSize="92.1760391198044" IsNewNode="True">
+                  <LayoutGroup Id="Auto44539dfb-85d7-4bec-a393-ce5773a5c59c" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                    <LayoutItem Id="IsActive" ViewItem="IsActive" Index="0" RelativeSize="7.9575596816976129" IsNewNode="True" />
+                    <LayoutItem Id="ChangePasswordOnFirstLogon" ViewItem="ChangePasswordOnFirstLogon" Index="1" RelativeSize="6.36604774535809" IsNewNode="True" />
+                    <LayoutItem Id="IsEnabledLanguage" ViewItem="IsEnabledLanguage" Index="2" RelativeSize="6.36604774535809" IsNewNode="True" />
+                    <LayoutItem Id="Language" ViewItem="Language" Index="3" RelativeSize="79.3103448275862" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item6" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="5" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Roles" ViewItem="Roles" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="Employee" RelativeSize="68.222222222222229" Removed="True">
+              <LayoutGroup Id="Employee_col1" RelativeSize="49.962714392244592">
+                <LayoutItem Id="Birthday" RelativeSize="13.432835820895523" />
+                <LayoutItem Id="City" RelativeSize="10.447761194029852" />
+                <LayoutItem Id="Country" RelativeSize="10.447761194029852" />
+                <LayoutItem Id="EmployeeNumber" RelativeSize="13.432835820895523" />
+                <LayoutItem Id="FirstName" RelativeSize="10.447761194029852" />
+                <LayoutItem Id="Gender" RelativeSize="10.447761194029852" />
+                <LayoutItem Id="LastName" RelativeSize="10.447761194029852" />
+                <LayoutItem Id="State" RelativeSize="10.447761194029852" />
+                <LayoutItem Id="Zip" RelativeSize="10.447761194029852" />
+              </LayoutGroup>
+              <LayoutGroup Id="Employee_col2" RelativeSize="50.037285607755408">
+                <LayoutItem Id="Photo" ViewItem="Photo" Index="0" RelativeSize="13.432835820895523" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="Company" ViewItem="Company" Index="1" RelativeSize="10.447761194029852" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="Department" RelativeSize="10.447761194029852" Index="2" />
+                <LayoutItem Id="Position" RelativeSize="10.447761194029852" Index="3" />
+                <LayoutItem Id="Signature" Index="4" RelativeSize="10.447761194029852" />
+                <LayoutItem Id="EmploymentDate" Index="5" RelativeSize="10.447761194029852" />
+                <LayoutItem Id="RetireDate" Index="6" RelativeSize="10.447761194029852" />
+                <LayoutItem Id="Language" Index="7" RelativeSize="10.447761194029852" />
+                <LayoutItem Id="IsEnabledLanguage" Index="8" RelativeSize="13.432835820895523" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="10.909090909090908" Caption="SizeableEditors" Direction="Horizontal" Removed="True">
+            <LayoutItem Id="Address" RelativeSize="100" Removed="True" />
+            <LayoutItem Id="Resume" RelativeSize="52.307692307692307" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Employee_DetailView_Qualifications" ClassName="Modules.BusinessObjects.Hr.Employee" IsNewNode="True">
+      <Items IsNewNode="True">
+        <PropertyEditor Id="Address" PropertyName="Address" IsNewNode="True" />
+        <PropertyEditor Id="Birthday" PropertyName="Birthday" IsNewNode="True" />
+        <PropertyEditor Id="ChangePasswordOnFirstLogon" PropertyName="ChangePasswordOnFirstLogon" IsNewNode="True" />
+        <PropertyEditor Id="City" PropertyName="City" IsNewNode="True" />
+        <PropertyEditor Id="Company" PropertyName="Company" IsNewNode="True" />
+        <PropertyEditor Id="Country" PropertyName="Country" IsNewNode="True" />
+        <PropertyEditor Id="Department" PropertyName="Department" IsNewNode="True" />
+        <PropertyEditor Id="Email" PropertyName="Email" IsNewNode="True" />
+        <PropertyEditor Id="EmploymentDate" PropertyName="EmploymentDate" IsNewNode="True" />
+        <PropertyEditor Id="Fax" PropertyName="Fax" IsNewNode="True" />
+        <PropertyEditor Id="FirstName" PropertyName="FirstName" IsNewNode="True" />
+        <PropertyEditor Id="Gender" PropertyName="Gender" IsNewNode="True" />
+        <PropertyEditor Id="HomePhone" PropertyName="HomePhone" IsNewNode="True" />
+        <PropertyEditor Id="IsActive" PropertyName="IsActive" IsNewNode="True" />
+        <PropertyEditor Id="IsEnabledLanguage" PropertyName="IsEnabledLanguage" IsNewNode="True" />
+        <PropertyEditor Id="Language" PropertyName="Language" IsNewNode="True" />
+        <PropertyEditor Id="LastName" PropertyName="LastName" IsNewNode="True" />
+        <PropertyEditor Id="MobilePhone" PropertyName="MobilePhone" IsNewNode="True" />
+        <PropertyEditor Id="OfficePhone" PropertyName="OfficePhone" IsNewNode="True" />
+        <PropertyEditor Id="OtherPhone" PropertyName="OtherPhone" IsNewNode="True" />
+        <PropertyEditor Id="Photo" PropertyName="Photo" IsNewNode="True" />
+        <PropertyEditor Id="Position" PropertyName="Position" IsNewNode="True" />
+        <PropertyEditor Id="Resume" PropertyName="Resume" IsNewNode="True" />
+        <PropertyEditor Id="RetireDate" PropertyName="RetireDate" IsNewNode="True" />
+        <PropertyEditor Id="Roles" PropertyName="Roles" View="PermissionPolicyUser_Roles_ListView" IsNewNode="True" />
+        <PropertyEditor Id="Signature" PropertyName="Signature" IsNewNode="True" />
+        <PropertyEditor Id="State" PropertyName="State" IsNewNode="True" />
+        <PropertyEditor Id="UserName" PropertyName="UserName" IsNewNode="True" />
+        <PropertyEditor Id="Zip" PropertyName="Zip" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+          <TabbedGroup Id="Tabs" Index="0" RelativeSize="100" IsNewNode="True">
+            <LayoutGroup Id="MeasureQualifications" Index="0" ShowCaption="True" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Employee_ListView" Criteria="[Company] = CurrentCompanyOid() And ([UserName] = CurrentUserName() Or IsAdmin() = '1' Or IsAdministrative() = '1') And [UserName] &lt;&gt; 'Administrator' And [UserName] &lt;&gt; 'admin'" MasterDetailMode="ListViewOnly" Filter="">
+      <Columns>
+        <ColumnInfo Id="Birthday" Index="-1" />
+        <ColumnInfo Id="City" Index="-1" />
+        <ColumnInfo Id="Company" Index="-1" />
+        <ColumnInfo Id="Country" Index="-1" />
+        <ColumnInfo Id="EmploymentDate" Index="-1" />
+        <ColumnInfo Id="Fax" Index="-1" />
+        <ColumnInfo Id="FirstName" Index="-1" />
+        <ColumnInfo Id="Gender" Index="-1" />
+        <ColumnInfo Id="HomePhone" Index="-1" />
+        <ColumnInfo Id="IsEnabledLanguage" Index="-1" />
+        <ColumnInfo Id="Language" Index="-1" />
+        <ColumnInfo Id="LastName" Index="-1" />
+        <ColumnInfo Id="OtherPhone" Index="-1" />
+        <ColumnInfo Id="RetireDate" Index="-1" />
+        <ColumnInfo Id="State" Index="-1" />
+        <ColumnInfo Id="Zip" Index="-1" />
+        <ColumnInfo Id="UserName" Index="1" />
+        <ColumnInfo Id="Photo" Index="2" />
+        <ColumnInfo Id="Department" Index="4" />
+        <ColumnInfo Id="Position" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="Employee_ListView_Qualifications" ClassName="Modules.BusinessObjects.Hr.Employee" Criteria="[UserName] &lt;&gt; 'administrator'" MasterDetailMode="ListViewAndDetailView" MasterDetailView="Employee_DetailView_Qualifications" AllowEdit="False" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Address" PropertyName="Address" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Birthday" PropertyName="Birthday" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" PropertyName="ChangePasswordOnFirstLogon" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="City" PropertyName="City" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Company" PropertyName="Company" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Country" PropertyName="Country" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Email" PropertyName="Email" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="EmploymentDate" PropertyName="EmploymentDate" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Fax" PropertyName="Fax" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="FirstName" PropertyName="FirstName" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Gender" PropertyName="Gender" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="HomePhone" PropertyName="HomePhone" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="IsActive" PropertyName="IsActive" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="IsEnabledLanguage" PropertyName="IsEnabledLanguage" Width="50" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Language" PropertyName="Language" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="LastName" PropertyName="LastName" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="MobilePhone" PropertyName="MobilePhone" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="OfficePhone" PropertyName="OfficePhone" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="OtherPhone" PropertyName="OtherPhone" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Photo" PropertyName="Photo" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Position" PropertyName="Position" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Resume" PropertyName="Resume" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="RetireDate" PropertyName="RetireDate" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Signature" PropertyName="Signature" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="State" PropertyName="State" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="UserName" PropertyName="UserName" Width="400" SortIndex="0" SortOrder="Ascending" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Zip" PropertyName="Zip" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Department" PropertyName="Department" Width="104" Index="4" IsNewNode="True" />
+      </Columns>
+      <SplitLayout SplitterPosition="280" IsNewNode="True" />
+    </ListView>
+    <ListView Id="Employee_LookupListView" Criteria="[Company.Oid] = CurrentCompanyOid() And [UserName] &lt;&gt; 'Administrator' And [UserName] &lt;&gt; 'admin'" AllowNew="False">
+      <Filters>
+        <Filter Id="@6cbac3cc-12ea-4338-868b-46aae61972cf" Criteria="[Company] = CurrentCompanyOid()" IsNewNode="True" />
+      </Filters>
+    </ListView>
+    <ListView Id="Matrix_ListView">
+      <Columns>
+        <ColumnInfo Id="MatrixName" Caption="MatrixName" />
+        <ColumnInfo Id="MatrixCode" Caption="MatrixCode" />
+      </Columns>
+    </ListView>
+    <ListView Id="Method_LookupListView">
+      <Columns>
+        <ColumnInfo Id="MethodNumber" Caption="MethodNumber" PropertyName="MethodNumber" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Navigation_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="17.7319587628866">
+            <LayoutGroup Id="Navigation" RelativeSize="100">
+              <LayoutItem Id="NavigationName" RelativeSize="37.2093023255814" />
+              <LayoutItem Id="NavigationId" ViewItem="NavigationId" Index="1" RelativeSize="27.906976744186046" IsNewNode="True" />
+              <LayoutItem Id="Parent" Index="2" RelativeSize="34.883720930232556" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Direction="Horizontal" RelativeSize="1.8556701030927836">
+            <LayoutItem Id="NavigationId" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Roles_Group" Direction="Vertical" RelativeSize="80.412371134020617">
+            <LayoutItem Id="Roles" RelativeSize="100" ShowCaption="False" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Navigation_ListView">
+      <Columns>
+        <ColumnInfo Id="NavigationName" SortOrder="Descending" Width="164" />
+        <ColumnInfo Id="NavigationId" Index="1" Width="393" />
+        <ColumnInfo Id="Parent" Index="2" SortOrder="Ascending" GroupIndex="0" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Parameter_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="11.900191938579654">
+            <LayoutGroup Id="Parameter" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="88.099808061420347">
+            <LayoutItem Id="Comment" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Position_ListView" Criteria="[Company] = CurrentCompanyOid()">
+      <Columns>
+        <ColumnInfo Id="PositionName" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Project_LookupListView" AllowNew="False" />
+    <DetailView Id="SampleCategory_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="7.2936660268714011">
+            <LayoutGroup Id="SampleCategory" Caption="SampleCategory" RelativeSize="100">
+              <LayoutItem Id="SampleCategoryName" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="92.7063339731286">
+            <LayoutItem Id="Comment" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SampleCategory_ListView">
+      <Columns>
+        <ColumnInfo Id="SampleCategoryName" Width="296" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleCategory_LookupListView" AllowNew="False" />
+    <DetailView Id="Samplecheckin_DetailView">
+      <Items>
+        <PropertyEditor Id="ClientAddress" LookupProperty="Address" />
+        <PropertyEditor Id="ClientAddress2" LookupProperty="Address1" />
+        <PropertyEditor Id="ClientPhone" LookupProperty="OfficePhone" />
+        <PropertyEditor Id="ProjectID" LookupProperty="ProjectId" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="67.335766423357668">
+            <LayoutGroup Id="Samplecheckin" RelativeSize="65.582655826558266">
+              <LayoutGroup Id="Samplecheckin_col1" RelativeSize="50">
+                <LayoutItem Id="JobID" RelativeSize="15.384615384615385" />
+                <LayoutItem Id="RecievedDate" RelativeSize="11.538461538461538" />
+                <LayoutItem Id="RecievedBy" RelativeSize="11.538461538461538" />
+                <LayoutItem Id="ClientName" RelativeSize="11.538461538461538" />
+                <LayoutItem Id="ClientAddress" RelativeSize="11.538461538461538" />
+                <LayoutItem Id="ClientAddress2" RelativeSize="11.538461538461538" />
+                <LayoutItem Id="ClientPhone" RelativeSize="11.538461538461538" />
+                <LayoutItem Id="ProjectID" RelativeSize="15.384615384615385" />
+              </LayoutGroup>
+              <LayoutGroup Id="Samplecheckin_col2" RelativeSize="50" />
+            </LayoutGroup>
+            <LayoutGroup Id="VisualMatrixName" ShowCaption="True" Caption="Visual Matrix Name" Index="1" RelativeSize="34.417344173441734" IsNewNode="True">
+              <LayoutItem Id="VisualMatrixName" ViewItem="VisualMatrixName" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Comment" Direction="Horizontal" RelativeSize="1.0948905109489051">
+            <LayoutItem Id="Comment" Removed="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="20.255474452554743" />
+          <LayoutItem Id="Comment" ViewItem="Comment" Index="3" RelativeSize="11.313868613138686" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Samplecheckin_ListView">
+      <Columns>
+        <ColumnInfo Id="JobID" Index="0" />
+        <ColumnInfo Id="RecievedDate" Index="1" />
+        <ColumnInfo Id="RecievedBy" Index="2" />
+        <ColumnInfo Id="ClientName" Index="3" />
+        <ColumnInfo Id="ClientAddress" LookupProperty="Address" PropertyName="ClientName.Address" />
+        <ColumnInfo Id="ClientAddress2" LookupProperty="Address1" PropertyName="ClientName.Address1" />
+        <ColumnInfo Id="ClientPhone" LookupProperty="OfficePhone" PropertyName="ClientName.OfficePhone" />
+        <ColumnInfo Id="ProjectID" LookupProperty="ProjectId" PropertyName="ProjectID" />
+        <ColumnInfo Id="ProjectName" PropertyName="ProjectID.ProjectName" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleLogIn_DetailView">
+      <Items>
+        <PropertyEditor Id="CollectTime" Caption="Collected Time" />
+        <PropertyEditor Id="ProjectID" DataSourceProperty="" DataSourceCriteria="" />
+        <PropertyEditor Id="ProjectName" DataSourceProperty="" DataSourceCriteria="" />
+        <PropertyEditor Id="QCSource" PropertyName="QCSource" Caption="QCSource" LookupProperty="SampleID" />
+      </Items>
+    </DetailView>
+    <ListView Id="SampleLogIn_ListView">
+      <Columns>
+        <ColumnInfo Id="JobID" Index="0" />
+        <ColumnInfo Id="SampleID" Index="1" />
+        <ColumnInfo Id="ClientSampleID" Index="2" />
+        <ColumnInfo Id="VisualMatrix" Index="3" />
+        <ColumnInfo Id="ProjectID" PropertyName="JobID.ProjectID.ProjectId" Index="4" />
+        <ColumnInfo Id="ProjectName" PropertyName="JobID.ProjectID.ProjectName" Index="5" />
+        <ColumnInfo Id="CollectDate" Index="6" />
+        <ColumnInfo Id="CollectTime" Index="7" Caption="CollectedTime" />
+        <ColumnInfo Id="Collector" Index="8" />
+        <ColumnInfo Id="Qty" Index="9" />
+        <ColumnInfo Id="QCSource" PropertyName="QCSource" LookupProperty="SampleID" />
+        <ColumnInfo Id="Storage" Index="12" />
+        <ColumnInfo Id="FlowRate" Index="13" />
+        <ColumnInfo Id="TimeStart" Index="14" />
+        <ColumnInfo Id="TimeEnd" Index="15" />
+        <ColumnInfo Id="Volume" Index="16" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_Testparameters_ListView">
+      <Columns>
+        <ColumnInfo Id="TestMethod" LookupProperty="MatrixName.MatrixName" Caption="Matrix" />
+        <ColumnInfo Id="Test" Caption="Test" PropertyName="TestMethod" LookupProperty="TestName.TestName" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="Method" Index="3" Caption="Method" PropertyName="TestMethod" LookupProperty="MethodName.MethodName" IsNewNode="True" />
+        <ColumnInfo Id="MethodNumber" Caption="MethodNumber" PropertyName="TestMethod" LookupProperty="MethodName.MethodNumber" Index="4" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_TestParameters_ListView_Copy" ClassName="Modules.BusinessObjects.Setting.TestMethod" AllowDelete="False" AllowUnlink="True" AllowNew="False" AllowLink="True" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Comment" PropertyName="Comment" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ModifiedBy" PropertyName="ModifiedBy" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ModifiedDate" PropertyName="ModifiedDate" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="MatrixName" PropertyName="MatrixName" Width="169" SortIndex="0" SortOrder="Ascending" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="TestName" PropertyName="TestName" Width="70" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="MethodName" PropertyName="MethodName" Width="118" Index="2" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleParameter_DetailView" Caption="ResultEntry" />
+    <ListView Id="SampleParameter_ListView" Caption="ResultEntry" MasterDetailView="" DetailViewID="" AllowEdit="True">
+      <Columns>
+        <ColumnInfo Id="ApprovedBy" Index="-1" />
+        <ColumnInfo Id="ApprovedDate" Index="-1" />
+        <ColumnInfo Id="ValidatedBy" Index="-1" />
+        <ColumnInfo Id="ValidatedDate" Index="-1" />
+        <ColumnInfo Id="Samplelogin" LookupProperty="SampleID" Caption="SampleID" AllowEdit="False" />
+        <ColumnInfo Id="Test" PropertyName="Testparameter" LookupProperty="TestMethod.TestName.TestName" Caption="Test" Index="2" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="MethodName" PropertyName="Testparameter" LookupProperty="TestMethod.MethodName.MethodName" Caption="MethodName" Index="3" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Testparameter" LookupProperty="TestMethod.MatrixName.MatrixName" Caption="Matrix" AllowEdit="False" />
+        <ColumnInfo Id="MethodNumber" PropertyName="Testparameter" LookupProperty="TestMethod.MethodName.MethodNumber" Caption="MethodNumber" Index="4" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Parameter" Caption="Parameter" PropertyName="Testparameter" LookupProperty="Parameter" Index="4" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Result" Index="6" />
+        <ColumnInfo Id="Units" Index="7" />
+        <ColumnInfo Id="Status" Index="8" AllowEdit="False" />
+        <ColumnInfo Id="AnalyzedDate" Index="9" />
+        <ColumnInfo Id="AnalyzedBy" Index="10" />
+        <ColumnInfo Id="EnteredDate" Index="11" />
+        <ColumnInfo Id="EnteredBy" Index="12" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_ResultApproval" ClassName="Modules.BusinessObjects.SampleManagement.SampleParameter" Caption="ResultEntry" DetailViewID="" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Samplelogin" PropertyName="Samplelogin" Width="100" Index="0" LookupProperty="SampleID" Caption="SampleID" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Testparameter" PropertyName="Testparameter" Width="70" Index="1" LookupProperty="TestMethod.MatrixName.MatrixName" Caption="Matrix" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Test" PropertyName="Testparameter" LookupProperty="TestMethod.TestName.TestName" Caption="Test" Index="2" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="MethodName" PropertyName="Testparameter" LookupProperty="TestMethod.MethodName.MethodName" Caption="MethodName" Index="3" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="MethodNumber" PropertyName="Testparameter" LookupProperty="TestMethod.MethodName.MethodNumber" Caption="MethodNumber" Index="4" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Parameter" Caption="Parameter" PropertyName="Testparameter" LookupProperty="Parameter" Index="5" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Result" PropertyName="Result" Width="70" Index="6" IsNewNode="True" />
+        <ColumnInfo Id="Units" PropertyName="Units" Width="70" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="70" Index="8" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="AnalyzedDate" PropertyName="AnalyzedDate" Width="70" Index="9" IsNewNode="True" />
+        <ColumnInfo Id="AnalyzedBy" PropertyName="AnalyzedBy" Width="70" Index="10" IsNewNode="True" />
+        <ColumnInfo Id="EnteredDate" PropertyName="EnteredDate" Width="70" Index="10" IsNewNode="True" />
+        <ColumnInfo Id="EnteredBy" PropertyName="EnteredBy" Width="70" Index="11" IsNewNode="True" />
+        <ColumnInfo Id="ValidatedDate" PropertyName="ValidatedDate" Width="70" Index="12" IsNewNode="True" />
+        <ColumnInfo Id="ValidatedBy" PropertyName="ValidatedBy" Width="70" Index="13" IsNewNode="True" />
+        <ColumnInfo Id="ApprovedDate" PropertyName="ApprovedDate" Width="70" Index="14" IsNewNode="True" />
+        <ColumnInfo Id="ApprovedBy" PropertyName="ApprovedBy" Width="70" Index="15" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_ListView_Copy_ResultValidation" ClassName="Modules.BusinessObjects.SampleManagement.SampleParameter" Caption="ResultEntry" DetailViewID="" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="ApprovedBy" PropertyName="ApprovedBy" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ApprovedDate" PropertyName="ApprovedDate" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Samplelogin" PropertyName="Samplelogin" Width="70" Index="0" LookupProperty="SampleID" Caption="SampleID" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Testparameter" PropertyName="Testparameter" Width="70" Index="1" LookupProperty="TestMethod.MatrixName.MatrixName" Caption="Matrix" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Test" PropertyName="Testparameter" LookupProperty="TestMethod.TestName.TestName" Caption="Test" Index="2" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="MethodName" PropertyName="Testparameter" LookupProperty="TestMethod.MethodName.MethodName" Caption="MethodName" Index="3" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="MethodNumber" PropertyName="Testparameter" LookupProperty="TestMethod.MethodName.MethodNumber" Caption="MethodNumber" Index="4" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Parameter" Caption="Parameter" PropertyName="Testparameter" LookupProperty="Parameter" Index="4" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="Result" PropertyName="Result" Width="70" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Units" PropertyName="Units" Width="70" Index="6" IsNewNode="True" />
+        <ColumnInfo Id="Status" PropertyName="Status" Width="70" Index="7" AllowEdit="False" IsNewNode="True" />
+        <ColumnInfo Id="AnalyzedDate" PropertyName="AnalyzedDate" Width="70" Index="8" IsNewNode="True" />
+        <ColumnInfo Id="AnalyzedBy" PropertyName="AnalyzedBy" Width="70" Index="9" IsNewNode="True" />
+        <ColumnInfo Id="EnteredDate" PropertyName="EnteredDate" Width="70" Index="10" IsNewNode="True" />
+        <ColumnInfo Id="EnteredBy" PropertyName="EnteredBy" Width="70" Index="11" IsNewNode="True" />
+        <ColumnInfo Id="ValidatedDate" PropertyName="ValidatedDate" Width="70" Index="12" IsNewNode="True" />
+        <ColumnInfo Id="ValidatedBy" PropertyName="ValidatedBy" Width="70" Index="13" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestMethod_DetailView">
+      <Items>
+        <PropertyEditor Id="MethodName" LookupEditorMode="AllItemsWithSearch" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="46.930693069306933">
+            <LayoutGroup Id="TestMethod" RelativeSize="100">
+              <LayoutGroup Id="Parameters_Group" ShowCaption="True" Caption="Parameters" Index="3" RelativeSize="66.244725738396625" IsNewNode="True">
+                <LayoutItem Id="Parameters" ViewItem="Parameters" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="53.069306930693067">
+            <LayoutItem Id="Comment" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestMethod_ListView">
+      <Columns>
+        <ColumnInfo Id="ModifiedBy" Index="-1" />
+        <ColumnInfo Id="MatrixName" Width="175" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestMethod_LookupListView" AllowNew="False" AllowLink="True" AllowUnlink="True" />
+    <ListView Id="Testparameter_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Test" Caption="Test" PropertyName="TestMethod" LookupProperty="TestName.TestName" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="Method Name" Caption="Method Name" PropertyName="TestMethod" LookupProperty="MethodName.MethodName" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="MethodNumber" Caption="MethodNumber" PropertyName="TestMethod" LookupProperty="MethodName.MethodNumber" Index="4" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="VisualMatrix_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="17.338709677419356">
+            <LayoutGroup Id="VisualMatrix" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="82.661290322580641">
+            <LayoutItem Id="Comment" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="VisualMatrix_ListView">
+      <Columns>
+        <ColumnInfo Id="VisualMatrixName" Width="153" />
+        <ColumnInfo Id="MatrixName" Width="92" />
+      </Columns>
+    </ListView>
+    <ListView Id="VisualMatrix_LookupListView" AllowNew="False">
+      <Columns>
+        <ColumnInfo Id="VisualMatrixCode" Caption="VisualMatrixCode" PropertyName="VisualMatrixCode" IsNewNode="True" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

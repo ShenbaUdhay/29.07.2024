@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="TestMethod_DetailView_SamplePreparationChain">
+      <Items Id="Items">
+        <PropertyEditor Id="GroupTests" Caption="监测项目组合" />
+      </Items>
+    </DetailView>
+    <ListView Id="SampleLogIn_ListView_SampleRegistration_SeletedSampleID">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_ListView_SampleRegistration_CopyTo_SampleID">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_ListView_SampleRegistration_Bottle">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reporting_ListView_Delivery">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Date Delivered" Caption="发放日期 " />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleLogIn_ListView_Copy_SampleRegistration">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SampleName" Caption="样品名称" />
+      </Columns>
+    </ListView>
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.SampleManagement.SampleLogIn">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="SampleName" Caption="样品名称" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Settings">
+        <Items Id="Items">
+          <Item Id="MethodCategory" Caption="方法分类" />
+          <Item Id="ProjectCategory" Caption="任务类别" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

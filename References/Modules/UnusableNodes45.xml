@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Employee_DetailView_Qualifications">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="MeasureQualifications">
+              <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="Roles" View="PermissionPolicyUser_Roles_ListView" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Employee">
+                <LayoutGroup Id="Employee_col2">
+                  <LayoutItem Id="Photo3" ViewItem="Photo3" />
+                  <LayoutItem Id="Signature3" ViewItem="Signature3" />
+                  <LayoutItem Id="Signature2" ViewItem="Signature2" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureQualifications_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="Employee" ViewItem="Employee" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MeasureQualificationsAuthorize_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MeasureQualificationsAuthorize_col1">
+              <LayoutGroup Id="Auto22255a84-fc4d-4efd-bad8-82c0b2b67150">
+                <LayoutItem Id="MeasureQualifications" ViewItem="MeasureQualifications" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="PopupRegistration_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item1">
+              <LayoutGroup Id="Auto9e918c06-2a0b-4567-b365-817c31db5eb7">
+                <LayoutGroup Id="Auto515b8a68-5da4-44ef-8f72-d74f3934d9ac">
+                  <LayoutGroup Id="Auto7518ffd0-a308-4c7b-821b-d20bfce0b2b9">
+                    <LayoutGroup Id="Auto7291ce30-2e5d-4182-a1f6-69300b531d0b">
+                      <LayoutGroup Id="Auto3ae9b4d3-aae2-4edb-b5d2-f621bc1f1f21">
+                        <LayoutGroup Id="Autod1c85362-458e-42b4-9ad4-620ffa9f94bf">
+                          <LayoutGroup Id="Autof3ec8fa4-35de-42f2-8862-c73129d5f80b">
+                            <LayoutGroup Id="Autof8224660-44f2-41b3-aaa0-4e0cf8b8b73e">
+                              <LayoutGroup Id="Auto3f7b8a7f-d215-4205-8dab-9ae25cb7b31e">
+                                <LayoutGroup Id="Autobf769766-ff45-420e-8dec-2c1fb8abee95">
+                                  <LayoutItem Id="Middle52" ViewItem="Middle52" />
+                                  <LayoutItem Id="Middle42" ViewItem="Middle42" />
+                                  <LayoutItem Id="Middle32" ViewItem="Middle32" />
+                                  <LayoutItem Id="Middle22" ViewItem="Middle22" />
+                                  <LayoutItem Id="Middle12" ViewItem="Middle12" />
+                                  <LayoutItem Id="Middle2" ViewItem="Middle2" />
+                                  <LayoutItem Id="Below5" ViewItem="Below5" />
+                                  <LayoutItem Id="Up9" ViewItem="Up9" />
+                                </LayoutGroup>
+                                <LayoutGroup Id="Auto3ecb6a64-778e-4668-8fa3-e456602ddfea">
+                                  <LayoutItem Id="Middle51" ViewItem="Middle51" />
+                                  <LayoutItem Id="Middle41" ViewItem="Middle41" />
+                                  <LayoutItem Id="Middle31" ViewItem="Middle31" />
+                                  <LayoutItem Id="Middle21" ViewItem="Middle21" />
+                                  <LayoutItem Id="Middle11" ViewItem="Middle11" />
+                                  <LayoutItem Id="Middle1" ViewItem="Middle1" />
+                                  <LayoutItem Id="Below4" ViewItem="Below4" />
+                                  <LayoutItem Id="Up8" ViewItem="Up8" />
+                                </LayoutGroup>
+                              </LayoutGroup>
+                              <LayoutGroup Id="Auto6781b80f-084a-4cb3-985a-394896bc430c">
+                                <LayoutItem Id="Middle50" ViewItem="Middle50" />
+                                <LayoutItem Id="Middle40" ViewItem="Middle40" />
+                                <LayoutItem Id="Middle30" ViewItem="Middle30" />
+                                <LayoutItem Id="Middle20" ViewItem="Middle20" />
+                                <LayoutItem Id="Middle10" ViewItem="Middle10" />
+                                <LayoutItem Id="Middle0" ViewItem="Middle0" />
+                                <LayoutItem Id="Below3" ViewItem="Below3" />
+                                <LayoutItem Id="Up7" ViewItem="Up7" />
+                              </LayoutGroup>
+                            </LayoutGroup>
+                            <LayoutGroup Id="Auto54e7dd88-9c3a-4e20-8624-a58c776225b5">
+                              <LayoutItem Id="Middle49" ViewItem="Middle49" />
+                              <LayoutItem Id="Middle39" ViewItem="Middle39" />
+                              <LayoutItem Id="Middle29" ViewItem="Middle29" />
+                              <LayoutItem Id="Middle19" ViewItem="Middle19" />
+                              <LayoutItem Id="Middle9" ViewItem="Middle9" />
+                              <LayoutItem Id="Below12" ViewItem="Below12" />
+                              <LayoutItem Id="Below2" ViewItem="Below2" />
+                              <LayoutItem Id="Up6" ViewItem="Up6" />
+                            </LayoutGroup>
+                          </LayoutGroup>
+                          <LayoutGroup Id="Autoc72a5fb0-af74-4671-8fb8-3842119dc57b">
+                            <LayoutItem Id="Middle48" ViewItem="Middle48" />
+                            <LayoutItem Id="Middle38" ViewItem="Middle38" />
+                            <LayoutItem Id="Middle28" ViewItem="Middle28" />
+                            <LayoutItem Id="Middle18" ViewItem="Middle18" />
+                            <LayoutItem Id="Middle8" ViewItem="Middle8" />
+                            <LayoutItem Id="Below11" ViewItem="Below11" />
+                            <LayoutItem Id="Below1" ViewItem="Below1" />
+                            <LayoutItem Id="Up5" ViewItem="Up5" />
+                          </LayoutGroup>
+                        </LayoutGroup>
+                        <LayoutGroup Id="Autoa906dbeb-6255-438c-a775-5c7bf8e4d4ac">
+                          <LayoutItem Id="Middle47" ViewItem="Middle47" />
+                          <LayoutItem Id="Middle37" ViewItem="Middle37" />
+                          <LayoutItem Id="Middle27" ViewItem="Middle27" />
+                          <LayoutItem Id="Middle17" ViewItem="Middle17" />
+                          <LayoutItem Id="Middle7" ViewItem="Middle7" />
+                          <LayoutItem Id="Below10" ViewItem="Below10" />
+                          <LayoutItem Id="Below0" ViewItem="Below0" />
+                          <LayoutItem Id="Up4" ViewItem="Up4" />
+                        </LayoutGroup>
+                      </LayoutGroup>
+                      <LayoutGroup Id="Auto355d9390-85bc-4782-b116-f185dd7ef1a1">
+                        <LayoutItem Id="Middle46" ViewItem="Middle46" />
+                        <LayoutItem Id="Middle36" ViewItem="Middle36" />
+                        <LayoutItem Id="Middle26" ViewItem="Middle26" />
+                        <LayoutItem Id="Middle16" ViewItem="Middle16" />
+                        <LayoutItem Id="Middle6" ViewItem="Middle6" />
+                        <LayoutItem Id="Below9" ViewItem="Below9" />
+                        <LayoutItem Id="Up13" ViewItem="Up13" />
+                        <LayoutItem Id="Up3" ViewItem="Up3" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto4d751d6d-bcc2-46eb-9a65-feb27b10c90a">
+                      <LayoutItem Id="Middle45" ViewItem="Middle45" />
+                      <LayoutItem Id="Middle35" ViewItem="Middle35" />
+                      <LayoutItem Id="Middle25" ViewItem="Middle25" />
+                      <LayoutItem Id="Middle15" ViewItem="Middle15" />
+                      <LayoutItem Id="Middle5" ViewItem="Middle5" />
+                      <LayoutItem Id="Below8" ViewItem="Below8" />
+                      <LayoutItem Id="Up12" ViewItem="Up12" />
+                      <LayoutItem Id="Up2" ViewItem="Up2" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto3a3cd5cb-4028-4288-aebb-8ae4835f31ab">
+                    <LayoutItem Id="Middle44" ViewItem="Middle44" />
+                    <LayoutItem Id="Middle34" ViewItem="Middle34" />
+                    <LayoutItem Id="Middle24" ViewItem="Middle24" />
+                    <LayoutItem Id="Middle14" ViewItem="Middle14" />
+                    <LayoutItem Id="Middle4" ViewItem="Middle4" />
+                    <LayoutItem Id="Below7" ViewItem="Below7" />
+                    <LayoutItem Id="Up11" ViewItem="Up11" />
+                    <LayoutItem Id="Up1" ViewItem="Up1" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Auto9f95b330-5bc1-4726-b20e-37ca35f8e4a7">
+                  <LayoutItem Id="Middle43" ViewItem="Middle43" />
+                  <LayoutItem Id="Middle33" ViewItem="Middle33" />
+                  <LayoutItem Id="Middle23" ViewItem="Middle23" />
+                  <LayoutItem Id="Middle13" ViewItem="Middle13" />
+                  <LayoutItem Id="Middle3" ViewItem="Middle3" />
+                  <LayoutItem Id="Below6" ViewItem="Below6" />
+                  <LayoutItem Id="Up10" ViewItem="Up10" />
+                  <LayoutItem Id="Up0" ViewItem="Up0" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

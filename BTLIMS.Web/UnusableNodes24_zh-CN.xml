@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SampleParameter_ListView_Copy_QCResultEntry">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCResultNumeric" Caption="数字结果" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

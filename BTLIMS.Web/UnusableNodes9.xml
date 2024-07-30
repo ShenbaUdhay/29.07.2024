@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="QCBatchsequence">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="qcaction1" ActionContainer="qcaction1" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="QCBatchSequence_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Jobid" Caption="Job ID" />
+        <PropertyEditor Id="Noruns" Caption="No. Runs" />
+        <ActionContainerViewItem Id="qcreset" ActionContainer="qcreset" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QCBatchSequence">
+              <LayoutGroup Id="Autoffff062e-aaf9-472b-ba44-1b1502581bab">
+                <LayoutGroup Id="Autoc1522bfa-d81a-4021-8c56-a08a9b298711">
+                  <LayoutGroup Id="Autoab5f3137-1538-40d7-9a3f-354ba545196d">
+                    <LayoutGroup Id="Auto21f4eba1-4b16-488e-9570-8ea1a7f10b2f">
+                      <LayoutItem Id="Noruns" ViewItem="Noruns" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Autoa2ef8b35-9388-4f01-b847-d64dab63aeef">
+                      <LayoutItem Id="Instrument" ViewItem="Instrument" />
+                      <LayoutItem Id="Jobid" ViewItem="Jobid" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto1d64ad39-8dc2-4196-b20b-5739099c7e16">
+                    <LayoutItem Id="Analyst" ViewItem="Analyst" />
+                    <LayoutItem Id="Test" ViewItem="Test" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="QCBatchSequence_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Analyst" Index="-1" />
+        <ColumnInfo Id="Instrument" Index="-1" />
+        <ColumnInfo Id="Jobid" Index="-1" />
+        <ColumnInfo Id="Noruns" Index="-1" />
+        <ColumnInfo Id="Test" Index="-1" />
+        <ColumnInfo Id="CollectionDate" Index="4" Width="107" Caption="CollectionDate" />
+        <ColumnInfo Id="ClientName" Index="5" Width="110" Caption="ClientName" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestMethod_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autof41af155-9776-4c91-848f-f62f0a69ca8f">
+              <LayoutGroup Id="Autoe423ea68-cf7b-493f-9322-4b5229229eac">
+                <LayoutGroup Id="Auto58b13ec3-7ee9-4865-b86f-9fbcfb63921c">
+                  <LayoutGroup Id="Autoe3a35350-4a18-477c-a7ab-e1f71b88ba8c">
+                    <LayoutItem Id="Container" ViewItem="Container" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="System">
+        <Items Id="Items">
+          <Item Id="TestGroup" ViewId="TestGroup_ListView" />
+          <Item Id="TestForm" ViewId="TestForm_LookupListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

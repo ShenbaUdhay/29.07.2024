@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.SampleManagement.SamplePreparation.SamplePrepBatch">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Jobid" Caption="工作编号" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="SamplePrepBatch_ListView_CopyFrom">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Jobid" Caption="工作编号" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SamplePrepBatch_DetailView_Copy">
+      <Items Id="Items">
+        <PropertyEditor Id="Jobid" Caption="工作编号" />
+      </Items>
+    </DetailView>
+    <ListView Id="SamplePrepBatch_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Jobid" Caption="工作编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="Labware_SamplePrepBatchs_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Jobid" Caption="工作编号" />
+      </Columns>
+    </ListView>
+    <ListView Id="Reagent_PrepBatchs_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Jobid" Caption="工作编号" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SamplePrepBatch_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Jobid" Caption="工作编号" />
+      </Items>
+    </DetailView>
+    <ListView Id="SamplePrepBatch_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Jobid" Caption="工作编号" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

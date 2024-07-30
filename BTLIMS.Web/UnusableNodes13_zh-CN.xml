@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SampleLogIn_ListView_SampleDisposition">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DateToDispose" Caption="清除日期" />
+        <ColumnInfo Id="PreserveCondition" Caption="保存条件" />
+        <ColumnInfo Id="StorageID" Caption="库房编号" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

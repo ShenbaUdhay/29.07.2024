@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ActiveDate" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AlertQty" xml:space="preserve">
+    <value>警报数量</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>量</value>
+  </data>
+  <data name="AmountUnit" xml:space="preserve">
+    <value>数量单位</value>
+  </data>
+  <data name="ApplicationCenter" xml:space="preserve">
+    <value>应用中心</value>
+    <comment>应用中心</comment>
+  </data>
+  <data name="AssetManagement" xml:space="preserve">
+    <value>资产管理</value>
+    <comment>资产管理</comment>
+  </data>
+  <data name="BoilingPoint" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BusinessArchiving" xml:space="preserve">
+    <value>业务归档</value>
+    <comment>业务归档</comment>
+  </data>
+  <data name="BusinessSystem" xml:space="preserve">
+    <value>业务系统</value>
+    <comment>业务系统</comment>
+  </data>
+  <data name="Catalog#" xml:space="preserve">
+    <value>目录#</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="CertificateReception" xml:space="preserve">
+    <value>证书接收</value>
+    <comment>证书接收</comment>
+  </data>
+  <data name="CertificateRelease" xml:space="preserve">
+    <value>证书发放</value>
+    <comment>证书发放</comment>
+  </data>
+  <data name="ClauseSubject" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="Component" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>基础配置</value>
+    <comment>基础配置</comment>
+  </data>
+  <data name="CustomerManagement" xml:space="preserve">
+    <value>客户管理</value>
+    <comment>客户管理</comment>
+  </data>
+  <data name="CutOff" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>管理看板</value>
+    <comment>管理看板</comment>
+  </data>
+  <data name="DaysSampleKeeping" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Decimal" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DefaultResult" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DefaultUnit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DefaultUnits" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DistributionDate" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Equivalent" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ExpiryDate" xml:space="preserve">
+    <value>到期日</value>
+  </data>
+  <data name="FinalDefaultResult" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FinalDefaultUnit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FinalDefaultUnits" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FlashPoint" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Formula" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GeneralData" xml:space="preserve">
+    <value>通用数据</value>
+    <comment>通用数据</comment>
+  </data>
+  <data name="Grade" xml:space="preserve">
+    <value>年级</value>
+  </data>
+  <data name="Grouptm" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HighCLimit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HumanResources" xml:space="preserve">
+    <value>人力资源</value>
+    <comment>人力资源</comment>
+  </data>
+  <data name="InstrumentRelease" xml:space="preserve">
+    <value>器具发放</value>
+    <comment>器具发放</comment>
+  </data>
+  <data name="InstrumentReturn" xml:space="preserve">
+    <value>器具归还</value>
+    <comment>器具归还</comment>
+  </data>
+  <data name="InstrumentStorage" xml:space="preserve">
+    <value>器具入库</value>
+    <comment>器具入库</comment>
+  </data>
+  <data name="InternalStandard" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsGroupTest" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsLabLT" xml:space="preserve">
+    <value>是实验室LT</value>
+  </data>
+  <data name="IsResale" xml:space="preserve">
+    <value>IsResale</value>
+  </data>
+  <data name="IsToxic" xml:space="preserve">
+    <value>有毒</value>
+  </data>
+  <data name="IsVendorLT" xml:space="preserve">
+    <value>是供应商LT</value>
+  </data>
+  <data name="Item Description" xml:space="preserve">
+    <value>商品描述</value>
+  </data>
+  <data name="Item/Unit" xml:space="preserve">
+    <value>项目/单位</value>
+  </data>
+  <data name="ItemName" xml:space="preserve">
+    <value>项目名</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>登录</value>
+    <comment>登录</comment>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>退出</value>
+    <comment>退出</comment>
+  </data>
+  <data name="LOQ" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LowCLimit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Manufacturer" xml:space="preserve">
+    <value>制造商</value>
+  </data>
+  <data name="MatrixName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MCL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MDL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MeasurementBusiness" xml:space="preserve">
+    <value>计量业务</value>
+    <comment>计量业务</comment>
+  </data>
+  <data name="MeltingPoint" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MethodCategory" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MethodName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MethodNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MfrcatNum" xml:space="preserve">
+    <value>制造商猫号</value>
+  </data>
+  <data name="MfritemName" xml:space="preserve">
+    <value>制造项目名称</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>我的账号</value>
+    <comment>我的账号</comment>
+  </data>
+  <data name="PackUnits" xml:space="preserve">
+    <value>包装单位</value>
+  </data>
+  <data name="Parameter" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ParameterName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QcRole" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QCRootRole" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QCSource" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QCType" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QCTypeName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QualityTestingBusiness" xml:space="preserve">
+    <value>质检业务</value>
+    <comment>质检业务</comment>
+  </data>
+  <data name="RecHCLimit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegulatoryLimit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REHCLimit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RELCLimit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RemainderDaysInAdvance" xml:space="preserve">
+    <value>RemainderDaysInAdvance</value>
+  </data>
+  <data name="ReportApproval" xml:space="preserve">
+    <value>报告批准</value>
+    <comment>报告批准</comment>
+  </data>
+  <data name="ReportPrint" xml:space="preserve">
+    <value>报告打印</value>
+    <comment>报告打印</comment>
+  </data>
+  <data name="ReportReview" xml:space="preserve">
+    <value>报告审核</value>
+    <comment>报告审核</comment>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>报表</value>
+    <comment>报表</comment>
+  </data>
+  <data name="ResultEntry" xml:space="preserve">
+    <value>结果登记</value>
+    <comment>结果登记</comment>
+  </data>
+  <data name="RetireDate" xml:space="preserve">
+    <value>退休日期</value>
+  </data>
+  <data name="ReturnConfirmation" xml:space="preserve">
+    <value>归还确认</value>
+    <comment>归还确认</comment>
+  </data>
+  <data name="RPLimit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RptLimit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RSD" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="Search Navigation item" xml:space="preserve">
+    <value>搜索导航项</value>
+  </data>
+  <data name="SigFig" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Specification" xml:space="preserve">
+    <value>规格</value>
+  </data>
+  <data name="SpikeAmount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SpikeAmountUnits" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StandardClause" xml:space="preserve">
+    <value>StandardClause</value>
+  </data>
+  <data name="StockQty" xml:space="preserve">
+    <value>库存数量</value>
+  </data>
+  <data name="Storage" xml:space="preserve">
+    <value>存储</value>
+  </data>
+  <data name="Surroagate" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SurrogateAmount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SurrogateLLimit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SurrogateULimit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Synonym" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SystemManagement" xml:space="preserve">
+    <value>系统管理</value>
+    <comment>系统管理</comment>
+  </data>
+  <data name="TaskAssignment" xml:space="preserve">
+    <value>任务分配</value>
+    <comment>任务分配</comment>
+  </data>
+  <data name="TaskReceipt" xml:space="preserve">
+    <value>任务领取</value>
+    <comment>任务领取</comment>
+  </data>
+  <data name="TestCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TestName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UnitPrice" xml:space="preserve">
+    <value>单价</value>
+  </data>
+  <data name="UQL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Vendor" xml:space="preserve">
+    <value>供应商</value>
+  </data>
+  <data name="VendorItemName" xml:space="preserve">
+    <value>供应商商品名称</value>
+  </data>
+  <data name="Vendorlt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VisualMatrixName" xml:space="preserve">
+    <value />
+  </data>
+</root>

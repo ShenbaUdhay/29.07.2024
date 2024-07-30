@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="SuccessfulMessage">
+      <LocalizationItem Name="SamplesSignedOffSuccessfully" Value="Samples signed off successfully." />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Messages">
+      <LocalizationItem Name="selectmatrix" Value="Select the SampleMatrix" />
+    </LocalizationGroup>
+  </Localization>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="Cancellation" ImageName="State_Validation_Invalid" />
+      <Action Id="FieldDataApproved" ImageName="Save_16x16" />
+      <Action Id="FieldDataApprovedRollback" ImageName="Backward_16x16" />
+      <Action Id="FieldDataEntryComplete" ImageName="Action_Save" />
+      <Action Id="FieldDataEntryEdit" ImageName="Action_Edit" />
+      <Action Id="FieldDataEntrySave" ImageName="Action_Save" />
+      <Action Id="FieldDataRollBack" ImageName="Backward_16x16" />
+      <Action Id="FieldDataValidated" ImageName="Save_16x16" />
+      <Action Id="FieldTestEdit" ImageName="Action_Edit" />
+      <Action Id="FieldTestSave" ImageName="Action_Save" />
+      <Action Id="NewAnalysis" ImageName="Action_New" />
+      <Action Id="NewFieldTesting" ImageName="Action_New" />
+      <Action Id="PrintingSampleLabels" ImageName="Barcode_16x16" />
+      <Action Id="SamplingInstrumentsNew" ImageName="Action_New" />
+      <Action Id="SamplingInstrumentsSave" ImageName="Action_Save" />
+      <Action Id="SamplingProposalSettingSave" ImageName="Action_Save" />
+      <Action Id="SaveAnalysis" ImageName="Action_Save" />
+      <Action Id="SaveFieldTesting" ImageName="Action_Save" />
+    </Actions>
+  </ActionDesign>
+</Application>

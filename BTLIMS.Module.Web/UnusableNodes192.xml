@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="SampleRegistration_DashboardView">
+      <Layout Id="Layout">
+        <LayoutItem Id="SampleLogIn_ListView" ViewItem="SampleLogIn_ListView" />
+      </Layout>
+    </DashboardView>
+    <DetailView Id="SampleLogIn_DetailView_TestPopup">
+      <Items Id="Items">
+        <PropertyEditor Id="Collector" View="Employee_LookupListView_Copy_SampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SampleLogIn_DetailView_Copy_Test">
+      <Items Id="Items">
+        <PropertyEditor Id="Collector" View="Employee_LookupListView_Copy_SampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy_SampleRegistration">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Samplecheckin_DetailView_Copy">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+        <PropertyEditor Id="Testparameters" LinkView="Testparameter_LookupListView_Copy_GroupSampleLogin" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Requisition_DetailView_Receive">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Description" ViewItem="Description" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Requisition">
+              <LayoutGroup Id="Requisition_col1">
+                <LayoutItem Id="PackUnits" ViewItem="PackUnits" />
+                <LayoutItem Id="StockQty" ViewItem="StockQty" />
+                <LayoutItem Id="Brand" ViewItem="Brand" />
+                <LayoutItem Id="Vendor" ViewItem="Vendor" />
+                <LayoutItem Id="Category" ViewItem="Category" />
+                <LayoutItem Id="Grade" ViewItem="Grade" />
+                <LayoutItem Id="Specification" ViewItem="Specification" />
+                <LayoutItem Id="ItemCode" ViewItem="ItemCode" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="ReportPackage">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="CustomReportDesigner" ViewItem="CustomReportDesigner" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DashboardView Id="Employee_Dashboard_ListViewAndDetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="Employee_DetailView_MeasureQualification" ViewItem="Employee_DetailView_MeasureQualification" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1">
+            <LayoutItem Id="Employee_ListView_MeasureQualification" ViewItem="Employee_ListView_MeasureQualification" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <DetailView Id="1">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="UploadImage" ActionContainer="UploadImage" />
+      </Items>
+    </DetailView>
+    <DetailView Id="CopyPermission_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CopyPermission">
+              <LayoutGroup Id="Auto6016baa5-1e29-4a9e-bb8e-73ca15ea8eed">
+                <LayoutItem Id="strUser" ViewItem="strUser" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Customer_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item4">
+              <LayoutGroup Id="Auto07b91f9a-ad92-4a76-96bf-8dfd0f5176d3">
+                <LayoutItem Id="County" ViewItem="County" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Distribution_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Distribution">
+              <LayoutGroup Id="Distribution_col1">
+                <LayoutItem Id="RequestedBy" RelativeSize="6.3829787234042552" />
+                <LayoutItem Id="givento" RelativeSize="6.3829787234042552" />
+                <LayoutItem Id="Storage" RelativeSize="6.3829787234042552" />
+                <LayoutItem Id="VendorLT" RelativeSize="6.3829787234042552" />
+                <LayoutItem Id="ExpiryDate" RelativeSize="8.51063829787234" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Labware_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Labware_col1">
+              <LayoutItem Id="DepartmentUsed" ViewItem="DepartmentUsed" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QCResultValidationQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_QCSampleIDPopUp" ActionContainer="RE_QCSampleIDPopUp" />
+        <ActionContainerViewItem Id="Qc_JobIDPopUp" ActionContainer="RE_QCJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="QCType_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QCType">
+              <LayoutItem Id="QCRole" ViewItem="QCRole" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="ReportingDV">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Report View" ActionContainer="Preview" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="ReportingQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RepJobIDPopUp" ActionContainer="RepJobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ResultEntryQueryPanel_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RE_JobIDMultiSelect" ActionContainer="RE_JobIDPopUp" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SpreadSheetEntry_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SpreadSheetEntry">
+              <LayoutGroup Id="SpreadSheetEntry_col2">
+                <LayoutItem Id="UQTESTQCSPIKE" RelativeSize="1.0480349344978166" />
+                <LayoutItem Id="UQTESTQCSTANDARDSPIKEID" RelativeSize="1.0480349344978166" />
+                <LayoutItem Id="RPD" RelativeSize="1.0480349344978166" />
+                <LayoutItem Id="MDL" RelativeSize="1.0480349344978166" />
+                <LayoutItem Id="UQTESTPARAMETERID" RelativeSize="1.0480349344978166" />
+                <LayoutItem Id="RPTLIMIT" RelativeSize="1.0480349344978166" />
+                <LayoutItem Id="FLOWRATE" RelativeSize="1.0480349344978166" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TestMethod_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autof41af155-9776-4c91-848f-f62f0a69ca8f">
+              <LayoutGroup Id="TestMethod_col1">
+                <LayoutItem Id="PrepMethod1" ViewItem="PrepMethod1" />
+                <LayoutItem Id="PrepMethod" ViewItem="PrepMethod" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

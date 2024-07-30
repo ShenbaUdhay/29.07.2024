@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="PopupRegistrationBatch_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="RegistrationBatchLabwareAction" Caption="RegistrationBatchLabwareAction(24)" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Item2">
+            <LayoutGroup Id="Item3" Caption="基本信息" />
+            <LayoutGroup Id="Item4" Caption="检测结果" />
+            <LayoutGroup Id="BizMeasureLabwares_Group" Caption="测试设备" />
+            <LayoutGroup Id="Item1" Caption="特殊符号" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SampleLogIn_TestParameters_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ModifiedBy" Caption="更改人" />
+        <ColumnInfo Id="MatrixName" Caption="基质" />
+        <ColumnInfo Id="MethodNumber" Caption="方法编号" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SampleLogIn_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="TestParameters" Caption="检测参数" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

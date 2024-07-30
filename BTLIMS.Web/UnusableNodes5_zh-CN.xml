@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.SampleManagement.Samplecheckin">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Dimensions" Caption="外形尺寸" />
+        <Member Name="FilterElementAlarm" Caption="滤芯报警" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="Samplecheckin_DetailView_Copy_SampleRegistration">
+      <Items Id="Items">
+        <PropertyEditor Id="WaterStorageContainer" Caption="带储水器容器" />
+        <PropertyEditor Id="TotalCleanWaterFlow" Caption="额定总净水流量" />
+        <PropertyEditor Id="ReMarks" Caption="备注" />
+        <PropertyEditor Id="Dimensions" Caption="外形尺寸" />
+        <PropertyEditor Id="CleanWaterFlow" Caption="额定净水流量" />
+      </Items>
+    </DetailView>
+    <ListView Id="SampleCategory_Samplecheckins_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Dimensions" Caption="外形尺寸" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Samplecheckin_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Dimensions" Caption="外形尺寸" />
+      </Items>
+    </DetailView>
+    <ListView Id="Samplecheckin_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Dimensions" Caption="外形尺寸" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

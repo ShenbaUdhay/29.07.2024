@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="QCType_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="QCRole" Caption="质控角色" />
+      </Items>
+    </DetailView>
+    <ListView Id="QCType_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="QCRole" Caption="质控角色" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Modules.BusinessObjects.SampleManagement.Reporting">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="ImageUpload" Caption="图片上传" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="Reporting_ListView_Account">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Sample Type" Caption="样品分类" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Reporting_DetailView_Recalled">
+      <Items Id="Items">
+        <PropertyEditor Id="Image Upload" Caption="图片上传" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Reporting_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="ImageUpload" Caption="图片上传" />
+      </Items>
+    </DetailView>
+    <ListView Id="Reporting_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ImageUpload" Caption="图片上传" />
+      </Columns>
+    </ListView>
+    <ListView Id="SampleParameter_Reportings_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ImageUpload" Caption="图片上传" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
